@@ -1,0 +1,1576 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CnH</title>
+<meta name="description" content="Chaque jour, une grande problématique et 5 cartes pour réfléchir à des sujets dont on parle peu : une base sourcée, une ouverture, et le droit de dériver.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f8f5ef" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#12110f" media="(prefers-color-scheme: dark)">
+<meta name="referrer" content="no-referrer">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+/* =========================================================
+   CnH — V1 (site statique, aucune donnée personnelle, aucun traceur)
+   Contenus : contenu/donnees.js (généré par outils/valider_contenu.py)
+   Polices : dossier polices/ (hébergées avec le site, licence SIL OFL)
+   ========================================================= */
+@font-face {
+  font-family: "Fraunces"; font-style: normal; font-weight: 100 900; font-display: swap;
+  src: url("polices/fraunces-latin-wght-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Fraunces"; font-style: italic; font-weight: 100 900; font-display: swap;
+  src: url("polices/fraunces-latin-wght-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Figtree"; font-style: normal; font-weight: 300 900; font-display: swap;
+  src: url("polices/figtree-latin-wght-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Figtree"; font-style: italic; font-weight: 300 900; font-display: swap;
+  src: url("polices/figtree-latin-wght-italic.woff2") format("woff2");
+}
+
+:root {
+  --fond: #f8f5ef;
+  --surface: #fffdf9;
+  --surface-2: #f0ebe2;
+  --encre: #1c1a17;
+  --encre-2: #625a51;
+  --trait: #e4ddd0;
+  --accent: #9c3f1f;
+  --focus: #1c5fd6;
+
+  --t-histoire: #8a4f1c;
+  --t-cuisine: #a1331f;
+  --t-societe: #1f6a57;
+  --t-arts: #4a45a0;
+  --t-hors: #6f5a00;
+
+  --serif: "Fraunces", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --sans: "Figtree", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --rayon: 18px;
+  --doux: cubic-bezier(.2, .75, .25, 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fond: #12110f;
+    --surface: #1b1916;
+    --surface-2: #26231f;
+    --encre: #f1ebe1;
+    --encre-2: #ada393;
+    --trait: #332e28;
+    --accent: #f0a27a;
+    --focus: #8ab4ff;
+
+    --t-histoire: #e3a468;
+    --t-cuisine: #f08c73;
+    --t-societe: #6fcfb2;
+    --t-arts: #aaa6f5;
+    --t-hors: #dcc25a;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--fond);
+  color: var(--encre);
+  font: 400 1.0625rem/1.65 var(--sans);
+  -webkit-font-smoothing: antialiased;
+  padding: env(safe-area-inset-top, 0) 0 env(safe-area-inset-bottom, 0);
+}
+a { color: inherit; text-decoration-color: color-mix(in srgb, currentColor 35%, transparent); text-underline-offset: .2em; }
+a:hover { text-decoration-color: currentColor; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 6px; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+svg.ic { width: 1.15rem; height: 1.15rem; flex: none; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.sr-only { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.sauter { position: absolute; left: -999px; top: .5rem; background: var(--encre); color: var(--fond); padding: .5rem .8rem; border-radius: 8px; z-index: 10; }
+.sauter:focus { left: .5rem; }
+
+.cadre { max-width: 46rem; margin: 0 auto; padding-inline: max(1rem, env(safe-area-inset-left, 0)); }
+
+/* ---------- En-tête : logo cursif à gauche ---------- */
+.entete .cadre { display: flex; align-items: center; justify-content: space-between; gap: .5rem 1rem; flex-wrap: wrap; padding-block: 1rem .25rem; }
+.logo { display: inline-flex; color: var(--encre); text-decoration: none; padding: .15rem .1rem; margin-left: -.1rem; border-radius: 10px; transition: color .2s; }
+.logo svg { display: block; height: 2.7rem; width: auto; fill: currentColor; }
+.logo:hover { color: var(--accent); }
+.nav { display: flex; gap: .1rem; }
+.nav a { position: relative; text-decoration: none; font-size: .95rem; font-weight: 500; padding: .5rem .6rem; color: var(--encre-2); border-radius: 999px; }
+.nav a:hover { color: var(--encre); }
+.nav a[aria-current="page"] { color: var(--encre); font-weight: 600; }
+.nav a[aria-current="page"]::after { content: ""; position: absolute; left: 50%; bottom: .1rem; width: .32rem; height: .32rem; border-radius: 50%; background: var(--accent); transform: translateX(-50%); }
+
+main { padding-block: 1.5rem 3.5rem; min-height: 60vh; }
+main:focus { outline: none; }
+
+/* ---------- Typo ---------- */
+h1, h2, h3 { font-family: var(--serif); line-height: 1.15; letter-spacing: -.015em; margin: 0; }
+h1 { font-size: clamp(2rem, 1.3rem + 3vw, 3.1rem); font-weight: 520; }
+h2 { font-size: 1.45rem; font-weight: 520; }
+h3 { font-size: 1.16rem; font-weight: 560; }
+.surtitre { font: 600 .74rem/1.2 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--c, var(--encre-2)); margin: 0 0 .7rem; }
+.date { font-size: .95rem; color: var(--encre-2); margin: 0 0 1.25rem; }
+.discret { color: var(--encre-2); font-size: .9rem; }
+
+/* Date du jour, façon feuille d'éphéméride */
+.jour-tete { display: flex; align-items: center; gap: .8rem; margin: .5rem 0 2rem; }
+.jour-num { font: 380 3.3rem/.85 var(--serif); letter-spacing: -.04em; }
+.jour-mois { display: flex; flex-direction: column; font-size: .88rem; line-height: 1.3; color: var(--encre-2); }
+.jour-mois b { color: var(--encre); font-weight: 600; }
+.jour-badge { margin-left: auto; font: 600 .74rem/1 var(--sans); padding: .45rem .7rem; border-radius: 999px; background: var(--encre); color: var(--fond); }
+
+/* ---------- Couleurs de thème ---------- */
+.t-histoire-patrimoine { --c: var(--t-histoire); }
+.t-cuisine-alimentation { --c: var(--t-cuisine); }
+.t-modes-de-vie-societe { --c: var(--t-societe); }
+.t-arts-langues-croyances { --c: var(--t-arts); }
+.t-hors-piste { --c: var(--t-hors); }
+.theme { display: inline-flex; align-items: center; gap: .35rem; font-size: .8rem; font-weight: 600; color: var(--c, var(--encre-2)); }
+.point { width: .5rem; height: .5rem; border-radius: 50%; background: var(--c, var(--encre-2)); flex: none; display: inline-block; }
+.pastille {
+  width: 2.75rem; height: 2.75rem; border-radius: 14px; display: grid; place-items: center; flex: none;
+  background: color-mix(in srgb, var(--c, var(--accent)) 12%, var(--surface)); color: var(--c, var(--accent));
+  transition: background .25s, color .25s;
+}
+.pastille svg.ic { width: 1.45rem; height: 1.45rem; }
+
+/* ---------- Blocs de carte ---------- */
+.etiquette {
+  display: flex; align-items: center; gap: .55rem; margin: 2rem 0 .7rem;
+  font: 600 .72rem/1.2 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--encre-2);
+}
+.etiquette::before { content: ""; width: 1.1rem; height: 2px; border-radius: 2px; background: var(--c, var(--accent)); flex: none; }
+.base { margin: 0; }
+.ouverture {
+  font: italic 370 clamp(1.28rem, 1.1rem + .7vw, 1.55rem)/1.38 var(--serif);
+  margin: 1.4rem 0 0; padding: .1rem 0 .1rem 1rem;
+  border-left: 2px solid var(--c, var(--accent));
+}
+.derives { list-style: none; padding: 0; margin: 0; display: grid; gap: .5rem; }
+.derives li { position: relative; padding-left: 1.5rem; }
+.derives li::before {
+  content: ""; position: absolute; left: .2rem; top: .28em; width: .6rem; height: .55rem;
+  border-left: 2px solid var(--c, var(--accent)); border-bottom: 2px solid var(--c, var(--accent)); border-bottom-left-radius: 5px;
+}
+
+/* Sources repliables, toujours en bas de la carte */
+.sources { padding: 0 0 .5rem 1.4rem; margin: 0; font-size: .86rem; color: var(--encre-2); display: grid; gap: .35rem; }
+.sources a { color: var(--encre); }
+.sources li { scroll-margin-top: 5rem; border-radius: 6px; transition: background .3s; }
+.sources li.surligne { background: color-mix(in srgb, var(--c, var(--accent)) 18%, transparent); }
+.sources-bloc { margin-top: 2rem; border-top: 1px solid var(--trait); }
+.sources-bloc > summary {
+  cursor: pointer; list-style: none; display: flex; align-items: center; gap: .5rem; padding: .8rem 0 .6rem;
+  font: 600 .72rem/1.2 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--encre-2);
+}
+.sources-bloc > summary::-webkit-details-marker { display: none; }
+.sources-bloc > summary::before { content: ""; width: .42rem; height: .42rem; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(-45deg); transition: transform .2s; margin: 0 .15rem 0 .1rem; }
+.sources-bloc[open] > summary::before { transform: rotate(45deg); }
+.sources-bloc > summary:hover { color: var(--encre); }
+
+/* ---------- Repères : encadrés, un chiffre ou un mot clé en grand ---------- */
+.reperes { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: .6rem; }
+.repere {
+  display: flex; flex-direction: column; gap: .35rem; padding: .95rem 1rem 1rem; border-radius: 16px;
+  background: color-mix(in srgb, var(--c, var(--accent)) 8%, var(--surface));
+}
+.repere-cle { font: 560 2rem/1 var(--serif); color: var(--c, var(--accent)); letter-spacing: -.025em; overflow-wrap: anywhere; }
+.repere p { margin: 0; font-size: .94rem; line-height: 1.5; }
+@media (min-width: 36rem) {
+  .reperes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .repere:last-child:nth-child(odd) { grid-column: 1 / -1; }
+}
+.renvoi {
+  font: 600 .7rem/1 var(--sans); vertical-align: .12em; margin-left: .2rem; padding: .17rem .33rem; border-radius: 5px;
+  color: var(--encre-2); background: color-mix(in srgb, var(--encre) 8%, transparent); border: 0; cursor: pointer;
+}
+.renvoi:hover { color: var(--encre); }
+
+/* ---------- Ça divise : vignettes réversibles ---------- */
+.divise-tete { display: flex; align-items: center; justify-content: space-between; gap: .35rem .75rem; flex-wrap: wrap; margin: 2rem 0 .6rem; }
+.divise-tete .etiquette { margin: 0; }
+.divise-aide { flex-basis: 100%; order: 3; font-size: .82rem; color: var(--encre-2); margin: 0; }
+.defiler { white-space: nowrap; }
+.tout-retourner {
+  display: inline-flex; align-items: center; gap: .4rem; font: 600 .8rem/1 var(--sans); padding: .45rem .75rem .45rem .6rem;
+  border-radius: 999px; cursor: pointer; border: 1px solid var(--trait); background: transparent; color: var(--encre);
+}
+.tout-retourner:hover { border-color: var(--c, var(--encre-2)); }
+.tout-retourner svg.ic { width: 1rem; height: 1rem; }
+.vignettes {
+  display: grid; grid-auto-flow: column; grid-auto-columns: min(86%, 20rem); gap: .75rem;
+  overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory;
+  padding: .25rem .1rem 1rem; margin: 0 -.1rem; list-style: none;
+  scrollbar-width: thin; scrollbar-color: color-mix(in srgb, var(--c, var(--accent)) 40%, transparent) transparent;
+}
+@media (min-width: 40rem) { .vignettes { grid-auto-columns: calc((100% - .75rem) / 2); } }
+.vignette { scroll-snap-align: start; perspective: 1400px; display: flex; flex-direction: column; gap: .6rem; }
+.vignette-inner { display: grid; flex: 1; cursor: pointer; transform-style: preserve-3d; transition: transform .6s var(--doux); }
+.vignette-inner.retournee { transform: rotateY(180deg); }
+.face {
+  grid-area: 1 / 1; display: flex; flex-direction: column; gap: .65rem;
+  padding: 1rem 1rem .9rem; border-radius: var(--rayon); position: relative;
+  -webkit-backface-visibility: hidden; backface-visibility: hidden;
+}
+.face-a { background: var(--surface); color: var(--encre); border: 1px solid color-mix(in srgb, var(--c, var(--accent)) 30%, var(--trait)); }
+.face-a::after { /* coin corné : invite à retourner */
+  content: ""; position: absolute; right: -1px; bottom: -1px; width: 1.5rem; height: 1.5rem; border-radius: 0 0 var(--rayon) 0;
+  background: linear-gradient(135deg, transparent 50%, var(--c, var(--accent)) 50%);
+  transition: width .25s var(--doux), height .25s var(--doux);
+}
+.vignette-inner:hover .face-a::after { width: 2.2rem; height: 2.2rem; }
+.face-b { transform: rotateY(180deg); background: var(--c, var(--accent)); color: var(--surface); border: 1px solid var(--c, var(--accent)); }
+.vignette-haut { display: flex; justify-content: space-between; align-items: center; gap: .5rem; }
+.vignette-num { font: 700 .68rem/1.2 var(--sans); letter-spacing: .1em; text-transform: uppercase; opacity: .85; flex: none; }
+.face-a .vignette-num { color: var(--c, var(--accent)); }
+.face-b .vignette-num { color: color-mix(in srgb, var(--surface) 85%, transparent); }
+/* Sélecteur de camp : dit où l'on est et emmène de l'autre côté */
+.segment { display: flex; gap: .2rem; padding: .22rem; border-radius: 999px; flex: 1 1 auto; max-width: 14.5rem; }
+.face-a .segment { background: var(--surface-2); }
+.face-b .segment { background: color-mix(in srgb, var(--surface) 18%, transparent); }
+.seg {
+  flex: 1 1 0; min-height: 34px; padding: 0 .4rem; border: 0; border-radius: 999px; cursor: pointer;
+  font: 600 .78rem/1 var(--sans); background: transparent; color: inherit;
+}
+.face-a .seg { color: var(--encre-2); }
+.face-b .seg { color: color-mix(in srgb, var(--surface) 82%, transparent); }
+.face-a .seg.seg-actif { background: var(--surface); color: var(--encre); box-shadow: 0 1px 2px rgba(20, 16, 10, .14); }
+.face-b .seg.seg-actif { background: var(--surface); color: var(--c, var(--accent)); }
+.vignette-q { font: 560 1.1rem/1.3 var(--serif); margin: 0; }
+.face-b .vignette-q { font-size: .98rem; opacity: .92; }
+.vignette-arg { margin: 0; font-size: .97rem; line-height: 1.5; }
+.vignette-bas { display: flex; align-items: center; justify-content: space-between; gap: .5rem; margin-top: auto; padding-top: .2rem; }
+.retourner {
+  display: inline-flex; align-items: center; gap: .4rem; font: 600 .85rem/1 var(--sans);
+  padding: .55rem .85rem .55rem .7rem; border-radius: 999px; cursor: pointer; border: 0;
+}
+.face-a .retourner { background: var(--encre); color: var(--fond); }
+.face-b .retourner { background: var(--surface); color: var(--encre); }
+.retourner svg.ic { width: 1rem; height: 1rem; }
+.face .renvoi { vertical-align: baseline; margin: 0 0 0 .3rem; }
+.face-b .renvoi { background: color-mix(in srgb, var(--surface) 22%, transparent); color: var(--surface); }
+.face-b :focus-visible { outline-color: var(--surface); }
+
+/* Pièce à l'appui : le fait qui appuie chaque camp, caché sous un voile
+   (couleurs inversées d'une face à l'autre), dévoilé au survol ou au toucher */
+.piece { position: relative; border-radius: 12px; font-size: .88rem; line-height: 1.45; }
+.face-a .piece {
+  --p-fond: color-mix(in srgb, var(--c, var(--accent)) 8%, var(--surface));
+  --p-titre: var(--c, var(--accent)); --p-voile: var(--c, var(--accent)); --p-voile-encre: var(--surface);
+}
+.face-b .piece {
+  --p-fond: color-mix(in srgb, var(--surface) 14%, transparent);
+  --p-titre: var(--surface); --p-voile: var(--surface); --p-voile-encre: var(--c, var(--accent));
+}
+.piece { background: var(--p-fond); }
+.piece-bouton {
+  display: flex; align-items: center; gap: .4rem; width: 100%; margin: 0; padding: .55rem .7rem .25rem;
+  background: none; border: 0; border-radius: 12px; cursor: pointer; text-align: left;
+  font: 700 .66rem/1.2 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--p-titre);
+}
+.piece-bouton svg.ic { width: 1rem; height: 1rem; }
+.piece-epingle { display: none; margin-left: auto; align-items: center; gap: .25rem; letter-spacing: 0; text-transform: none; font-weight: 600; opacity: .8; }
+.piece-epingle svg.ic { width: .85rem; height: .85rem; }
+.piece.epinglee .piece-epingle { display: inline-flex; }
+.piece .ic-ouvert, .piece.ouverte .ic-ferme { display: none; }
+.piece.ouverte .ic-ouvert { display: block; }
+.piece-contenu { position: relative; min-height: 3.1rem; padding: .1rem .7rem .6rem; }
+.piece-contenu p { display: inline; margin: 0; }
+.piece-contenu::after {
+  content: "Touche pour dévoiler";
+  position: absolute; inset: 0 .35rem .35rem; border-radius: 9px; display: grid; place-items: center; padding: 0 .5rem; text-align: center;
+  font: 600 .78rem/1.2 var(--sans); color: var(--p-voile-encre);
+  background: repeating-linear-gradient(135deg, transparent 0 7px, color-mix(in srgb, var(--p-voile-encre) 14%, transparent) 7px 8.5px), var(--p-voile);
+  clip-path: inset(0 0 0 0 round 9px);
+  transition: clip-path .4s var(--doux), opacity .4s;
+}
+@media (hover: hover) and (pointer: fine) {
+  .piece-contenu::after { content: "Survole pour dévoiler"; }
+}
+.piece.ouverte .piece-contenu::after { clip-path: inset(0 0 0 100% round 9px); opacity: 0; transition-delay: .06s; }
+
+/* À creuser : notions ou faits à rechercher, sous chaque vignette */
+.a-creuser { margin: 0; padding: 0 .1rem; font-size: .84rem; }
+.a-creuser-titre { display: flex; align-items: center; gap: .3rem; margin-bottom: .35rem; font: 700 .66rem/1.2 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--c, var(--accent)); }
+.a-creuser-titre svg.ic { width: .95rem; height: .95rem; }
+.a-creuser ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .35rem; }
+.a-creuser li { border: 1px solid color-mix(in srgb, var(--c, var(--accent)) 32%, var(--trait)); border-radius: 999px; padding: .2rem .65rem; line-height: 1.35; }
+
+/* Cartes liées */
+.liens { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0; padding: 0; list-style: none; }
+.liens a {
+  display: inline-flex; align-items: center; gap: .45rem; text-decoration: none;
+  padding: .45rem .8rem .45rem .6rem; border-radius: 999px; border: 1px solid var(--trait); background: var(--surface); font-size: .9rem;
+}
+.liens a svg.ic { color: var(--c, var(--accent)); }
+.liens a:hover { border-color: var(--c, var(--encre-2)); }
+
+/* ---------- Problématique du jour : carte encre, inversée en mode sombre ---------- */
+.problematique {
+  background: var(--encre); color: var(--fond); border-radius: 26px;
+  padding: clamp(1.35rem, 1.1rem + 2vw, 2.6rem); display: flex; flex-direction: column; gap: 1rem;
+}
+.problematique .surtitre { margin: 0; color: color-mix(in srgb, var(--fond) 74%, var(--encre)); }
+.problematique h1 { max-width: 18ch; }
+.problematique .base { max-width: 62ch; color: color-mix(in srgb, var(--fond) 88%, var(--encre)); }
+.problematique .ouverture { margin: .3rem 0 0; max-width: 46ch; border-left-color: color-mix(in srgb, var(--c, var(--accent)) 55%, var(--fond)); }
+.pb-suite { display: flex; align-items: center; gap: .5rem 1rem; flex-wrap: wrap; padding-top: .25rem; }
+.pb-suite a {
+  display: inline-flex; align-items: center; gap: .5rem; min-height: 46px; padding: 0 1.1rem; border-radius: 999px;
+  background: var(--fond); color: var(--encre); text-decoration: none; font: 600 .95rem/1 var(--sans);
+}
+.pb-suite a:hover { filter: brightness(.96); }
+.pb-suite .discret { color: color-mix(in srgb, var(--fond) 72%, var(--encre)); }
+.pb-corps { margin-top: 1.75rem; }
+.pb-corps > .etiquette:first-child { margin-top: 1.5rem; }
+
+/* Progression : une carte déjà ouverte dans la visite */
+.sommaire button { position: relative; }
+.sommaire button.lu::after {
+  content: ""; position: absolute; right: .45rem; top: .45rem; width: .45rem; height: .45rem; border-radius: 50%;
+  background: var(--c); box-shadow: 0 0 0 2px var(--surface);
+}
+.sommaire-aide { font-size: .8rem; color: var(--encre-2); margin: 0; }
+
+/* Sommaire du jour : une pastille par carte */
+.sommaire { display: flex; flex-direction: column; gap: .55rem; margin: -.75rem 0 1.75rem; }
+.sommaire-liste { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .5rem; list-style: none; padding: 0; margin: 0; }
+.sommaire button {
+  width: 100%; height: 3.25rem; border: 0; border-radius: 14px; cursor: pointer; display: grid; place-items: center;
+  background: color-mix(in srgb, var(--c) 12%, var(--surface)); color: var(--c); transition: background .2s;
+}
+.sommaire button:hover { background: color-mix(in srgb, var(--c) 22%, var(--surface)); }
+.sommaire svg.ic { width: 1.35rem; height: 1.35rem; }
+
+/* ---------- Cartes du jour ---------- */
+.section-titre { display: flex; align-items: baseline; justify-content: space-between; gap: .3rem 1rem; margin: 3rem 0 1rem; padding-top: 2rem; border-top: 1px solid var(--trait); flex-wrap: wrap; }
+.cartes { display: grid; grid-template-columns: minmax(0, 1fr); gap: .65rem; }
+details.carte, .corps, .fiche, .problematique { min-width: 0; }
+details.carte { background: var(--surface); border: 1px solid var(--trait); border-radius: var(--rayon); transition: border-color .2s, box-shadow .3s; }
+details.carte:hover { border-color: color-mix(in srgb, var(--c) 40%, var(--trait)); }
+details.carte[open] { border-color: color-mix(in srgb, var(--c) 45%, var(--trait)); box-shadow: 0 14px 34px -24px color-mix(in srgb, var(--c) 70%, transparent); }
+details.carte > summary {
+  list-style: none; cursor: pointer; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: .9rem; align-items: center;
+  padding: .9rem 1rem; border-radius: var(--rayon);
+}
+details.carte > summary::-webkit-details-marker { display: none; }
+details.carte[open] .pastille { background: var(--c); color: var(--surface); }
+details.carte > summary .point { display: none; }
+.carte-meta { display: flex; flex-wrap: wrap; gap: 0 .7rem; align-items: center; margin: 0 0 .15rem; font-size: .8rem; }
+.format { font-size: .8rem; color: var(--encre-2); }
+.plus {
+  width: 2rem; height: 2rem; border-radius: 50%; display: grid; place-items: center;
+  border: 1px solid var(--trait); color: var(--encre-2); transition: transform .3s var(--doux), background .2s, color .2s;
+}
+.plus svg.ic { width: 1rem; height: 1rem; }
+details.carte[open] .plus { transform: rotate(45deg); background: var(--encre); border-color: var(--encre); color: var(--fond); }
+.corps { margin-inline: 1rem; padding-bottom: 1.25rem; border-top: 1px solid var(--trait); }
+.corps > .etiquette:first-child { margin-top: 1.25rem; }
+.corps .actions { margin-top: 1.5rem; }
+
+.bouton {
+  display: inline-flex; align-items: center; gap: .45rem; font: 600 .92rem/1 var(--sans);
+  padding: .75rem 1.1rem; border-radius: 999px; border: 1px solid var(--encre); background: var(--encre); color: var(--fond);
+  text-decoration: none; cursor: pointer; transition: transform .15s, border-color .2s;
+}
+.bouton:hover { transform: translateY(-1px); }
+.bouton.secondaire { background: transparent; color: var(--encre); border-color: var(--trait); }
+.bouton.secondaire:hover { border-color: var(--encre); }
+.bouton svg.ic { width: 1rem; height: 1rem; }
+.bouton.discret-bouton { background: transparent; color: var(--encre-2); border-color: transparent; padding-inline: .7rem; }
+.bouton.discret-bouton:hover { color: var(--encre); border-color: var(--trait); }
+.actions { display: flex; flex-wrap: wrap; gap: .6rem; }
+
+.nav-jours { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2.25rem; flex-wrap: wrap; }
+.note { font-size: .85rem; color: var(--encre-2); margin-top: 1rem; }
+
+/* ---------- Carte seule ---------- */
+.fiche-nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1.25rem; }
+.fiche-pos { font-size: .85rem; color: var(--encre-2); font-variant-numeric: tabular-nums; }
+.chips { display: flex; gap: .5rem; overflow-x: auto; list-style: none; margin: 1.25rem 0 0; padding: 0 0 .4rem; scrollbar-width: none; }
+.chips::-webkit-scrollbar { display: none; }
+.chips a {
+  display: inline-flex; align-items: center; min-height: 36px; padding: 0 .85rem; border-radius: 999px; white-space: nowrap;
+  border: 1px solid var(--trait); background: var(--surface); font: 600 .82rem/1 var(--sans); text-decoration: none;
+}
+.chips a:hover { border-color: var(--c, var(--encre-2)); }
+.carte-suivante {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .75rem; align-items: center; margin-top: 1.5rem;
+  padding: 1rem 1rem 1rem 1.15rem; border-radius: 20px; background: var(--encre); color: var(--fond); text-decoration: none;
+}
+.carte-suivante .surtitre { margin: 0 0 .2rem; color: color-mix(in srgb, var(--fond) 70%, var(--encre)); }
+.carte-suivante b { font: 500 1.15rem/1.2 var(--serif); }
+.carte-suivante .rond { display: grid; place-items: center; width: 2.75rem; height: 2.75rem; border-radius: 50%; background: var(--fond); color: var(--encre); }
+.retour { display: inline-flex; align-items: center; gap: .35rem; font-size: .92rem; color: var(--encre-2); text-decoration: none; }
+.retour:hover { color: var(--encre); }
+.fiche {
+  position: relative; background: var(--surface); border: 1px solid var(--trait); border-top: 5px solid var(--c, var(--accent)); border-radius: 24px;
+  padding: clamp(1.25rem, 1rem + 2vw, 2.5rem);
+}
+.fiche-tete .point { display: none; }
+.fiche-tete { display: flex; align-items: center; gap: .8rem; }
+.fiche-tete .carte-meta { margin: 0; }
+.fiche h1 { margin-top: 1rem; }
+
+/* ---------- Transition entre les vues ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  #app > * { animation: apparait .28s ease both; }
+  @keyframes apparait { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+}
+
+/* ---------- Archives ---------- */
+.recherche { display: flex; flex-direction: column; gap: .4rem; margin: 0 0 1rem; }
+.recherche label { font: 600 .72rem/1.2 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--encre-2); }
+.recherche-champ { position: relative; display: flex; align-items: center; }
+.recherche-champ svg.ic { position: absolute; left: .85rem; color: var(--encre-2); pointer-events: none; }
+.recherche input {
+  width: 100%; min-height: 48px; padding: 0 2.6rem 0 2.8rem; border-radius: 999px; border: 1px solid var(--trait);
+  background: var(--surface); color: var(--encre); font: 400 1rem/1 var(--sans); -webkit-appearance: none;
+}
+.recherche input::-webkit-search-cancel-button { display: none; }
+.recherche input:focus-visible { border-color: var(--focus); }
+.effacer {
+  position: absolute; right: .5rem; width: 2rem; height: 2rem; display: grid; place-items: center; cursor: pointer;
+  border: 0; border-radius: 50%; background: var(--surface-2); color: var(--encre-2);
+}
+.effacer[hidden] { display: none !important; }
+.filtres-titre { font: 600 .72rem/1.2 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--encre-2); margin: 1rem 0 .5rem; }
+.filtres { display: flex; flex-wrap: wrap; gap: .45rem; margin: 0 0 1rem; }
+.filtres .compte { font-variant-numeric: tabular-nums; opacity: .65; margin-left: .15rem; }
+.resultat { font-size: .88rem; color: var(--encre-2); margin: .25rem 0 1rem; }
+.rien {
+  display: flex; flex-direction: column; align-items: flex-start; gap: .75rem; padding: 1.5rem;
+  border: 1px dashed var(--trait); border-radius: var(--rayon); color: var(--encre-2); font-size: .95rem;
+}
+.filtres button {
+  display: inline-flex; align-items: center; gap: .45rem;
+  font: 500 .88rem/1 var(--sans); padding: .55rem .85rem; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--trait); background: transparent; color: var(--encre);
+}
+.filtres button[aria-pressed="true"] { background: var(--encre); color: var(--fond); border-color: var(--encre); }
+.liste { list-style: none; padding: 0; margin: 0; display: grid; gap: .55rem; }
+.liste a.ligne {
+  display: grid; grid-template-columns: minmax(0, 1fr); gap: .1rem; text-decoration: none;
+  background: var(--surface); border: 1px solid var(--trait); border-radius: 16px; padding: .85rem 1rem;
+}
+.liste a.ligne.avec-pastille { grid-template-columns: auto minmax(0, 1fr); column-gap: .9rem; align-items: start; }
+.liste a.ligne:hover { border-color: var(--c, var(--encre-2)); }
+.liste a.ligne.avec-pastille .point { display: none; }
+.liste .extrait { display: block; color: var(--encre-2); font-size: .92rem; margin-top: .2rem; }
+.liste .titre-ligne { font: 560 1.08rem/1.3 var(--serif); display: block; margin-top: .15rem; }
+
+/* ---------- Pages de texte (à propos, légal) ---------- */
+.texte { max-width: 40rem; }
+.texte h1 { margin-bottom: 1rem; }
+.texte h2 { margin: 2.25rem 0 .6rem; font-size: 1.3rem; }
+.texte h3 { margin: 1.5rem 0 .5rem; font-size: 1.08rem; }
+.texte p, .texte ul, .texte ol { margin: 0 0 1rem; }
+.texte li { margin-bottom: .3rem; }
+.texte hr { border: 0; border-top: 1px solid var(--trait); margin: 2rem 0; }
+.texte blockquote { margin: 0 0 1rem; padding: .75rem 1rem; background: var(--surface-2); border-radius: 12px; }
+.table-scroll { overflow-x: auto; margin: 0 0 1.25rem; border: 1px solid var(--trait); border-radius: 12px; }
+.texte table { border-collapse: collapse; width: 100%; min-width: 36rem; font-size: .88rem; }
+.texte th, .texte td { text-align: left; vertical-align: top; padding: .55rem .7rem; border-bottom: 1px solid var(--trait); }
+.texte th { background: var(--surface-2); font-weight: 600; }
+.texte tr:last-child td { border-bottom: 0; }
+mark.a-completer { background: color-mix(in srgb, #f2c230 45%, transparent); color: inherit; padding: 0 .2em; border-radius: 4px; }
+.avertissement { background: var(--surface-2); border-radius: 14px; padding: .85rem 1rem; font-size: .92rem; margin-bottom: 1.5rem; }
+.principe { display: grid; gap: .6rem; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); margin: 1.25rem 0 1.75rem; }
+.principe div { background: var(--surface); border: 1px solid var(--trait); border-radius: 16px; padding: 1rem; }
+.principe b { font: 560 1.12rem/1.25 var(--serif); display: block; margin-bottom: .25rem; }
+.principe b span { display: block; font-size: 1.9rem; color: var(--accent); line-height: 1; margin-bottom: .35rem; }
+.exemple { margin: 1.75rem 0 2rem; padding: 1.25rem 1.25rem .5rem; border: 1px solid var(--trait); border-radius: var(--rayon); background: color-mix(in srgb, var(--c, var(--accent)) 4%, var(--surface)); }
+.exemple > .etiquette:first-child { margin-top: 0; }
+.exemple .divise-tete { margin-top: 1rem; }
+.themes-liste { list-style: none; padding: 0; display: grid; gap: .45rem; }
+.themes-liste li { display: flex; align-items: center; gap: .7rem; }
+.themes-liste .pastille { width: 2.2rem; height: 2.2rem; border-radius: 11px; }
+.themes-liste .pastille svg.ic { width: 1.2rem; height: 1.2rem; }
+
+/* ---------- Pied de page ---------- */
+.pied { border-top: 1px solid var(--trait); font-size: .86rem; color: var(--encre-2); }
+.pied .cadre { padding-block: 1.5rem 2.25rem; display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; }
+.pied-textes { display: grid; gap: .5rem; }
+.pied-logo { color: var(--encre-2); opacity: .5; flex: none; }
+.pied-logo svg { height: 1.7rem; width: auto; fill: currentColor; display: block; }
+.pied nav { display: flex; flex-wrap: wrap; gap: .3rem 1.25rem; }
+.pied a { color: var(--encre); }
+
+.erreur { background: var(--surface); border: 1px solid var(--trait); border-radius: var(--rayon); padding: 1.25rem; }
+.erreur code, .texte code { font-size: .9em; background: var(--surface-2); padding: .1em .35em; border-radius: 5px; }
+
+@media (max-width: 30rem) {
+  .logo svg { height: 2.3rem; }
+  .nav a { font-size: .9rem; padding: .45rem .45rem; }
+  details.carte > summary { padding: .8rem .85rem; gap: .7rem; }
+  .corps { margin-inline: .85rem; }
+  .pastille { width: 2.45rem; height: 2.45rem; border-radius: 12px; }
+  .pastille svg.ic { width: 1.3rem; height: 1.3rem; }
+  .jour-num { font-size: 2.9rem; }
+}
+@media (max-width: 23.5rem) {
+  .logo svg { height: 2.05rem; }
+  .entete .cadre { gap: .5rem; }
+  .nav a { font-size: .86rem; padding: .45rem .36rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; scroll-behavior: auto !important; }
+}
+@media print {
+  .entete .nav, .pied nav, .actions, .nav-jours, .jour-badge, .sommaire, .chips, .carte-suivante, .pb-suite { display: none; }
+  .problematique { background: none; color: var(--encre); padding: 0; }
+  .problematique .surtitre, .problematique .base { color: var(--encre); }
+  details.carte .corps { display: block; }
+  .vignettes { grid-auto-flow: row; grid-auto-columns: auto; overflow: visible; }
+  .vignette-inner, .vignette-inner.retournee, .face-b { transform: none !important; }
+  .face { -webkit-backface-visibility: visible; backface-visibility: visible; min-height: 0; }
+  .vignette-inner { gap: .5rem; }
+  .face-a, .face-b { grid-area: auto; }
+  .face[inert] { display: flex; }
+  .face-a::after, .piece-contenu::after { display: none; }
+  .tout-retourner, .retourner, .piece-bouton svg { display: none; }
+  .reperes { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+<a class="sauter" href="#contenu-principal">Aller au contenu</a>
+
+<header class="entete">
+  <div class="cadre">
+    <a class="logo" href="#/" aria-label="CnH, retour à la page du jour" title="Une base, une ouverture, le droit de dériver.">
+      <!-- « CnH » tracé d'après la police Parisienne (SIL OFL 1.1, voir polices/LISEZMOI.md) -->
+      <svg viewBox="2 -154 467 176" aria-hidden="true" focusable="false"><path d="M64 -68.9Q64.1 -68.7 65.5 -67.6Q66.9 -66.4 69.5 -65Q72 -63.6 75.7 -62.5Q79.4 -61.4 84.1 -61.4Q92 -61.4 99 -64.4Q106 -67.4 112 -72.3Q117.9 -77.2 122.7 -83.5Q127.4 -89.8 130.7 -96.4Q134 -103 135.8 -109.4Q137.6 -115.8 137.6 -120.9Q137.6 -127 135.8 -131.5Q134 -136 130.9 -138.9Q127.9 -141.8 123.8 -143.2Q119.6 -144.6 114.8 -144.6Q105.3 -144.6 96 -141.2Q86.6 -137.9 77.8 -132.1Q69 -126.3 60.9 -118.5Q52.8 -110.6 45.8 -101.6Q38.8 -92.6 33.1 -82.9Q27.4 -73.1 23.4 -63.5Q19.3 -53.9 17.1 -44.9Q14.9 -35.8 14.9 -28.2Q14.9 -19.4 17.4 -11.6Q20 -3.8 25.1 2Q30.2 7.8 37.9 11.2Q45.5 14.5 55.7 14.5Q64.8 14.5 74.6 11.7Q84.4 8.9 94.2 2.7Q103.9 -3.5 113.4 -13.4Q122.9 -23.2 131.6 -37.3L135.2 -34.5Q125.8 -19.2 115.6 -8.8Q105.4 1.6 95.2 8Q85 14.3 75.1 17.1Q65.2 19.8 56.3 19.8Q43.5 19.8 33.7 15.2Q23.9 10.7 17.3 3.3Q10.7 -4.1 7.4 -13.6Q4 -23 4 -32.8Q4 -41.2 6.4 -50.7Q8.7 -60.2 13 -70Q17.3 -79.8 23.4 -89.6Q29.4 -99.4 36.9 -108.4Q44.3 -117.3 53 -125Q61.7 -132.7 71.2 -138.4Q80.8 -144 91 -147.2Q101.1 -150.5 111.6 -150.5Q118.2 -150.5 124.2 -148.7Q130.3 -146.8 134.9 -142.8Q139.5 -138.8 142.2 -132.6Q144.9 -126.3 144.9 -117.5Q144.9 -111.6 143.1 -104.7Q141.3 -97.8 137.9 -90.9Q134.4 -83.9 129.4 -77.4Q124.5 -70.9 118.2 -66Q112 -61 104.5 -58Q96.9 -55 88.4 -55Q79.3 -55 72.6 -58Q65.8 -61.1 61 -65.6L64 -68.9ZM215.1 -51.9Q215.1 -47.6 213.6 -43.2Q212.1 -38.7 209.8 -34.2Q207.5 -29.8 204.9 -25.5Q202.3 -21.2 200 -17.2Q197.7 -13.2 196.2 -9.6Q194.7 -5.9 194.7 -2.9Q194.7 -0.6 195.7 0.2Q196.7 1 197.9 1Q201.7 1 206.4 -2.8Q211.1 -6.5 215.9 -12.2Q220.8 -17.9 225.6 -24.6Q230.4 -31.3 234.3 -37.3L237.9 -34.5Q237.1 -33.3 235 -29.8Q232.9 -26.2 229.8 -21.7Q226.7 -17.1 222.8 -12.2Q219 -7.2 214.6 -3Q210.2 1.1 205.5 3.8Q200.9 6.5 196.2 6.5Q193.5 6.5 191.3 5.6Q189.1 4.7 187.6 3.1Q186 1.5 185.1 -0.7Q184.2 -2.8 184.2 -5.2Q184.2 -9.1 185.9 -13.6Q187.7 -18.2 190.3 -23Q192.9 -27.8 196 -32.6Q199.1 -37.5 201.7 -41.9Q204.3 -46.3 206.1 -50.1Q207.8 -53.8 207.8 -56.5Q207.8 -59.6 206.2 -61.7Q204.5 -63.8 201.5 -63.8Q198.3 -63.8 194.1 -61.2Q189.9 -58.5 184.7 -53.4Q179.5 -48.3 173.3 -40.9Q167.2 -33.4 160 -23.9Q155.9 -18.4 152 -13.3Q150.3 -11.1 148.6 -8.8Q146.9 -6.5 145.2 -4.2Q143.5 -2 142 0.1Q140.5 2.1 139.3 3.6L130.5 0L142.2 -16.1Q144.7 -19.5 147.3 -23.4Q149.9 -27.3 152.4 -31.5Q155 -35.6 157.3 -39.8Q159.6 -44 161.6 -48Q164.5 -54 165.6 -58Q166.7 -61.9 166.7 -64.3Q166.7 -67 165.7 -67.8Q164.7 -68.7 162.9 -68.7Q161 -68.7 158.6 -66.8Q156.1 -64.8 153.5 -61.8Q150.9 -58.7 148.2 -54.9Q145.6 -51 143.2 -47.2Q140.8 -43.4 138.7 -40Q136.6 -36.6 135.2 -34.5L131.6 -37.3Q136.7 -45.3 140.8 -52Q145 -58.6 148.8 -63.4Q152.7 -68.2 156.3 -70.8Q160 -73.5 164.1 -73.5Q166.3 -73.5 168.4 -72.6Q170.4 -71.7 171.9 -70Q173.5 -68.2 174.4 -65.7Q175.3 -63.2 175.3 -59.9Q175.3 -57.3 174.7 -54.5Q179.1 -58.8 182.9 -61.6Q186.7 -64.4 189.9 -66.1Q193.1 -67.7 195.8 -68.4Q198.5 -69.1 200.7 -69.1Q202.6 -69.1 205.1 -68.4Q207.6 -67.7 209.8 -65.8Q212 -63.9 213.6 -60.6Q215.1 -57.2 215.1 -51.9ZM411.2 -58.3Q412.6 -58.1 415.1 -57.7Q417.6 -57.2 420.6 -56.1Q423.5 -55 426.6 -53Q429.6 -51.1 432.1 -47.8Q434.6 -44.5 436.2 -39.7Q437.7 -34.9 437.7 -28.2Q437.7 -20.9 435 -13.9Q432.3 -6.9 427.5 -1.5Q422.7 4 416.1 7.4Q409.5 10.7 401.8 10.7Q393.8 10.7 388 8.2Q382.1 5.8 378.4 1.4Q374.6 -3.1 372.8 -9.4Q371 -15.6 371 -23.2Q371 -31.3 373.7 -44.1Q376.4 -56.9 383.7 -73.5Q372.2 -68.8 361 -65Q349.7 -61.3 338.5 -58Q332.6 -48.9 325.4 -40.2Q318.2 -31.4 310.4 -23.7Q302.5 -16 294.2 -9.6Q285.9 -3.1 277.8 1.6Q269.7 6.3 262.1 8.9Q254.4 11.5 247.8 11.5Q241.9 11.5 238.2 9.8Q234.5 8.1 232.4 5.7Q230.3 3.2 229.5 0.3Q228.7 -2.6 228.7 -5Q228.7 -8 230.2 -11.7Q231.6 -15.3 234.6 -19.1Q237.6 -22.9 242.2 -26.6Q246.8 -30.2 253 -33.4Q262.6 -38.3 272.1 -42.2Q281.6 -46.1 291 -49.4Q300.3 -52.6 309.5 -55.4Q318.7 -58.2 327.9 -60.9Q332.8 -69.5 337 -78.3Q341.1 -87.2 344.2 -95.6Q347.2 -104 349 -111.7Q350.7 -119.3 350.7 -125.6Q350.7 -130.4 349.2 -134.4Q347.6 -138.4 344.8 -141.2Q341.9 -144.1 337.8 -145.7Q333.7 -147.3 328.6 -147.3Q319.2 -147.3 310.7 -145.1Q302.1 -142.8 294.7 -139Q287.3 -135.2 281.4 -130.1Q275.4 -125 271.2 -119.3Q266.9 -113.6 264.6 -107.7Q262.3 -101.7 262.3 -96.1Q262.3 -90.5 264.6 -86.8Q267 -83.2 270.6 -81.1Q274.2 -78.9 278.4 -78.1Q282.5 -77.2 286.1 -77.2Q290.2 -77.2 294 -77.9Q297.7 -78.6 300.6 -79.4Q303.4 -80.2 305.2 -81Q306.9 -81.7 306.9 -81.7L309.1 -76.9Q308.6 -76.6 306.2 -75.8Q303.9 -74.9 300.1 -73.9Q296.3 -72.9 291.2 -72.2Q286.2 -71.4 280.3 -71.4Q274.2 -71.4 268.8 -72.8Q263.3 -74.2 259.2 -77.2Q255.2 -80.2 252.9 -85Q250.5 -89.7 250.5 -96.5Q250.5 -104.2 254.1 -111.3Q257.6 -118.4 263.6 -124.7Q269.6 -130.9 277.5 -136Q285.3 -141.1 294 -144.8Q302.6 -148.5 311.5 -150.5Q320.3 -152.5 328.3 -152.5Q335.6 -152.5 341.7 -150.5Q347.7 -148.5 352.1 -144.6Q356.5 -140.6 359 -134.7Q361.4 -128.8 361.4 -121Q361.4 -114.4 359.8 -106.9Q358.2 -99.4 355.6 -92Q353 -84.6 349.7 -77.7Q346.4 -70.8 342.9 -65.3Q354.1 -68.6 365 -72.2Q375.9 -75.9 387 -80.7Q398.1 -102.3 408.1 -116.3Q418.1 -130.2 426.7 -138.2Q435.2 -146.3 442.2 -149.4Q449.2 -152.5 454.3 -152.5Q460.2 -152.5 463.5 -149.3Q466.8 -146.1 466.8 -140.4Q466.8 -133.9 462 -126.6Q457.1 -119.2 448.8 -112.3Q436.4 -102 424.2 -94.3Q412 -86.6 399.6 -80.6Q393.9 -68.5 390.2 -58.8Q386.5 -49.1 384.4 -41.4Q382.2 -33.7 381.3 -27.7Q380.4 -21.7 380.4 -17.1Q380.4 -11.3 382 -7.1Q383.6 -2.8 386.5 0Q389.3 2.8 393.2 4.2Q397.1 5.5 401.8 5.5Q408 5.5 413.6 2.9Q419.1 0.2 423.3 -4.4Q427.5 -9 430 -15.2Q432.4 -21.3 432.4 -28.3Q432.4 -34.3 431 -38.5Q429.5 -42.7 427.2 -45.5Q425 -48.2 422.3 -49.8Q419.6 -51.3 417.2 -52.1Q414.9 -52.8 413.2 -53Q411.4 -53.1 411 -53.1ZM252.3 4.4Q260.5 4.4 269.7 0Q278.9 -4.4 288.2 -12.2Q297.6 -19.9 306.7 -30.5Q315.7 -41.1 323.5 -53.5L317.3 -51.7Q310.9 -49.8 302.8 -47.1Q294.7 -44.3 286.3 -40.8Q277.9 -37.3 269.9 -33.2Q261.8 -29 255.6 -24.3Q249.3 -19.6 245.5 -14.4Q241.7 -9.1 241.7 -3.4Q241.7 0.4 244.7 2.4Q247.6 4.4 252.3 4.4ZM403.3 -88.4Q413.8 -93.8 424.3 -100.7Q434.8 -107.5 445.6 -116.4Q450 -120 453.1 -123.5Q456.1 -127 458 -130.1Q459.9 -133.2 460.8 -135.9Q461.6 -138.5 461.6 -140.5Q461.6 -143.4 459.9 -145.4Q458.1 -147.4 454.3 -147.4Q450.2 -147.4 445.9 -145.1Q441.5 -142.7 437 -138.6Q432.5 -134.4 428.1 -128.8Q423.6 -123.1 419.3 -116.6Q415 -110 411 -102.8Q406.9 -95.6 403.3 -88.4Z"/></svg>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#/" data-nav="jour">Aujourd’hui</a>
+      <a href="#/archives" data-nav="archives">Archives</a>
+      <a href="#/a-propos" data-nav="a-propos">À propos</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenu-principal" tabindex="-1">
+  <div class="cadre" id="app">
+    <noscript><p class="erreur">CnH a besoin de JavaScript pour afficher les cartes du jour.</p></noscript>
+  </div>
+</main>
+
+<footer class="pied">
+  <div class="cadre">
+    <div class="pied-textes">
+      <nav aria-label="Liens de bas de page">
+        <a href="#/mentions-legales">Mentions légales</a>
+        <a href="#/confidentialite">Confidentialité</a>
+        <a href="#/a-propos">À propos</a>
+      </nav>
+      <p style="margin:0">Aucun compte, aucune publicité, aucun traceur. <span id="maj"></span></p>
+    </div>
+    <span class="pied-logo" id="logo-pied" aria-hidden="true"></span>
+  </div>
+</footer>
+
+<script src="contenu/donnees.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  /* ---------------------------------------------------------------
+     Constantes
+     --------------------------------------------------------------- */
+  var THEMES = {
+    'histoire-patrimoine':     { nom: 'Histoire & patrimoine' },
+    'cuisine-alimentation':    { nom: 'Cuisine & alimentation' },
+    'modes-de-vie-societe':    { nom: 'Modes de vie & société' },
+    'arts-langues-croyances':  { nom: 'Arts, langues & croyances' },
+    'hors-piste':              { nom: 'Hors-piste' }
+  };
+  // Icônes au trait (grille 24 × 24), dessinées pour CnH
+  var ICONES = {
+    'histoire-patrimoine': 'M3 9 12 4l9 5H3zM6 11.5v6M10 11.5v6M14 11.5v6M18 11.5v6M3.5 20h17',
+    'cuisine-alimentation': 'M3.5 12.5h17a8.5 8.5 0 0 1-17 0zM8.5 9c-1-1.2 1-2.3 0-3.5M12 9c-1-1.2 1-2.3 0-3.5M15.5 9c-1-1.2 1-2.3 0-3.5',
+    'modes-de-vie-societe': 'M3.5 11 12 4.5l8.5 6.5M6 9.2V20h12V9.2M10 20v-5h4v5',
+    'arts-langues-croyances': 'M5 4.5h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-7.5L7 20v-3.5H5a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2zM7.5 9h9M7.5 12h6',
+    'hors-piste': 'M12 3a9 9 0 1 1 0 18 9 9 0 0 1 0-18zM15.5 8.5l-2.1 4.9-4.9 2.1 2.1-4.9z',
+    'oeil': 'M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12zM12 9.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z',
+    'oeil-ferme': 'M3 10c2.5 3.3 5.5 5 9 5s6.5-1.7 9-5M6.3 13.3 4.8 15.6M12 15v2.7M17.7 13.3l1.5 2.3',
+    'retourner': 'M4.5 11a7.5 7.5 0 0 1 13-5M19.5 13a7.5 7.5 0 0 1-13 5M17.8 2.5v3.8H14M6.2 21.5v-3.8H10',
+    'loupe': 'M10.5 4a6.5 6.5 0 1 1 0 13 6.5 6.5 0 0 1 0-13zM15.5 15.5 20 20',
+    'plus': 'M12 5v14M5 12h14',
+    'fleche-g': 'M19 12H5M11 6l-6 6 6 6',
+    'fleche-d': 'M5 12h14M13 6l6 6-6 6',
+    'hasard': 'M3 7h3.5c4.5 0 6.5 10 11 10H21M3 17h3.5c1.8 0 3.1-1.6 4.2-3.5M13.3 10.5C14.4 8.6 15.7 7 17.5 7H21M18.5 4.5 21 7l-2.5 2.5M18.5 14.5 21 17l-2.5 2.5',
+    'epingle': 'M9 3.5h6l-1 5 3.5 3v2H6.5v-2l3.5-3zM12 13.5V20.5',
+    'bas': 'M6 9l6 6 6-6',
+    'croix': 'M6 6l12 12M18 6 6 18',
+    'copier': 'M9 9.5A2.5 2.5 0 0 1 11.5 7h6A2.5 2.5 0 0 1 20 9.5v6a2.5 2.5 0 0 1-2.5 2.5h-6A2.5 2.5 0 0 1 9 15.5zM15 7V6.5A2.5 2.5 0 0 0 12.5 4h-6A2.5 2.5 0 0 0 4 6.5v6A2.5 2.5 0 0 0 6.5 15H7',
+    'imprimer': 'M7 9V4h10v5M7 18H5.5A1.5 1.5 0 0 1 4 16.5v-5A1.5 1.5 0 0 1 5.5 10h13a1.5 1.5 0 0 1 1.5 1.5v5a1.5 1.5 0 0 1-1.5 1.5H17M7 14h10v6H7z',
+    'coche': 'M5 12.5l4.5 4.5L19 7'
+  };
+  var ORDRE_THEMES = ['histoire-patrimoine', 'cuisine-alimentation', 'modes-de-vie-societe', 'arts-langues-croyances', 'hors-piste'];
+  var FORMATS = {
+    'dilemme': 'Dilemme',
+    'et-si': 'Et si…',
+    'chiffre': 'Un chiffre',
+    'objet': 'Un objet',
+    'avant-ailleurs': 'Avant / ailleurs',
+    'ouverte': 'Question ouverte'
+  };
+  var PAGES = {
+    'mentions-legales': { fichier: 'mentions-legales.md', titre: 'Mentions légales' },
+    'confidentialite': { fichier: 'politique-de-confidentialite.md', titre: 'Politique de confidentialité' }
+  };
+
+  var app = document.getElementById('app');
+  var main = document.getElementById('contenu-principal');
+  var D = window.CNH_DONNEES;
+
+  /* ---------------------------------------------------------------
+     Utilitaires DOM (textContent partout : aucun HTML injecté)
+     --------------------------------------------------------------- */
+  // Typographie française : apostrophe courbe, espace fine insécable avant ? ! : ; %, dans les guillemets et les milliers
+  function typo(s) {
+    return String(s).replace(/'/g, '\u2019').replace(/ ([?!:;»%])/g, '\u202F$1').replace(/« /g, '«\u202F')
+      .replace(/(^|[^\d])(\d{1,3}(?: \d{3})+)(?!\d)/g, function (m, avant, nombre) { // 6 000 : pas de coupure entre les milliers
+        return avant + nombre.replace(/ /g, '\u202F');
+      });
+  }
+  function h(tag, props) {
+    var el = document.createElement(tag);
+    props = props || {};
+    Object.keys(props).forEach(function (k) {
+      var v = props[k];
+      if (v === null || v === undefined || v === false) return;
+      if (k === 'class') el.className = v;
+      else if (k === 'text') el.textContent = typo(v);
+      else if (k === 'html') el.innerHTML = v; // réservé au rendu Markdown des pages légales (texte échappé)
+      else if (k.indexOf('on') === 0) el.addEventListener(k.slice(2), v);
+      else el.setAttribute(k, v === true ? '' : v);
+    });
+    for (var i = 2; i < arguments.length; i++) ajouter(el, arguments[i]);
+    return el;
+  }
+  function ajouter(parent, enfant) {
+    if (enfant === null || enfant === undefined || enfant === false) return;
+    if (Array.isArray(enfant)) { enfant.forEach(function (e) { ajouter(parent, e); }); return; }
+    parent.appendChild(typeof enfant === 'string' ? document.createTextNode(typo(enfant)) : enfant);
+  }
+  function vider(el) { while (el.firstChild) el.removeChild(el.firstChild); }
+  function icone(nom, classe) {
+    var ns = 'http://www.w3.org/2000/svg';
+    var svg = document.createElementNS(ns, 'svg');
+    svg.setAttribute('viewBox', '0 0 24 24');
+    svg.setAttribute('class', 'ic' + (classe ? ' ' + classe : ''));
+    svg.setAttribute('aria-hidden', 'true');
+    svg.setAttribute('focusable', 'false');
+    var p = document.createElementNS(ns, 'path');
+    p.setAttribute('d', ICONES[nom] || ICONES['hors-piste']);
+    svg.appendChild(p);
+    return svg;
+  }
+  function pastille(theme) {
+    return h('span', { class: 'pastille', 'aria-hidden': 'true' }, icone(theme));
+  }
+  function esc(s) {
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+
+  /* ---------------------------------------------------------------
+     Dates (fuseau Europe/Paris)
+     --------------------------------------------------------------- */
+  function aujourdHui() {
+    var parts = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Paris', year: 'numeric', month: '2-digit', day: '2-digit' }).formatToParts(new Date());
+    var p = {};
+    parts.forEach(function (x) { p[x.type] = x.value; });
+    return p.year + '-' + p.month + '-' + p.day;
+  }
+  function dateValide(s) {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(s)) return false;
+    var d = new Date(s + 'T12:00:00Z');
+    return !isNaN(d) && d.toISOString().slice(0, 10) === s;
+  }
+  function decaler(s, jours) {
+    var d = new Date(s + 'T12:00:00Z');
+    d.setUTCDate(d.getUTCDate() + jours);
+    return d.toISOString().slice(0, 10);
+  }
+  function dateLongue(s) {
+    var t = new Intl.DateTimeFormat('fr-FR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(s + 'T12:00:00Z'));
+    return t.charAt(0).toUpperCase() + t.slice(1);
+  }
+  function datePartie(s, options) {
+    return new Intl.DateTimeFormat('fr-FR', Object.assign({ timeZone: 'UTC' }, options)).format(new Date(s + 'T12:00:00Z'));
+  }
+  function dateCourte(s) {
+    return new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(s + 'T12:00:00Z'));
+  }
+
+  /* ---------------------------------------------------------------
+     Données
+     --------------------------------------------------------------- */
+  if (!D || !Array.isArray(D.contenus)) {
+    vider(app);
+    ajouter(app, h('div', { class: 'erreur', role: 'alert' },
+      h('h1', { text: 'Contenus introuvables' }),
+      h('p', {}, 'Le fichier ', h('code', { text: 'contenu/donnees.js' }), ' est absent ou invalide. Depuis le dossier du projet, lance :'),
+      h('p', {}, h('code', { text: 'python3 outils/valider_contenu.py' }))
+    ));
+    return;
+  }
+
+  var PUBLIES = D.contenus.filter(function (c) { return c && c.statut === 'verifie'; });
+  var PAR_ID = {};
+  PUBLIES.forEach(function (c) { PAR_ID[c.id] = c; });
+  var CARTES = PUBLIES.filter(function (c) { return c.type === 'carte'; });
+  var PROBLEMATIQUES = PUBLIES.filter(function (c) { return c.type === 'problematique'; });
+  var JOURS = (D.programme && D.programme.jours) || {};
+  var DATES_PROGRAMMEES = Object.keys(JOURS).filter(dateValide).sort();
+  var DEBUT = DATES_PROGRAMMEES[0] || aujourdHui();
+
+  if (D.genere_le) {
+    document.getElementById('maj').textContent = 'Contenus mis à jour le ' + dateCourte(String(D.genere_le).slice(0, 10)) + '.';
+  }
+
+  /* ---------------------------------------------------------------
+     Sélection du jour : programme, sinon rotation déterministe
+     --------------------------------------------------------------- */
+  function graine(texte) {
+    var x = 2166136261;
+    for (var i = 0; i < texte.length; i++) { x ^= texte.charCodeAt(i); x = Math.imul(x, 16777619); }
+    return x >>> 0;
+  }
+  function aleatoire(seed) { // mulberry32
+    return function () {
+      seed |= 0; seed = seed + 0x6D2B79F5 | 0;
+      var t = Math.imul(seed ^ seed >>> 15, 1 | seed);
+      t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+      return ((t ^ t >>> 14) >>> 0) / 4294967296;
+    };
+  }
+  function melanger(liste, rnd) {
+    var a = liste.slice();
+    for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(rnd() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; }
+    return a;
+  }
+  function parId(a, b) { return a.id < b.id ? -1 : a.id > b.id ? 1 : 0; }
+
+  function selectionDuJour(date) {
+    var prog = JOURS[date];
+    if (prog) {
+      var pb = PAR_ID[prog.problematique] || null;
+      var cartes = (prog.cartes || []).map(function (id) { return PAR_ID[id]; }).filter(Boolean);
+      if (pb && cartes.length) return { problematique: pb, cartes: cartes, auto: false };
+    }
+    var rnd = aleatoire(graine('cnh:' + date));
+    var pbs = PROBLEMATIQUES.slice().sort(parId);
+    var probleme = pbs.length ? pbs[Math.floor(rnd() * pbs.length)] : null;
+    var formatsPris = {};
+    var choix = [];
+    ORDRE_THEMES.forEach(function (theme) {
+      var candidates = melanger(CARTES.filter(function (c) { return c.theme === theme; }).sort(parId), rnd);
+      if (!candidates.length) return;
+      var retenue = candidates.filter(function (c) { return !formatsPris[c.format]; })[0] || candidates[0];
+      formatsPris[retenue.format] = true;
+      choix.push(retenue);
+    });
+    return { problematique: probleme, cartes: choix, auto: true };
+  }
+
+  /* ---------------------------------------------------------------
+     Composants
+     --------------------------------------------------------------- */
+  function classeTheme(c) { return 't-' + c.theme; }
+
+  // Recherche : tout le texte d'une carte, sans accents ni casse (calculé une fois)
+  function sansAccents(x) { return String(x).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); }
+  function texteCherchable(c) {
+    if (c._cherchable) return c._cherchable;
+    var bouts = [c.titre, c.base, c.ouverture, FORMATS[c.format] || '', (THEMES[c.theme] || {}).nom || ''];
+    (c.reperes || []).forEach(function (r) { bouts.push(r.cle, r.texte); });
+    (c.clivages || []).forEach(function (k) {
+      bouts.push(k.question, k.cote_a, k.cote_b);
+      if (k.fait_a) bouts.push(k.fait_a.texte);
+      if (k.fait_b) bouts.push(k.fait_b.texte);
+      (k.a_creuser || []).forEach(function (x) { bouts.push(x); });
+    });
+    (c.derives || []).forEach(function (d) { bouts.push(d); });
+    (c.sources || []).forEach(function (src) { bouts.push(src.titre, src.editeur); });
+    c._cherchable = sansAccents(bouts.join(' '));
+    return c._cherchable;
+  }
+
+  function etiquetteTheme(c, court) {
+    var t = THEMES[c.theme] || { nom: c.theme };
+    var nom = t.nom;
+    if (!court && c.theme === 'hors-piste' && Array.isArray(c.themes_croises)) {
+      nom += ' · ' + c.themes_croises.map(function (x) { return (THEMES[x] || { nom: x }).nom; }).join(' × ');
+    }
+    return h('span', { class: 'theme' }, h('span', { class: 'point', 'aria-hidden': 'true' }), nom);
+  }
+
+  function blocSources(c, id) {
+    if (!c.sources || !c.sources.length) return null;
+    return h('details', { class: 'sources-bloc', id: id || null },
+      h('summary', { text: (c.sources.length > 1 ? 'Sources' : 'Source') + ' (' + c.sources.length + ')' }),
+      h('ol', { class: 'sources' }, c.sources.map(function (s, i) {
+        return h('li', { id: idSource(c, i + 1) },
+          (s.editeur ? s.editeur + ' — ' : ''),
+          h('a', { href: s.url, rel: 'noopener noreferrer', target: '_blank' }, s.titre),
+          s.consulte_le && dateValide(s.consulte_le) ? ' · consulté le ' + dateCourte(s.consulte_le) : ''
+        );
+      }))
+    );
+  }
+
+  function blocLiens(c) {
+    var liens = (c.liens || []).map(function (id) { return PAR_ID[id]; }).filter(Boolean);
+    if (!liens.length) return null;
+    return [
+      h('p', { class: 'etiquette', text: 'Cartes liées →' }),
+      h('ul', { class: 'liens' }, liens.map(function (l) {
+        return h('li', { class: classeTheme(l) },
+          h('a', { href: '#/carte/' + encodeURIComponent(l.id) }, icone(l.theme), l.titre)
+        );
+      }))
+    ];
+  }
+
+  function idSource(c, n) { return 'source-' + c.id + '-' + n; }
+
+  // Petit renvoi [n] vers la source n de la carte (sans toucher au hash du routeur)
+  function renvoi(c, n) {
+    if (!n || !c.sources || !c.sources[n - 1]) return null;
+    var s = c.sources[n - 1];
+    return h('button', {
+      type: 'button', class: 'renvoi',
+      'aria-label': 'Source ' + n + ' : ' + (s.editeur ? s.editeur + ', ' : '') + s.titre,
+      title: (s.editeur ? s.editeur + ' — ' : '') + s.titre,
+      onclick: function (e) {
+        var cible = document.getElementById(idSource(c, n));
+        if (!cible) return;
+        for (var d = cible.closest('details'); d; d = d.parentElement && d.parentElement.closest('details')) d.open = true;
+        cible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        cible.classList.add('surligne');
+        setTimeout(function () { cible.classList.remove('surligne'); }, 1600);
+      }
+    }, '[' + n + ']');
+  }
+
+  // Un renvoi peut viser une source (2) ou plusieurs ([4, 1])
+  function renvois(c, src) {
+    return (Array.isArray(src) ? src : [src]).map(function (n) { return renvoi(c, n); });
+  }
+
+  function blocReperes(c, id) {
+    if (!c.reperes || !c.reperes.length) return null;
+    return [
+      h('p', { class: 'etiquette', id: id || null, text: 'Repères' }),
+      h('ul', { class: 'reperes' }, c.reperes.map(function (p) {
+        return h('li', { class: 'repere' },
+          h('span', { class: 'repere-cle', text: p.cle }),
+          h('p', {}, p.texte, renvois(c, p.source))
+        );
+      }))
+    ];
+  }
+
+  // Retourne une vignette : recto = premier camp, verso = l'autre camp
+  function retourner(inner, versVerso, focaliser) {
+    var faces = inner.querySelectorAll('.face');
+    var recto = faces[0], verso = faces[1];
+    var aVoir = versVerso ? verso : recto;
+    var aCacher = versVerso ? recto : verso;
+    inner.classList.toggle('retournee', versVerso);
+    aCacher.setAttribute('inert', ''); aCacher.setAttribute('aria-hidden', 'true');
+    aVoir.removeAttribute('inert'); aVoir.removeAttribute('aria-hidden');
+    var annonce = inner.parentNode.querySelector('.sr-only');
+    if (annonce) {
+      annonce.textContent = (versVerso ? "De l'autre côté : " : "D'un côté : ") + aVoir.querySelector('.vignette-arg').textContent +
+        (aVoir.querySelector('.piece') ? ' Pièce à l’appui disponible.' : '');
+    }
+    if (focaliser) {
+      var cible = aVoir.querySelector('.seg-actif');
+      if (cible) cible.focus({ preventScroll: true });
+    }
+  }
+
+  // Pièce à l'appui : le fait qui appuie un camp, caché sous un voile.
+  // Souris : se dévoile au survol. Toucher, clic ou clavier : reste ouverte
+  // jusqu'à un nouvel appui sur « Pièce à l'appui ». Ne retourne jamais la vignette.
+  function pieceAlAppui(c, f, id) {
+    if (!f || !f.texte) return null;
+    var epinglee = false, survolee = false;
+    var contenu = h('div', { class: 'piece-contenu', id: id, inert: true }, h('p', { text: f.texte }), renvois(c, f.source));
+    var bouton = h('button', { type: 'button', class: 'piece-bouton', 'aria-expanded': 'false', 'aria-controls': id },
+      icone('oeil-ferme', 'ic-ferme'), icone('oeil', 'ic-ouvert'), h('span', { text: "Pièce à l'appui" }),
+      h('span', { class: 'piece-epingle' }, icone('epingle'), 'épinglée'));
+    var piece = h('div', { class: 'piece' }, bouton, contenu);
+    function maj() {
+      var ouverte = epinglee || survolee;
+      piece.classList.toggle('ouverte', ouverte);
+      piece.classList.toggle('epinglee', epinglee);
+      bouton.setAttribute('aria-expanded', String(ouverte));
+      if (ouverte) contenu.removeAttribute('inert'); else contenu.setAttribute('inert', '');
+    }
+    piece.addEventListener('click', function (e) {
+      if (e.target.closest('.renvoi')) return;
+      if (!epinglee) epinglee = true; // un appui (ou un clic pendant le survol) garde la pièce ouverte
+      else if (e.target.closest('.piece-bouton')) { epinglee = false; survolee = false; }
+      else return; // clic dans le texte déjà dévoilé : on ne referme pas
+      maj();
+    });
+    piece.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') { survolee = true; maj(); } });
+    piece.addEventListener('pointerleave', function (e) { if (e.pointerType === 'mouse') { survolee = false; maj(); } });
+    return piece;
+  }
+
+  function vignette(c, k, i, total) {
+    // Sélecteur de camp : montre le côté affiché et emmène sur l'autre
+    function segment(estA) {
+      function bouton(versB, libelle) {
+        var actif = estA !== versB;
+        return h('button', {
+          type: 'button', class: 'seg' + (actif ? ' seg-actif' : ''), 'aria-pressed': String(actif),
+          'aria-label': libelle + ' : ' + k.question,
+          onclick: function () { if (!actif) retourner(inner, versB, true); }
+        }, libelle);
+      }
+      return h('div', { class: 'segment', role: 'group', 'aria-label': 'Camp affiché' },
+        bouton(false, "D'un côté"), bouton(true, "De l'autre"));
+    }
+    function face(cote) {
+      var estA = cote === 'a';
+      return h('div', { class: 'face ' + (estA ? 'face-a' : 'face-b'), inert: !estA, 'aria-hidden': estA ? null : 'true' },
+        h('div', { class: 'vignette-haut' },
+          segment(estA),
+          h('span', { class: 'vignette-num', text: (i + 1) + ' / ' + total })
+        ),
+        h('p', { class: 'vignette-q', text: k.question }),
+        h('p', { class: 'vignette-arg', text: estA ? k.cote_a : k.cote_b }),
+        pieceAlAppui(c, estA ? k.fait_a : k.fait_b, 'piece-' + c.id + '-' + i + '-' + cote)
+      );
+    }
+    var inner = h('div', {
+      class: 'vignette-inner',
+      onclick: function (e) {
+        if (e.target.closest('.renvoi, a, .piece, .segment')) return;
+        retourner(inner, !inner.classList.contains('retournee'), false);
+      }
+    }, face('a'), face('b'));
+    var creuser = (k.a_creuser && k.a_creuser.length) ? h('div', { class: 'a-creuser' },
+      h('span', { class: 'a-creuser-titre' }, icone('loupe'), 'À creuser'),
+      h('ul', {}, k.a_creuser.map(function (x) { return h('li', { text: x }); }))
+    ) : null;
+    return h('li', { class: 'vignette' }, inner, creuser, h('span', { class: 'sr-only', 'aria-live': 'polite' }));
+  }
+
+  function blocClivages(c, id) {
+    if (!c.clivages || !c.clivages.length) return null;
+    var total = c.clivages.length;
+    var liste = h('ul', { class: 'vignettes', 'aria-label': 'Points qui divisent, ' + total + ' vignettes réversibles' },
+      c.clivages.map(function (k, i) { return vignette(c, k, i, total); }));
+    var libelle = h('span', { text: 'Tout retourner' });
+    var bouton = h('button', {
+      type: 'button', class: 'tout-retourner', 'aria-pressed': 'false',
+      onclick: function () {
+        var versVerso = bouton.getAttribute('aria-pressed') !== 'true';
+        liste.querySelectorAll('.vignette-inner').forEach(function (v) { retourner(v, versVerso, false); });
+        bouton.setAttribute('aria-pressed', String(versVerso));
+        libelle.textContent = versVerso ? 'Tout remettre' : 'Tout retourner';
+      }
+    }, icone('retourner'), libelle);
+    return [
+      h('div', { class: 'divise-tete' },
+        h('p', { class: 'etiquette', id: id || null, text: 'Ça divise' }),
+        h('p', { class: 'divise-aide' }, 'Choisis un camp ou touche la vignette pour la retourner. Chaque camp cache sa pièce à l’appui sous un voile.', total > 1 ? h('span', { class: 'defiler', text: ' Fais défiler →' }) : null),
+        bouton
+      ),
+      liste
+    ];
+  }
+
+  function contenuCarte(c, sansSources, ancres) {
+    function ancre(nom) { return ancres ? 'sec-' + nom : null; }
+    return [
+      h('p', { class: 'etiquette', id: ancre('base'), text: 'La base' }),
+      h('p', { class: 'base' }, c.base, renvois(c, c.base_source)),
+      h('p', { class: 'ouverture', text: c.ouverture }),
+      blocReperes(c, ancre('reperes')),
+      blocClivages(c, ancre('divise')),
+      c.derives && c.derives.length ? [
+        h('p', { class: 'etiquette', id: ancre('deriver'), text: 'Pour dériver' }),
+        h('ul', { class: 'derives' }, c.derives.map(function (d) { return h('li', { text: d }); }))
+      ] : null,
+      blocLiens(c),
+      sansSources ? null : blocSources(c, ancre('sources'))
+    ];
+  }
+
+  // Raccourcis vers les sections, en haut d'une carte seule
+  function chipsSections(c) {
+    var liens = [['base', 'La base']];
+    if (c.reperes && c.reperes.length) liens.push(['reperes', 'Repères']);
+    if (c.clivages && c.clivages.length) liens.push(['divise', 'Ça divise']);
+    if (c.derives && c.derives.length) liens.push(['deriver', 'Dériver']);
+    if (c.sources && c.sources.length) liens.push(['sources', 'Sources · ' + c.sources.length]);
+    return h('ul', { class: 'chips', 'aria-label': 'Sections de la carte' }, liens.map(function (l) {
+      return h('li', {}, h('a', {
+        href: '#', onclick: function (e) {
+          e.preventDefault();
+          var cible = document.getElementById('sec-' + l[0]);
+          if (!cible) return;
+          if (l[0] === 'sources' && cible.tagName === 'DETAILS') cible.open = true;
+          cible.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, l[1]));
+    }));
+  }
+
+  function carteDepliable(c) {
+    return h('details', { class: 'carte ' + classeTheme(c), id: 'carte-' + c.id },
+      h('summary', {},
+        pastille(c.theme),
+        h('span', {},
+          h('span', { class: 'carte-meta' }, etiquetteTheme(c, true), h('span', { class: 'format', text: FORMATS[c.format] || '' })),
+          h('h3', { text: c.titre })
+        ),
+        h('span', { class: 'plus', 'aria-hidden': 'true' }, icone('plus'))
+      ),
+      h('div', { class: 'corps' },
+        contenuCarte(c, true),
+        h('div', { class: 'actions' },
+          h('a', { class: 'bouton secondaire', href: '#/carte/' + encodeURIComponent(c.id) }, 'Ouvrir la carte seule', icone('fleche-d'))
+        ),
+        blocSources(c)
+      )
+    );
+  }
+
+  /* ---------------------------------------------------------------
+     Vues
+     --------------------------------------------------------------- */
+  function vueJour(date) {
+    var auj = aujourdHui();
+    var estAujourdhui = date === auj;
+    document.title = (estAujourdhui ? "Aujourd'hui" : dateLongue(date)) + ' · CnH';
+
+    if (date > auj) {
+      return [
+        h('p', { class: 'date', text: dateLongue(date) }),
+        h('h1', { text: "Ce jour n'est pas encore arrivé" }),
+        h('p', {}, 'Les cartes de cette date seront visibles le jour venu.'),
+        h('div', { class: 'actions' }, h('a', { class: 'bouton', href: '#/' }, "Revenir à aujourd'hui"))
+      ];
+    }
+
+    var sel = selectionDuJour(date);
+    var pb = sel.problematique;
+    var enfants = [];
+
+    var num = datePartie(date, { day: 'numeric' });
+    var jourSemaine = datePartie(date, { weekday: 'long' });
+    enfants.push(h('p', { class: 'jour-tete' },
+      h('span', { class: 'sr-only', text: dateLongue(date) }),
+      h('span', { class: 'jour-num', 'aria-hidden': 'true', text: num === '1' ? '1er' : num }),
+      h('span', { class: 'jour-mois', 'aria-hidden': 'true' },
+        h('b', { text: jourSemaine.charAt(0).toUpperCase() + jourSemaine.slice(1) }),
+        datePartie(date, { month: 'long', year: 'numeric' })
+      ),
+      estAujourdhui ? h('span', { class: 'jour-badge', 'aria-hidden': 'true', text: "Aujourd'hui" }) : null
+    ));
+
+    var fiches = sel.cartes.map(carteDepliable);
+    var pastillesSommaire = [];
+    if (sel.cartes.length) {
+      var aide = h('p', { class: 'sommaire-aide', text: 'Les cartes déjà ouvertes sont marquées d’un point.' });
+      enfants.push(h('nav', { class: 'sommaire', 'aria-label': 'Sommaire du jour' },
+        h('div', { style: 'display:flex; align-items:baseline; justify-content:space-between; gap:.75rem; flex-wrap:wrap' },
+          h('p', { class: 'etiquette', text: 'Sommaire du jour' }), aide),
+        h('ul', { class: 'sommaire-liste' }, sel.cartes.map(function (carte, i) {
+          var t = THEMES[carte.theme] || { nom: carte.theme };
+          var bouton = h('button', {
+            type: 'button', title: t.nom + ' : ' + carte.titre, 'aria-label': t.nom + ' : ' + carte.titre,
+            onclick: function () {
+              var d = fiches[i];
+              d.open = true;
+              d.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              d.querySelector('summary').focus({ preventScroll: true });
+            }
+          }, icone(carte.theme));
+          pastillesSommaire.push(bouton);
+          // marque la carte comme parcourue dès qu'elle s'ouvre, le temps de la visite
+          fiches[i].addEventListener('toggle', function () {
+            if (fiches[i].open) {
+              bouton.classList.add('lu');
+              bouton.title = t.nom + ' : ' + carte.titre + ' (déjà ouverte)';
+            }
+          });
+          return h('li', { class: classeTheme(carte) }, bouton);
+        }))
+      ));
+    }
+
+    if (pb) {
+      var compte = [];
+      if (pb.reperes && pb.reperes.length) compte.push(pb.reperes.length + ' repère' + (pb.reperes.length > 1 ? 's' : ''));
+      if (pb.clivages && pb.clivages.length) compte.push(pb.clivages.length > 1 ? pb.clivages.length + ' points qui divisent' : '1 point qui divise');
+      enfants.push(h('article', { class: 'problematique ' + classeTheme(pb), 'aria-labelledby': 'titre-pb' },
+        h('p', { class: 'surtitre', text: estAujourdhui ? 'La problématique du jour' : 'La problématique de ce jour' }),
+        h('h1', { id: 'titre-pb', text: pb.titre }),
+        h('p', { class: 'base' }, pb.base, renvois(pb, pb.base_source)),
+        h('p', { class: 'ouverture', text: pb.ouverture }),
+        h('div', { class: 'pb-suite' },
+          h('a', {
+            href: '#', onclick: function (e) {
+              e.preventDefault();
+              var cible = document.getElementById('pb-corps');
+              if (cible) cible.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }, 'Repères et points qui divisent', icone('bas')),
+          compte.length ? h('span', { class: 'discret', text: compte.join(' · ') }) : null
+        )
+      ));
+      enfants.push(h('div', { class: 'pb-corps ' + classeTheme(pb), id: 'pb-corps' },
+        blocReperes(pb),
+        blocClivages(pb),
+        pb.derives && pb.derives.length ? [
+          h('p', { class: 'etiquette', text: 'Pour dériver' }),
+          h('ul', { class: 'derives' }, pb.derives.map(function (d) { return h('li', { text: d }); }))
+        ] : null,
+        blocLiens(pb),
+        blocSources(pb)
+      ));
+    } else {
+      enfants.push(h('h1', { text: 'Pas encore de problématique' }), h('p', { class: 'discret', text: 'Ajoute une problématique vérifiée dans contenu/cartes.json.' }));
+    }
+
+    enfants.push(h('div', { class: 'section-titre' },
+      h('h2', { text: sel.cartes.length === 5 ? 'Les 5 cartes du jour' : 'Les cartes du jour' }),
+      h('span', { class: 'discret', text: 'Touche une carte pour la déplier' })
+    ));
+    enfants.push(h('div', { class: 'cartes' }, fiches));
+
+    if (sel.auto) {
+      enfants.push(h('p', { class: 'note', text: 'Journée non programmée : sélection automatique parmi les cartes vérifiées.' }));
+    }
+
+    var precedent = decaler(date, -1);
+    var suivant = decaler(date, 1);
+    enfants.push(h('nav', { class: 'nav-jours', 'aria-label': 'Autres jours' },
+      precedent >= DEBUT ? h('a', { class: 'bouton secondaire', href: '#/jour/' + precedent }, icone('fleche-g'), 'Jour précédent') : h('span'),
+      !estAujourdhui && suivant <= auj
+        ? h('a', { class: 'bouton secondaire', href: suivant === auj ? '#/' : '#/jour/' + suivant }, 'Jour suivant', icone('fleche-d'))
+        : h('a', { class: 'bouton secondaire', href: '#/archives' }, 'Les jours précédents', icone('fleche-d'))
+    ));
+    return enfants;
+  }
+
+  // Copie l'adresse de la carte, sans rien envoyer nulle part
+  function boutonPartager() {
+    var libelle = h('span', { text: 'Copier le lien' });
+    var bouton = h('button', {
+      class: 'bouton discret-bouton', type: 'button',
+      onclick: function () {
+        var adresse = location.href;
+        function fini(ok) {
+          libelle.textContent = ok ? 'Lien copié' : 'Copie impossible';
+          setTimeout(function () { libelle.textContent = 'Copier le lien'; }, 2200);
+        }
+        try {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(adresse).then(function () { fini(true); }, function () { fini(false); });
+            return;
+          }
+          var zone = h('textarea', { style: 'position:fixed;left:-999px;top:0' });
+          zone.value = adresse;
+          document.body.appendChild(zone);
+          zone.select();
+          var ok = document.execCommand && document.execCommand('copy');
+          document.body.removeChild(zone);
+          fini(!!ok);
+        } catch (e) { fini(false); }
+      }
+    }, icone('copier'), libelle);
+    return bouton;
+  }
+
+  function vueCarte(id) {
+    var c = PAR_ID[id];
+    if (!c) return vueIntrouvable();
+    document.title = c.titre + ' · CnH';
+    var autres = CARTES.concat(PROBLEMATIQUES).filter(function (x) { return x.id !== c.id; });
+    var duJour = selectionDuJour(aujourdHui()).cartes;
+    var rang = duJour.map(function (x) { return x.id; }).indexOf(c.id);
+    var suivante = rang >= 0 && duJour.length > 1 ? duJour[(rang + 1) % duJour.length] : null;
+    return [
+      h('div', { class: 'fiche-nav' },
+        h('a', { class: 'retour', href: '#/' }, icone('fleche-g'), 'Cartes du jour'),
+        rang >= 0 ? h('span', { class: 'fiche-pos', text: (rang + 1) + ' / ' + duJour.length }) : null
+      ),
+      h('article', { class: 'fiche ' + classeTheme(c) },
+        h('div', { class: 'fiche-tete' },
+          pastille(c.theme),
+          h('p', { class: 'carte-meta' },
+            c.type === 'problematique' ? h('span', { class: 'surtitre', style: 'margin:0', text: 'Problématique' }) : etiquetteTheme(c),
+            c.type === 'carte' ? h('span', { class: 'format', text: FORMATS[c.format] || '' }) : null
+          )
+        ),
+        h('h1', { text: c.titre }),
+        chipsSections(c),
+        contenuCarte(c, false, true)
+      ),
+      suivante ? h('a', { class: 'carte-suivante ' + classeTheme(suivante), href: '#/carte/' + encodeURIComponent(suivante.id) },
+        h('span', {},
+          h('span', { class: 'surtitre', text: 'Carte suivante · ' + (THEMES[suivante.theme] || {}).nom }),
+          h('b', { text: suivante.titre })
+        ),
+        h('span', { class: 'rond', 'aria-hidden': 'true' }, icone('fleche-d'))
+      ) : null,
+      h('div', { class: 'actions', style: 'margin-top:1.5rem' },
+        autres.length ? h('button', {
+          class: 'bouton', type: 'button',
+          onclick: function () {
+            var x = autres[Math.floor(Math.random() * autres.length)];
+            location.hash = '#/carte/' + encodeURIComponent(x.id);
+          }
+        }, icone('hasard'), 'Une autre carte au hasard') : null,
+        autres.length ? h('a', { class: 'bouton secondaire', href: '#/archives' }, 'Toutes les cartes') : null,
+        boutonPartager(),
+        h('button', { class: 'bouton discret-bouton', type: 'button', onclick: function () { window.print(); } },
+          icone('imprimer'), 'Imprimer')
+      )
+    ];
+  }
+
+  function vueArchives() {
+    document.title = 'Archives · CnH';
+    var auj = aujourdHui();
+    var jours = [];
+    for (var d = auj; d >= DEBUT && jours.length < 60; d = decaler(d, -1)) jours.push(d);
+
+    var filtreTheme = 'tous';
+    var filtreFormat = 'tous';
+    var recherche = '';
+    var liste = h('ul', { class: 'liste' });
+    var resultat = h('p', { class: 'resultat', 'aria-live': 'polite' });
+    var boutonsTheme = [];
+    var boutonsFormat = [];
+
+    var champ = h('input', {
+      type: 'search', id: 'recherche-cartes', autocomplete: 'off', spellcheck: 'false',
+      placeholder: 'Un mot, un chiffre, une source…',
+      oninput: function () { recherche = sansAccents(champ.value.trim()); afficher(); }
+    });
+    var effacer = h('button', {
+      type: 'button', class: 'effacer', hidden: true, 'aria-label': 'Effacer la recherche',
+      onclick: function () { champ.value = ''; recherche = ''; afficher(); champ.focus(); }
+    }, icone('croix'));
+
+    function retenues() {
+      return CARTES.slice().sort(function (a, b) {
+        return ORDRE_THEMES.indexOf(a.theme) - ORDRE_THEMES.indexOf(b.theme) || (a.titre < b.titre ? -1 : 1);
+      }).filter(function (c) {
+        if (filtreTheme !== 'tous' && c.theme !== filtreTheme) return false;
+        if (filtreFormat !== 'tous' && c.format !== filtreFormat) return false;
+        if (recherche && texteCherchable(c).indexOf(recherche) === -1) return false;
+        return true;
+      });
+    }
+
+    function afficher() {
+      var gardees = retenues();
+      vider(liste);
+      gardees.forEach(function (c) {
+        liste.appendChild(h('li', { class: classeTheme(c) },
+          h('a', { class: 'ligne avec-pastille', href: '#/carte/' + encodeURIComponent(c.id) },
+            pastille(c.theme),
+            h('span', {},
+              h('span', { class: 'carte-meta' }, etiquetteTheme(c), h('span', { class: 'format', text: FORMATS[c.format] || '' })),
+              h('span', { class: 'titre-ligne', text: c.titre }),
+              h('span', { class: 'extrait', text: c.ouverture })
+            )
+          )
+        ));
+      });
+      if (!gardees.length) {
+        liste.appendChild(h('li', {}, h('div', { class: 'rien' },
+          h('p', { style: 'margin:0', text: recherche ? 'Aucune carte ne contient « ' + champ.value.trim() + ' ».' : 'Aucune carte avec ces filtres pour le moment.' }),
+          h('button', {
+            type: 'button', class: 'bouton secondaire', onclick: function () {
+              champ.value = ''; recherche = ''; filtreTheme = 'tous'; filtreFormat = 'tous'; afficher();
+            }
+          }, 'Tout réafficher')
+        )));
+      }
+      resultat.textContent = gardees.length === CARTES.length
+        ? CARTES.length + ' carte' + (CARTES.length > 1 ? 's' : '')
+        : gardees.length + ' carte' + (gardees.length > 1 ? 's' : '') + ' sur ' + CARTES.length;
+      effacer.hidden = !champ.value;
+      boutonsTheme.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.filtre === filtreTheme)); });
+      boutonsFormat.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.filtre === filtreFormat)); });
+    }
+
+    function compte(predicat) { return CARTES.filter(predicat).length; }
+
+    [['tous', 'Tous', null]].concat(ORDRE_THEMES.map(function (t) { return [t, THEMES[t].nom, t]; })).forEach(function (f) {
+      var n = f[2] ? compte(function (c) { return c.theme === f[2]; }) : CARTES.length;
+      boutonsTheme.push(h('button', {
+        type: 'button', class: f[0] === 'tous' ? null : 't-' + f[0], 'data-filtre': f[0], 'aria-pressed': 'false',
+        onclick: function () { filtreTheme = f[0]; afficher(); }
+      }, f[0] === 'tous' ? null : h('span', { class: 'point', 'aria-hidden': 'true' }), f[1],
+        h('span', { class: 'compte', text: ' ' + n })));
+    });
+
+    var formatsPresents = Object.keys(FORMATS).filter(function (f) { return compte(function (c) { return c.format === f; }) > 0; });
+    [['tous', 'Tous les formats']].concat(formatsPresents.map(function (f) { return [f, FORMATS[f]]; })).forEach(function (f) {
+      var n = f[0] === 'tous' ? CARTES.length : compte(function (c) { return c.format === f[0]; });
+      boutonsFormat.push(h('button', {
+        type: 'button', 'data-filtre': f[0], 'aria-pressed': 'false',
+        onclick: function () { filtreFormat = f[0]; afficher(); }
+      }, f[1], h('span', { class: 'compte', text: ' ' + n })));
+    });
+    afficher();
+
+    return [
+      h('h1', { text: 'Archives' }),
+      h('div', { class: 'section-titre' }, h('h2', { text: 'Les jours passés' })),
+      h('ul', { class: 'liste' }, jours.map(function (j) {
+        var sel = selectionDuJour(j);
+        return h('li', { class: sel.problematique ? classeTheme(sel.problematique) : '' },
+          h('a', { class: 'ligne', href: j === auj ? '#/' : '#/jour/' + j },
+            h('span', { class: 'discret', text: dateLongue(j) + (j === auj ? " · aujourd'hui" : '') }),
+            h('span', { class: 'titre-ligne', text: sel.problematique ? sel.problematique.titre : 'Sans problématique' })
+          )
+        );
+      })),
+      h('div', { class: 'section-titre' }, h('h2', { text: 'Toutes les cartes' })),
+      h('div', { class: 'recherche' },
+        h('label', { for: 'recherche-cartes', text: 'Chercher dans les cartes' }),
+        h('div', { class: 'recherche-champ' }, icone('loupe'), champ, effacer)
+      ),
+      h('p', { class: 'filtres-titre', text: 'Thème' }),
+      h('div', { class: 'filtres', role: 'group', 'aria-label': 'Filtrer par thème' }, boutonsTheme),
+      h('p', { class: 'filtres-titre', text: 'Format' }),
+      h('div', { class: 'filtres', role: 'group', 'aria-label': 'Filtrer par format' }, boutonsFormat),
+      resultat,
+      liste
+    ];
+  }
+
+  // Un vrai point qui divise, en démonstration sur la page À propos
+  function exempleVignette() {
+    var source = CARTES.filter(function (c) { return c.clivages && c.clivages.length; })[0];
+    if (!source) return null;
+    var demo = {};
+    Object.keys(source).forEach(function (k) { demo[k] = source[k]; });
+    demo.clivages = [source.clivages[0]];
+    return h('div', { class: 'exemple ' + classeTheme(source) },
+      h('p', { class: 'etiquette', text: 'Un exemple' }),
+      h('p', { class: 'discret', style: 'margin:0 0 .75rem' }, 'Extrait de la carte « ', source.titre, ' ». Retourne la vignette, puis dévoile la pièce à l’appui.'),
+      blocClivages(demo),
+      blocSources(source)
+    );
+  }
+
+  function vueAPropos() {
+    document.title = 'À propos · CnH';
+    return h('div', { class: 'texte' },
+      h('h1', { text: 'À propos de CnH' }),
+      h('p', {}, "Chaque jour, CnH propose une grande problématique et 5 cartes pour réfléchir à des sujets dont on parle peu : l'histoire et le patrimoine, la cuisine, les modes de vie, la société, les arts, les langues et les croyances."),
+      h('div', { class: 'principe' },
+        h('div', {}, h('b', {}, h('span', { 'aria-hidden': 'true', text: '1' }), 'Une base'), 'Un fait vérifié, avec sa source.'),
+        h('div', {}, h('b', {}, h('span', { 'aria-hidden': 'true', text: '2' }), 'Une ouverture'), "Une question qui n'a pas de bonne réponse."),
+        h('div', {}, h('b', {}, h('span', { 'aria-hidden': 'true', text: '3' }), 'Le droit de dériver'), "Des pistes pour aller ailleurs, même hors sujet.")
+      ),
+      exempleVignette(),
+      h('h2', { text: "Ce n'est pas un quiz" }),
+      h('p', {}, "Pas de score, pas de classement, pas de bonne réponse. Le but est d'ouvrir la réflexion, seul ou à plusieurs. Chaque carte donne des repères, puis des points qui divisent : deux camps, et pour chacun une pièce à l'appui, un fait sourcé à dévoiler."),
+      h('h2', { text: 'Les thèmes' }),
+      h('ul', { class: 'themes-liste' }, ORDRE_THEMES.map(function (t) {
+        return h('li', { class: 't-' + t }, pastille(t), h('span', {}, THEMES[t].nom, t === 'hors-piste' ? ' : une carte qui croise deux thèmes' : ''));
+      })),
+      h('h2', { text: 'Des sources qualifiées' }),
+      h('p', {}, "Chaque base s'appuie sur au moins une source identifiée : institutions (UNESCO, Insee, ministère de la Culture…), publications académiques ou éditoriales vérifiées, grandes collections en accès ouvert. Les sources sont citées sous chaque carte. Si tu repères une erreur, écris-nous via les mentions légales."),
+      h('h2', { text: 'Tes données' }),
+      h('p', {}, "Lire CnH ne demande aucun compte et ne dépose aucun traceur. Détails dans la ", h('a', { href: '#/confidentialite' }, 'politique de confidentialité'), '.'),
+      h('h2', { text: 'Polices' }),
+      h('p', {}, "Fraunces et Figtree, sous licence libre SIL OFL, sont hébergées avec le site : aucune police n'est chargée depuis un service tiers. Le logo est tracé d'après la police Parisienne (SIL OFL).")
+    );
+  }
+
+  function vuePage(route) {
+    var page = PAGES[route];
+    var md = D.pages && D.pages[route];
+    if (!page || !md) return vueIntrouvable();
+    document.title = page.titre + ' · CnH';
+    var enChantier = /\[À (COMPLÉTER|VALIDER|VÉRIFIER)/.test(md);
+    return h('div', { class: 'texte' },
+      enChantier ? h('p', { class: 'avertissement', role: 'note' }, 'Document en cours de rédaction : les passages surlignés restent à compléter avant la mise en ligne publique.') : null,
+      h('div', { html: markdownVersHtml(md) })
+    );
+  }
+
+  function vueIntrouvable() {
+    document.title = 'Page introuvable · CnH';
+    return [
+      h('h1', { text: 'Page introuvable' }),
+      h('p', {}, "Cette page n'existe pas, ou la carte n'est plus publiée."),
+      h('div', { class: 'actions' }, h('a', { class: 'bouton', href: '#/' }, "Revenir aux cartes du jour"))
+    ];
+  }
+
+  /* ---------------------------------------------------------------
+     Mini-rendu Markdown (pages légales uniquement)
+     Titres, paragraphes, listes (2 niveaux), tableaux, citations,
+     gras, italique, code, liens. Le texte est échappé avant tout.
+     --------------------------------------------------------------- */
+  var LIENS_INTERNES = { 'mentions-legales.md': '#/mentions-legales', 'politique-de-confidentialite.md': '#/confidentialite', 'politique-de-confidentialite-v1.md': '#/confidentialite' };
+
+  function enLigne(texte) {
+    var s = esc(texte);
+    s = s.replace(/`([^`]+)`/g, '<code>$1</code>');
+    s = s.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+    s = s.replace(/(^|[^*\w])\*([^*\s][^*]*?)\*(?!\*)/g, '$1<em>$2</em>');
+    s = s.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, function (m, t, u) {
+      if (/^https:\/\//.test(u)) return '<a href="' + u + '" rel="noopener noreferrer" target="_blank">' + t + '</a>';
+      if (/^mailto:[^@\s"<>]+@[^@\s"<>]+$/.test(u)) return '<a href="' + u + '">' + t + '</a>';
+      if (LIENS_INTERNES[u]) return '<a href="' + LIENS_INTERNES[u] + '">' + t + '</a>';
+      return t + ' <span class="discret">(publié à l\'ouverture du forum)</span>';
+    });
+    s = s.replace(/\[(À (?:COMPLÉTER|VALIDER|VÉRIFIER)[^\]]*)\]/g, '<mark class="a-completer">[$1]</mark>');
+    return s;
+  }
+
+  function markdownVersHtml(md) {
+    var lignes = md.replace(/\r/g, '').split('\n');
+    var out = [];
+    var para = [];
+    var i = 0;
+
+    function fermerPara() {
+      if (para.length) { out.push('<p>' + enLigne(para.join(' ')) + '</p>'); para = []; }
+    }
+    function cellules(l) {
+      return l.trim().replace(/^\|/, '').replace(/\|$/, '').split('|').map(function (c) { return c.trim(); });
+    }
+
+    while (i < lignes.length) {
+      var l = lignes[i];
+      var m;
+
+      if (!l.trim()) { fermerPara(); i++; continue; }
+
+      if ((m = /^(#{1,4})\s+(.*)$/.exec(l))) {
+        fermerPara();
+        var niv = m[1].length;
+        out.push('<h' + niv + '>' + enLigne(m[2]) + '</h' + niv + '>');
+        i++; continue;
+      }
+      if (/^\s*(-{3,}|\*{3,})\s*$/.test(l)) { fermerPara(); out.push('<hr>'); i++; continue; }
+
+      if (/^\s*\|/.test(l)) {
+        fermerPara();
+        var rangs = [];
+        while (i < lignes.length && /^\s*\|/.test(lignes[i])) { rangs.push(lignes[i]); i++; }
+        var entete = cellules(rangs[0]);
+        var corps = rangs.slice(1).filter(function (r) { return !/^\s*\|?\s*:?-{2,}/.test(r); });
+        var t = '<div class="table-scroll"><table><thead><tr>' + entete.map(function (c) { return '<th scope="col">' + enLigne(c) + '</th>'; }).join('') + '</tr></thead><tbody>';
+        corps.forEach(function (r) { t += '<tr>' + cellules(r).map(function (c) { return '<td>' + enLigne(c) + '</td>'; }).join('') + '</tr>'; });
+        out.push(t + '</tbody></table></div>');
+        continue;
+      }
+
+      if (/^>\s?/.test(l)) {
+        fermerPara();
+        var cit = [];
+        while (i < lignes.length && /^>\s?/.test(lignes[i])) { cit.push(lignes[i].replace(/^>\s?/, '')); i++; }
+        out.push('<blockquote><p>' + enLigne(cit.join(' ')) + '</p></blockquote>');
+        continue;
+      }
+
+      if (/^(\s*)([-*]|\d+\.)\s+/.test(l)) {
+        fermerPara();
+        var ordonnee = /^\s*\d+\.\s+/.test(l);
+        var html = ordonnee ? '<ol>' : '<ul>';
+        var sousOuverte = false;
+        var liOuvert = false;
+        while (i < lignes.length && /^(\s*)([-*]|\d+\.)\s+/.test(lignes[i])) {
+          var lm = /^(\s*)([-*]|\d+\.)\s+(.*)$/.exec(lignes[i]);
+          var retrait = lm[1].length >= 2;
+          var contenu = lm[3].replace(/^\[ \]\s+/, '☐ ').replace(/^\[x\]\s+/i, '☑ ');
+          if (retrait && liOuvert) {
+            if (!sousOuverte) { html += '<ul>'; sousOuverte = true; }
+            html += '<li>' + enLigne(contenu) + '</li>';
+          } else {
+            if (sousOuverte) { html += '</ul>'; sousOuverte = false; }
+            if (liOuvert) html += '</li>';
+            html += '<li>' + enLigne(contenu);
+            liOuvert = true;
+          }
+          i++;
+        }
+        if (sousOuverte) html += '</ul>';
+        if (liOuvert) html += '</li>';
+        out.push(html + (ordonnee ? '</ol>' : '</ul>'));
+        continue;
+      }
+
+      para.push(l.trim());
+      i++;
+    }
+    fermerPara();
+    return out.join('\n');
+  }
+
+  /* ---------------------------------------------------------------
+     Routeur (hash)
+     --------------------------------------------------------------- */
+  function routeur() {
+    var chemin = decodeURIComponent((location.hash || '#/').replace(/^#/, '')) || '/';
+    var segments = chemin.split('/').filter(Boolean);
+    var vue, nav = null;
+
+    if (!segments.length) { vue = vueJour(aujourdHui()); nav = 'jour'; }
+    else if (segments[0] === 'jour' && segments[1] && dateValide(segments[1])) {
+      vue = segments[1] === aujourdHui() ? vueJour(aujourdHui()) : vueJour(segments[1]);
+      nav = segments[1] === aujourdHui() ? 'jour' : 'archives';
+    }
+    else if (segments[0] === 'carte' && segments[1]) { vue = vueCarte(segments[1]); }
+    else if (segments[0] === 'archives') { vue = vueArchives(); nav = 'archives'; }
+    else if (segments[0] === 'a-propos') { vue = vueAPropos(); nav = 'a-propos'; }
+    else if (PAGES[segments[0]]) { vue = vuePage(segments[0]); }
+    else { vue = vueIntrouvable(); }
+
+    vider(app);
+    ajouter(app, vue);
+
+    document.querySelectorAll('[data-nav]').forEach(function (a) {
+      if (a.getAttribute('data-nav') === nav) a.setAttribute('aria-current', 'page');
+      else a.removeAttribute('aria-current');
+    });
+
+    window.scrollTo(0, 0);
+    if (routeur.dejaAffiche) main.focus({ preventScroll: true });
+    routeur.dejaAffiche = true;
+  }
+
+  var logoEntete = document.querySelector('.logo svg');
+  var logoPied = document.getElementById('logo-pied');
+  if (logoEntete && logoPied) logoPied.appendChild(logoEntete.cloneNode(true));
+
+  window.addEventListener('hashchange', routeur);
+  window.addEventListener('beforeprint', function () {
+    document.querySelectorAll('details').forEach(function (d) { d.open = true; });
+  });
+  routeur();
+})();
+</script>
+</body>
+</html>

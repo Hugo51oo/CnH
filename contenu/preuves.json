@@ -1,0 +1,667 @@
+{
+  "pb-qui-paie-ce-quon-garde": {
+    "sources": [
+      {
+        "titre": "Projet de loi de finances pour 2026 : Patrimoines — l'essentiel",
+        "editeur": "Sénat",
+        "url": "https://www.senat.fr/fileadmin/Commissions/Culture_Education_Communication/2025-2026/PLF2026_Essentiel_Patrimoines_2026_VersionFinale.pdf",
+        "consulte_le": "2026-09-17"
+      },
+      {
+        "titre": "Rapport d'activité 2024",
+        "editeur": "Fondation du patrimoine",
+        "url": "https://strapi-upload.cdn.fondation-patrimoine.org/RAPPORT_D_ACTIVITE_2024_0dbfed10c9.pdf",
+        "consulte_le": "2026-09-17"
+      },
+      {
+        "titre": "Mission Patrimoine 2024 : sept tirages Loto dédiés au patrimoine",
+        "editeur": "FDJ United",
+        "url": "https://www.fdjunited.com/fr/presse/mission-patrimoine-2024-sept-tirages-loto-dedies-au-patrimoine-dont-le-dernier-lors-des-journees-europeennes-du-patrimoine/",
+        "consulte_le": "2026-09-17"
+      },
+      {
+        "titre": "Les propriétaires privés de monuments historiques",
+        "editeur": "Ministère de la Culture",
+        "url": "https://www.culture.gouv.fr/thematiques/monuments-sites/acteurs-metiers-formations/les-partenaires/les-proprietaires-prives",
+        "consulte_le": "2026-09-17"
+      },
+      {
+        "titre": "Les maires face au patrimoine historique architectural : protéger, rénover, valoriser (rapport n° 426)",
+        "editeur": "Sénat",
+        "url": "https://www.senat.fr/rap/r19-426/r19-426_mono.html",
+        "consulte_le": "2026-09-17"
+      },
+      {
+        "titre": "La loi Aillagon : inciter l'engagement des particuliers et des entreprises",
+        "editeur": "Ministère de la Culture",
+        "url": "https://www.culture.gouv.fr/thematiques/mecenat/qu-est-ce-que-le-mecenat/la-loi-aillagon-inciter-l-engagement-des-particuliers-et-des-entreprises",
+        "consulte_le": "2026-09-17"
+      },
+      {
+        "titre": "Les immeubles : dispositifs fiscaux",
+        "editeur": "Ministère de la Culture",
+        "url": "https://www.culture.gouv.fr/thematiques/monuments-sites/interventions-demarches/subventions-et-dispositifs-fiscaux/les-immeubles-dispositifs-fiscaux",
+        "consulte_le": "2026-09-17"
+      },
+      {
+        "titre": "Notice technique — observatoire du patrimoine non protégé 2025",
+        "editeur": "Fondation du patrimoine",
+        "url": "https://strapi-upload.cdn.fondation-patrimoine.org/Notice_technique_Observatoire_patrimoine_non_protege_2025_0463e9c754.pdf",
+        "consulte_le": "2026-09-17"
+      },
+      {
+        "titre": "Loto du patrimoine 2024 : dotations des 18 sites emblématiques régionaux",
+        "editeur": "Fondation du patrimoine",
+        "url": "https://strapi-upload.cdn.fondation-patrimoine.org/CP_Loto_du_Patrimoine_2024_Dotations_des_18_sites_emblematiques_regionaux_19594faff9.pdf",
+        "consulte_le": "2026-09-17"
+      }
+    ],
+    "preuves": [
+      {
+        "appuie": "base",
+        "source": 2,
+        "citation": "En 2024, le montant total des ressources de la Fondation du patrimoine s'est élevé à 127,9 M€."
+      },
+      {
+        "appuie": "base",
+        "source": 1,
+        "citation": "se verra réduit de 106 millions d'euros (-8 %) en CP par rapport à la LFI pour 2025"
+      },
+      {
+        "appuie": "repere 1",
+        "source": 1,
+        "citation": "il sera le plus touché en 2026 par l'effort d'économies porté sur la mission « Culture », avec une baisse de 8 % de ses crédits de paiement (CP)"
+      },
+      {
+        "appuie": "repere 2",
+        "source": 2,
+        "citation": "En 2024, le montant total des ressources de la Fondation du patrimoine s'est élevé à 127,9 M€."
+      },
+      {
+        "appuie": "repere 3",
+        "source": 3,
+        "citation": "De 2018 à 2023, plus de 155 millions d'euros ont pu être collectés pour soutenir le patrimoine en péril"
+      },
+      {
+        "appuie": "repere 4",
+        "source": 5,
+        "citation": "En 2019, les dépenses consacrées par les communes pour restaurer le patrimoine protégé étaient estimées à 295 millions d'euros."
+      },
+      {
+        "appuie": "clivage 1 fait_a",
+        "source": 1,
+        "citation": "il sera le plus touché en 2026 par l'effort d'économies porté sur la mission « Culture », avec une baisse de 8 % de ses crédits de paiement (CP)"
+      },
+      {
+        "appuie": "clivage 1 fait_b",
+        "source": 6,
+        "citation": "le système de déduction d'impôt pour les entreprises passe à un système de réduction d'impôt (réduction de 60 % du don dans la limite de 5 pour 1000 du chiffre d'affaires)"
+      },
+      {
+        "appuie": "clivage 2 fait_a",
+        "source": 4,
+        "citation": "Sur les 44 421 immeubles protégés au titre des monuments historiques en 2019, 37 % sont détenus par des propriétaires privés."
+      },
+      {
+        "appuie": "clivage 2 fait_b",
+        "source": 7,
+        "citation": "sans limitation de montant, sur le revenu global du propriétaire"
+      },
+      {
+        "appuie": "clivage 3 fait_a",
+        "source": 9,
+        "citation": "Dix-huit projets emblématiques du patrimoine des régions de métropole et collectivités d'outre-mer et un projet par département sont retenus chaque année"
+      },
+      {
+        "appuie": "clivage 3 fait_b",
+        "source": 8,
+        "citation": "Environ 67 400 monuments patrimoniaux en état critique."
+      }
+    ]
+  },
+  "restaurer-a-l-identique": {
+    "sources": [
+      {
+        "titre": "Charte internationale sur la conservation et la restauration des monuments et des sites (Charte de Venise, 1964)",
+        "editeur": "ICOMOS",
+        "url": "https://www.icomos.org/images/DOCUMENTS/Charters/venice_f.pdf",
+        "consulte_le": "2026-09-17"
+      },
+      {
+        "titre": "Centre historique de Varsovie",
+        "editeur": "UNESCO — Centre du patrimoine mondial",
+        "url": "https://whc.unesco.org/fr/list/30/",
+        "consulte_le": "2026-09-17"
+      },
+      {
+        "titre": "Créer la réconciliation : le pont de Mostar",
+        "editeur": "UNESCO — Centre du patrimoine mondial",
+        "url": "https://whc.unesco.org/fr/histoire-mostar/",
+        "consulte_le": "2026-09-17"
+      },
+      {
+        "titre": "Rapport n° 521 (2018-2019) sur le projet de loi pour la conservation et la restauration de la cathédrale Notre-Dame de Paris",
+        "editeur": "Sénat",
+        "url": "https://www.senat.fr/rap/l18-521/l18-5218.html",
+        "consulte_le": "2026-09-17"
+      },
+      {
+        "titre": "Notre-Dame de Paris : un chantier de restauration hors norme suivi par la DRAC",
+        "editeur": "Ministère de la Culture — DRAC Île-de-France",
+        "url": "https://www.culture.gouv.fr/regions/drac-ile-de-france/actualites/actualite-a-la-une/notre-dame-de-paris-un-chantier-de-restauration-hors-norme-suivi-par-la-drac",
+        "consulte_le": "2026-09-17"
+      },
+      {
+        "titre": "Les mesures d'urgence",
+        "editeur": "Ministère de la Culture — Notre-Dame de Paris",
+        "url": "https://notre-dame-de-paris.culture.gouv.fr/fr/les-mesures-durgence",
+        "consulte_le": "2026-09-17"
+      }
+    ],
+    "preuves": [
+      {
+        "appuie": "base",
+        "source": 6,
+        "citation": "L'incendie a détruit une partie des voûtes, la charpente, la couverture et la flèche de la cathédrale."
+      },
+      {
+        "appuie": "repere 1",
+        "source": 1,
+        "citation": "seule l'anastylose peut être envisagée, c'est-à-dire la recomposition des parties existantes mais démembrées."
+      },
+      {
+        "appuie": "repere 2",
+        "source": 6,
+        "citation": "L'incendie a détruit une partie des voûtes, la charpente, la couverture et la flèche de la cathédrale."
+      },
+      {
+        "appuie": "repere 3",
+        "source": 5,
+        "citation": "la restauration à l'identique de la flèche de Viollet-le-Duc et de sa toiture en plomb ainsi que l'utilisation du bois pour la charpente"
+      },
+      {
+        "appuie": "repere 4",
+        "source": 2,
+        "citation": "En août 1944, pendant le soulèvement de Varsovie, plus de 85 % du centre historique de la ville ont été détruits par les troupes nazies."
+      },
+      {
+        "appuie": "clivage 1 fait_a",
+        "source": 5,
+        "citation": "la restauration à l'identique de la flèche de Viollet-le-Duc et de sa toiture en plomb ainsi que l'utilisation du bois pour la charpente"
+      },
+      {
+        "appuie": "clivage 1 fait_b",
+        "source": 1,
+        "citation": "tout travail de complément reconnu indispensable pour raisons esthétiques ou techniques relève de la composition architecturale et portera la marque de notre temps."
+      },
+      {
+        "appuie": "clivage 2 fait_a",
+        "source": 3,
+        "citation": "Les blocs de pierre du nouveau pont proviennent de la même carrière locale utilisée au XVIe siècle pour la construction originale."
+      },
+      {
+        "appuie": "clivage 2 fait_b",
+        "source": 1,
+        "citation": "La restauration est une opération qui doit garder un caractère exceptionnel."
+      },
+      {
+        "appuie": "clivage 3 fait_a",
+        "source": 6,
+        "citation": "Dès le 16 avril au matin, l'architecte en chef des monuments historiques (ACMH), M. Philippe Villeneuve, a rejoint la nacelle des pompiers pour effectuer un diagnostic visuel de l'édifice."
+      },
+      {
+        "appuie": "clivage 3 fait_b",
+        "source": 4,
+        "citation": "Je suis opposé au lancement d'un concours international d'architecture pour reconstruire la flèche."
+      }
+    ]
+  },
+  "qui-decide-du-bon": {
+    "sources": [
+      {
+        "titre": "Lancement du Nutri-Score : espace d'information sur les modalités et les règles d'apposition du logo",
+        "editeur": "Santé publique France",
+        "url": "https://www.santepubliquefrance.fr/les-actualites/2017/lancement-du-nutri-score-sante-publique-france-met-en-ligne-un-espace-pour-tout-savoir-sur-les-modalites-et-les-regles-d-apposition-du-logo",
+        "consulte_le": "2026-09-17"
+      },
+      {
+        "titre": "Adoptez l'étiquetage Nutri-Score afin de rassurer les consommateurs",
+        "editeur": "Ministère de l'Économie",
+        "url": "https://www.economie.gouv.fr/entreprises/nutri-score",
+        "consulte_le": "2026-09-17"
+      },
+      {
+        "titre": "Nutri-Score : tout comprendre de A à E",
+        "editeur": "INRAE",
+        "url": "https://www.inrae.fr/actualites/nutri-score",
+        "consulte_le": "2026-09-17"
+      },
+      {
+        "titre": "Bilan du Nutri-Score (question écrite n° 07297)",
+        "editeur": "Sénat",
+        "url": "https://www.senat.fr/questions/base/2022/qSEQ220700297.html",
+        "consulte_le": "2026-09-17"
+      },
+      {
+        "titre": "Application du système Nutri-Score aux produits sous indications géographiques (question écrite n° 22667)",
+        "editeur": "Sénat",
+        "url": "https://www.senat.fr/questions/base/2021/qSEQ210522667.html",
+        "consulte_le": "2026-09-17"
+      },
+      {
+        "titre": "Mandatory front-of-pack nutrition labelling (train législatif)",
+        "editeur": "Parlement européen",
+        "url": "https://www.europarl.europa.eu/legislative-train/theme-a-european-green-deal/file-mandatory-front-of-pack-nutrition-labelling",
+        "consulte_le": "2026-09-17"
+      },
+      {
+        "titre": "Nutri-Score, NOVA, bio… Comment mieux informer sur les effets « santé » des aliments ?",
+        "editeur": "INRAE",
+        "url": "https://www.inrae.fr/actualites/nutri-score-nova-bio-comment-mieux-informer-effets-sante-aliments",
+        "consulte_le": "2026-09-17"
+      },
+      {
+        "titre": "Aliments ultra-transformés : des impacts négatifs sur la santé documentés",
+        "editeur": "Inserm",
+        "url": "https://presse.inserm.fr/aliments-ultra-transformes-des-impacts-negatifs-sur-la-sante-documentes-et-des-propositions-concretes-pour-limiter-lexposition-des-populations/71444/",
+        "consulte_le": "2026-09-17"
+      }
+    ],
+    "preuves": [
+      {
+        "appuie": "base",
+        "source": 1,
+        "citation": "A l'issue d'une évaluation en conditions réelles, le ministère chargé de la santé a annoncé que la signalétique simplifiée prendrait la forme d'un logo : LE NUTRI-SCORE."
+      },
+      {
+        "appuie": "base",
+        "source": 3,
+        "citation": "Adopté par la France en 2017, le Nutri-Score est utilisé en 2025 par 1 462 entreprises (contre 1 377 en 2024) et concerne 63 % du volume des ventes."
+      },
+      {
+        "appuie": "repere 1",
+        "source": 2,
+        "citation": "L'apposition du Nutri-Score sur les emballages reste à ce jour volontaire, bien que fortement encouragée par les autorités sanitaires."
+      },
+      {
+        "appuie": "repere 2",
+        "source": 7,
+        "citation": "la classification NOVA a été proposée en 2009 et modifiée en 2016. Elle catégorise les aliments selon 4 groupes, en fonction de leur degré de transformation industrielle"
+      },
+      {
+        "appuie": "repere 3",
+        "source": 4,
+        "citation": "actées le 26 juillet 2022 et seront mises en place avec les évolutions à venir concernant les boissons, au cours de l'année 2023."
+      },
+      {
+        "appuie": "repere 3",
+        "source": 4,
+        "citation": "De même, l'huile d'olive, comme l'huile de colza et de noix, sera notée B et non C, en tenant compte des profils bénéfiques en acides gras de ces huiles."
+      },
+      {
+        "appuie": "repere 4",
+        "source": 3,
+        "citation": "Adopté par la France en 2017, le Nutri-Score est utilisé en 2025 par 1 462 entreprises (contre 1 377 en 2024) et concerne 63 % du volume des ventes."
+      },
+      {
+        "appuie": "clivage 1 fait_a",
+        "source": 2,
+        "citation": "L'apposition du Nutri-Score sur les emballages reste à ce jour volontaire, bien que fortement encouragée par les autorités sanitaires."
+      },
+      {
+        "appuie": "clivage 1 fait_b",
+        "source": 6,
+        "citation": "views on FOPNL systems among Member States were too polarised for the European Commission to come forward with a proposal."
+      },
+      {
+        "appuie": "clivage 2 fait_a",
+        "source": 5,
+        "citation": "Le Nutri-score et les signes de l'origine et de la qualité (SIQO) répondent à des objectifs différents."
+      },
+      {
+        "appuie": "clivage 2 fait_b",
+        "source": 5,
+        "citation": "le Nutri-Score ne tient pas compte de la réalité des portions : il se fonde exclusivement sur la consommation théorique de 100 grammes de produit"
+      },
+      {
+        "appuie": "clivage 3 fait_a",
+        "source": 3,
+        "citation": "Le Nutri-Score est un système d'étiquetage nutritionnel simplifié en face avant des emballages qui attribue une note allant de A (vert) à E (orange foncé)"
+      },
+      {
+        "appuie": "clivage 3 fait_b",
+        "source": 8,
+        "citation": "une revue systématique de la littérature scientifique, portant sur 104 études à long terme, a révélé que 92 d'entre elles faisaient état d'une incidence plus élevée d'une ou plusieurs maladies chroniques associée à la consommation d'aliments ultra-transformés"
+      }
+    ]
+  },
+  "machines-du-quotidien": {
+    "sources": [
+      {
+        "titre": "Le travail domestique : 60 milliards d'heures en 2010 (Insee Première n° 1423)",
+        "editeur": "Insee",
+        "url": "https://www.insee.fr/fr/statistiques/2123967",
+        "consulte_le": "2026-09-17"
+      },
+      {
+        "titre": "Le temps domestique et parental des hommes et des femmes : quels facteurs d'évolutions en 25 ans ? (Économie et Statistique n° 478-479-480)",
+        "editeur": "Insee",
+        "url": "https://www.insee.fr/fr/statistiques/fichier/1303232/es478h.pdf",
+        "consulte_le": "2026-09-17"
+      },
+      {
+        "titre": "25 ans de participation des hommes et des femmes au travail domestique : quels facteurs d'évolutions ? (document de travail n° 203)",
+        "editeur": "Ined",
+        "url": "https://www.ined.fr/sites/default/files/imported_images/doc_travail_2014_203_travail_domestique_genre.fr.pdf",
+        "consulte_le": "2026-09-17"
+      },
+      {
+        "titre": "La consommation des ménages depuis cinquante ans",
+        "editeur": "Insee",
+        "url": "https://www.insee.fr/fr/statistiques/fichier/1372376/conso09c.pdf",
+        "consulte_le": "2026-09-17"
+      },
+      {
+        "titre": "Why Was There More Work for Mother? Knowledge and Household Behavior, 1870-1945",
+        "editeur": "Joel Mokyr, Northwestern University",
+        "url": "https://faculty.wcas.northwestern.edu/jmokyr/newberry.pdf",
+        "consulte_le": "2026-09-17"
+      }
+    ],
+    "preuves": [
+      {
+        "appuie": "base",
+        "source": 1,
+        "citation": "Chaque jour, en moyenne, nous consacrons plus de 3 heures à des tâches domestiques (cuisine, ménage, courses, soins aux enfants, etc.)."
+      },
+      {
+        "appuie": "base",
+        "source": 4,
+        "citation": "La quasi-totalité des ménages possède aujourd'hui un lave-linge et un réfrigérateur ou combiné réfrigérateur-congélateur"
+      },
+      {
+        "appuie": "repere 1",
+        "source": 1,
+        "citation": "Chaque jour, en moyenne, nous consacrons plus de 3 heures à des tâches domestiques (cuisine, ménage, courses, soins aux enfants, etc.)."
+      },
+      {
+        "appuie": "repere 2",
+        "source": 3,
+        "citation": "la progression de l'équipement en lave-vaisselles et congélateurs - le taux d'équipement est passé respectivement de 31% à 58% et de 44% à 91%"
+      },
+      {
+        "appuie": "repere 3",
+        "source": 2,
+        "citation": "les femmes y consacrent en moyenne 183 minutes chaque jour, soit près de 3 heures"
+      },
+      {
+        "appuie": "repere 4",
+        "source": 1,
+        "citation": "Au niveau macroéconomique, en 2010, entre 42 et 77 milliards d'heures de travail domestique ont été effectuées en France."
+      },
+      {
+        "appuie": "clivage 1 fait_a",
+        "source": 2,
+        "citation": "en 2010, elles y passent 69 minutes de moins qu'en 1985"
+      },
+      {
+        "appuie": "clivage 1 fait_b",
+        "source": 5,
+        "citation": "the American housewife of 1950 produced single-handedly what her counterpart in 1850 needed a staff of three or four to produce: a middle class standard of cleanliness, health, and comfort"
+      },
+      {
+        "appuie": "clivage 2 fait_a",
+        "source": 2,
+        "citation": "celui-ci s'élevait à 138 minutes en 1985"
+      },
+      {
+        "appuie": "clivage 2 fait_b",
+        "source": 2,
+        "citation": "Les hommes, eux, ont réduit de 9 minutes leur temps domestique en 25 ans"
+      },
+      {
+        "appuie": "clivage 3 fait_a",
+        "source": 3,
+        "citation": "les femmes au foyer – qui sont celles qui ont les temps domestiques les plus élevés– représentaient 26 % des 18-60 ans en 1985 et seulement 15% quatorze ans plus tard."
+      },
+      {
+        "appuie": "clivage 3 fait_b",
+        "source": 2,
+        "citation": "Pour ces derniers, il est en effet passé de 22 à 41 minutes par jour entre 1985 et 2010"
+      }
+    ]
+  },
+  "eglises-de-la-republique": {
+    "sources": [
+      {
+        "titre": "Patrimoine religieux en péril : la messe n'est pas dite (rapport d'information n° 765, 2021-2022)",
+        "editeur": "Sénat",
+        "url": "https://www.senat.fr/rap/r21-765/r21-765_mono.html",
+        "consulte_le": "2026-09-17"
+      },
+      {
+        "titre": "Les collectivités territoriales et le financement des lieux de culte",
+        "editeur": "Sénat",
+        "url": "https://www.senat.fr/rap/r14-345/r14-3455.html",
+        "consulte_le": "2026-09-17"
+      },
+      {
+        "titre": "Proposition de loi relative aux édifices religieux construits avant 1905 (texte n° 1412, XVIe législature)",
+        "editeur": "Assemblée nationale",
+        "url": "https://www.assemblee-nationale.fr/dyn/opendata/PIONANR5L16B1412.html",
+        "consulte_le": "2026-09-17"
+      },
+      {
+        "titre": "Sauvons le patrimoine religieux de nos villages",
+        "editeur": "Fondation du patrimoine",
+        "url": "https://www.fondation-patrimoine.org/les-projets/sauvons-le-patrimoine-religieux-de-nos-villages/87950",
+        "consulte_le": "2026-09-17"
+      },
+      {
+        "titre": "La protection au titre des monuments historiques — bilan 2024, chiffres clés",
+        "editeur": "Ministère de la Culture",
+        "url": "https://www.culture.gouv.fr/thematiques/monuments-sites/ressources/les-bilans/la-protection-au-titre-des-monuments-historiques-bilan-2024-chiffres-clefs-au-1er-janvier-2025",
+        "consulte_le": "2026-09-17"
+      },
+      {
+        "titre": "Avis budgétaire sur le projet de loi de finances pour 2024 — Culture : Patrimoines",
+        "editeur": "Sénat",
+        "url": "https://www.senat.fr/rap/a23-133-21/a23-133-21_mono.html",
+        "consulte_le": "2026-09-17"
+      },
+      {
+        "titre": "Bail emphytéotique administratif et association cultuelle",
+        "editeur": "Conseil d'État",
+        "url": "https://www.conseil-etat.fr/actualites/bail-emphyteotique-administratif-association-cultuelle",
+        "consulte_le": "2026-09-17"
+      }
+    ],
+    "preuves": [
+      {
+        "appuie": "base",
+        "source": 1,
+        "citation": "Plus de 40 000 des édifices cultuels qui demeurent affectés à cet objet sur le territoire français appartiennent à des collectivités publiques et non aux cultes."
+      },
+      {
+        "appuie": "repere 1",
+        "source": 1,
+        "citation": "Plus de 40 000 des édifices cultuels qui demeurent affectés à cet objet sur le territoire français appartiennent à des collectivités publiques et non aux cultes."
+      },
+      {
+        "appuie": "repere 2",
+        "source": 1,
+        "citation": "Seulement 15 000 édifices religieux ou d'origine religieuse bénéficient d'une protection au titre des monuments historiques."
+      },
+      {
+        "appuie": "repere 2",
+        "source": 5,
+        "citation": "Au 31 décembre 2024, 45 223 immeubles sont protégés au titre des monuments historiques, dont 14 333 classés et 30 890 inscrits."
+      },
+      {
+        "appuie": "repere 3",
+        "source": 3,
+        "citation": "L'État, les départements, les communes et les établissements publics de coopération intercommunale pourront engager les dépenses nécessaires pour l'entretien et la conservation des édifices du culte."
+      },
+      {
+        "appuie": "repere 4",
+        "source": 4,
+        "citation": "Déjà collectés grâce à 101 602 donateurs"
+      },
+      {
+        "appuie": "repere 4",
+        "source": 6,
+        "citation": "le relèvement à 75 % du taux de la réduction d'impôt accordée aux particuliers, dans la limite de 1 000 euros par an, prévu à l'article 3 quinvicies du présent projet de loi jusqu'à fin 2025"
+      },
+      {
+        "appuie": "clivage 1 fait_a",
+        "source": 7,
+        "citation": "Un tel bail emphytéotique est conclu pour une longue durée et donne au locataire, appelé emphytéote, les prérogatives du propriétaire durant la durée du bail."
+      },
+      {
+        "appuie": "clivage 1 fait_b",
+        "source": 7,
+        "citation": "De tels contrats constituent une forme de subventionnement de la construction d'un édifice cultuel qui déroge à la loi de 1905."
+      },
+      {
+        "appuie": "clivage 2 fait_a",
+        "source": 1,
+        "citation": "Dans une étude parue en 2017, la Conférence des évêques de France comptabilisait 255 églises communales ou diocésaines désaffectées ou vendues depuis 1905"
+      },
+      {
+        "appuie": "clivage 2 fait_b",
+        "source": 1,
+        "citation": "L'Observatoire du patrimoine religieux évalue entre 2 000 et 5 000 le nombre d'édifices cultuels susceptibles d'être abandonnés, vendus ou détruits d'ici à 2030."
+      },
+      {
+        "appuie": "clivage 3 fait_a",
+        "source": 2,
+        "citation": "En Alsace-Moselle, 1 397 ministres des cultes sont ainsi rémunérés par l'État, sur le budget du ministère de l'Intérieur, pour un montant total de 58 millions d'euros"
+      },
+      {
+        "appuie": "clivage 3 fait_b",
+        "source": 2,
+        "citation": "Votre délégation considère qu'une telle situation présente une difficulté quant au respect de l'égalité entre les cultes"
+      }
+    ]
+  },
+  "la-cantine": {
+    "sources": [
+      {
+        "titre": "Loi n° 2018-938 du 30 octobre 2018 (EGalim)",
+        "editeur": "Légifrance",
+        "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000037547946",
+        "consulte_le": "2026-09-17"
+      },
+      {
+        "titre": "Objectifs EGalim en restauration collective : le bilan 2022",
+        "editeur": "Ministère de l'Agriculture et de la Souveraineté alimentaire",
+        "url": "https://agriculture.gouv.fr/objectifs-egalim-en-restauration-collective-le-bilan-2022-publie-la-collecte-des-donnees-2023",
+        "consulte_le": "2026-09-17"
+      },
+      {
+        "titre": "Proposer une tarification sociale dans les cantines : la cantine à 1 euro",
+        "editeur": "Ministère du Travail, de la Santé et des Solidarités",
+        "url": "https://solidarites.gouv.fr/proposer-une-tarification-sociale-dans-les-cantines-la-cantine-1-euro",
+        "consulte_le": "2026-09-17"
+      },
+      {
+        "titre": "Contribution sur la restauration scolaire",
+        "editeur": "Cnesco",
+        "url": "https://www.cnesco.fr/wp-content/uploads/2017/10/171002_Restauration_scolaire_VF.pdf",
+        "consulte_le": "2026-09-17"
+      },
+      {
+        "titre": "Appui scientifique et technique relatif aux fréquences de menus sans viande ni poisson en restauration scolaire (saisine 2020-SA-0101)",
+        "editeur": "Anses",
+        "url": "https://www.anses.fr/fr/system/files/NUT2020SA0101Ra.pdf",
+        "consulte_le": "2026-09-17"
+      },
+      {
+        "titre": "Réduire le gaspillage alimentaire en restauration collective : ajuster les grammages des portions",
+        "editeur": "ADEME",
+        "url": "https://librairie.ademe.fr/dechets-economie-circulaire/769-reduire-le-gaspillage-alimentaire-en-restauration-collective-recommandations-et-bonnes-pratiques-pour-ajuster-les-grammages-des-portions.html",
+        "consulte_le": "2026-09-17"
+      },
+      {
+        "titre": "Les menus de substitution dans les cantines scolaires ne sont qu'une simple faculté pour les collectivités (décision du 11 décembre 2020, n° 426483)",
+        "editeur": "Conseil d'État",
+        "url": "https://www.conseil-etat.fr/actualites/les-menus-de-substitution-dans-les-cantines-scolaires-qui-ne-sont-qu-une-simple-faculte-pour-les-collectivites-territoriales-ne-sont-pas-contrair",
+        "consulte_le": "2026-09-17"
+      },
+      {
+        "titre": "Question écrite n° 54407 : histoire et missions des caisses des écoles",
+        "editeur": "Assemblée nationale",
+        "url": "https://www.assemblee-nationale.fr/dyn/11/questions/QANR5L11QE54407.pdf",
+        "consulte_le": "2026-09-17"
+      },
+      {
+        "titre": "Dans les lycées néo-aquitains, les boursiers fréquentent moins les restaurants scolaires (Insee Analyses Nouvelle-Aquitaine n° 90)",
+        "editeur": "Insee",
+        "url": "https://www.insee.fr/fr/statistiques/4642666",
+        "consulte_le": "2026-09-17"
+      }
+    ],
+    "preuves": [
+      {
+        "appuie": "base",
+        "source": 4,
+        "citation": "Plus de 6 millions d'élèves déjeunent régulièrement à la cantine. Cela représente un élève sur deux en primaire et deux sur trois au collège et lycée"
+      },
+      {
+        "appuie": "base",
+        "source": 1,
+        "citation": "Au plus tard le 1er janvier 2022"
+      },
+      {
+        "appuie": "repere 1",
+        "source": 4,
+        "citation": "Plus de 6 millions d'élèves déjeunent régulièrement à la cantine. Cela représente un élève sur deux en primaire et deux sur trois au collège et lycée"
+      },
+      {
+        "appuie": "repere 2",
+        "source": 1,
+        "citation": "les repas servis dans les restaurants collectifs dont les personnes morales de droit public ont la charge comprennent une part au moins égale, en valeur, à 50 % de produits répondant à l'une des conditions suivantes"
+      },
+      {
+        "appuie": "repere 3",
+        "source": 3,
+        "citation": "En décembre 2023, 2 405 collectivités se sont engagées dans ce dispositif."
+      },
+      {
+        "appuie": "repere 4",
+        "source": 6,
+        "citation": "Les données compilées par l'ADEME en 2018 ont permis d'évaluer le gaspillage alimentaire à 115 grammes par repas et par convive en moyenne"
+      },
+      {
+        "appuie": "clivage 1 fait_a",
+        "source": 7,
+        "citation": "Il n'existe aucune obligation pour les collectivités territoriales gestionnaires d'un service public de restauration scolaire de distribuer aux élèves des repas différenciés."
+      },
+      {
+        "appuie": "clivage 1 fait_b",
+        "source": 5,
+        "citation": "Il n'est donc pas pertinent de proposer de ce fait une fréquence maximale de menus sans viande ni poisson."
+      },
+      {
+        "appuie": "clivage 2 fait_a",
+        "source": 1,
+        "citation": "les produits mentionnés au 2° du présent I devant représenter une part au moins égale, en valeur, à 20 %"
+      },
+      {
+        "appuie": "clivage 2 fait_b",
+        "source": 2,
+        "citation": "Le rapport qui vient être transmis au Parlement fait état de taux d'approvisionnement en produits durables et de qualité de 27,5%, dont 13,1% de Bio en 2022."
+      },
+      {
+        "appuie": "clivage 3 fait_a",
+        "source": 9,
+        "citation": "Les boursiers (57 % de demi-pensionnaires) et les non-boursiers (64 %)"
+      },
+      {
+        "appuie": "clivage 3 fait_b",
+        "source": 8,
+        "citation": "favoriser et de faciliter la fréquentation scolaire par l'attribution de récompenses aux élèves assidus et de secours aux élèves indigents ou peu aisés"
+      }
+    ]
+  }
+}

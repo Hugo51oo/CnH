@@ -1,0 +1,33 @@
+# Secrets et configuration locale
+.env
+.env.*
+!.env.example
+supabase/.temp/
+supabase/.branches/
+
+# Chaîne d'agents : travail en cours, jamais publié tel quel
+outils/agents/produits/
+outils/agents/.pages/
+outils/agents/.bac/
+outils/agents/journal.jsonl
+
+# Aperçu autonome (régénérable : python3 outils/construire_apercu.py)
+apercu/
+
+# Système et éditeurs
+.DS_Store
+.vscode/
+.idea/
+
+# Dépendances et builds
+node_modules/
+dist/
+__pycache__/
+*.pyc
+
+# Audio (ne doit jamais être versionné)
+*.webm
+*.wav
+*.mp3
+*.m4a
+*.ogg

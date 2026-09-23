@@ -1,0 +1,133 @@
+{
+  "date": "2026-09-19",
+  "sujets": [
+    {
+      "id": "pb-a-qui-appartient-le-passe",
+      "type": "problematique",
+      "theme": "histoire-patrimoine",
+      "format": "ouverte",
+      "brief": "À qui appartient le passé ? Qui décide de ce qu'on garde, de ce qu'on montre, de ce qu'on rend.",
+      "pistes": [
+        "l'inaliénabilité des collections publiques (code du patrimoine)",
+        "les restitutions de biens culturels (loi du 24 décembre 2020, loi-cadre sur les restes humains de 2023)",
+        "la convention UNESCO de 1970 sur le trafic illicite",
+        "la part des objets non européens dans les collections publiques françaises",
+        "le débat sur les musées universels"
+      ],
+      "reperes": "4",
+      "clivages": "3",
+      "sources_candidates": [
+        "https://www.senat.fr/lc/lc191/lc191_mono.html",
+        "https://m.quaibranly.fr/fr/collections/vie-des-collections/autour-des-collections/linventaire-et-la-gestion-informatisee-des-collections/inventaire-des-collections",
+        "https://m.quaibranly.fr/fr/collections/toutes-les-collections/le-plateau-des-collections",
+        "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17BTA0280.html",
+        "https://www.culture.gouv.fr/presse/communiques-de-presse/adoption-definitive-de-la-loi-relative-a-la-restitution-de-biens-culturels",
+        "https://www.unesco.org/fr/fight-illicit-trafficking/about",
+        "https://www.unesco.org/en/legal-affairs/convention-means-prohibiting-and-preventing-illicit-import-export-and-transfer-ownership-cultural",
+        "https://www.assemblee-nationale.fr/dyn/15/textes/l15t0539_texte-adopte-seance.pdf",
+        "https://m.quaibranly.fr/fr/collections/vie-des-collections/actualites/restitution-de-26-oeuvres-a-la-republique-du-benin",
+        "https://www.britishmuseum.org/about-us/british-museum-story/contested-objects-collection/parthenon-sculptures",
+        "https://www.culture.gouv.fr/content/download/342695/pdf_file/Restitution%20de%20restes%20humains%20appartenant%20aux%20collections%20publiques.pdf",
+        "https://www.culture.gouv.fr/content/download/328460/pdf_file/Rapport_Patrimoine%20partag%C3%A9_universalit%C3%A9,%20restitutions%20et%20circulation%20des%20%C5%93uvres%20d%E2%80%99art%20.pdf?inLanguage=fre-FR&version=31",
+        "https://www.conseil-etat.fr/site/avis-consultatifs/derniers-avis-rendus/au-gouvernement/avis-sur-un-projet-de-loi-relatif-a-la-restitution-de-biens-culturels-provenant-d-etats-qui-du-fait-d-une-appropriation-illicite-en-ont-ete-prives"
+      ]
+    },
+    {
+      "id": "les-archives-nationales",
+      "theme": "histoire-patrimoine",
+      "format": "chiffre",
+      "brief": "Ce que la France conserve de son administration, et ce qu'elle jette.",
+      "pistes": [
+        "les kilomètres linéaires conservés par les Archives nationales et départementales",
+        "les délais de communicabilité et les dérogations (code du patrimoine)",
+        "le tri et l'élimination : on ne garde qu'une part des documents produits",
+        "la numérisation et la consultation en ligne",
+        "le site de Pierrefitte-sur-Seine"
+      ],
+      "liens": [
+        "pb-a-qui-appartient-le-passe",
+        "met-open-access"
+      ],
+      "sources_candidates": [
+        "https://www.culture.gouv.fr/Media/medias-creation-rapide/Chiffres-cles-2023_DEPS_Archives_Fiche.pdf",
+        "https://www.economie.gouv.fr/saef/communicabilite-des-documents-darchives",
+        "https://www.archives-nationales.culture.gouv.fr/acces-aux-archives-quel-cadre-legal",
+        "https://www.culture.gouv.fr/presse/communiques-de-presse/L-agence-l-AUC-laureate-du-projet-d-extension-des-Archives-nationales-a-Pierrefitte-sur-Seine",
+        "https://www.senat.fr/rap/r16-358/r16-358_mono.html"
+      ]
+    },
+    {
+      "id": "la-fourchette",
+      "theme": "cuisine-alimentation",
+      "format": "objet",
+      "brief": "La fourchette, un objet très récent à l'échelle de l'histoire de la table.",
+      "pistes": [
+        "son arrivée tardive en Europe occidentale via Byzance et l'Italie",
+        "la résistance du clergé et des moralistes",
+        "son adoption à la cour de France, le passage de deux à quatre dents",
+        "les manières de table comme contrôle de soi (histoire des civilités)",
+        "la majorité de l'humanité mange encore avec les doigts ou des baguettes"
+      ],
+      "liens": [
+        "repas-gastronomique"
+      ],
+      "sources_candidates": []
+    },
+    {
+      "id": "le-bruit-des-villes",
+      "theme": "modes-de-vie-societe",
+      "format": "et-si",
+      "brief": "Le bruit comme fait urbain : ce qu'il coûte, ce qu'il dit de la ville qu'on habite.",
+      "pistes": [
+        "le coût social du bruit en France (études Ademe / Conseil national du bruit)",
+        "les seuils de l'Organisation mondiale de la santé",
+        "les cartes de bruit stratégiques imposées par la directive européenne 2002/49/CE",
+        "les zones calmes et leur protection",
+        "le bruit des transports comparé au bruit de voisinage"
+      ],
+      "liens": [
+        "vivre-seul"
+      ],
+      "sources_candidates": []
+    },
+    {
+      "id": "la-langue-des-signes",
+      "theme": "arts-langues-croyances",
+      "format": "avant-ailleurs",
+      "brief": "La langue des signes française : une langue à part entière, longtemps interdite.",
+      "pistes": [
+        "l'abbé de l'Épée et la première école publique",
+        "le congrès de Milan de 1880 et l'interdiction du signe dans l'enseignement",
+        "la reconnaissance de la LSF comme langue à part entière par la loi du 11 février 2005",
+        "le nombre estimé de locuteurs et l'accès à l'interprétation",
+        "les langues des signes sont différentes d'un pays à l'autre"
+      ],
+      "liens": [
+        "langues-qui-s-eteignent"
+      ],
+      "sources_candidates": []
+    },
+    {
+      "id": "statues-et-noms-de-rues",
+      "theme": "hors-piste",
+      "themes_croises": [
+        "histoire-patrimoine",
+        "modes-de-vie-societe"
+      ],
+      "format": "dilemme",
+      "brief": "Déboulonner, déplacer, expliquer, laisser : que fait-on d'une statue ou d'un nom de rue devenu gênant ?",
+      "pistes": [
+        "le statut juridique d'une statue appartenant au domaine public",
+        "des cas documentés de déplacement en musée plutôt que de destruction",
+        "la pose de cartels explicatifs comme troisième voie",
+        "qui décide d'un nom de rue en France (le conseil municipal)",
+        "la part des rues portant un nom de femme dans les grandes villes françaises"
+      ],
+      "liens": [
+        "pb-a-qui-appartient-le-passe",
+        "eglises-de-la-republique"
+      ],
+      "sources_candidates": []
+    }
+  ]
+}

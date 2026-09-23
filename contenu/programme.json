@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "fuseau": "Europe/Paris",
+  "jours": {
+    "2026-09-15": {
+      "problematique": "pb-ce-quon-transmet",
+      "cartes": [
+        "lune-patrimoine",
+        "repas-gastronomique",
+        "vivre-seul",
+        "langues-qui-s-eteignent",
+        "met-open-access"
+      ]
+    },
+    "2026-09-18": {
+      "problematique": "pb-qui-paie-ce-quon-garde",
+      "cartes": [
+        "restaurer-a-l-identique",
+        "qui-decide-du-bon",
+        "machines-du-quotidien",
+        "eglises-de-la-republique",
+        "la-cantine"
+      ]
+    }
+  }
+}
