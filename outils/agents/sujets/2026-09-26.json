@@ -1,0 +1,84 @@
+{
+  "date": "2026-09-26",
+  "sujets": [
+    {
+      "id": "pb-quest-ce-qui-fait-un-plat-francais",
+      "type": "problematique",
+      "theme": "cuisine-alimentation",
+      "format": "ouverte",
+      "brief": "Qu'est-ce qui rend un plat « français », et qui a le droit de le dire ?",
+      "pistes": [
+        "les appellations d'origine (AOC/AOP/IGP) et ce qu'elles protègent vraiment",
+        "le Nutri-Score et l'étiquetage d'origine",
+        "la restauration collective et la loi Egalim (part de produits locaux/bio obligatoire)",
+        "les labels « fait maison » et ce qu'ils excluent"
+      ],
+      "reperes": "4",
+      "clivages": "3"
+    },
+    {
+      "id": "tapisserie-de-bayeux-voyage",
+      "theme": "histoire-patrimoine",
+      "format": "avant-ailleurs",
+      "brief": "La tapisserie de Bayeux : neuf siècles sans quitter la France, puis un prêt exceptionnel au British Museum.",
+      "pistes": [
+        "sa fragilité (broderie du XIe siècle)",
+        "la décision de prêt annoncée en 2018 et sa mise en œuvre",
+        "les précautions de transport et de conservation",
+        "ce qu'elle représente (bataille de Hastings, 1066)"
+      ],
+      "liens": ["les-archives-nationales"]
+    },
+    {
+      "id": "camembert-lait-cru",
+      "theme": "cuisine-alimentation",
+      "format": "objet",
+      "brief": "Le camembert de Normandie AOP : pourquoi il doit être au lait cru, et le débat sur la survie de cette règle.",
+      "pistes": [
+        "le cahier des charges de l'AOP (INAO)",
+        "le débat sanitaire (listeria) contre l'authenticité du goût",
+        "la baisse du nombre de producteurs au lait cru",
+        "la distinction avec le « camembert fabriqué en Normandie » industriel, non AOP"
+      ],
+      "liens": ["la-fourchette", "repas-gastronomique"]
+    },
+    {
+      "id": "semaine-de-quatre-jours",
+      "theme": "modes-de-vie-societe",
+      "format": "chiffre",
+      "brief": "Les expérimentations de semaine de quatre jours en France : où, combien, quels résultats mesurés.",
+      "pistes": [
+        "des entreprises ou collectivités ayant expérimenté la semaine de 4 jours",
+        "la distinction entre 4 jours à temps plein compressé et 4 jours à temps réduit",
+        "les études d'impact disponibles (absentéisme, productivité perçue)"
+      ]
+    },
+    {
+      "id": "occitan-a-l-ecole",
+      "theme": "arts-langues-croyances",
+      "format": "et-si",
+      "brief": "Et si l'école enseignait autant l'occitan que l'anglais ? Les langues régionales dans l'enseignement public.",
+      "pistes": [
+        "la loi Molac de 2021 et sa censure partielle par le Conseil constitutionnel",
+        "les filières bilingues publiques et associatives (Calandretas, Diwan)",
+        "le nombre estimé de locuteurs de langues régionales",
+        "la charte européenne des langues régionales, jamais ratifiée par la France"
+      ],
+      "liens": ["la-langue-des-signes", "langues-qui-s-eteignent"]
+    },
+    {
+      "id": "authentifier-une-relique",
+      "theme": "hors-piste",
+      "themes_croises": ["histoire-patrimoine", "arts-langues-croyances"],
+      "format": "dilemme",
+      "brief": "Le Saint Suaire de Turin, daté au carbone 14 du Moyen Âge : la science doit-elle trancher la valeur d'une relique ?",
+      "pistes": [
+        "la datation au carbone 14 de 1988 et ses résultats",
+        "les contestations méthodologiques ultérieures",
+        "la position officielle de l'Église (jamais authentifié comme relique du Christ)",
+        "d'autres reliques ou objets déjà déclassés par des méthodes scientifiques"
+      ],
+      "liens": ["pb-a-qui-appartient-le-passe"]
+    }
+  ]
+}

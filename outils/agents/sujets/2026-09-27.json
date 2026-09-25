@@ -1,0 +1,84 @@
+{
+  "date": "2026-09-27",
+  "sujets": [
+    {
+      "id": "pb-a-quoi-sert-un-musee-aujourdhui",
+      "type": "problematique",
+      "theme": "histoire-patrimoine",
+      "format": "ouverte",
+      "brief": "Éduquer, conserver ou divertir : à quoi sert un musée aujourd'hui ?",
+      "pistes": [
+        "la nouvelle définition du musée adoptée par l'ICOM en 2022",
+        "le débat gratuité contre billetterie",
+        "la fréquentation des musées français, avant et après le covid",
+        "la tension entre recherche/conservation et exposition au public"
+      ],
+      "reperes": "4",
+      "clivages": "3"
+    },
+    {
+      "id": "graffitis-de-pompei",
+      "theme": "histoire-patrimoine",
+      "format": "chiffre",
+      "brief": "Pompéi : des milliers de graffitis antiques retrouvés sur les murs, une source historique à part entière.",
+      "pistes": [
+        "le nombre de graffitis recensés à Pompéi",
+        "ce qu'ils racontent (petites annonces, insultes, déclarations d'amour, résultats de combats de gladiateurs)",
+        "leur conservation face à l'exposition à l'air libre depuis les fouilles"
+      ],
+      "liens": ["les-archives-nationales"]
+    },
+    {
+      "id": "additifs-alimentaires-e-numeros",
+      "theme": "cuisine-alimentation",
+      "format": "et-si",
+      "brief": "Et si tu lisais vraiment la liste des additifs sur un paquet ? Ce que les numéros E veulent dire, et qui les évalue.",
+      "pistes": [
+        "le système européen de numérotation des additifs (E...)",
+        "le rôle de l'Anses et de l'EFSA dans leur évaluation",
+        "des exemples de retraits récents (ex. dioxyde de titane E171)",
+        "la différence entre « interdit » et « déconseillé »"
+      ],
+      "liens": ["qui-decide-du-bon"]
+    },
+    {
+      "id": "teletravail-avant-apres-covid",
+      "theme": "modes-de-vie-societe",
+      "format": "avant-ailleurs",
+      "brief": "Le télétravail en France : marginal avant 2020, installé depuis. Ce que disent les chiffres avant/après.",
+      "pistes": [
+        "la part de salariés en télétravail avant 2020 (Dares/Insee)",
+        "la bascule pendant les confinements",
+        "le taux stabilisé depuis, une fois la crise passée",
+        "les accords d'entreprise encadrant le nombre de jours de télétravail"
+      ],
+      "liens": ["machines-du-quotidien", "temps-domestique"]
+    },
+    {
+      "id": "irezumi-tatouage-japonais",
+      "theme": "arts-langues-croyances",
+      "format": "objet",
+      "brief": "L'irezumi, tatouage traditionnel japonais : un art ancien encore associé au crime organisé aujourd'hui.",
+      "pistes": [
+        "son histoire (période Edo, décoration des condamnés puis art à part entière)",
+        "son interdiction pendant l'ère Meiji",
+        "l'association actuelle avec les yakuzas dans l'imaginaire japonais",
+        "l'interdiction de fait dans certains bains publics (onsen) japonais"
+      ]
+    },
+    {
+      "id": "manger-seul-au-restaurant",
+      "theme": "hors-piste",
+      "themes_croises": ["cuisine-alimentation", "modes-de-vie-societe"],
+      "format": "dilemme",
+      "brief": "Manger seul au restaurant : plaisir assumé ou malaise social ? Le concept japonais « ohitorisama » face au regard français.",
+      "pistes": [
+        "le concept japonais « ohitorisama » et les restaurants équipés pour un client seul",
+        "des données ou études sur le repas pris seul en France",
+        "l'essor de la livraison comme façon d'éviter le repas seul en public",
+        "le repas comme moment social par défaut dans la culture française"
+      ],
+      "liens": ["vivre-seul", "repas-gastronomique"]
+    }
+  ]
+}
