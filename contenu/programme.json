@@ -31,6 +31,16 @@
         "la-langue-des-signes",
         "statues-et-noms-de-rues"
       ]
+    },
+    "2026-09-25": {
+      "problematique": "pb-qui-possede-tes-donnees",
+      "cartes": [
+        "notre-dame-chantier",
+        "baguette-patrimoine-unesco",
+        "temps-domestique",
+        "lascaux-la-grotte-fermee",
+        "gaspillage-alimentaire"
+      ]
     }
   }
 }

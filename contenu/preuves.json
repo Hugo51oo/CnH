@@ -1313,5 +1313,546 @@
         "citation": "Le conseil municipal procède à la dénomination des voies et lieux-dits, y compris les voies privées ouvertes à la circulation."
       }
     ]
+  },
+  "pb-qui-possede-tes-donnees": {
+    "sources": [
+      {
+        "titre": "Rapport annuel : le bilan et les actions marquantes de la CNIL en 2025",
+        "editeur": "CNIL",
+        "url": "https://www.cnil.fr/fr/rapport-annuel-2025",
+        "consulte_le": "2026-09-25"
+      },
+      {
+        "titre": "Le règlement général sur la protection des données - RGPD",
+        "editeur": "CNIL",
+        "url": "https://www.cnil.fr/fr/reglement-europeen-protection-donnees",
+        "consulte_le": "2026-09-25"
+      },
+      {
+        "titre": "Les droits pour maîtriser vos données personnelles",
+        "editeur": "CNIL",
+        "url": "https://www.cnil.fr/fr/les-droits-pour-maitriser-vos-donnees-personnelles",
+        "consulte_le": "2026-09-25"
+      },
+      {
+        "titre": "RGPD : l'Union européenne entre de plain-pied dans l'ère du numérique",
+        "editeur": "The Conversation France",
+        "url": "https://theconversation.com/rgpd-lunion-europeenne-entre-de-plain-pied-dans-lere-du-numerique-98179",
+        "consulte_le": "2026-09-25"
+      },
+      {
+        "titre": "Le RGPD vu des deux côtés de l'Atlantique : des divergences philosophiques inconciliables ?",
+        "editeur": "The Conversation France",
+        "url": "https://theconversation.com/le-rgpd-vu-des-deux-cotes-de-latlantique-des-divergences-philosophiques-inconciliables-100192",
+        "consulte_le": "2026-09-25"
+      }
+    ],
+    "preuves": [
+      {
+        "appuie": "base",
+        "source": 2,
+        "citation": "La protection des personnes physiques à l'égard du traitement des données à caractère personnel est un droit fondamental."
+      },
+      {
+        "appuie": "repere 1",
+        "source": 1,
+        "citation": "2025 a été marquée par un nouveau record de plaintes reçues par la CNIL, qui atteint 20 150, soit 10 % de plus qu'en 2024."
+      },
+      {
+        "appuie": "repere 2",
+        "source": 1,
+        "citation": "Au total, la CNIL a mené 323 contrôles et a rendu 259 décisions, dont 83 sanctions"
+      },
+      {
+        "appuie": "repere 3",
+        "source": 4,
+        "citation": "Le premier est le « droit à l'effacement (droit à l'oubli) » (art. 17)"
+      },
+      {
+        "appuie": "repere 4",
+        "source": 1,
+        "citation": "non-respect de la protection des données et de la vie privée dans le cadre du travail, du commerce, de l'immobilier ou encore sur les réseaux sociaux"
+      },
+      {
+        "appuie": "clivage 1 fait_a",
+        "source": 1,
+        "citation": "pour un montant total de près de 487 M€ (perçus par le Trésor public)."
+      },
+      {
+        "appuie": "clivage 1 fait_b",
+        "source": 3,
+        "citation": "Vous pouvez vous opposer à tout moment à ce qu'un organisme utilise certaines de vos données."
+      },
+      {
+        "appuie": "clivage 2 fait_a",
+        "source": 5,
+        "citation": "la notion de privacy comme nocive pour le marché en ce qu'elle prive d'informations les agents dans leurs prises de décisions."
+      },
+      {
+        "appuie": "clivage 2 fait_b",
+        "source": 2,
+        "citation": "Les personnes physiques devraient avoir le contrôle des données à caractère personnel les concernant."
+      },
+      {
+        "appuie": "clivage 3 fait_a",
+        "source": 5,
+        "citation": "la doctrine libérale du « laissez-faire, laissez passer »"
+      },
+      {
+        "appuie": "clivage 3 fait_b",
+        "source": 3,
+        "citation": "Obtenir et vérifier les données qu'un organisme détient sur vous."
+      }
+    ]
+  },
+  "notre-dame-chantier": {
+    "sources": [
+      {
+        "titre": "Spécial Notre-Dame de Paris (1/6) : les grandes étapes d'une renaissance",
+        "editeur": "Ministère de la Culture",
+        "url": "https://www.culture.gouv.fr/actualites/special-notre-dame-de-paris-1-6-les-grandes-etapes-d-une-renaissance",
+        "consulte_le": "2026-09-25"
+      },
+      {
+        "titre": "La loi du 29 juillet 2019",
+        "editeur": "Ministère de la Culture",
+        "url": "https://notre-dame-de-paris.culture.gouv.fr/fr/la-loi-du-29-juillet-2019",
+        "consulte_le": "2026-09-25"
+      },
+      {
+        "titre": "L'établissement public",
+        "editeur": "Rebâtir Notre-Dame de Paris",
+        "url": "https://rebatirnotredamedeparis.fr/l-etablissement-public",
+        "consulte_le": "2026-09-25"
+      },
+      {
+        "titre": "La conservation et la restauration de la cathédrale Notre-Dame de Paris",
+        "editeur": "Cour des comptes",
+        "url": "https://www.ccomptes.fr/fr/publications/la-conservation-et-la-restauration-de-la-cathedrale-notre-dame-de-paris",
+        "consulte_le": "2026-09-25"
+      },
+      {
+        "titre": "Restauration de Notre-Dame de Paris (dossier législatif)",
+        "editeur": "Assemblée nationale",
+        "url": "https://www.assemblee-nationale.fr/dyn/15/dossiers/souscription_nationale_restauration_notre-dame_paris",
+        "consulte_le": "2026-09-25"
+      },
+      {
+        "titre": "La préparation de la restauration",
+        "editeur": "Ministère de la Culture",
+        "url": "https://notre-dame-de-paris.culture.gouv.fr/fr/la-preparation-de-la-restauration",
+        "consulte_le": "2026-09-25"
+      },
+      {
+        "titre": "Utilisation des dons versés pour la reconstruction de la cathédrale Notre-Dame de Paris",
+        "editeur": "Sénat",
+        "url": "https://www.senat.fr/questions/base/2020/qSEQ20101319S.html",
+        "consulte_le": "2026-09-25"
+      },
+      {
+        "titre": "Projet de loi pour la restauration et la conservation de la cathédrale Notre-Dame de Paris et instituant une souscription nationale à cet effet - Rapport n° 521 (2018-2019)",
+        "editeur": "Sénat",
+        "url": "https://www.senat.fr/rap/l18-521/l18-5218.html",
+        "consulte_le": "2026-09-25"
+      }
+    ],
+    "preuves": [
+      {
+        "appuie": "base",
+        "source": 1,
+        "citation": "Le 15 avril 2019, vers 19h, l'impensable se produisait : un incendie s'était déclaré dans l'un des symboles de notre patrimoine, la cathédrale Notre-Dame de Paris."
+      },
+      {
+        "appuie": "repere 1",
+        "source": 1,
+        "citation": "Le montant de la souscription nationale est évalué aujourd'hui à 830 millions d'euros."
+      },
+      {
+        "appuie": "repere 2",
+        "source": 1,
+        "citation": "Le 8 décembre 2024, à l'issue d'un chantier de reconstruction hors-norme, la cathédrale Notre-Dame de Paris va accueillir à nouveau les fidèles et le public."
+      },
+      {
+        "appuie": "repere 3",
+        "source": 3,
+        "citation": "assurer la conduite, la coordination et la réalisation des études et des opérations concourant à la conservation et à la restauration de la cathédrale Notre-Dame de Paris"
+      },
+      {
+        "appuie": "repere 4",
+        "source": 4,
+        "citation": "La souscription nationale lancée le soir de l'incendie a permis de recueillir 825 M€ auprès de 338 086 donateurs"
+      },
+      {
+        "appuie": "clivage 1 fait_a",
+        "source": 6,
+        "citation": "une reconstitution fidèle dans leur état Viollet-le-Duc pour le transept et la flèche, et dans leur état médiéval pour la nef et le chœur"
+      },
+      {
+        "appuie": "clivage 1 fait_b",
+        "source": 5,
+        "citation": "prendre par ordonnance les mesures d'aménagement ou de dérogation à certaines dispositions législatives qui seraient nécessaires afin de faciliter la réalisation des travaux"
+      },
+      {
+        "appuie": "clivage 2 fait_a",
+        "source": 4,
+        "citation": "l'utilisation des fonds issus d'un exceptionnel élan de générosité (825 M€) n'est pas suffisamment transparente"
+      },
+      {
+        "appuie": "clivage 2 fait_b",
+        "source": 7,
+        "citation": "Les fonds issus de la souscription nationale serviront aussi à financer [le] fonctionnement [de l'établissement public]."
+      },
+      {
+        "appuie": "clivage 3 fait_a",
+        "source": 2,
+        "citation": "répondre au défi que constitue la restauration dans les cinq ans de l'édifice et de ses collections"
+      },
+      {
+        "appuie": "clivage 3 fait_b",
+        "source": 8,
+        "citation": "La perspective d'introduire des dérogations aux règles de droit commun pour faciliter la mise en oeuvre du chantier de Notre-Dame me paraît incompréhensible."
+      }
+    ]
+  },
+  "baguette-patrimoine-unesco": {
+    "sources": [
+      {
+        "titre": "Les savoir-faire artisanaux et la culture de la baguette de pain",
+        "editeur": "UNESCO - Patrimoine culturel immatériel",
+        "url": "https://ich.unesco.org/fr/RL/les-savoir-faire-artisanaux-et-la-culture-de-la-baguette-de-pain-01883",
+        "consulte_le": "2026-09-25"
+      },
+      {
+        "titre": "La baguette de pain inscrite au patrimoine immatériel de l'Unesco",
+        "editeur": "Ministère de la Culture",
+        "url": "https://www.culture.gouv.fr/actualites/La-baguette-de-pain-inscrite-au-patrimoine-immateriel-de-l-Unesco",
+        "consulte_le": "2026-09-25"
+      },
+      {
+        "titre": "Le commerce alimentaire spécialisé : déclin enrayé ? - Insee Première - 1359",
+        "editeur": "Insee",
+        "url": "https://www.insee.fr/fr/statistiques/1280960",
+        "consulte_le": "2026-09-25"
+      },
+      {
+        "titre": "Le patrimoine culturel immatériel à l'Unesco",
+        "editeur": "Ministère de la Culture",
+        "url": "https://www.culture.gouv.fr/thematiques/patrimoine-culturel-immateriel/le-patrimoine-culturel-immateriel/le-patrimoine-culturel-immateriel-a-l-unesco",
+        "consulte_le": "2026-09-25"
+      }
+    ],
+    "preuves": [
+      {
+        "appuie": "base",
+        "source": 1,
+        "citation": "Inscrit en 2022 (17.COM) sur la Liste représentative du patrimoine culturel immatériel de l'humanité"
+      },
+      {
+        "appuie": "base",
+        "source": 1,
+        "citation": "Le procédé de fabrication traditionnel comprend plusieurs étapes : dosage et pesage des ingrédients, pétrissage, fermentation, division, détente, façonnage manuel, apprêt, scarification (signature du boulanger) et cuisson."
+      },
+      {
+        "appuie": "base",
+        "source": 2,
+        "citation": "Les mesures de sauvegarde envisagées comportent la mise en place d'actions de sensibilisation à l'importance des pratiques alimentaires faisant partie du quotidien"
+      },
+      {
+        "appuie": "repere inscription",
+        "source": 1,
+        "citation": "Inscrit en 2022 (17.COM) sur la Liste représentative du patrimoine culturel immatériel de l'humanité"
+      },
+      {
+        "appuie": "repere sauvegarde",
+        "source": 2,
+        "citation": "Les mesures de sauvegarde envisagées comportent la mise en place d'actions de sensibilisation à l'importance des pratiques alimentaires faisant partie du quotidien"
+      },
+      {
+        "appuie": "repere objectifconv",
+        "source": 4,
+        "citation": "sensibiliser un large public aux pratiques culturelles immatérielles, de renforcer la reconnaissance des détenteurs"
+      },
+      {
+        "appuie": "repere partdemarche",
+        "source": 3,
+        "citation": "les boulangeries et pâtisseries, qui enregistrent la deuxième plus forte perte de part de marché (− 6,1 points), ont un poids tel dans la vente de pain (72 % des ventes en 2000) que cette baisse les affecte moins"
+      },
+      {
+        "appuie": "clivage 1 fait_a",
+        "source": 2,
+        "citation": "consacre la dimension patrimoniale des savoir-faire artisanaux de la baguette et reconnaît qu'aller chercher son pain est aussi un acte culturel, un moment de partage et de lien social"
+      },
+      {
+        "appuie": "clivage 1 fait_b",
+        "source": 1,
+        "citation": "Inscrit en 2022 (17.COM) sur la Liste représentative du patrimoine culturel immatériel de l'humanité"
+      },
+      {
+        "appuie": "clivage 2 fait_a",
+        "source": 3,
+        "citation": "les boulangeries et pâtisseries, qui enregistrent la deuxième plus forte perte de part de marché (− 6,1 points)"
+      },
+      {
+        "appuie": "clivage 2 fait_b",
+        "source": 3,
+        "citation": "le nombre de boulangeries-pâtisseries est resté stable"
+      }
+    ]
+  },
+  "temps-domestique": {
+    "sources": [
+      {
+        "titre": "Le travail domestique : 60 milliards d'heures en 2010 - Insee Première n° 1423",
+        "editeur": "Insee",
+        "url": "https://www.insee.fr/fr/statistiques/2123967",
+        "consulte_le": "2026-09-25"
+      },
+      {
+        "titre": "Depuis 11 ans, moins de tâches ménagères, plus d'Internet - Insee Première n° 1377",
+        "editeur": "Insee",
+        "url": "https://www.insee.fr/fr/statistiques/1281050",
+        "consulte_le": "2026-09-25"
+      },
+      {
+        "titre": "La contribution du travail domestique non marchand au bien-être matériel des ménages : une quantification à partir de l'enquête Emploi du Temps - Document de travail F2011/04",
+        "editeur": "Insee",
+        "url": "https://www.insee.fr/fr/statistiques/1380932",
+        "consulte_le": "2026-09-25"
+      }
+    ],
+    "preuves": [
+      {
+        "appuie": "base",
+        "source": 1,
+        "citation": "Chaque jour, en moyenne, nous consacrons plus de 3 heures à des tâches domestiques"
+      },
+      {
+        "appuie": "base",
+        "source": 1,
+        "citation": "Ce travail est majoritairement réalisé par les femmes (64 % des heures de travail domestique)"
+      },
+      {
+        "appuie": "repere ecart-1h30",
+        "source": 2,
+        "citation": "L'écart entre les hommes et les femmes s'est donc réduit, mais demeure : il est d'une heure et demie par jour."
+      },
+      {
+        "appuie": "repere 42-77mds-h",
+        "source": 1,
+        "citation": "Au niveau macroéconomique, en 2010, entre 42 et 77 milliards d'heures de travail domestique ont été effectuées en France."
+      },
+      {
+        "appuie": "repere stiglitz-pib",
+        "source": 3,
+        "citation": "Le rapport Stiglitz a rappelé qu'une des limites du produit intérieur brut comme indicateur de bien-être est qu'il ne prend pas en compte la production domestique non marchande."
+      },
+      {
+        "appuie": "repere 17,5%-smic",
+        "source": 3,
+        "citation": "Valorisé au SMIC et mesuré avec la définition la plus restreinte, il apporterait une contribution à la production nationale équivalente à 17,5% du PIB."
+      },
+      {
+        "appuie": "clivage 1 fait_a",
+        "source": 3,
+        "citation": "Le rapport Stiglitz a rappelé qu'une des limites du produit intérieur brut comme indicateur de bien-être est qu'il ne prend pas en compte la production domestique non marchande."
+      },
+      {
+        "appuie": "clivage 1 fait_b",
+        "source": 1,
+        "citation": "ces services ne sont pas comptabilisés dans le produit intérieur brut (PIB)"
+      },
+      {
+        "appuie": "clivage 2 fait_a",
+        "source": 2,
+        "citation": "L'écart entre les hommes et les femmes s'est donc réduit, mais demeure : il est d'une heure et demie par jour."
+      },
+      {
+        "appuie": "clivage 2 fait_b",
+        "source": 2,
+        "citation": "Le temps domestique quotidien, resté stable chez les hommes, a diminué chez les femmes, en particulier chez celles qui n'ont pas d'emploi (une demi-heure de moins par jour depuis 1999)."
+      }
+    ]
+  },
+  "lascaux-la-grotte-fermee": {
+    "sources": [
+      {
+        "titre": "La grotte de Lascaux nous émerveille depuis 80 ans !",
+        "editeur": "Ministère de la Culture",
+        "url": "https://www.culture.gouv.fr/regions/drac-nouvelle-aquitaine/actualites/la-grotte-de-lascaux-nous-emerveille-depuis-80-ans",
+        "consulte_le": "2026-09-25"
+      },
+      {
+        "titre": "Four Discoverers",
+        "editeur": "Ministère de la Culture",
+        "url": "https://archeologie.culture.gouv.fr/lascaux/en/four-discoverers",
+        "consulte_le": "2026-09-25"
+      },
+      {
+        "titre": "Prehistoric Sites and Decorated Caves of the Vézère Valley",
+        "editeur": "UNESCO World Heritage Centre",
+        "url": "https://whc.unesco.org/en/list/85/",
+        "consulte_le": "2026-09-25"
+      },
+      {
+        "titre": "Lascaux IV",
+        "editeur": "Ministère de la Culture",
+        "url": "https://archeologie.culture.gouv.fr/lascaux/en/lascaux-iv",
+        "consulte_le": "2026-09-25"
+      },
+      {
+        "titre": "Patrimoine : algues, bactéries, champignons à l'assaut des vieilles pierres",
+        "editeur": "The Conversation France",
+        "url": "https://theconversation.com/patrimoine-algues-bacteries-champignons-a-lassaut-des-vieilles-pierres-241611",
+        "consulte_le": "2026-09-25"
+      }
+    ],
+    "preuves": [
+      {
+        "appuie": "base",
+        "source": 1,
+        "citation": "Sa fermeture en avril 1963 sur décision du ministre de la Culture André Malraux a aussitôt pris une dimension symbolique, fondatrice de l'idée de « conservation préventive »."
+      },
+      {
+        "appuie": "repere 1",
+        "source": 2,
+        "citation": "Four boys unexpectedly found themselves part of history when, on 12 September 1940, they discovered the Lascaux cave."
+      },
+      {
+        "appuie": "repere 2",
+        "source": 2,
+        "citation": "Ravidat and Marsal stood guard outside the entrance to the cave during the winter of 1940-41. They became guides once the cave was opened to visitors in 1948, and they were the ones who pointed out the appearance of the green algae in 1958 and 1959."
+      },
+      {
+        "appuie": "repere 3",
+        "source": 1,
+        "citation": "Sa fermeture en avril 1963 sur décision du ministre de la Culture André Malraux a aussitôt pris une dimension symbolique, fondatrice de l'idée de « conservation préventive »."
+      },
+      {
+        "appuie": "repere 4",
+        "source": 3,
+        "citation": "Date of Inscription: 1979"
+      },
+      {
+        "appuie": "repere 4",
+        "source": 3,
+        "citation": "The Vézère valley contains 147 prehistoric sites dating from the Palaeolithic and 25 decorated caves."
+      },
+      {
+        "appuie": "clivage 1 fait_a",
+        "source": 4,
+        "citation": "The facility is centred on the quasi-entire reproduction of Lascaux cave and the use of new imaging and virtual technologies in the service of public outreach."
+      },
+      {
+        "appuie": "clivage 1 fait_b",
+        "source": 5,
+        "citation": "Dans la grotte ornée de Lascaux, le surtourisme a entraîné le développement massif de champignons noirs Ochroconis lascauxensis à cause de la condensation d'eau sur les parois, des élévations de température, de la concentration en CO2 et en matière organique."
+      },
+      {
+        "appuie": "clivage 2 fait_a",
+        "source": 1,
+        "citation": "Victime de son succès, les mois précédant sa fermeture au public, Lascaux recevait jusqu'à 1800 visiteurs par jour."
+      },
+      {
+        "appuie": "clivage 2 fait_b",
+        "source": 2,
+        "citation": "Ravidat and Marsal stood guard outside the entrance to the cave during the winter of 1940-41. They became guides once the cave was opened to visitors in 1948, and they were the ones who pointed out the appearance of the green algae in 1958 and 1959."
+      }
+    ]
+  },
+  "gaspillage-alimentaire": {
+    "sources": [
+      {
+        "titre": "Éviter le gaspillage alimentaire dans les collectivités et les entreprises",
+        "editeur": "ADEME",
+        "url": "https://economie-circulaire.ademe.fr/gaspillage-alimentaire",
+        "consulte_le": "2026-09-25"
+      },
+      {
+        "titre": "Article L541-15-5 - Code de l'environnement",
+        "editeur": "Légifrance",
+        "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000041598874",
+        "consulte_le": "2026-09-25"
+      },
+      {
+        "titre": "Lutte contre le gaspillage alimentaire : les lois françaises",
+        "editeur": "Ministère de l'Agriculture et de l'Alimentation",
+        "url": "https://agriculture.gouv.fr/lutte-contre-le-gaspillage-alimentaire-les-lois-francaises",
+        "consulte_le": "2026-09-25"
+      },
+      {
+        "titre": "Aide alimentaire : un dispositif vital, un financement menacé ? Un modèle associatif fondé sur le bénévolat à préserver",
+        "editeur": "Sénat",
+        "url": "https://www.senat.fr/rap/r18-034/r18-03415.html",
+        "consulte_le": "2026-09-25"
+      },
+      {
+        "titre": "Question n°3382 : Qualités des dons d'aide alimentaires par les GMS",
+        "editeur": "Assemblée nationale",
+        "url": "https://questions.assemblee-nationale.fr/q16/16-3382QE.htm",
+        "consulte_le": "2026-09-25"
+      }
+    ],
+    "preuves": [
+      {
+        "appuie": "base",
+        "source": 1,
+        "citation": "Ce suivi s'applique à l'ensemble des déchets alimentaires (qui représentent en 2023 pour la France 9,7 millions de tonnes)"
+      },
+      {
+        "appuie": "base",
+        "source": 1,
+        "citation": "En France, en 2023, cela représente 3,8 millions de tonnes, soit près de la moitié des déchets alimentaires totaux"
+      },
+      {
+        "appuie": "repere 1",
+        "source": 1,
+        "citation": "Ce suivi s'applique à l'ensemble des déchets alimentaires (qui représentent en 2023 pour la France 9,7 millions de tonnes)"
+      },
+      {
+        "appuie": "repere 2",
+        "source": 1,
+        "citation": "En France, en 2023, cela représente 3,8 millions de tonnes, soit près de la moitié des déchets alimentaires totaux"
+      },
+      {
+        "appuie": "repere 3",
+        "source": 2,
+        "citation": "ils ne peuvent délibérément rendre leurs invendus alimentaires encore consommables impropres à la consommation humaine ou à toute autre forme de valorisation prévue au même article L. 541-15-4"
+      },
+      {
+        "appuie": "repere 4",
+        "source": 3,
+        "citation": "Les distributeurs de plus de 400 m² doivent maintenant proposer des conventions de don"
+      },
+      {
+        "appuie": "clivage 1 fait_a",
+        "source": 5,
+        "citation": "le volume des dons alimentaires des grandes surfaces aux associations de solidarité a augmenté de 23 % entre 2015 et 2018"
+      },
+      {
+        "appuie": "clivage 1 fait_b",
+        "source": 4,
+        "citation": "une baisse de la qualité du don, qui se manifeste par une absence de tri des denrées de la part de la grande distribution ou par des denrées données à J-1 de leur date limite de consommation"
+      },
+      {
+        "appuie": "clivage 2 fait_a",
+        "source": 1,
+        "citation": "Comment se répartit le gaspillage alimentaire ? 3,8 millions de tonnes au total par an. - 35% par les ménages - 26% de productions agricoles - 17% liés à la transformation - 14% de consommation hors domicile - 8% par la distribution"
+      },
+      {
+        "appuie": "clivage 2 fait_b",
+        "source": 3,
+        "citation": "Les distributeurs de plus de 400 m² doivent maintenant proposer des conventions de don"
+      },
+      {
+        "appuie": "clivage 3 fait_a",
+        "source": 3,
+        "citation": "l'obligation de diagnostic anti-gaspillage aux industries agroalimentaires"
+      },
+      {
+        "appuie": "clivage 3 fait_b",
+        "source": 4,
+        "citation": "Les associations doivent également supporter de nouvelles charges, notamment celles engendrées par le traitement des dons en nature qui sont en augmentation ; à savoir des coûts logistiques, de déploiement d'outils de gestion, de recherches de partenariat etc."
+      }
+    ]
   }
 }

@@ -1,7 +1,7 @@
 /* Fichier généré par outils/valider_contenu.py — ne pas modifier à la main.
    Modifier contenu/cartes.json ou contenu/programme.json, puis relancer le script. */
 window.CNH_DONNEES = {
-  "genere_le": "2026-09-25T09:18:08Z",
+  "genere_le": "2026-09-25T09:58:17Z",
   "contenus": [
     {
       "id": "pb-ce-quon-transmet",
@@ -2546,6 +2546,720 @@ window.CNH_DONNEES = {
       ],
       "statut": "verifie",
       "verifie_le": "2026-09-25"
+    },
+    {
+      "id": "pb-qui-possede-tes-donnees",
+      "type": "problematique",
+      "theme": "modes-de-vie-societe",
+      "format": "ouverte",
+      "titre": "Tes données personnelles, qui les contrôle ?",
+      "base": "Le RGPD, en application depuis 2018, encadre l'usage des données personnelles par les entreprises et administrations en Europe. Il ne crée pas un droit de propriété sur ces données, mais un ensemble de droits de contrôle : accès, rectification, effacement, portabilité. En France, la CNIL est chargée de veiller au respect de ces droits et peut sanctionner les manquements.",
+      "base_source": 2,
+      "ouverture": "Entre accepter les cookies et fermer l'appli sans lire, est-ce que tu sais vraiment ce que tu donnes de toi, et ce que tu peux encore reprendre ?",
+      "reperes": [
+        {
+          "cle": "plaintes25",
+          "texte": "En 2025, la CNIL a reçu 20 150 plaintes, un nouveau record, en hausse de 10 % par rapport à 2024.",
+          "source": 1
+        },
+        {
+          "cle": "sanctions25",
+          "texte": "La CNIL a mené 323 contrôles et prononcé 83 sanctions en 2025, pour un montant total de près de 487 millions d'euros d'amendes.",
+          "source": 1
+        },
+        {
+          "cle": "droits-rgpd",
+          "texte": "Le RGPD crée un droit d'accès, de rectification, un droit à l'effacement (« droit à l'oubli », art. 17) et un droit à la portabilité des données.",
+          "source": 4
+        },
+        {
+          "cle": "secteurs-plt",
+          "texte": "Les plaintes reçues par la CNIL concernent notamment le travail, le commerce, l'immobilier et les réseaux sociaux.",
+          "source": 1
+        }
+      ],
+      "clivages": [
+        {
+          "question": "Le RGPD te donne-t-il un vrai pouvoir, ou surtout des droits sur le papier ?",
+          "cote_a": "Le RGPD n'est pas qu'un texte symbolique : la CNIL peut contrôler les entreprises, les mettre en demeure et les sanctionner financièrement. En 2025, 83 sanctions ont représenté près de 487 millions d'euros d'amendes — la preuve que ces droits pèsent concrètement face à des organisations qui ne les respectent pas.",
+          "cote_b": "Sur le papier tu as le droit d'accéder à tes données, de t'y opposer ou de les faire effacer, mais dans les faits c'est à toi de faire la démarche auprès de chaque organisme, un par un, sans garantie de réponse rapide. Peu de gens exercent réellement ces droits au quotidien face à des dizaines de services utilisés chaque semaine.",
+          "fait_a": {
+            "texte": "En 2025, les sanctions prononcées par la CNIL ont représenté un montant total de près de 487 millions d'euros d'amendes.",
+            "source": 1
+          },
+          "fait_b": {
+            "texte": "Le droit d'opposition permet de s'opposer à tout moment à ce qu'un organisme utilise certaines de tes données — une démarche que chaque personne doit engager elle-même.",
+            "source": 3
+          },
+          "a_creuser": [
+            "Mise en demeure de la CNIL",
+            "Sanction simplifiée vs ordinaire"
+          ]
+        },
+        {
+          "question": "Faut-il un vrai droit de propriété sur tes données, plutôt qu'un droit de contrôle ?",
+          "cote_a": "Si mes données ont une valeur économique pour les plateformes qui les exploitent, je devrais pouvoir les valoriser moi-même, les vendre ou négocier leur usage comme n'importe quel bien. Un vrai droit de propriété donnerait un levier financier aux individus plutôt qu'aux seules entreprises qui en tirent profit aujourd'hui.",
+          "cote_b": "Le RGPD choisit délibérément de ne jamais parler de « propriété » : une donnée personnelle reste attachée à la personne plutôt qu'être un bien qu'on échange. En faire une marchandise inciterait à la vendre plutôt qu'à la protéger, et laisserait les plus précaires céder leur vie privée faute de moyens.",
+          "fait_a": {
+            "texte": "L'approche américaine considère la protection de la vie privée comme nocive pour le marché, car elle prive les acteurs économiques d'informations utiles à leurs décisions.",
+            "source": 5
+          },
+          "fait_b": {
+            "texte": "Le RGPD énonce que les personnes physiques devraient avoir le contrôle des données à caractère personnel les concernant.",
+            "source": 2
+          },
+          "a_creuser": [
+            "Patrimonialité des données",
+            "Portabilité comme alternative à la vente"
+          ]
+        },
+        {
+          "question": "« Gratuit contre données », échange équilibré ou marché déséquilibré ?",
+          "cote_a": "Personne n'est obligé d'utiliser un réseau social ou un moteur de recherche gratuit : en échange d'un service utile, on accepte que ses données servent à la publicité ciblée. C'est un compromis économique classique, comparable à une chaîne de télévision gratuite financée par la publicité.",
+          "cote_b": "Le consentement est rarement libre quand le service est devenu incontournable au quotidien et que les conditions d'utilisation sont illisibles : le rapport de force favorise largement les plateformes, qui savent optimiser la collecte quand l'utilisateur ne mesure pas ce qu'il cède réellement.",
+          "fait_a": {
+            "texte": "L'approche américaine de la protection de la vie privée s'inscrit dans la doctrine libérale du « laissez-faire, laissez-passer », qui privilégie l'autorégulation des acteurs privés.",
+            "source": 5
+          },
+          "fait_b": {
+            "texte": "Le droit d'accès permet d'obtenir et de vérifier les données qu'un organisme détient sur une personne.",
+            "source": 3
+          },
+          "a_creuser": [
+            "Économie de l'attention",
+            "Publicité ciblée"
+          ]
+        }
+      ],
+      "derives": [
+        "Compare les politiques de confidentialité de deux services que tu utilises tous les jours.",
+        "Fais toi-même une demande d'accès à tes données auprès d'un service, en t'appuyant sur les explications de la CNIL.",
+        "Regarde comment fonctionne la portabilité des données entre deux services concurrents."
+      ],
+      "sources": [
+        {
+          "titre": "Rapport annuel : le bilan et les actions marquantes de la CNIL en 2025",
+          "editeur": "CNIL",
+          "url": "https://www.cnil.fr/fr/rapport-annuel-2025",
+          "consulte_le": "2026-09-25"
+        },
+        {
+          "titre": "Le règlement général sur la protection des données - RGPD",
+          "editeur": "CNIL",
+          "url": "https://www.cnil.fr/fr/reglement-europeen-protection-donnees",
+          "consulte_le": "2026-09-25"
+        },
+        {
+          "titre": "Les droits pour maîtriser vos données personnelles",
+          "editeur": "CNIL",
+          "url": "https://www.cnil.fr/fr/les-droits-pour-maitriser-vos-donnees-personnelles",
+          "consulte_le": "2026-09-25"
+        },
+        {
+          "titre": "RGPD : l'Union européenne entre de plain-pied dans l'ère du numérique",
+          "editeur": "The Conversation France",
+          "url": "https://theconversation.com/rgpd-lunion-europeenne-entre-de-plain-pied-dans-lere-du-numerique-98179",
+          "consulte_le": "2026-09-25"
+        },
+        {
+          "titre": "Le RGPD vu des deux côtés de l'Atlantique : des divergences philosophiques inconciliables ?",
+          "editeur": "The Conversation France",
+          "url": "https://theconversation.com/le-rgpd-vu-des-deux-cotes-de-latlantique-des-divergences-philosophiques-inconciliables-100192",
+          "consulte_le": "2026-09-25"
+        }
+      ],
+      "statut": "verifie",
+      "verifie_le": "2026-09-25"
+    },
+    {
+      "id": "notre-dame-chantier",
+      "type": "carte",
+      "theme": "histoire-patrimoine",
+      "format": "chiffre",
+      "titre": "830 millions d'euros pour reconstruire Notre-Dame",
+      "base": "Le 15 avril 2019, un incendie détruit la charpente et la flèche de Notre-Dame de Paris. La loi du 29 juillet 2019 organise la restauration, la finance par une souscription nationale et crée un établissement public dédié. La cathédrale a rouvert au public le 8 décembre 2024, cinq ans et demi après l'incendie.",
+      "base_source": 1,
+      "ouverture": "Et toi, aurais-tu préféré une flèche reconstruite à l'identique ou un geste architectural neuf pour Notre-Dame ?",
+      "reperes": [
+        {
+          "cle": "dons",
+          "texte": "Le montant de la souscription nationale ouverte par la loi du 29 juillet 2019 est évalué à 830 millions d'euros, réunis auprès de 340 000 donateurs venus de plus de 150 pays, selon un bilan du ministère de la Culture publié fin octobre 2024.",
+          "source": 1
+        },
+        {
+          "cle": "reouverture",
+          "texte": "La cathédrale a rouvert au public le 8 décembre 2024, à l'issue d'un chantier de reconstruction hors-norme.",
+          "source": 1
+        },
+        {
+          "cle": "etablissement",
+          "texte": "Un établissement public assure la conduite, la coordination et la réalisation des études et opérations de conservation et de restauration depuis sa création par la loi de 2019.",
+          "source": 3
+        },
+        {
+          "cle": "donateurs",
+          "texte": "Fin 2019 déjà, 825 millions d'euros avaient été recueillis auprès de 338 086 donateurs, selon la Cour des comptes.",
+          "source": 4
+        }
+      ],
+      "clivages": [
+        {
+          "question": "Fallait-il reconstruire la flèche à l'identique ou oser un geste contemporain ?",
+          "cote_a": "Restaurer la flèche dans son état Viollet-le-Duc respecte l'authenticité du monument et le savoir-faire du XIXe siècle. C'est aussi l'option qui permettait de tenir l'objectif de cinq ans fixé par l'exécutif, sans les risques techniques et les délais qu'aurait demandés un projet inédit.",
+          "cote_b": "Un geste contemporain aurait affirmé que la cathédrale appartient aussi à notre époque, comme elle a déjà intégré des ajouts successifs au fil des siècles, dont la flèche de Viollet-le-Duc elle-même. La loi d'exception de 2019 ouvrait la voie à des dérogations qui auraient pu le permettre.",
+          "fait_a": {
+            "texte": "La Commission nationale du patrimoine et de l'architecture a approuvé une reconstitution fidèle à l'état Viollet-le-Duc pour le transept et la flèche.",
+            "source": 6
+          },
+          "fait_b": {
+            "texte": "La loi du 29 juillet 2019 permet au gouvernement de prendre par ordonnance des mesures d'aménagement ou de dérogation à certaines dispositions législatives pour faciliter la réalisation des travaux.",
+            "source": 5
+          },
+          "a_creuser": [
+            "Commission nationale du patrimoine et de l'architecture",
+            "Concours international pour la flèche en 2019"
+          ]
+        },
+        {
+          "question": "Les dons doivent-ils financer uniquement les travaux, ou aussi le fonctionnement de l'établissement public ?",
+          "cote_a": "La loi de 2019 réserve la souscription nationale au financement des travaux de conservation et de restauration : utiliser une part des dons pour des frais de fonctionnement ou de gestion trahit ce que les donateurs pensaient financer et fragilise leur confiance.",
+          "cote_b": "Sans un établissement public capable de piloter le chantier au quotidien, les travaux n'auraient pas pu avancer : financer son fonctionnement par les dons a été assumé et expliqué publiquement par le gouvernement dès juillet 2019, et reste légal.",
+          "fait_a": {
+            "texte": "La Cour des comptes observe que l'utilisation des fonds issus d'un exceptionnel élan de générosité (825 M€) n'est pas suffisamment transparente.",
+            "source": 4
+          },
+          "fait_b": {
+            "texte": "Les fonds issus de la souscription nationale serviront aussi à financer [le] fonctionnement [de l'établissement public], selon la réponse ministérielle publiée par le Sénat.",
+            "source": 7
+          },
+          "a_creuser": [
+            "Débudgétisation de l'État",
+            "Recommandations de la Cour des comptes sur Notre-Dame"
+          ]
+        },
+        {
+          "question": "Fallait-il déroger aux règles patrimoniales habituelles pour tenir le délai de cinq ans ?",
+          "cote_a": "Un monument suivi par le monde entier justifiait d'accélérer certaines procédures administratives (archéologie, urbanisme, environnement) pour répondre au défi d'une restauration en cinq ans, sans toucher aux exigences de qualité du chantier.",
+          "cote_b": "Exempter l'État des règles de droit commun pour Notre-Dame, alors qu'elles s'imposent à tous les autres propriétaires de monuments historiques, fragilise un système de protection du patrimoine construit depuis des décennies et crée un précédent.",
+          "fait_a": {
+            "texte": "La loi vise à répondre au défi que constitue la restauration dans les cinq ans de l'édifice et de ses collections.",
+            "source": 2
+          },
+          "fait_b": {
+            "texte": "La perspective d'introduire des dérogations aux règles de droit commun pour faciliter la mise en oeuvre du chantier de Notre-Dame me paraît incompréhensible.",
+            "source": 8
+          },
+          "a_creuser": [
+            "Article 9 de la loi du 29 juillet 2019",
+            "Doctrine patrimoniale héritée d'André Malraux"
+          ]
+        }
+      ],
+      "derives": [
+        "Qui doit décider de ce qu'on restaure « à l'identique » dans un monument symbolique ?",
+        "Le mécénat privé doit-il financer l'entretien courant du patrimoine public ?",
+        "Que peut-on apprendre du chantier de Notre-Dame pour d'autres monuments menacés ?"
+      ],
+      "liens": [
+        "restaurer-a-l-identique",
+        "pb-qui-paie-ce-quon-garde"
+      ],
+      "sources": [
+        {
+          "titre": "Spécial Notre-Dame de Paris (1/6) : les grandes étapes d'une renaissance",
+          "editeur": "Ministère de la Culture",
+          "url": "https://www.culture.gouv.fr/actualites/special-notre-dame-de-paris-1-6-les-grandes-etapes-d-une-renaissance",
+          "consulte_le": "2026-09-25"
+        },
+        {
+          "titre": "La loi du 29 juillet 2019",
+          "editeur": "Ministère de la Culture",
+          "url": "https://notre-dame-de-paris.culture.gouv.fr/fr/la-loi-du-29-juillet-2019",
+          "consulte_le": "2026-09-25"
+        },
+        {
+          "titre": "L'établissement public",
+          "editeur": "Rebâtir Notre-Dame de Paris",
+          "url": "https://rebatirnotredamedeparis.fr/l-etablissement-public",
+          "consulte_le": "2026-09-25"
+        },
+        {
+          "titre": "La conservation et la restauration de la cathédrale Notre-Dame de Paris",
+          "editeur": "Cour des comptes",
+          "url": "https://www.ccomptes.fr/fr/publications/la-conservation-et-la-restauration-de-la-cathedrale-notre-dame-de-paris",
+          "consulte_le": "2026-09-25"
+        },
+        {
+          "titre": "Restauration de Notre-Dame de Paris (dossier législatif)",
+          "editeur": "Assemblée nationale",
+          "url": "https://www.assemblee-nationale.fr/dyn/15/dossiers/souscription_nationale_restauration_notre-dame_paris",
+          "consulte_le": "2026-09-25"
+        },
+        {
+          "titre": "La préparation de la restauration",
+          "editeur": "Ministère de la Culture",
+          "url": "https://notre-dame-de-paris.culture.gouv.fr/fr/la-preparation-de-la-restauration",
+          "consulte_le": "2026-09-25"
+        },
+        {
+          "titre": "Utilisation des dons versés pour la reconstruction de la cathédrale Notre-Dame de Paris",
+          "editeur": "Sénat",
+          "url": "https://www.senat.fr/questions/base/2020/qSEQ20101319S.html",
+          "consulte_le": "2026-09-25"
+        },
+        {
+          "titre": "Projet de loi pour la restauration et la conservation de la cathédrale Notre-Dame de Paris et instituant une souscription nationale à cet effet - Rapport n° 521 (2018-2019)",
+          "editeur": "Sénat",
+          "url": "https://www.senat.fr/rap/l18-521/l18-5218.html",
+          "consulte_le": "2026-09-25"
+        }
+      ],
+      "statut": "verifie",
+      "verifie_le": "2026-09-25"
+    },
+    {
+      "id": "baguette-patrimoine-unesco",
+      "type": "carte",
+      "theme": "cuisine-alimentation",
+      "format": "objet",
+      "titre": "La baguette, patrimoine immatériel de l'UNESCO",
+      "base": "Le 30 novembre 2022, l'UNESCO a inscrit les « savoir-faire artisanaux et la culture de la baguette de pain » sur la Liste représentative du patrimoine culturel immatériel de l'humanité. Le dossier décrit un procédé traditionnel en plusieurs étapes : dosage, pétrissage, fermentation, façonnage manuel et scarification, la « signature du boulanger ». La seule mesure de sauvegarde détaillée par le ministère de la Culture est la mise en place d'actions de sensibilisation aux pratiques alimentaires quotidiennes.",
+      "base_source": 1,
+      "ouverture": "Et toi, la baguette que tu achètes ressemble-t-elle encore à ce savoir-faire décrit par l'UNESCO ?",
+      "reperes": [
+        {
+          "cle": "inscription",
+          "texte": "L'élément est inscrit depuis 2022 (décision 17.COM) sur la Liste représentative du patrimoine culturel immatériel de l'humanité.",
+          "source": 1
+        },
+        {
+          "cle": "sauvegarde",
+          "texte": "La seule mesure de sauvegarde détaillée est la mise en place d'actions de sensibilisation à l'importance des pratiques alimentaires qui font partie du quotidien.",
+          "source": 2
+        },
+        {
+          "cle": "objectifconv",
+          "texte": "La convention vise à « sensibiliser un large public aux pratiques culturelles immatérielles » et à renforcer la reconnaissance de leurs détenteurs.",
+          "source": 4
+        },
+        {
+          "cle": "partdemarche",
+          "texte": "Entre 1993 et 2000, les boulangeries-pâtisseries ont enregistré la deuxième plus forte perte de part de marché du commerce alimentaire spécialisé (-6,1 points) ; leur poids dans la vente de pain (72 % en 2000) a, selon l'Insee, atténué l'effet de cette baisse.",
+          "source": 3
+        }
+      ],
+      "clivages": [
+        {
+          "question": "La reconnaissance UNESCO change-t-elle quelque chose de concret pour les boulangers ?",
+          "cote_a": "Officiellement, l'inscription « consacre la dimension patrimoniale des savoir-faire artisanaux de la baguette » et reconnaît qu'aller chercher son pain est « un acte culturel, un moment de partage et de lien social », selon la ministre de la Culture. Elle s'accompagne de mesures de sauvegarde soutenues par plusieurs ministères, ce qui offre une reconnaissance officielle et une visibilité internationale à un métier.",
+          "cote_b": "Concrètement, cette reconnaissance n'apporte ni norme de fabrication contraignante ni protection commerciale nouvelle : elle figure sur une liste dite « représentative », une catégorie de reconnaissance, pas un régime de protection comme une appellation d'origine. La seule mesure annoncée est la mise en place d'« actions de sensibilisation », sans nouveau cadre réglementaire ni financement identifié.",
+          "fait_a": {
+            "texte": "L'inscription « consacre la dimension patrimoniale des savoir-faire artisanaux de la baguette et reconnaît qu'aller chercher son pain est aussi un acte culturel, un moment de partage et de lien social ».",
+            "source": 2
+          },
+          "fait_b": {
+            "texte": "L'élément est inscrit en 2022 (17.COM) sur la Liste représentative du patrimoine culturel immatériel de l'humanité, et non sur un dispositif de protection juridique d'un produit.",
+            "source": 1
+          },
+          "a_creuser": [
+            "Différence entre patrimoine culturel immatériel et appellation d'origine protégée",
+            "Ce que financent concrètement les « actions de sensibilisation » annoncées"
+          ]
+        },
+        {
+          "question": "La boulangerie de quartier résiste-t-elle vraiment à la grande distribution ?",
+          "cote_a": "Le petit commerce de boulangerie a bien perdu du terrain face à la grande distribution entre 1993 et 2000 : d'après l'Insee, les boulangeries-pâtisseries ont enregistré, sur cette période, la deuxième plus forte perte de part de marché de tout le commerce alimentaire spécialisé (-6,1 points), un net recul pour un commerce longtemps considéré comme incontournable.",
+          "cote_b": "Sur la période plus récente étudiée par l'Insee, la tendance s'est stabilisée : le nombre de boulangeries-pâtisseries est resté stable, contrairement à d'autres commerces de proximité qui ont continué de fermer. L'étude de l'Insee qui documente cette période s'intitule d'ailleurs « Le commerce alimentaire spécialisé : déclin enrayé ? ».",
+          "fait_a": {
+            "texte": "Entre 1993 et 2000, les boulangeries et pâtisseries ont enregistré la deuxième plus forte perte de part de marché du commerce alimentaire spécialisé (-6,1 points).",
+            "source": 3
+          },
+          "fait_b": {
+            "texte": "Le nombre de boulangeries-pâtisseries est resté stable.",
+            "source": 3
+          },
+          "a_creuser": [
+            "Le poids des boulangeries industrielles et des terminaux de cuisson dans ces statistiques",
+            "L'évolution du nombre de boulangeries depuis la période étudiée par l'Insee"
+          ]
+        }
+      ],
+      "derives": [
+        "Compare ce que protège une appellation d'origine protégée (AOP) à ce que reconnaît une inscription UNESCO.",
+        "Regarde d'où vient le pain de ta boulangerie la plus proche : farine, cuisson sur place ou terminal de cuisson.",
+        "Cherche d'autres pratiques françaises inscrites au patrimoine culturel immatériel de l'UNESCO, comme le repas gastronomique des Français."
+      ],
+      "liens": [
+        "repas-gastronomique",
+        "la-fourchette"
+      ],
+      "sources": [
+        {
+          "titre": "Les savoir-faire artisanaux et la culture de la baguette de pain",
+          "editeur": "UNESCO - Patrimoine culturel immatériel",
+          "url": "https://ich.unesco.org/fr/RL/les-savoir-faire-artisanaux-et-la-culture-de-la-baguette-de-pain-01883",
+          "consulte_le": "2026-09-25"
+        },
+        {
+          "titre": "La baguette de pain inscrite au patrimoine immatériel de l'Unesco",
+          "editeur": "Ministère de la Culture",
+          "url": "https://www.culture.gouv.fr/actualites/La-baguette-de-pain-inscrite-au-patrimoine-immateriel-de-l-Unesco",
+          "consulte_le": "2026-09-25"
+        },
+        {
+          "titre": "Le commerce alimentaire spécialisé : déclin enrayé ? - Insee Première - 1359",
+          "editeur": "Insee",
+          "url": "https://www.insee.fr/fr/statistiques/1280960",
+          "consulte_le": "2026-09-25"
+        },
+        {
+          "titre": "Le patrimoine culturel immatériel à l'Unesco",
+          "editeur": "Ministère de la Culture",
+          "url": "https://www.culture.gouv.fr/thematiques/patrimoine-culturel-immateriel/le-patrimoine-culturel-immateriel/le-patrimoine-culturel-immateriel-a-l-unesco",
+          "consulte_le": "2026-09-25"
+        }
+      ],
+      "statut": "verifie",
+      "verifie_le": "2026-09-25"
+    },
+    {
+      "id": "temps-domestique",
+      "type": "carte",
+      "theme": "modes-de-vie-societe",
+      "format": "et-si",
+      "titre": "Les tâches domestiques, un travail hors PIB",
+      "base": "En 2010, les Français consacrent en moyenne plus de trois heures par jour aux tâches domestiques, réalisées à 64 % par les femmes. Valorisé selon une définition intermédiaire, ce travail équivaudrait à 33 % du PIB, mais il n'est pas comptabilisé dans le produit intérieur brut.",
+      "base_source": 1,
+      "ouverture": "Et si on comptait, en euros, tout ce que personne ne te paie à la maison ?",
+      "reperes": [
+        {
+          "cle": "ecart-1h30",
+          "texte": "L'écart de temps domestique quotidien entre hommes et femmes s'est réduit au fil des enquêtes, mais reste d'une heure et demie par jour.",
+          "source": 2
+        },
+        {
+          "cle": "42-77mds-h",
+          "texte": "Au niveau macroéconomique, en 2010, entre 42 et 77 milliards d'heures de travail domestique ont été effectuées en France selon le périmètre retenu.",
+          "source": 1
+        },
+        {
+          "cle": "stiglitz-pib",
+          "texte": "Le rapport Stiglitz a rappelé qu'une des limites du PIB comme indicateur de bien-être est qu'il ne prend pas en compte la production domestique non marchande.",
+          "source": 3
+        },
+        {
+          "cle": "17,5%-smic",
+          "texte": "Valorisé au Smic et avec la définition la plus restreinte, le travail domestique équivaudrait à 17,5 % du PIB.",
+          "source": 3
+        }
+      ],
+      "clivages": [
+        {
+          "question": "Faut-il chiffrer en euros le travail domestique ?",
+          "cote_a": "Si ce travail pèse aussi lourd qu'un pan entier de l'économie marchande, l'ignorer dans le PIB rend invisible un travail massivement féminin qui permet à l'économie « officielle » de tourner. C'est d'ailleurs l'une des limites du PIB pointées par le rapport Stiglitz sur la mesure du bien-être.",
+          "cote_b": "Mettre un prix sur un temps donné par amour ou par nécessité familiale risque de le transformer en simple « service » comme un autre. Cette non-comptabilisation n'est pas un oubli : elle correspond à une convention comptable assumée, qui distingue le marchand du reste.",
+          "fait_a": {
+            "texte": "Le rapport Stiglitz a rappelé qu'une des limites du produit intérieur brut comme indicateur de bien-être est qu'il ne prend pas en compte la production domestique non marchande.",
+            "source": 3
+          },
+          "fait_b": {
+            "texte": "Ces services ne sont pas comptabilisés dans le produit intérieur brut (PIB).",
+            "source": 1
+          },
+          "a_creuser": [
+            "Compte satellite de la production domestique",
+            "Rapport Stiglitz-Sen-Fitoussi sur la mesure du bien-être"
+          ]
+        },
+        {
+          "question": "L'écart hommes-femmes se réduit-il vraiment ?",
+          "cote_a": "L'écart s'est resserré d'enquête en enquête : il n'est plus que d'une heure et demie par jour. C'est un mouvement lent mais réel, qu'il vaut mieux reconnaître comme un progrès que balayer d'un revers de main.",
+          "cote_b": "Le rapprochement vient surtout du fait que les femmes ont réduit leur propre temps domestique, pas que les hommes en ont pris davantage à leur charge : leur temps à eux est resté stable. Parler de progrès partagé masque une charge qui reste très inégalement répartie.",
+          "fait_a": {
+            "texte": "L'écart entre les hommes et les femmes s'est donc réduit, mais demeure : il est d'une heure et demie par jour.",
+            "source": 2
+          },
+          "fait_b": {
+            "texte": "Le temps domestique quotidien, resté stable chez les hommes, a diminué chez les femmes, en particulier chez celles qui n'ont pas d'emploi (une demi-heure de moins par jour depuis 1999).",
+            "source": 2
+          },
+          "a_creuser": [
+            "Charge mentale",
+            "Partage du temps libre vs partage des tâches"
+          ]
+        }
+      ],
+      "derives": [
+        "La « charge mentale » : au-delà du temps passé, qui pense à tout organiser ?",
+        "Le débat, ancien, sur un compte satellite qui intégrerait la production domestique aux comptes nationaux",
+        "Comment les politiques publiques (crèches, congé parental, horaires de travail) redessinent le partage des tâches"
+      ],
+      "liens": [
+        "vivre-seul",
+        "machines-du-quotidien"
+      ],
+      "sources": [
+        {
+          "titre": "Le travail domestique : 60 milliards d'heures en 2010 - Insee Première n° 1423",
+          "editeur": "Insee",
+          "url": "https://www.insee.fr/fr/statistiques/2123967",
+          "consulte_le": "2026-09-25"
+        },
+        {
+          "titre": "Depuis 11 ans, moins de tâches ménagères, plus d'Internet - Insee Première n° 1377",
+          "editeur": "Insee",
+          "url": "https://www.insee.fr/fr/statistiques/1281050",
+          "consulte_le": "2026-09-25"
+        },
+        {
+          "titre": "La contribution du travail domestique non marchand au bien-être matériel des ménages : une quantification à partir de l'enquête Emploi du Temps - Document de travail F2011/04",
+          "editeur": "Insee",
+          "url": "https://www.insee.fr/fr/statistiques/1380932",
+          "consulte_le": "2026-09-25"
+        }
+      ],
+      "statut": "verifie",
+      "verifie_le": "2026-09-25"
+    },
+    {
+      "id": "lascaux-la-grotte-fermee",
+      "type": "carte",
+      "theme": "arts-langues-croyances",
+      "format": "avant-ailleurs",
+      "titre": "La grotte de Lascaux, fermée pour toujours",
+      "base": "La grotte de Lascaux est découverte le 12 septembre 1940 par quatre adolescents de Montignac. Ouverte au public en 1948, elle devient si fréquentée — jusqu'à 1 800 visiteurs par jour — que son équilibre climatique se dérègle. Le ministre André Malraux décide sa fermeture définitive en avril 1963, un geste fondateur de la « conservation préventive ».",
+      "base_source": 1,
+      "ouverture": "Si la seule façon de sauver une œuvre est de ne plus jamais la montrer, est-ce qu'on l'a vraiment sauvée ?",
+      "reperes": [
+        {
+          "cle": "Quatre ados",
+          "texte": "La grotte de Lascaux est découverte par quatre adolescents le 12 septembre 1940.",
+          "source": 2
+        },
+        {
+          "cle": "Algues en 1958",
+          "texte": "Devenus guides de la grotte dès son ouverture au public en 1948, Ravidat et Marsal sont ceux qui signalent l'apparition des algues vertes sur les parois en 1958 et 1959.",
+          "source": 2
+        },
+        {
+          "cle": "Fermée en 1963",
+          "texte": "La grotte de Lascaux est fermée définitivement au public en avril 1963, sur décision du ministre de la Culture André Malraux.",
+          "source": 1
+        },
+        {
+          "cle": "UNESCO 1979",
+          "texte": "La vallée de la Vézère, avec ses grottes ornées dont Lascaux, est inscrite au patrimoine mondial de l'UNESCO depuis 1979.",
+          "source": 3
+        }
+      ],
+      "clivages": [
+        {
+          "question": "Montrer une copie au public, est-ce trahir l'œuvre ou la sauver ?",
+          "cote_a": "Une reproduction, même la plus fidèle, n'est pas l'œuvre : le visiteur ne voit ni la vraie roche ni les vrais pigments touchés par des mains d'il y a 17 000 ans. Faire passer un fac-similé pour l'expérience de Lascaux risque de banaliser la différence entre l'original et sa copie.",
+          "cote_b": "Sans fac-similé, plus personne ne pourrait approcher Lascaux : l'original ne survit qu'en restant fermé et surveillé par une poignée de scientifiques. Reproduire la grotte est le seul moyen de transmettre cet art à des millions de visiteurs sans détruire ce qu'il en reste.",
+          "fait_a": {
+            "texte": "Lascaux IV est centré sur la reproduction quasi intégrale de la grotte de Lascaux, complétée par des dispositifs numériques et des fac-similés mobiles.",
+            "source": 4
+          },
+          "fait_b": {
+            "texte": "Dans la grotte ornée de Lascaux, le surtourisme a entraîné le développement massif de champignons noirs (Ochroconis lascauxensis), à cause de la condensation, des hausses de température et de la concentration en CO2 liées à la présence humaine.",
+            "source": 5
+          },
+          "a_creuser": [
+            "L'aura de l'œuvre originale",
+            "D'autres grottes remplacées par des fac-similés (Chauvet, Altamira)"
+          ]
+        },
+        {
+          "question": "Fallait-il fermer Lascaux dès les premiers signes d'alerte ?",
+          "cote_a": "Un site vieux de 17 000 ans est irremplaçable : dès que des algues sont repérées sur les parois en 1958-1959, chaque jour d'ouverture supplémentaire aggrave un dommage irréversible. Fermer vite, même contre l'avis du public, était la seule décision responsable.",
+          "cote_b": "Les mêmes personnes qui ont découvert et gardé la grotte — de simples habitants de Montignac — sont devenues les guides qui la faisaient vivre pour le public dès 1948. Fermer un lieu ouvert et entretenu par ses propres inventeurs prive une communauté de ce qu'elle a créé.",
+          "fait_a": {
+            "texte": "Victime de son succès, dans les mois précédant sa fermeture au public, la grotte de Lascaux recevait jusqu'à 1800 visiteurs par jour.",
+            "source": 1
+          },
+          "fait_b": {
+            "texte": "Marcel Ravidat et Jacques Marsal sont devenus guides de la grotte dès son ouverture au public en 1948, après en avoir monté la garde dès l'hiver 1940-1941.",
+            "source": 2
+          },
+          "a_creuser": [
+            "Le principe de précaution en matière de patrimoine",
+            "Le tourisme de masse sur les sites classés"
+          ]
+        }
+      ],
+      "derives": [
+        "Compare avec d'autres grottes ornées fermées au public, comme la grotte Chauvet.",
+        "Regarde ce qu'implique concrètement une inscription au patrimoine mondial de l'UNESCO.",
+        "Cherche d'autres cas où une copie remplace un original devenu inaccessible (musées, monuments, manuscrits)."
+      ],
+      "liens": [],
+      "sources": [
+        {
+          "titre": "La grotte de Lascaux nous émerveille depuis 80 ans !",
+          "editeur": "Ministère de la Culture",
+          "url": "https://www.culture.gouv.fr/regions/drac-nouvelle-aquitaine/actualites/la-grotte-de-lascaux-nous-emerveille-depuis-80-ans",
+          "consulte_le": "2026-09-25"
+        },
+        {
+          "titre": "Four Discoverers",
+          "editeur": "Ministère de la Culture",
+          "url": "https://archeologie.culture.gouv.fr/lascaux/en/four-discoverers",
+          "consulte_le": "2026-09-25"
+        },
+        {
+          "titre": "Prehistoric Sites and Decorated Caves of the Vézère Valley",
+          "editeur": "UNESCO World Heritage Centre",
+          "url": "https://whc.unesco.org/en/list/85/",
+          "consulte_le": "2026-09-25"
+        },
+        {
+          "titre": "Lascaux IV",
+          "editeur": "Ministère de la Culture",
+          "url": "https://archeologie.culture.gouv.fr/lascaux/en/lascaux-iv",
+          "consulte_le": "2026-09-25"
+        },
+        {
+          "titre": "Patrimoine : algues, bactéries, champignons à l'assaut des vieilles pierres",
+          "editeur": "The Conversation France",
+          "url": "https://theconversation.com/patrimoine-algues-bacteries-champignons-a-lassaut-des-vieilles-pierres-241611",
+          "consulte_le": "2026-09-25"
+        }
+      ],
+      "statut": "verifie",
+      "verifie_le": "2026-09-25"
+    },
+    {
+      "id": "gaspillage-alimentaire",
+      "type": "carte",
+      "theme": "hors-piste",
+      "themes_croises": [
+        "cuisine-alimentation",
+        "modes-de-vie-societe"
+      ],
+      "format": "dilemme",
+      "titre": "Invendus alimentaires : la loi Garot dix ans après",
+      "base": "En France, le gaspillage alimentaire représente 9,7 millions de tonnes de déchets par an en 2023, dont 3,8 millions de tonnes sont encore comestibles, soit près de la moitié. Ces pertes se répartissent tout au long de la chaîne : 35 % chez les ménages, 26 % en production agricole, 17 % en transformation, 14 % en restauration hors domicile et 8 % en distribution.",
+      "base_source": 1,
+      "ouverture": "Et toi, tu crois que cette loi a vraiment réduit le gaspillage, ou qu'elle a surtout déplacé le problème vers les associations ?",
+      "reperes": [
+        {
+          "cle": "total-dechets",
+          "texte": "Le gaspillage alimentaire représente au total 9,7 millions de tonnes de déchets par an en France, en 2023.",
+          "source": 1
+        },
+        {
+          "cle": "part-comestible",
+          "texte": "Sur ce total, 3,8 millions de tonnes sont des produits encore comestibles jetés, soit près de la moitié des déchets alimentaires.",
+          "source": 1
+        },
+        {
+          "cle": "interdiction",
+          "texte": "Depuis la loi du 11 février 2016, les distributeurs ne peuvent plus rendre délibérément impropres à la consommation leurs invendus alimentaires encore consommables.",
+          "source": 2
+        },
+        {
+          "cle": "seuil-400m2",
+          "texte": "Les distributeurs dont la surface de vente dépasse 400 m² doivent proposer une convention de don à une association habilitée.",
+          "source": 3
+        }
+      ],
+      "clivages": [
+        {
+          "question": "La loi a-t-elle vraiment réduit le gaspillage, ou l'a-t-elle déplacé vers les associations ?",
+          "cote_a": "Depuis la loi Garot, les dons alimentaires des grandes surfaces aux associations ont nettement progressé : +23 % entre 2015 et 2018 selon la Fédération française des banques alimentaires. L'interdiction légale de détruire les invendus a changé une pratique courante et structuré une filière de récupération.",
+          "cote_b": "Le Sénat pointe une baisse de la qualité des dons : absence de tri par la grande distribution, produits donnés à la veille de leur date limite de consommation. Les associations doivent en plus absorber de nouveaux coûts logistiques pour trier et redistribuer ces produits, sans financement garanti en face.",
+          "fait_a": {
+            "texte": "le volume des dons alimentaires des grandes surfaces aux associations de solidarité a augmenté de 23 % entre 2015 et 2018",
+            "source": 5
+          },
+          "fait_b": {
+            "texte": "une baisse de la qualité du don, qui se manifeste par une absence de tri des denrées de la part de la grande distribution ou par des denrées données à J-1 de leur date limite de consommation",
+            "source": 4
+          },
+          "a_creuser": [
+            "La date limite de consommation (DLC) et sa marge de tolérance",
+            "Le statut et le financement des associations d'aide alimentaire"
+          ]
+        },
+        {
+          "question": "Faut-il d'abord viser les ménages ou les distributeurs ?",
+          "cote_a": "Les ménages sont, de loin, la première source de gaspillage alimentaire comestible en France : 35 % du total, contre seulement 8 % pour la distribution. Concentrer la loi sur les grandes surfaces, c'est réguler le maillon le moins responsable du volume total et laisser de côté l'essentiel du problème, qui se joue dans les cuisines.",
+          "cote_b": "La distribution reste le maillon le plus facile à réguler : quelques milliers de magasins contre des millions de foyers. En imposant aux enseignes de plus de 400 m² une convention de don, la loi agit là où un contrôle et une sanction sont concrètement possibles, tout en libérant des denrées pour l'aide alimentaire.",
+          "fait_a": {
+            "texte": "Comment se répartit le gaspillage alimentaire ? 3,8 millions de tonnes au total par an. - 35% par les ménages - 26% de productions agricoles - 17% liés à la transformation - 14% de consommation hors domicile - 8% par la distribution",
+            "source": 1
+          },
+          "fait_b": {
+            "texte": "Les distributeurs de plus de 400 m² doivent maintenant proposer des conventions de don",
+            "source": 3
+          },
+          "a_creuser": [
+            "Les dates de péremption (DLC/DDM) et la confusion qu'elles créent",
+            "Le gaspillage à la production agricole, en amont des rayons"
+          ]
+        },
+        {
+          "question": "Étendre les obligations à toute la chaîne : progrès ou usine à gaz ?",
+          "cote_a": "La loi AGEC de 2020 a élargi le dispositif en créant une obligation de diagnostic anti-gaspillage pour les industries agroalimentaires. Agir en amont, chez les producteurs et transformateurs, permet de prévenir le gaspillage avant qu'il n'arrive en rayon, plutôt que de seulement gérer les invendus après coup.",
+          "cote_b": "Multiplier les obligations réglementaires ne sert à rien si le réseau associatif qui réceptionne les dons n'a pas les moyens de suivre : les associations doivent supporter des charges croissantes pour traiter ces dons, sans que leur financement suive. Étendre la loi sans financer l'aval, c'est déplacer la pression sans la résoudre.",
+          "fait_a": {
+            "texte": "l'obligation de diagnostic anti-gaspillage aux industries agroalimentaires",
+            "source": 3
+          },
+          "fait_b": {
+            "texte": "Les associations doivent également supporter de nouvelles charges, notamment celles engendrées par le traitement des dons en nature qui sont en augmentation ; à savoir des coûts logistiques, de déploiement d'outils de gestion, de recherches de partenariat etc.",
+            "source": 4
+          },
+          "a_creuser": [
+            "Le diagnostic anti-gaspillage obligatoire en entreprise",
+            "Le financement public des associations d'aide alimentaire"
+          ]
+        }
+      ],
+      "derives": [
+        "La hiérarchie légale des solutions anti-gaspillage : prévenir avant de donner, donner avant de valoriser",
+        "Qui sont les associations habilitées à recevoir les dons, et comment le deviennent-elles ?",
+        "Le rôle des dates limites de consommation (DLC) dans la décision de jeter ou de donner"
+      ],
+      "liens": [
+        "la-cantine",
+        "qui-decide-du-bon"
+      ],
+      "sources": [
+        {
+          "titre": "Éviter le gaspillage alimentaire dans les collectivités et les entreprises",
+          "editeur": "ADEME",
+          "url": "https://economie-circulaire.ademe.fr/gaspillage-alimentaire",
+          "consulte_le": "2026-09-25"
+        },
+        {
+          "titre": "Article L541-15-5 - Code de l'environnement",
+          "editeur": "Légifrance",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000041598874",
+          "consulte_le": "2026-09-25"
+        },
+        {
+          "titre": "Lutte contre le gaspillage alimentaire : les lois françaises",
+          "editeur": "Ministère de l'Agriculture et de l'Alimentation",
+          "url": "https://agriculture.gouv.fr/lutte-contre-le-gaspillage-alimentaire-les-lois-francaises",
+          "consulte_le": "2026-09-25"
+        },
+        {
+          "titre": "Aide alimentaire : un dispositif vital, un financement menacé ? Un modèle associatif fondé sur le bénévolat à préserver",
+          "editeur": "Sénat",
+          "url": "https://www.senat.fr/rap/r18-034/r18-03415.html",
+          "consulte_le": "2026-09-25"
+        },
+        {
+          "titre": "Question n°3382 : Qualités des dons d'aide alimentaires par les GMS",
+          "editeur": "Assemblée nationale",
+          "url": "https://questions.assemblee-nationale.fr/q16/16-3382QE.htm",
+          "consulte_le": "2026-09-25"
+        }
+      ],
+      "statut": "verifie",
+      "verifie_le": "2026-09-25"
     }
   ],
   "programme": {
@@ -2580,6 +3294,16 @@ window.CNH_DONNEES = {
           "le-bruit-des-villes",
           "la-langue-des-signes",
           "statues-et-noms-de-rues"
+        ]
+      },
+      "2026-09-25": {
+        "problematique": "pb-qui-possede-tes-donnees",
+        "cartes": [
+          "notre-dame-chantier",
+          "baguette-patrimoine-unesco",
+          "temps-domestique",
+          "lascaux-la-grotte-fermee",
+          "gaspillage-alimentaire"
         ]
       }
     }
