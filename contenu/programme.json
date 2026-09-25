@@ -21,6 +21,16 @@
         "eglises-de-la-republique",
         "la-cantine"
       ]
+    },
+    "2026-09-19": {
+      "problematique": "pb-a-qui-appartient-le-passe",
+      "cartes": [
+        "les-archives-nationales",
+        "la-fourchette",
+        "le-bruit-des-villes",
+        "la-langue-des-signes",
+        "statues-et-noms-de-rues"
+      ]
     }
   }
 }

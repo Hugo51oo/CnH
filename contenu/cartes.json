@@ -1800,6 +1800,750 @@
       ],
       "statut": "verifie",
       "verifie_le": "2026-09-17"
+    },
+    {
+      "id": "pb-a-qui-appartient-le-passe",
+      "type": "problematique",
+      "theme": "histoire-patrimoine",
+      "format": "ouverte",
+      "titre": "À qui appartient le passé ?",
+      "base": "Les biens des collections des musées de France appartenant à une personne publique font partie du domaine public : ils sont inaliénables. Rendre vingt-six œuvres d'Abomey au Bénin et le sabre dit d'El Hadj Omar Tall au Sénégal a donc exigé une loi, adoptée définitivement le 17 décembre 2020. Le 7 mai 2026, le Parlement a voté une procédure générale : un bien approprié illicitement entre le 20 novembre 1815 et le 23 avril 1972 peut sortir du domaine public par décret en Conseil d'État.",
+      "base_source": [
+        1,
+        8,
+        9,
+        5,
+        4
+      ],
+      "ouverture": "Quand un objet a été pris de force il y a cent trente ans, à qui appartient-il aujourd'hui : au musée qui l'a inventorié, au pays d'où il vient, ou à toi qui viens le regarder ?",
+      "reperes": [
+        {
+          "cle": "370 000 objets",
+          "texte": "Le musée du quai Branly-Jacques Chirac compte plus de 370 000 objets à son inventaire. Son exposition permanente en présente environ 3 500.",
+          "source": [
+            2,
+            3
+          ]
+        },
+        {
+          "cle": "1815 → 1972",
+          "texte": "La loi adoptée le 7 mai 2026 ne vaut que pour les biens culturels dont l'appropriation illicite est intervenue entre le 20 novembre 1815 et le 23 avril 1972. La sortie du domaine public est alors prononcée par un décret en Conseil d'État.",
+          "source": [
+            5,
+            4
+          ]
+        },
+        {
+          "cle": "149 pays",
+          "texte": "La convention de l'UNESCO contre le trafic illicite de biens culturels, adoptée le 14 novembre 1970, est entrée en vigueur le 24 avril 1972. Elle a été ratifiée par 149 pays.",
+          "source": [
+            6,
+            7
+          ]
+        },
+        {
+          "cle": "10 demandes",
+          "texte": "Le rapport « Patrimoine partagé » remis au président de la République recense dix demandes de restitution reçues récemment, émanant du Bénin, du Sénégal, de la Côte d'Ivoire, du Mali, du Tchad, de l'Éthiopie, de l'Algérie, de Madagascar, du Kazakhstan et du Népal.",
+          "source": 12
+        }
+      ],
+      "clivages": [
+        {
+          "question": "Une loi à chaque fois, ou une procédure permanente ?",
+          "cote_a": "L'inaliénabilité ne tient que si personne ne peut y déroger seul. Faire voter une loi pour chaque restitution oblige à un débat public, à l'examen du dossier devant les deux chambres, et rend chaque sortie de collection traçable. C'est lent, mais c'est le prix d'un principe qui protège aussi les collections contre les ventes et les arbitrages budgétaires.",
+          "cote_b": "Une loi par objet rend la restitution otage du calendrier parlementaire : un dossier solide peut attendre des années, un dossier faible passer vite s'il est politiquement porteur. Une procédure permanente, fondée sur l'enquête de provenance et l'avis d'un comité scientifique, traite les demandes selon leur mérite plutôt que selon l'agenda.",
+          "fait_a": {
+            "texte": "Saisi en juillet 2025 d'un projet de loi sur la restitution de biens culturels, le Conseil d'État a rappelé que la procédure de restitution définitive de biens relevant du domaine public mobilier d'une personne publique doit être prévue par la loi.",
+            "source": 13
+          },
+          "fait_b": {
+            "texte": "Depuis la loi adoptée le 7 mai 2026, la sortie du domaine public d'un bien culturel est prononcée par un décret en Conseil d'État, et non plus par une loi votée pour chaque cas.",
+            "source": [
+              4,
+              5
+            ]
+          },
+          "a_creuser": [
+            "Le domaine public mobilier",
+            "Le déclassement"
+          ]
+        },
+        {
+          "question": "Au musée du monde, ou chez soi ?",
+          "cote_a": "Réunir sous un même toit des objets venus de partout laisse voir ce qu'aucune collection locale ne montre : les emprunts, les circulations, les influences entre cultures. Sorti de cet ensemble, un objet dit son territoire, mais plus les liens qui le traversent. Et il reste visible par un public bien plus nombreux que là d'où il vient.",
+          "cote_b": "La comparaison n'a de valeur que si les termes sont libres. Un objet emporté lors d'une conquête ne prouve pas la circulation des cultures : il prouve un rapport de force. Tant qu'il reste où on l'a emmené, le musée raconte moins l'histoire de l'humanité que celle de sa propre collecte — et une société reste privée de ce qui fabrique sa mémoire.",
+          "fait_a": {
+            "texte": "Le British Museum justifie le maintien des sculptures du Parthénon à Londres par l'ampleur de sa collection, qui permet selon lui de comprendre comment les cultures du monde s'articulent entre elles.",
+            "source": 10
+          },
+          "fait_b": {
+            "texte": "Les vingt-six œuvres rendues au Bénin sont décrites par le musée du quai Branly lui-même comme des prises de guerre du général Dodds dans le palais royal d'Abomey, incendié après les combats de 1892.",
+            "source": 9
+          },
+          "a_creuser": [
+            "Le musée universel",
+            "La recherche de provenance"
+          ]
+        },
+        {
+          "question": "Qui a le droit de réclamer ?",
+          "cote_a": "Une restitution transfère une propriété : il faut quelqu'un qui puisse la recevoir, la garantir et en répondre. Seul un État a cette capacité juridique, signe un acte de transfert, assure la conservation et engage sa responsabilité. Passer par lui évite aussi que le musée détenteur choisisse lui-même son interlocuteur « légitime » parmi plusieurs prétendants.",
+          "cote_b": "Les objets n'ont pas été pris à des États : ils l'ont été à des royaumes, à des lignages, à des communautés dont les contours ne coïncident pas avec les frontières d'aujourd'hui. Réserver la demande aux États écarte les groupes répartis sur plusieurs pays et ceux qui n'en gouvernent aucun, et laisse un gouvernement décider à leur place de ce qui leur revient.",
+          "fait_a": {
+            "texte": "La loi adoptée le 7 mai 2026 ne permet la sortie du domaine public que pour restituer un bien à un État qui en fait la demande.",
+            "source": 4
+          },
+          "fait_b": {
+            "texte": "La loi de 2023 sur les restes humains conservés dans les collections publiques prévoit que la demande soit formulée par un État, agissant le cas échéant au nom d'un groupe humain demeurant présent sur son territoire et dont la culture et les traditions restent actives.",
+            "source": 11
+          },
+          "a_creuser": [
+            "La personnalité juridique",
+            "Les peuples autochtones"
+          ]
+        }
+      ],
+      "derives": [
+        "Si un objet peut sortir des collections publiques par décret, qu'est-ce qui empêcherait demain d'en sortir ce qui n'intéresse plus personne ?",
+        "Les archives, les enregistrements de langues, les collections d'histoire naturelle : est-ce que les mêmes règles devraient s'y appliquer ?",
+        "Un objet rendu et un objet prêté pour dix ans : est-ce que ça change quelque chose pour celui qui vient le regarder ?"
+      ],
+      "liens": [
+        "pb-qui-paie-ce-quon-garde",
+        "pb-ce-quon-transmet",
+        "met-open-access"
+      ],
+      "sources": [
+        {
+          "titre": "L'aliénation des collections publiques (étude de législation comparée n° 191)",
+          "editeur": "Sénat",
+          "url": "https://www.senat.fr/lc/lc191/lc191_mono.html",
+          "consulte_le": "2026-09-18"
+        },
+        {
+          "titre": "Inventaire des collections",
+          "editeur": "Musée du quai Branly - Jacques Chirac",
+          "url": "https://m.quaibranly.fr/fr/collections/vie-des-collections/autour-des-collections/linventaire-et-la-gestion-informatisee-des-collections/inventaire-des-collections",
+          "consulte_le": "2026-09-18"
+        },
+        {
+          "titre": "Le plateau des collections",
+          "editeur": "Musée du quai Branly - Jacques Chirac",
+          "url": "https://m.quaibranly.fr/fr/collections/toutes-les-collections/le-plateau-des-collections",
+          "consulte_le": "2026-09-18"
+        },
+        {
+          "titre": "Projet de loi relatif à la restitution de biens culturels provenant d'États qui, du fait d'une appropriation illicite, en ont été privés — texte adopté n° 280",
+          "editeur": "Assemblée nationale",
+          "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17BTA0280.html",
+          "consulte_le": "2026-09-18"
+        },
+        {
+          "titre": "Adoption définitive de la loi relative à la restitution de biens culturels",
+          "editeur": "Ministère de la Culture",
+          "url": "https://www.culture.gouv.fr/presse/communiques-de-presse/adoption-definitive-de-la-loi-relative-a-la-restitution-de-biens-culturels",
+          "consulte_le": "2026-09-18"
+        },
+        {
+          "titre": "À propos de la Convention de 1970",
+          "editeur": "UNESCO",
+          "url": "https://www.unesco.org/fr/fight-illicit-trafficking/about",
+          "consulte_le": "2026-09-18"
+        },
+        {
+          "titre": "Convention on the Means of Prohibiting and Preventing the Illicit Import, Export and Transfer of Ownership of Cultural Property",
+          "editeur": "UNESCO",
+          "url": "https://www.unesco.org/en/legal-affairs/convention-means-prohibiting-and-preventing-illicit-import-export-and-transfer-ownership-cultural",
+          "consulte_le": "2026-09-18"
+        },
+        {
+          "titre": "Projet de loi relatif à la restitution de biens culturels à la République du Bénin et à la République du Sénégal — texte adopté n° 539",
+          "editeur": "Assemblée nationale",
+          "url": "https://www.assemblee-nationale.fr/dyn/15/textes/l15t0539_texte-adopte-seance.pdf",
+          "consulte_le": "2026-09-18"
+        },
+        {
+          "titre": "Restitution de 26 œuvres à la République du Bénin",
+          "editeur": "Musée du quai Branly - Jacques Chirac",
+          "url": "https://m.quaibranly.fr/fr/collections/vie-des-collections/actualites/restitution-de-26-oeuvres-a-la-republique-du-benin",
+          "consulte_le": "2026-09-18"
+        },
+        {
+          "titre": "The Parthenon Sculptures",
+          "editeur": "British Museum",
+          "url": "https://www.britishmuseum.org/about-us/british-museum-story/contested-objects-collection/parthenon-sculptures",
+          "consulte_le": "2026-09-18"
+        },
+        {
+          "titre": "Restitution de restes humains appartenant aux collections publiques",
+          "editeur": "Ministère de la Culture",
+          "url": "https://www.culture.gouv.fr/content/download/342695/pdf_file/Restitution%20de%20restes%20humains%20appartenant%20aux%20collections%20publiques.pdf",
+          "consulte_le": "2026-09-18"
+        },
+        {
+          "titre": "Patrimoine partagé : universalité, restitutions et circulation des œuvres d'art — rapport au président de la République",
+          "editeur": "Ministère de la Culture",
+          "url": "https://www.culture.gouv.fr/content/download/328460/pdf_file/Rapport_Patrimoine%20partag%C3%A9_universalit%C3%A9,%20restitutions%20et%20circulation%20des%20%C5%93uvres%20d%E2%80%99art%20.pdf?inLanguage=fre-FR&version=31",
+          "consulte_le": "2026-09-18"
+        },
+        {
+          "titre": "Avis sur un projet de loi relatif à la restitution de biens culturels provenant d'États qui, du fait d'une appropriation illicite, en ont été privés",
+          "editeur": "Conseil d'État",
+          "url": "https://www.conseil-etat.fr/site/avis-consultatifs/derniers-avis-rendus/au-gouvernement/avis-sur-un-projet-de-loi-relatif-a-la-restitution-de-biens-culturels-provenant-d-etats-qui-du-fait-d-une-appropriation-illicite-en-ont-ete-prives",
+          "consulte_le": "2026-09-18"
+        }
+      ],
+      "statut": "verifie",
+      "verifie_le": "2026-09-25"
+    },
+    {
+      "id": "les-archives-nationales",
+      "type": "carte",
+      "theme": "histoire-patrimoine",
+      "format": "chiffre",
+      "titre": "2 788 kilomètres de papier",
+      "base": "En 2021, les services d'archives départementales français conservaient 2 788 kilomètres linéaires de documents, et les Archives nationales 463,81 kilomètres de fonds papier. Ouvert en 2013, le site de Pierrefitte-sur-Seine offre à lui seul une capacité de conservation de plus de 350 km linéaires : il arrivera à saturation en 2027, et le nouveau bâtiment prévu pour l'étendre ajoutera 100 km linéaires.",
+      "base_source": [
+        1,
+        4
+      ],
+      "ouverture": "Ces kilomètres de papier, tu crois qu'ils sont là pour l'histoire, pour la preuve, ou simplement parce que personne n'a jamais osé jeter ?",
+      "reperes": [
+        {
+          "cle": "2 788 km",
+          "texte": "En 2021, les services d'archives départementales conservaient 2 788 kilomètres linéaires d'archives ; les archives communales et intercommunales en conservaient 800 de plus.",
+          "source": 1
+        },
+        {
+          "cle": "Saturation 2027",
+          "texte": "Ouvert en 2013, le site de Pierrefitte-sur-Seine a été doté d'une capacité de conservation de plus de 350 km linéaires d'archives ; il arrivera à saturation en 2027.",
+          "source": 4
+        },
+        {
+          "cle": "1,8 milliard",
+          "texte": "En 2021, 830 000 personnes ont franchi le seuil des services d'archives pour des séances en salle et diverses activités, pendant que leurs sites internet totalisaient 1,8 milliard de pages et d'images vues.",
+          "source": 1
+        },
+        {
+          "cle": "50 ans",
+          "texte": "Le principe est la libre communicabilité des archives publiques, mais un délai de cinquante ans s'applique notamment aux documents dont la communication porterait atteinte à la protection de la vie privée ou à la sûreté de l'État.",
+          "source": 2
+        }
+      ],
+      "clivages": [
+        {
+          "question": "Tout garder, ou trier ?",
+          "cote_a": "Ce qui semble sans intérêt aujourd'hui devient la source de demain : listes de fournitures, registres de cantine, formulaires en trois exemplaires. Éliminer, c'est décider à la place de chercheurs qui ne sont pas encore nés — et l'opération est irréversible. Un rayonnage se construit ; un document détruit ne revient pas.",
+          "cote_b": "Conserver sans trier rend les fonds inutilisables : plus la masse grossit, moins elle est classée et décrite, donc moins elle est consultable. Le tri n'est pas une amputation, c'est ce qui rend le reste atteignable. Et si personne ne choisit, c'est le nombre de mètres de rayonnage disponibles qui choisit à sa place.",
+          "fait_a": {
+            "texte": "Le site de Pierrefitte-sur-Seine, ouvert en 2013 avec une capacité de conservation de plus de 350 km linéaires d'archives, fait l'objet d'un projet d'extension dont le nouveau bâtiment offrira une capacité de 100 km linéaires.",
+            "source": 4
+          },
+          "fait_b": {
+            "texte": "Dans son rapport de 2017 sur les Archives nationales, la Cour des comptes constatait que la collecte est surtout définie par l'espace de stockage disponible.",
+            "source": 5
+          },
+          "a_creuser": [
+            "La durée d'utilité administrative",
+            "Le sort final d'un dossier"
+          ]
+        },
+        {
+          "question": "Ouvrir plus vite, ou protéger la vie privée ?",
+          "cote_a": "Un document produit par l'administration est payé par tous et engage tous : la règle devrait être de le voir, pas d'attendre. Chaque décennie de délai est une décennie où l'histoire récente reste racontée par ceux qui l'ont faite, et où la vérification citoyenne arrive trop tard pour servir à quelque chose.",
+          "cote_b": "Un dossier administratif parle de personnes vivantes : leur santé, leurs démêlés judiciaires, leur famille. Ces gens n'ont jamais choisi de figurer dans ces papiers. Les délais ne protègent pas d'abord l'État, ils protègent des individus nommés — et une ouverture anticipée reste possible, examinée au cas par cas.",
+          "fait_a": {
+            "texte": "Les archives publiques sont, par défaut, communicables de plein droit ; quand un document ne l'est pas encore, une demande d'accès anticipé par dérogation peut être déposée.",
+            "source": 3
+          },
+          "fait_b": {
+            "texte": "Un délai de cinquante ans s'applique notamment aux documents dont la communication porterait atteinte à la protection de la vie privée, à la sûreté de l'État ou à la sécurité publique, et un délai de vingt-cinq ans à ceux qui portent atteinte au secret commercial et industriel.",
+            "source": 2
+          },
+          "a_creuser": [
+            "La dérogation en droit des archives",
+            "Le secret de la défense nationale"
+          ]
+        },
+        {
+          "question": "Numériser, ou conserver l'original ?",
+          "cote_a": "Un fonds numérisé se consulte depuis n'importe où, à n'importe quelle heure, sans manipuler le papier — donc sans l'user. Le public réel des archives est déjà en ligne : c'est là que se joue l'accès, bien plus que dans les salles de lecture.",
+          "cote_b": "Une image n'est pas un document : le grain du papier, une annotation au dos, l'ordre des pièces dans une liasse portent une information que le scan ne capte pas. Et un fichier dépend d'un format, d'un support et d'un budget de migration que personne ne garantit sur deux siècles, là où une feuille bien rangée se lit sans machine.",
+          "fait_a": {
+            "texte": "En 2021, le total des fonds numérisés par les services d'archives depuis le début des opérations de numérisation atteignait près de 592 millions de documents textuels et iconographiques.",
+            "source": 1
+          },
+          "fait_b": {
+            "texte": "Dans son rapport d'information de 2017 sur les Archives nationales, le Sénat constatait que les versements d'archives majoritairement non dématérialisées allaient rester importants.",
+            "source": 5
+          },
+          "a_creuser": [
+            "La valeur probante d'une copie numérique",
+            "L'obsolescence des formats"
+          ]
+        }
+      ],
+      "derives": [
+        "À partir de quand un dossier qui te concerne cesse d'être une donnée personnelle pour devenir une archive consultable ?",
+        "Si c'est la place sur les rayonnages qui décide de ce qu'on garde, qui devrait décider à sa place : l'archiviste, le chercheur, ou celui qui paie ?",
+        "Nos messages, nos photos et nos mails finiront-ils un jour dans un dépôt public — et faudrait-il le souhaiter ?"
+      ],
+      "liens": [
+        "pb-a-qui-appartient-le-passe",
+        "met-open-access"
+      ],
+      "sources": [
+        {
+          "titre": "Chiffres clés, statistiques de la culture 2023 — fiche Archives",
+          "editeur": "Ministère de la Culture (DEPS)",
+          "url": "https://www.culture.gouv.fr/Media/medias-creation-rapide/Chiffres-cles-2023_DEPS_Archives_Fiche.pdf",
+          "consulte_le": "2026-09-18"
+        },
+        {
+          "titre": "Communicabilité des documents d'archives",
+          "editeur": "Ministère de l'Économie et des Finances — Service des archives économiques et financières",
+          "url": "https://www.economie.gouv.fr/saef/communicabilite-des-documents-darchives",
+          "consulte_le": "2026-09-18"
+        },
+        {
+          "titre": "Accès aux archives : quel cadre légal ?",
+          "editeur": "Archives nationales",
+          "url": "https://www.archives-nationales.culture.gouv.fr/acces-aux-archives-quel-cadre-legal",
+          "consulte_le": "2026-09-18"
+        },
+        {
+          "titre": "L'agence l'AUC, lauréate du projet d'extension des Archives nationales à Pierrefitte-sur-Seine",
+          "editeur": "Ministère de la Culture",
+          "url": "https://www.culture.gouv.fr/presse/communiques-de-presse/L-agence-l-AUC-laureate-du-projet-d-extension-des-Archives-nationales-a-Pierrefitte-sur-Seine",
+          "consulte_le": "2026-09-18"
+        },
+        {
+          "titre": "Les Archives nationales (rapport d'information n° 358, communication de la Cour des comptes)",
+          "editeur": "Sénat",
+          "url": "https://www.senat.fr/rap/r16-358/r16-358_mono.html",
+          "consulte_le": "2026-09-18"
+        }
+      ],
+      "statut": "verifie",
+      "verifie_le": "2026-09-25"
+    },
+    {
+      "id": "la-fourchette",
+      "type": "carte",
+      "theme": "cuisine-alimentation",
+      "format": "objet",
+      "titre": "La fourchette, une arrivée tardive",
+      "base": "La fourchette existait déjà dans l'Empire romain, avec des pièces à deux ou trois dents entre le Ier et le Ve siècle. Elle disparaît ensuite mystérieusement d'Europe, avant de réapparaître en Perse sassanide puis de gagner l'Empire byzantin vers le Xe siècle et l'Italie vers l'an mil. Des traces écrites existent en France dès le début du XIVe siècle, mais son usage ne s'intensifie vraiment qu'à la fin du XVIe et au début du XVIIe siècle.",
+      "base_source": 1,
+      "ouverture": "Ça te ferait quoi de manger avec les doigts, comme presque toute l'Europe le faisait encore il y a quatre siècles ?",
+      "reperes": [
+        {
+          "cle": "Rome antique",
+          "texte": "Des fourchettes à deux ou trois dents existaient déjà dans l'Empire romain, entre le Ier et le Ve siècle de notre ère.",
+          "source": 1
+        },
+        {
+          "cle": "Retour via Perse",
+          "texte": "Disparue d'Europe après le Ve siècle, la fourchette réapparaît en Perse sassanide avant de gagner l'Empire byzantin vers le Xe siècle.",
+          "source": 1
+        },
+        {
+          "cle": "France, XIVe s.",
+          "texte": "Des traces écrites de fourchettes existent en France dès le début du XIVe siècle, bien avant l'époque de Catherine de Médicis.",
+          "source": 1
+        },
+        {
+          "cle": "Sans fourchette",
+          "texte": "Dans un château anglais du Moyen Âge, sans fourchette, on coupait au couteau puis on mangeait avec les doigts, avec de l'eau et des serviettes à disposition.",
+          "source": 2
+        }
+      ],
+      "clivages": [
+        {
+          "question": "Le récit de la princesse punie pour avoir utilisé une fourchette, vraie condamnation religieuse ou parabole exagérée ?",
+          "cote_a": "Le texte du moine Petrus Damiani montre une vraie hostilité théologique : une princesse byzantine, jugée trop raffinée, refuse de toucher sa nourriture et mange avec de petites fourchettes d'or plutôt qu'avec les mains données par Dieu. Sa mort, présentée comme une punition divine, traduit une méfiance réelle envers le luxe et l'orgueil à table, pas un simple détail littéraire.",
+          "cote_b": "L'historien Pierre Leclercq rappelle que ce récit du XIe siècle est avant tout une parabole morale, à ne pas prendre au pied de la lettre, et non la preuve d'une politique religieuse. On retrouve d'ailleurs des fourchettes dans des enluminures copiées par des moines, signe qu'aucun rejet institutionnel généralisé n'a réellement existé.",
+          "fait_a": {
+            "texte": "Selon le récit de Petrus Damiani, Dieu désapprouvait la princesse qui mangeait avec de petites fourchettes d'or plutôt qu'avec ses mains, et lui envoya une punition qui fit pourrir tout son corps.",
+            "source": 1
+          },
+          "fait_b": {
+            "texte": "L'historien qui a étudié ce récit souligne qu'il a avant tout une portée morale et ne doit pas être pris à la lettre.",
+            "source": 1
+          },
+          "a_creuser": [
+            "Petrus Damiani et la rigueur morale du XIe siècle",
+            "Les objets comme signes de péché ou de vertu"
+          ]
+        },
+        {
+          "question": "La fraise géante à la cour a-t-elle vraiment imposé la fourchette ?",
+          "cote_a": "En 1888, l'historien de l'art Henry Havard défendait une explication concrète : avec les immenses collerettes alors à la mode, il devenait matériellement impossible de porter les aliments à la bouche avec les doigts, d'où le recours à la fourchette et aux cuillers à manche allongé. Une contrainte vestimentaire aurait ainsi forcé un nouvel usage.",
+          "cote_b": "Pierre Leclercq juge cette explication séduisante mais peu solide : elle ne repose sur aucune source historique irréfutable, seulement sur une supposition. L'usage de la fourchette s'est bien intensifié en France à la même époque, mais rien ne prouve que la mode des fraises en soit la cause plutôt qu'une simple coïncidence de calendrier.",
+          "fait_a": {
+            "texte": "Henry Havard affirmait que si les Français mangent avec des fourchettes, c'est parce que leurs ancêtres portaient des cols immenses.",
+            "source": 1
+          },
+          "fait_b": {
+            "texte": "Cette affirmation ne se base pas sur une source historique irréfutable, mais sur une supposition jugée peu crédible par l'historien qui l'a réexaminée.",
+            "source": 1
+          },
+          "a_creuser": [
+            "La mode des fraises à la cour à la Renaissance",
+            "Comment les historiens trient mythe populaire et fait établi"
+          ]
+        }
+      ],
+      "derives": [
+        "Compare le rituel de l'eau et de la serviette au Moyen Âge à un repas d'aujourd'hui.",
+        "Cherche depuis quand ta propre famille ou ta région utilise couramment la fourchette.",
+        "Repère un autre objet de table qu'on croit ancien mais qui est en fait récent."
+      ],
+      "liens": [
+        "repas-gastronomique"
+      ],
+      "sources": [
+        {
+          "titre": "L'étonnante histoire de la fourchette",
+          "editeur": "Université de Liège (ULiège)",
+          "url": "https://www.news.uliege.be/cms/c_10474051/fr/l-etonnante-histoire-de-la-fourchette",
+          "consulte_le": "2026-09-25"
+        },
+        {
+          "titre": "Food in an English Medieval Castle",
+          "editeur": "World History Encyclopedia",
+          "url": "https://www.worldhistory.org/article/1229/food-in-an-english-medieval-castle/",
+          "consulte_le": "2026-09-25"
+        }
+      ],
+      "statut": "verifie",
+      "verifie_le": "2026-09-25"
+    },
+    {
+      "id": "le-bruit-des-villes",
+      "type": "carte",
+      "theme": "modes-de-vie-societe",
+      "format": "et-si",
+      "titre": "Le prix du bruit en ville",
+      "base": "En France, le coût social du bruit — effets sur la santé, le sommeil, la productivité — est estimé à 147,1 milliards d'euros par an, selon l'étude conjointe de l'Ademe et du Conseil national du bruit. Les transports (routier, ferroviaire, aérien) en représentent près des deux tiers, loin devant le bruit de voisinage.",
+      "base_source": 1,
+      "ouverture": "Et si le bruit que tu subis en ville n'était pas une fatalité, mais un choix qu'on n'a jamais vraiment fait ?",
+      "reperes": [
+        {
+          "cle": "147,1 Md€/an",
+          "texte": "Le bruit routier représente à lui seul 54,8% du coût social total du bruit en France, loin devant le ferroviaire (7,6%) et l'aérien (4,1%).",
+          "source": 1
+        },
+        {
+          "cle": "OMS <53dB Lden",
+          "texte": "L'OMS recommande de limiter le bruit routier à moins de 53 dB Lden le jour et 45 dB Lnight la nuit, au-delà desquels des effets sur la santé et le sommeil sont documentés.",
+          "source": 2
+        },
+        {
+          "cle": "Cartes Lden/Ln",
+          "texte": "La directive européenne 2002/49/CE impose des cartes de bruit stratégiques, mesurées avec deux indicateurs harmonisés : Lden (jour-soir-nuit) et Ln (nuit).",
+          "source": 3
+        },
+        {
+          "cle": "Zones calmes",
+          "texte": "Les plans de prévention du bruit dans l'environnement doivent définir les critères de localisation des zones calmes et les objectifs pour les préserver.",
+          "source": 5
+        }
+      ],
+      "clivages": [
+        {
+          "question": "Le vrai problème du bruit en ville, c'est le voisin ou la route ?",
+          "cote_a": "Le bruit de voisinage n'est pas un détail : il pèse à lui seul plus de 26 milliards d'euros par an en France, avec très peu de données pour le mesurer précisément — signe qu'il reste sous-traité par les pouvoirs publics alors qu'il empoisonne le quotidien de millions de gens en immeuble.",
+          "cote_b": "Miser sur le voisinage, c'est se tromper de cible : en Île-de-France, le bruit des transports coûte deux fois et demie plus cher que celui de voisinage. Tant que routes, rails et pistes ne sont pas traités, réguler les fêtes d'appartement ne change presque rien au bruit global subi.",
+          "fait_a": {
+            "texte": "Le coût social du bruit de voisinage est évalué à 26,3 milliards d'euros par an en France, soit 17,9% du coût total.",
+            "source": 1
+          },
+          "fait_b": {
+            "texte": "En Île-de-France, le bruit des transports coûte 26 milliards d'euros par an, contre 10,4 milliards pour le bruit de voisinage.",
+            "source": 4
+          },
+          "a_creuser": [
+            "Médiation de voisinage",
+            "Rénovation des voiries bruyantes"
+          ]
+        },
+        {
+          "question": "La ville doit-elle viser le silence, ou juste mieux gérer le bruit ?",
+          "cote_a": "Les seuils qu'on tolère aujourd'hui sont déjà trop hauts pour la santé : l'OMS recommande de descendre sous 53 dB le jour et 45 dB la nuit pour le trafic routier, parce qu'au-delà, les effets sur le sommeil et la santé sont documentés. Viser plus bas devrait être l'objectif, pas une option.",
+          "cote_b": "La loi elle-même n'exige pas le silence partout : la directive européenne demande seulement d'identifier et de préserver certaines 'zones calmes', pas de faire taire toute la ville. Une ville vivante fait du bruit ; l'enjeu est de ménager des poches de répit, pas d'atteindre zéro décibel partout.",
+          "fait_a": {
+            "texte": "L'OMS recommande de réduire le bruit routier à moins de 53 dB Lden le jour et 45 dB Lnight la nuit, au-delà desquels des effets néfastes sur la santé et le sommeil sont documentés.",
+            "source": 2
+          },
+          "fait_b": {
+            "texte": "La directive européenne demande d'élaborer des plans d'actions pour réduire le bruit, ainsi que d'identifier et de préserver les zones calmes.",
+            "source": 3
+          },
+          "a_creuser": [
+            "Lignes directrices OMS 2018 sur le bruit environnemental",
+            "Zones calmes dans les PPBE"
+          ]
+        }
+      ],
+      "derives": [
+        "Compare le bruit que tu entends chez toi aux seuils recommandés par l'OMS.",
+        "Regarde si ta commune a publié sa carte de bruit stratégique ou son PPBE.",
+        "Repère les 'zones calmes' — officielles ou juste connues de tous — de ton quartier."
+      ],
+      "liens": [],
+      "sources": [
+        {
+          "titre": "147 milliards d'euros : c'est le coût social du bruit en France, par an !",
+          "editeur": "ADEME",
+          "url": "https://www.ademe.fr/presse/communique-national/147-milliards-deuros-cest-le-cout-social-du-bruit-en-france-par-an/",
+          "consulte_le": "2026-09-25"
+        },
+        {
+          "titre": "Prévenir l'exposition au bruit lié aux transports : une politique publique à mettre en musique",
+          "editeur": "Sénat",
+          "url": "https://www.senat.fr/rap/r24-783/r24-7835.html",
+          "consulte_le": "2026-09-25"
+        },
+        {
+          "titre": "Mettre en œuvre la directive bruit",
+          "editeur": "Bruitparif",
+          "url": "https://www.bruitparif.fr/mettre-en-oeuvre-la-directive-bruit/",
+          "consulte_le": "2026-09-25"
+        },
+        {
+          "titre": "Le coût social du bruit",
+          "editeur": "Bruitparif",
+          "url": "https://www.bruitparif.fr/le-cout-social-du-bruit/",
+          "consulte_le": "2026-09-25"
+        },
+        {
+          "titre": "Les plans de prévention du bruit dans l'environnement (PPBE)",
+          "editeur": "Bruitparif",
+          "url": "https://www.bruitparif.fr/ppbe/",
+          "consulte_le": "2026-09-25"
+        }
+      ],
+      "statut": "verifie",
+      "verifie_le": "2026-09-25"
+    },
+    {
+      "id": "la-langue-des-signes",
+      "type": "carte",
+      "theme": "arts-langues-croyances",
+      "format": "avant-ailleurs",
+      "titre": "LSF : bannie en 1880, reconnue en 2005",
+      "base": "En 1791, une loi du 21 et 29 juillet crée à Paris l'institution des sourds de naissance, dans la continuité de l'œuvre de l'abbé de l'Épée : c'est la première école publique pour sourds. Près d'un siècle plus tard, le congrès de Milan bannit en août 1880 l'usage de la langue des signes dans l'enseignement des jeunes sourds ; dès la rentrée suivante, seul l'oral est toléré et les professeurs sourds sont renvoyés.",
+      "base_source": 1,
+      "ouverture": "Comment une langue peut-elle être interdite dans les écoles pendant un siècle, puis inscrite dans la loi comme une langue à part entière ?",
+      "reperes": [
+        {
+          "cle": "1791, 1re école",
+          "texte": "Une loi du 21 et 29 juillet 1791 crée à Paris l'institution des sourds de naissance, prolongeant l'œuvre de l'abbé de l'Épée : la première école publique pour sourds.",
+          "source": 1
+        },
+        {
+          "cle": "1880, interdite",
+          "texte": "Le congrès de Milan, en août 1880, bannit l'usage des signes dans l'enseignement des jeunes sourds ; dès la rentrée suivante, seul l'oral est toléré et les professeurs sourds sont renvoyés.",
+          "source": 1
+        },
+        {
+          "cle": "2005, reconnue",
+          "texte": "La loi du 11 février 2005 inscrit dans le code de l'éducation : « La langue des signes française est reconnue comme une langue à part entière ».",
+          "source": 3
+        },
+        {
+          "cle": "300k locuteurs",
+          "texte": "En France, on estime à environ 300 000 le nombre de personnes utilisant la LSF.",
+          "source": 2
+        }
+      ],
+      "clivages": [
+        {
+          "question": "La reconnaissance de 2005 a-t-elle changé la vie des sourds ?",
+          "cote_a": "Après plus d'un siècle d'interdiction, la loi de 2005 donne enfin un statut légal à la LSF : elle est reconnue comme une langue à part entière dans le code de l'éducation, ce qui ouvre la voie à son enseignement et à sa reconnaissance officielle.",
+          "cote_b": "Le statut légal ne suffit pas à changer le quotidien : plus de vingt ans après la loi, une part infime des enfants sourds accède réellement à un enseignement bilingue LSF-français en France.",
+          "fait_a": {
+            "texte": "La langue des signes française est reconnue comme une langue à part entière.",
+            "source": 3
+          },
+          "fait_b": {
+            "texte": "Seule une infime proportion d'enfants sourds, autour de 3,5 %, bénéficie en France d'un enseignement véritablement bilingue.",
+            "source": 2
+          },
+          "a_creuser": [
+            "Le bilinguisme LSF-français à l'école",
+            "Le métier d'interprète en langue des signes"
+          ]
+        },
+        {
+          "question": "Le congrès de Milan visait-il vraiment le bien des sourds ?",
+          "cote_a": "Le congrès se présente comme une réunion pour l'amélioration du sort des sourds : ses partisans défendent l'oralisation comme un outil d'intégration à la société entendante, contre l'isolement qu'ils prêtent à la langue des signes.",
+          "cote_b": "Dans les faits, la décision coûte cher à la communauté sourde : dès la rentrée qui suit, les professeurs sourds sont écartés de l'enseignement et renvoyés, et la transmission des signes se poursuit hors de l'école.",
+          "fait_a": {
+            "texte": "En août 1880, lors du congrès de Milan pour l'amélioration du sort des sourds, l'utilisation de la langue des signes au sein des écoles pour jeunes sourds est bannie.",
+            "source": 1
+          },
+          "fait_b": {
+            "texte": "Dès la rentrée 1880, seul l'oral est toléré pour s'exprimer au sein de l'établissement. Les professeurs sourds perdent alors toute possibilité d'enseigner auprès des jeunes de l'Institution et sont renvoyés.",
+            "source": 1
+          },
+          "a_creuser": [
+            "Les enseignants sourds avant 1880",
+            "L'oralisme dans l'éducation des sourds"
+          ]
+        }
+      ],
+      "derives": [
+        "Comment apprend-on la LSF aujourd'hui quand on n'est pas né dans une famille sourde ?",
+        "Pourquoi la langue des signes française est-elle différente de l'ASL ou de la BSL, comme deux langues parlées différentes ?",
+        "Que change, concrètement, le fait qu'une langue soit reconnue par la loi ?"
+      ],
+      "liens": [
+        "langues-qui-s-eteignent"
+      ],
+      "sources": [
+        {
+          "titre": "Histoire de l'Institut",
+          "editeur": "Institut National de Jeunes Sourds de Paris (INJS Paris)",
+          "url": "https://www.injs-paris.fr/page/patrimoine-et-culture/histoire-injs-paris/",
+          "consulte_le": "2026-09-25"
+        },
+        {
+          "titre": "Où en est la langue des signes française ?",
+          "editeur": "Ministère de la Culture",
+          "url": "https://www.culture.gouv.fr/thematiques/langue-francaise-et-langues-de-france/ou-en-est-la-langue-des-signes-francaise",
+          "consulte_le": "2026-09-25"
+        },
+        {
+          "titre": "Article L312-9-1 - Code de l'éducation",
+          "editeur": "Légifrance",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006524761",
+          "consulte_le": "2026-09-25"
+        }
+      ],
+      "statut": "verifie",
+      "verifie_le": "2026-09-25"
+    },
+    {
+      "id": "statues-et-noms-de-rues",
+      "type": "carte",
+      "theme": "hors-piste",
+      "themes_croises": [
+        "histoire-patrimoine",
+        "modes-de-vie-societe"
+      ],
+      "format": "dilemme",
+      "titre": "Statue ou rue : que faire quand ça dérange ?",
+      "base": "En France, une statue affectée à l'usage du public et installée sur une place relève, en règle générale, du domaine public. Le code général de la propriété des personnes publiques déclare ces biens inaliénables et imprescriptibles : la collectivité qui les possède ne peut ni les vendre ni les céder. Ce statut juridique encadre déjà, en amont, tout débat sur leur avenir.",
+      "base_source": 1,
+      "ouverture": "Si une statue ou un nom de rue près de chez toi honorait quelqu'un dont tu apprends aujourd'hui les crimes, tu ferais quoi : tu retires, tu déplaces, tu expliques, ou tu laisses ?",
+      "reperes": [
+        {
+          "cle": "Conseil décide",
+          "texte": "C'est le conseil municipal qui procède à la dénomination des voies et lieux-dits de la commune, y compris les voies privées ouvertes à la circulation.",
+          "source": 2
+        },
+        {
+          "cle": "Rues au féminin",
+          "texte": "À Paris, les dénominations de l'espace public faisant référence à des femmes sont passées d'environ 6 % au début des années 2000 à environ 15 % aujourd'hui.",
+          "source": 3
+        },
+        {
+          "cle": "En musée",
+          "texte": "À Bristol, la statue déboulonnée du négrier Edward Colston est devenue une pièce permanente de la collection du musée M Shed, son ancien socle restant en place comme monument classé.",
+          "source": 4
+        },
+        {
+          "cle": "Cartel vandalisé",
+          "texte": "À Bordeaux, deux plaques explicatives posées à l'angle de la rue Colbert pour rappeler le passé négrier de la ville ont été noircies à la bombe de peinture une semaine après leur inauguration, en mai 2022.",
+          "source": 6
+        }
+      ],
+      "clivages": [
+        {
+          "question": "Un monument ou un nom qui dérange : on le retire, ou on le garde en l'expliquant ?",
+          "cote_a": "Laisser une statue en place, c'est continuer à honorer quelqu'un chaque jour sans un mot sur ce qu'il a fait. La retirer vers un musée met fin à cet hommage silencieux tout en conservant l'objet : il reste visible, mais dans un cadre qui permet enfin de raconter pourquoi il pose problème.",
+          "cote_b": "Retirer un monument ou débaptiser une rue ne fait pas disparaître la personne de l'histoire, et ça peut donner l'impression d'évacuer le débat plutôt que de le trancher. Ajouter une explication sur place garde le repère sous les yeux de tous, avec le récit qui manquait, sans toucher à l'objet ni à la rue.",
+          "fait_a": {
+            "texte": "La statue déboulonnée d'Edward Colston, marchand d'esclaves, fait aujourd'hui partie de la collection permanente du musée M Shed à Bristol.",
+            "source": 4
+          },
+          "fait_b": {
+            "texte": "À Bordeaux, l'association Mémoires et Partages a préféré faire poser des plaques explicatives sur la rue Colbert plutôt que d'en demander le changement de nom.",
+            "source": 5
+          },
+          "a_creuser": [
+            "Muséalisation",
+            "Devoir de mémoire"
+          ]
+        },
+        {
+          "question": "Faut-il rebaptiser des rues pour rattraper le retard des noms de femmes, ou l'histoire du nom doit-elle primer ?",
+          "cote_a": "Le déséquilibre est massif et documenté dans le temps : tant que les hommes recouvrent l'immense majorité des plaques de rue, pousser activement des noms de femmes - dans les renommages comme dans les nouvelles voies - n'est pas un geste cosmétique mais une façon concrète de rendre visibles des parcours longtemps ignorés.",
+          "cote_b": "Rebaptiser une rue n'est pas un geste symbolique anodin : c'est une délibération du conseil municipal, seul compétent pour dénommer les voies communales, avec à la clé un vrai coût pour les habitants qui doivent changer leur adresse partout. Corriger le passé rue par rue n'est pas forcément le bon levier pour l'égalité aujourd'hui.",
+          "fait_a": {
+            "texte": "À Paris, la part des dénominations de l'espace public consacrées à des femmes est passée d'environ 6 % au début des années 2000 à environ 15 % aujourd'hui.",
+            "source": 3
+          },
+          "fait_b": {
+            "texte": "C'est le conseil municipal qui procède à la dénomination des voies et lieux-dits de la commune, y compris les voies privées ouvertes à la circulation.",
+            "source": 2
+          },
+          "a_creuser": [
+            "Parité dans l'espace public",
+            "Odonymie"
+          ]
+        }
+      ],
+      "derives": [
+        "Cherche le monument le plus contesté encore debout dans ta ville, et l'historique des débats qui l'entourent.",
+        "Regarde la liste des rues de ta commune : combien portent un nom de femme, combien un nom d'homme ?",
+        "Compare un cas de statue déplacée en musée avec un cas de cartel explicatif laissé sur place : lequel te semble le plus honnête avec l'histoire ?"
+      ],
+      "liens": [
+        "pb-a-qui-appartient-le-passe"
+      ],
+      "sources": [
+        {
+          "titre": "Article L3111-1 - Code général de la propriété des personnes publiques",
+          "editeur": "Légifrance",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006361404",
+          "consulte_le": "2026-09-25"
+        },
+        {
+          "titre": "Article L2121-30 - Code général des collectivités territoriales",
+          "editeur": "Légifrance",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213424",
+          "consulte_le": "2026-09-25"
+        },
+        {
+          "titre": "Féminisons les noms des rues !",
+          "editeur": "Ville de Paris",
+          "url": "https://www.paris.fr/pages/feminisons-les-noms-des-rues-6538",
+          "consulte_le": "2026-09-25"
+        },
+        {
+          "titre": "New display at M Shed: the toppling of the Colston statue",
+          "editeur": "Bristol Museums",
+          "url": "https://www.bristolmuseums.org.uk/blog/new-display-at-m-shed-the-toppling-of-the-colston-statue/",
+          "consulte_le": "2026-09-25"
+        },
+        {
+          "titre": "Passé esclavagiste à Bordeaux : la plaque pédagogique de la rue Colbert vandalisée",
+          "editeur": "Rue89 Bordeaux",
+          "url": "https://rue89bordeaux.com/2022/05/passe-esclavagiste-a-bordeaux-la-plaque-pedagogique-de-la-rue-colbert-vandalisee/",
+          "consulte_le": "2026-09-25"
+        },
+        {
+          "titre": "Mémoire de l'esclavage à Bordeaux : deux plaques de la rue Colbert dégradées",
+          "editeur": "France Bleu",
+          "url": "https://www.francebleu.fr/infos/faits-divers-justice/memoire-de-l-esclavage-a-bordeaux-deux-plaques-de-la-rue-colbert-degradees-1653317114",
+          "consulte_le": "2026-09-25"
+        }
+      ],
+      "statut": "verifie",
+      "verifie_le": "2026-09-25"
     }
   ]
 }

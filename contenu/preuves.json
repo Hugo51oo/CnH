@@ -663,5 +663,655 @@
         "citation": "favoriser et de faciliter la fréquentation scolaire par l'attribution de récompenses aux élèves assidus et de secours aux élèves indigents ou peu aisés"
       }
     ]
+  },
+  "pb-a-qui-appartient-le-passe": {
+    "sources": [
+      {
+        "titre": "L'aliénation des collections publiques (étude de législation comparée n° 191)",
+        "editeur": "Sénat",
+        "url": "https://www.senat.fr/lc/lc191/lc191_mono.html",
+        "consulte_le": "2026-09-18"
+      },
+      {
+        "titre": "Inventaire des collections",
+        "editeur": "Musée du quai Branly - Jacques Chirac",
+        "url": "https://m.quaibranly.fr/fr/collections/vie-des-collections/autour-des-collections/linventaire-et-la-gestion-informatisee-des-collections/inventaire-des-collections",
+        "consulte_le": "2026-09-18"
+      },
+      {
+        "titre": "Le plateau des collections",
+        "editeur": "Musée du quai Branly - Jacques Chirac",
+        "url": "https://m.quaibranly.fr/fr/collections/toutes-les-collections/le-plateau-des-collections",
+        "consulte_le": "2026-09-18"
+      },
+      {
+        "titre": "Projet de loi relatif à la restitution de biens culturels provenant d'États qui, du fait d'une appropriation illicite, en ont été privés — texte adopté n° 280",
+        "editeur": "Assemblée nationale",
+        "url": "https://www.assemblee-nationale.fr/dyn/opendata/PRJLANR5L17BTA0280.html",
+        "consulte_le": "2026-09-18"
+      },
+      {
+        "titre": "Adoption définitive de la loi relative à la restitution de biens culturels",
+        "editeur": "Ministère de la Culture",
+        "url": "https://www.culture.gouv.fr/presse/communiques-de-presse/adoption-definitive-de-la-loi-relative-a-la-restitution-de-biens-culturels",
+        "consulte_le": "2026-09-18"
+      },
+      {
+        "titre": "À propos de la Convention de 1970",
+        "editeur": "UNESCO",
+        "url": "https://www.unesco.org/fr/fight-illicit-trafficking/about",
+        "consulte_le": "2026-09-18"
+      },
+      {
+        "titre": "Convention on the Means of Prohibiting and Preventing the Illicit Import, Export and Transfer of Ownership of Cultural Property",
+        "editeur": "UNESCO",
+        "url": "https://www.unesco.org/en/legal-affairs/convention-means-prohibiting-and-preventing-illicit-import-export-and-transfer-ownership-cultural",
+        "consulte_le": "2026-09-18"
+      },
+      {
+        "titre": "Projet de loi relatif à la restitution de biens culturels à la République du Bénin et à la République du Sénégal — texte adopté n° 539",
+        "editeur": "Assemblée nationale",
+        "url": "https://www.assemblee-nationale.fr/dyn/15/textes/l15t0539_texte-adopte-seance.pdf",
+        "consulte_le": "2026-09-18"
+      },
+      {
+        "titre": "Restitution de 26 œuvres à la République du Bénin",
+        "editeur": "Musée du quai Branly - Jacques Chirac",
+        "url": "https://m.quaibranly.fr/fr/collections/vie-des-collections/actualites/restitution-de-26-oeuvres-a-la-republique-du-benin",
+        "consulte_le": "2026-09-18"
+      },
+      {
+        "titre": "The Parthenon Sculptures",
+        "editeur": "British Museum",
+        "url": "https://www.britishmuseum.org/about-us/british-museum-story/contested-objects-collection/parthenon-sculptures",
+        "consulte_le": "2026-09-18"
+      },
+      {
+        "titre": "Restitution de restes humains appartenant aux collections publiques",
+        "editeur": "Ministère de la Culture",
+        "url": "https://www.culture.gouv.fr/content/download/342695/pdf_file/Restitution%20de%20restes%20humains%20appartenant%20aux%20collections%20publiques.pdf",
+        "consulte_le": "2026-09-18"
+      },
+      {
+        "titre": "Patrimoine partagé : universalité, restitutions et circulation des œuvres d'art — rapport au président de la République",
+        "editeur": "Ministère de la Culture",
+        "url": "https://www.culture.gouv.fr/content/download/328460/pdf_file/Rapport_Patrimoine%20partag%C3%A9_universalit%C3%A9,%20restitutions%20et%20circulation%20des%20%C5%93uvres%20d%E2%80%99art%20.pdf?inLanguage=fre-FR&version=31",
+        "consulte_le": "2026-09-18"
+      },
+      {
+        "titre": "Avis sur un projet de loi relatif à la restitution de biens culturels provenant d'États qui, du fait d'une appropriation illicite, en ont été privés",
+        "editeur": "Conseil d'État",
+        "url": "https://www.conseil-etat.fr/site/avis-consultatifs/derniers-avis-rendus/au-gouvernement/avis-sur-un-projet-de-loi-relatif-a-la-restitution-de-biens-culturels-provenant-d-etats-qui-du-fait-d-une-appropriation-illicite-en-ont-ete-prives",
+        "consulte_le": "2026-09-18"
+      }
+    ],
+    "preuves": [
+      {
+        "appuie": "base",
+        "source": 1,
+        "citation": "Les biens constituant les collections des musées de France appartenant à une personne publique font partie de leur domaine public et sont, à ce titre, inaliénables."
+      },
+      {
+        "appuie": "base",
+        "source": 8,
+        "citation": "les vingt-six œuvres provenant d'Abomey conservées dans les collections nationales placées sous la garde du musée du quai Branly-Jacques Chirac, dont la liste figure en annexe à la présente loi, cessent de faire partie de ces collections."
+      },
+      {
+        "appuie": "base",
+        "source": 8,
+        "citation": "le sabre avec fourreau dit d'El Hadj Omar Tall conservé dans les collections nationales placées sous la garde du musée de l'Armée, dont la référence figure en annexe à la présente loi, cesse de faire partie de ces collections."
+      },
+      {
+        "appuie": "base",
+        "source": 9,
+        "citation": "Au terme du processus législatif, le projet de loi a été définitivement adopté par l'Assemblée nationale, en séance le 17 décembre 2020."
+      },
+      {
+        "appuie": "base",
+        "source": 5,
+        "citation": "les biens culturels de toute origine géographique, dont l'appropriation illicite est intervenue entre le 20 novembre 1815 et le 23 avril 1972"
+      },
+      {
+        "appuie": "base",
+        "source": 5,
+        "citation": "le 7 mai 2026 après un dernier vote du Sénat"
+      },
+      {
+        "appuie": "base",
+        "source": 4,
+        "citation": "La sortie du domaine public est prononcée par un décret en Conseil d'État"
+      },
+      {
+        "appuie": "repere 1",
+        "source": 2,
+        "citation": "celui-ci dresse la liste de plus de 370 000 objets inscrits à son inventaire."
+      },
+      {
+        "appuie": "repere 1",
+        "source": 3,
+        "citation": "L'exposition permanente présente environ 3500 œuvres réparties par zones géographiques : Océanie, Asie, Afrique et Amériques."
+      },
+      {
+        "appuie": "repere 2",
+        "source": 5,
+        "citation": "les biens culturels de toute origine géographique, dont l'appropriation illicite est intervenue entre le 20 novembre 1815 et le 23 avril 1972"
+      },
+      {
+        "appuie": "repere 2",
+        "source": 4,
+        "citation": "La sortie du domaine public est prononcée par un décret en Conseil d'État"
+      },
+      {
+        "appuie": "repere 3",
+        "source": 6,
+        "citation": "La Convention a ainsi été soumise à la 16e session de la Conférence générale de l'UNESCO et adoptée le 14 novembre 1970."
+      },
+      {
+        "appuie": "repere 3",
+        "source": 7,
+        "citation": "Entry into force: 24 April 1972, in accordance with Article 21"
+      },
+      {
+        "appuie": "repere 3",
+        "source": 6,
+        "citation": "A ce jour, la Convention a été ratifiée par 149 pays."
+      },
+      {
+        "appuie": "repere 4",
+        "source": 12,
+        "citation": "Au-delà des dix demandes reçues récemment pour des biens culturels–émanant du Bénin, du Sénégal, de la Côte d'Ivoire, du Mali, du Tchad, d'Ethiopie, de l'Algérie, de Madagascar, du Kazakhstan et du Népal"
+      },
+      {
+        "appuie": "clivage 1 fait_a",
+        "source": 13,
+        "citation": "la procédure de restitution définitive des biens culturels en cause relevant du domaine public mobilier d'une personne publique doit être prévue par la loi"
+      },
+      {
+        "appuie": "clivage 1 fait_b",
+        "source": 4,
+        "citation": "La sortie du domaine public est prononcée par un décret en Conseil d'État"
+      },
+      {
+        "appuie": "clivage 1 fait_b",
+        "source": 5,
+        "citation": "le 7 mai 2026 après un dernier vote du Sénat"
+      },
+      {
+        "appuie": "clivage 2 fait_a",
+        "source": 10,
+        "citation": "The strength of the collection is its breadth and depth which allows millions of visitors an understanding of the cultures of the world and how they interconnect"
+      },
+      {
+        "appuie": "clivage 2 fait_b",
+        "source": 9,
+        "citation": "26 œuvres du trésor royal d'Abomey, prises de guerre du général Dodds dans le palais incendié par le roi Béhanzin après les combats de 1892"
+      },
+      {
+        "appuie": "clivage 3 fait_a",
+        "source": 4,
+        "citation": "pour permettre la restitution à un État qui en fait la demande"
+      },
+      {
+        "appuie": "clivage 3 fait_b",
+        "source": 11,
+        "citation": "La demande de restitution a été formulée par un État, agissant le cas échéant au nom d'un groupe humain demeurant présent sur son territoire et dont la culture et les traditions restent actives"
+      }
+    ]
+  },
+  "les-archives-nationales": {
+    "sources": [
+      {
+        "titre": "Chiffres clés, statistiques de la culture 2023 — fiche Archives",
+        "editeur": "Ministère de la Culture (DEPS)",
+        "url": "https://www.culture.gouv.fr/Media/medias-creation-rapide/Chiffres-cles-2023_DEPS_Archives_Fiche.pdf",
+        "consulte_le": "2026-09-18"
+      },
+      {
+        "titre": "Communicabilité des documents d'archives",
+        "editeur": "Ministère de l'Économie et des Finances — Service des archives économiques et financières",
+        "url": "https://www.economie.gouv.fr/saef/communicabilite-des-documents-darchives",
+        "consulte_le": "2026-09-18"
+      },
+      {
+        "titre": "Accès aux archives : quel cadre légal ?",
+        "editeur": "Archives nationales",
+        "url": "https://www.archives-nationales.culture.gouv.fr/acces-aux-archives-quel-cadre-legal",
+        "consulte_le": "2026-09-18"
+      },
+      {
+        "titre": "L'agence l'AUC, lauréate du projet d'extension des Archives nationales à Pierrefitte-sur-Seine",
+        "editeur": "Ministère de la Culture",
+        "url": "https://www.culture.gouv.fr/presse/communiques-de-presse/L-agence-l-AUC-laureate-du-projet-d-extension-des-Archives-nationales-a-Pierrefitte-sur-Seine",
+        "consulte_le": "2026-09-18"
+      },
+      {
+        "titre": "Les Archives nationales (rapport d'information n° 358, communication de la Cour des comptes)",
+        "editeur": "Sénat",
+        "url": "https://www.senat.fr/rap/r16-358/r16-358_mono.html",
+        "consulte_le": "2026-09-18"
+      }
+    ],
+    "preuves": [
+      {
+        "appuie": "base",
+        "source": 1,
+        "citation": "En 2021, les services d'archives départementales conservent 2788 kilomètres linéaires d'archives"
+      },
+      {
+        "appuie": "base",
+        "source": 1,
+        "citation": "Aux Archives nationales, le métrage total des fonds papier conservés s'élève à 463,81 kilomètres linéaires."
+      },
+      {
+        "appuie": "base",
+        "source": 4,
+        "citation": "une capacité de conservation de plus de 350 km linéaires d'archives"
+      },
+      {
+        "appuie": "base",
+        "source": 4,
+        "citation": "arrivera à saturation en 2027"
+      },
+      {
+        "appuie": "base",
+        "source": 4,
+        "citation": "Avec une capacité de 100 km linéaires, le nouveau bâtiment"
+      },
+      {
+        "appuie": "repere 1",
+        "source": 1,
+        "citation": "En 2021, les services d'archives départementales conservent 2788 kilomètres linéaires d'archives"
+      },
+      {
+        "appuie": "repere 1",
+        "source": 1,
+        "citation": "En 2021, ils conservent 800 kilomètres linéaires d'archives"
+      },
+      {
+        "appuie": "repere 2",
+        "source": 4,
+        "citation": "ouvert en 2013"
+      },
+      {
+        "appuie": "repere 2",
+        "source": 4,
+        "citation": "une capacité de conservation de plus de 350 km linéaires d'archives"
+      },
+      {
+        "appuie": "repere 2",
+        "source": 4,
+        "citation": "arrivera à saturation en 2027"
+      },
+      {
+        "appuie": "repere 3",
+        "source": 1,
+        "citation": "830 000 personnes de tous âges ont franchi le seuil des services d'archives pour des séances en salle et diverses activités"
+      },
+      {
+        "appuie": "repere 3",
+        "source": 1,
+        "citation": "En 2021, si la crise sanitaire a freiné la fréquentation des salles de lecture, la consultation des archives en ligne a su répondre à la demande avec 1,8 milliard de pages et d'images vues sur les sites internet"
+      },
+      {
+        "appuie": "repere 4",
+        "source": 2,
+        "citation": "Le principe de libre communicabilité des archives publiques s'applique dès lors que celles-ci ne mettent pas en cause l'un des intérêts protégés par la loi"
+      },
+      {
+        "appuie": "repere 4",
+        "source": 2,
+        "citation": "50 ans pour les documents portant une appréciation ou un jugement de valeur sur une personne physique nommément désignée ou facilement identifiable, dont la communication porte atteinte au secret de la défense nationale, aux intérêts fondamentaux de l'État dans la conduite de la politique extérieure, à la sûreté de l'État, à la sécurité publique, à la protection de la vie privée."
+      },
+      {
+        "appuie": "clivage 1 fait_a",
+        "source": 4,
+        "citation": "une capacité de conservation de plus de 350 km linéaires d'archives"
+      },
+      {
+        "appuie": "clivage 1 fait_a",
+        "source": 4,
+        "citation": "Avec une capacité de 100 km linéaires, le nouveau bâtiment"
+      },
+      {
+        "appuie": "clivage 1 fait_b",
+        "source": 5,
+        "citation": "La collecte est surtout définie par l'espace de stockage disponible"
+      },
+      {
+        "appuie": "clivage 2 fait_a",
+        "source": 3,
+        "citation": "Les archives publiques sont, par défaut, communicables de plein droit"
+      },
+      {
+        "appuie": "clivage 2 fait_a",
+        "source": 3,
+        "citation": "accès anticipé par dérogation"
+      },
+      {
+        "appuie": "clivage 2 fait_b",
+        "source": 2,
+        "citation": "50 ans pour les documents portant une appréciation ou un jugement de valeur sur une personne physique nommément désignée ou facilement identifiable, dont la communication porte atteinte au secret de la défense nationale, aux intérêts fondamentaux de l'État dans la conduite de la politique extérieure, à la sûreté de l'État, à la sécurité publique, à la protection de la vie privée."
+      },
+      {
+        "appuie": "clivage 2 fait_b",
+        "source": 2,
+        "citation": "25 ans à compter de la date de l'acte pour les documents dont la communication porte atteinte au secret médical, au secret des délibérations du gouvernement, à la conduite des relations extérieures, à la monnaie et au crédit public, au secret commercial et industriel, à la recherche des infractions fiscales et douanières, au secret en matière de statistiques"
+      },
+      {
+        "appuie": "clivage 3 fait_a",
+        "source": 1,
+        "citation": "En 2021, le total des fonds numérisés depuis le début des opérations de numérisation s'élève à près de 592 millions de documents textuels et iconographiques"
+      },
+      {
+        "appuie": "clivage 3 fait_b",
+        "source": 5,
+        "citation": "les versements d'archives majoritairement non dématérialisées vont rester importants"
+      }
+    ]
+  },
+  "la-fourchette": {
+    "sources": [
+      {
+        "titre": "L'étonnante histoire de la fourchette",
+        "editeur": "Université de Liège (ULiège)",
+        "url": "https://www.news.uliege.be/cms/c_10474051/fr/l-etonnante-histoire-de-la-fourchette",
+        "consulte_le": "2026-09-25"
+      },
+      {
+        "titre": "Food in an English Medieval Castle",
+        "editeur": "World History Encyclopedia",
+        "url": "https://www.worldhistory.org/article/1229/food-in-an-english-medieval-castle/",
+        "consulte_le": "2026-09-25"
+      }
+    ],
+    "preuves": [
+      {
+        "appuie": "base",
+        "source": 1,
+        "citation": "On a retrouvé de très belles pièces à deux ou trois dents datant du Ier au Ve siècle de notre ère."
+      },
+      {
+        "appuie": "repere 1",
+        "source": 1,
+        "citation": "On a retrouvé de très belles pièces à deux ou trois dents datant du Ier au Ve siècle de notre ère."
+      },
+      {
+        "appuie": "repere 2",
+        "source": 1,
+        "citation": "la fourchette du modèle sassanide progresse vers l'Ouest, dans l'Empire byzantin."
+      },
+      {
+        "appuie": "repere 3",
+        "source": 1,
+        "citation": "il y a des traces écrites de fourchettes en France depuis le début du XIVe siècle."
+      },
+      {
+        "appuie": "repere 4",
+        "source": 2,
+        "citation": "As there were no forks and people cut up food with a knife and then used their fingers, retainers were always on hand with fresh bowls of water and towels."
+      },
+      {
+        "appuie": "clivage 1 fait_a",
+        "source": 1,
+        "citation": "Mais Dieu qui désapprouvait le comportement de cette femme, lui envoya une punition."
+      },
+      {
+        "appuie": "clivage 1 fait_b",
+        "source": 1,
+        "citation": "L'histoire a avant tout une portée morale et ne doit pas être prise à la lettre."
+      },
+      {
+        "appuie": "clivage 2 fait_a",
+        "source": 1,
+        "citation": "si nous mangeons avec des fourchettes, c'est parce que nos ancêtres eurent des cols immenses"
+      },
+      {
+        "appuie": "clivage 2 fait_b",
+        "source": 1,
+        "citation": "L'affirmation ne se base donc pas sur une source historique irréfutable, mais sur une supposition peu crédible"
+      }
+    ]
+  },
+  "le-bruit-des-villes": {
+    "sources": [
+      {
+        "titre": "147 milliards d'euros : c'est le coût social du bruit en France, par an !",
+        "editeur": "ADEME",
+        "url": "https://www.ademe.fr/presse/communique-national/147-milliards-deuros-cest-le-cout-social-du-bruit-en-france-par-an/",
+        "consulte_le": "2026-09-25"
+      },
+      {
+        "titre": "Prévenir l'exposition au bruit lié aux transports : une politique publique à mettre en musique",
+        "editeur": "Sénat",
+        "url": "https://www.senat.fr/rap/r24-783/r24-7835.html",
+        "consulte_le": "2026-09-25"
+      },
+      {
+        "titre": "Mettre en œuvre la directive bruit",
+        "editeur": "Bruitparif",
+        "url": "https://www.bruitparif.fr/mettre-en-oeuvre-la-directive-bruit/",
+        "consulte_le": "2026-09-25"
+      },
+      {
+        "titre": "Le coût social du bruit",
+        "editeur": "Bruitparif",
+        "url": "https://www.bruitparif.fr/le-cout-social-du-bruit/",
+        "consulte_le": "2026-09-25"
+      },
+      {
+        "titre": "Les plans de prévention du bruit dans l'environnement (PPBE)",
+        "editeur": "Bruitparif",
+        "url": "https://www.bruitparif.fr/ppbe/",
+        "consulte_le": "2026-09-25"
+      }
+    ],
+    "preuves": [
+      {
+        "appuie": "base",
+        "source": 1,
+        "citation": "Le coût social du bruit en France est ainsi estimé à 147,1 milliards d'euros par an, sur la base des données et connaissances disponibles."
+      },
+      {
+        "appuie": "repere 1",
+        "source": 1,
+        "citation": "le bruit des transports, principalement le bruit routier qui représente 54,8% du coût total, suivi du bruit ferroviaire (7,6%) et du bruit aérien (4,1%)."
+      },
+      {
+        "appuie": "repere 2",
+        "source": 2,
+        "citation": "l'OMS, dans ses lignes directrices de 2018 relatives au bruit dans l'environnement pour la région Europe, recommande de réduire les niveaux sonores produits par le trafic routier à moins de 53 dB Lden, car un niveau sonore supérieur à cette valeur est associé à des effets néfastes sur la santé, et même à moins de 45 dB Lnight la nuit, car un niveau sonore nocturne supérieur à cette valeur est associé à des perturbations du sommeil."
+      },
+      {
+        "appuie": "repere 3",
+        "source": 3,
+        "citation": "une évaluation harmonisée, au sein des Etats membres, de l'exposition au bruit dans l'environnement, au moyen des cartes de bruit stratégiques établies pour des niveaux moyens annuels à l'aide, a minima, des indicateurs exigés par la Commission européenne : Lden (Level day-evening-night) et Ln (Level night)."
+      },
+      {
+        "appuie": "repere 4",
+        "source": 5,
+        "citation": "les critères de détermination et la localisation des zones calmes et les objectifs de préservation les concernant"
+      },
+      {
+        "appuie": "clivage 1 fait_a",
+        "source": 1,
+        "citation": "Le coût social lié au bruit de voisinage, pour lequel il existe très peu de données chiffrées, est évalué à 26,3 Md€/an (17,9% du coût total)"
+      },
+      {
+        "appuie": "clivage 1 fait_b",
+        "source": 4,
+        "citation": "Bruit des transports en Île-de-France : un coût de 26 milliards par an"
+      },
+      {
+        "appuie": "clivage 2 fait_a",
+        "source": 2,
+        "citation": "recommande de réduire les niveaux sonores produits par le trafic routier à moins de 53 dB Lden, car un niveau sonore supérieur à cette valeur est associé à des effets néfastes sur la santé, et même à moins de 45 dB Lnight la nuit, car un niveau sonore nocturne supérieur à cette valeur est associé à des perturbations du sommeil."
+      },
+      {
+        "appuie": "clivage 2 fait_b",
+        "source": 3,
+        "citation": "Elaborer et mettre en œuvre des plans d'actions visant à prévenir les effets du bruit, à réduire, si nécessaire, les niveaux d'exposition, ainsi qu'à identifier et préserver les zones calmes."
+      }
+    ]
+  },
+  "la-langue-des-signes": {
+    "sources": [
+      {
+        "titre": "Histoire de l'Institut",
+        "editeur": "Institut National de Jeunes Sourds de Paris (INJS Paris)",
+        "url": "https://www.injs-paris.fr/page/patrimoine-et-culture/histoire-injs-paris/",
+        "consulte_le": "2026-09-25"
+      },
+      {
+        "titre": "Où en est la langue des signes française ?",
+        "editeur": "Ministère de la Culture",
+        "url": "https://www.culture.gouv.fr/thematiques/langue-francaise-et-langues-de-france/ou-en-est-la-langue-des-signes-francaise",
+        "consulte_le": "2026-09-25"
+      },
+      {
+        "titre": "Article L312-9-1 - Code de l'éducation",
+        "editeur": "Légifrance",
+        "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006524761",
+        "consulte_le": "2026-09-25"
+      }
+    ],
+    "preuves": [
+      {
+        "appuie": "base",
+        "source": 1,
+        "citation": "Créée sous la Constituante par la loi du 21 et 29 juillet 1791, l'institution des sourds de naissance avait pour finalité la poursuite de l'œuvre philanthropique de l'abbé Charles-Michel de L'Épée"
+      },
+      {
+        "appuie": "repere 1",
+        "source": 1,
+        "citation": "Créée sous la Constituante par la loi du 21 et 29 juillet 1791, l'institution des sourds de naissance avait pour finalité la poursuite de l'œuvre philanthropique de l'abbé Charles-Michel de L'Épée"
+      },
+      {
+        "appuie": "repere 2",
+        "source": 1,
+        "citation": "en août 1880, lors du congrès de Milan pour l'amélioration du sort des sourds, l'utilisation de la langue des signes au sein des écoles pour jeunes sourds est bannie."
+      },
+      {
+        "appuie": "repere 3",
+        "source": 3,
+        "citation": "La langue des signes française est reconnue comme une langue à part entière."
+      },
+      {
+        "appuie": "repere 4",
+        "source": 2,
+        "citation": "on estime aujourd'hui à environ 300 000 le nombre de personnes utilisant la LSF en France."
+      },
+      {
+        "appuie": "clivage 1 fait_a",
+        "source": 3,
+        "citation": "La langue des signes française est reconnue comme une langue à part entière."
+      },
+      {
+        "appuie": "clivage 1 fait_b",
+        "source": 2,
+        "citation": "seule une infime proportion d'enfants sourds, autour de 3,5 %, bénéficie en France d'un enseignement véritablement bilingue."
+      },
+      {
+        "appuie": "clivage 2 fait_a",
+        "source": 1,
+        "citation": "en août 1880, lors du congrès de Milan pour l'amélioration du sort des sourds, l'utilisation de la langue des signes au sein des écoles pour jeunes sourds est bannie."
+      },
+      {
+        "appuie": "clivage 2 fait_b",
+        "source": 1,
+        "citation": "Dès la rentrée 1880, seul l'oral est toléré pour s'exprimer au sein de l'établissement. Les professeurs sourds perdent alors toute possibilité d'enseigner auprès des jeunes de l'Institution et sont renvoyés."
+      }
+    ]
+  },
+  "statues-et-noms-de-rues": {
+    "sources": [
+      {
+        "titre": "Article L3111-1 - Code général de la propriété des personnes publiques",
+        "editeur": "Légifrance",
+        "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006361404",
+        "consulte_le": "2026-09-25"
+      },
+      {
+        "titre": "Article L2121-30 - Code général des collectivités territoriales",
+        "editeur": "Légifrance",
+        "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045213424",
+        "consulte_le": "2026-09-25"
+      },
+      {
+        "titre": "Féminisons les noms des rues !",
+        "editeur": "Ville de Paris",
+        "url": "https://www.paris.fr/pages/feminisons-les-noms-des-rues-6538",
+        "consulte_le": "2026-09-25"
+      },
+      {
+        "titre": "New display at M Shed: the toppling of the Colston statue",
+        "editeur": "Bristol Museums",
+        "url": "https://www.bristolmuseums.org.uk/blog/new-display-at-m-shed-the-toppling-of-the-colston-statue/",
+        "consulte_le": "2026-09-25"
+      },
+      {
+        "titre": "Passé esclavagiste à Bordeaux : la plaque pédagogique de la rue Colbert vandalisée",
+        "editeur": "Rue89 Bordeaux",
+        "url": "https://rue89bordeaux.com/2022/05/passe-esclavagiste-a-bordeaux-la-plaque-pedagogique-de-la-rue-colbert-vandalisee/",
+        "consulte_le": "2026-09-25"
+      },
+      {
+        "titre": "Mémoire de l'esclavage à Bordeaux : deux plaques de la rue Colbert dégradées",
+        "editeur": "France Bleu",
+        "url": "https://www.francebleu.fr/infos/faits-divers-justice/memoire-de-l-esclavage-a-bordeaux-deux-plaques-de-la-rue-colbert-degradees-1653317114",
+        "consulte_le": "2026-09-25"
+      }
+    ],
+    "preuves": [
+      {
+        "appuie": "base",
+        "source": 1,
+        "citation": "Les biens des personnes publiques mentionnées à l'article L. 1, qui relèvent du domaine public, sont inaliénables et imprescriptibles."
+      },
+      {
+        "appuie": "repere 1",
+        "source": 2,
+        "citation": "Le conseil municipal procède à la dénomination des voies et lieux-dits, y compris les voies privées ouvertes à la circulation."
+      },
+      {
+        "appuie": "repere 2",
+        "source": 3,
+        "citation": "La proportion des dénominations dans l'espace public (voies, mais aussi plaques, jardins, écoles, gymnases…) faisant référence à des femmes est d'environ 15 % aujourd'hui, contre 6 % au début des années 2000."
+      },
+      {
+        "appuie": "repere 3",
+        "source": 4,
+        "citation": "The bronze figure has now become a permanent part of Bristol Museums' collections, but the plinth will remain in place as a listed structure."
+      },
+      {
+        "appuie": "repere 4",
+        "source": 6,
+        "citation": "les deux plaques explicatives situées a l'angle de la rue Colbert dans le quartier Fondaudège ont été noircies à la bombe de peinture dans la nuit de vendredi à samedi."
+      },
+      {
+        "appuie": "repere 4",
+        "source": 5,
+        "citation": "Inaugurées une semaine plus tôt par la Ville, les plaques pédagogiques de la rue Colbert à Bordeaux ont été vandalisées dans la nuit de vendredi à samedi 21 mai 2022."
+      },
+      {
+        "appuie": "clivage 1 fait_a",
+        "source": 4,
+        "citation": "As part of our collection, we will look after the statue forever, and, as with all items, do our best to preserve it in its current state, graffiti and all."
+      },
+      {
+        "appuie": "clivage 1 fait_b",
+        "source": 5,
+        "citation": "Nous n'avons pas voulu débaptiser les plaques de la ville. Depuis 20 ans, nous faisons ce travail, plus efficace, d'expliquer que d'effacer."
+      },
+      {
+        "appuie": "clivage 2 fait_a",
+        "source": 3,
+        "citation": "La proportion des dénominations dans l'espace public (voies, mais aussi plaques, jardins, écoles, gymnases…) faisant référence à des femmes est d'environ 15 % aujourd'hui, contre 6 % au début des années 2000."
+      },
+      {
+        "appuie": "clivage 2 fait_b",
+        "source": 2,
+        "citation": "Le conseil municipal procède à la dénomination des voies et lieux-dits, y compris les voies privées ouvertes à la circulation."
+      }
+    ]
   }
 }
