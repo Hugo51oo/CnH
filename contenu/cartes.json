@@ -2556,22 +2556,22 @@
       "ouverture": "Entre accepter les cookies et fermer l'appli sans lire, est-ce que tu sais vraiment ce que tu donnes de toi, et ce que tu peux encore reprendre ?",
       "reperes": [
         {
-          "cle": "plaintes25",
+          "cle": "20 150 plaintes",
           "texte": "En 2025, la CNIL a reçu 20 150 plaintes, un nouveau record, en hausse de 10 % par rapport à 2024.",
           "source": 1
         },
         {
-          "cle": "sanctions25",
+          "cle": "83 sanctions",
           "texte": "La CNIL a mené 323 contrôles et prononcé 83 sanctions en 2025, pour un montant total de près de 487 millions d'euros d'amendes.",
           "source": 1
         },
         {
-          "cle": "droits-rgpd",
+          "cle": "4 droits",
           "texte": "Le RGPD crée un droit d'accès, de rectification, un droit à l'effacement (« droit à l'oubli », art. 17) et un droit à la portabilité des données.",
           "source": 4
         },
         {
-          "cle": "secteurs-plt",
+          "cle": "Secteurs visés",
           "texte": "Les plaintes reçues par la CNIL concernent notamment le travail, le commerce, l'immobilier et les réseaux sociaux.",
           "source": 1
         }
@@ -2680,22 +2680,22 @@
       "ouverture": "Et toi, aurais-tu préféré une flèche reconstruite à l'identique ou un geste architectural neuf pour Notre-Dame ?",
       "reperes": [
         {
-          "cle": "dons",
+          "cle": "830 M€",
           "texte": "Le montant de la souscription nationale ouverte par la loi du 29 juillet 2019 est évalué à 830 millions d'euros, réunis auprès de 340 000 donateurs venus de plus de 150 pays, selon un bilan du ministère de la Culture publié fin octobre 2024.",
           "source": 1
         },
         {
-          "cle": "reouverture",
+          "cle": "8 déc. 2024",
           "texte": "La cathédrale a rouvert au public le 8 décembre 2024, à l'issue d'un chantier de reconstruction hors-norme.",
           "source": 1
         },
         {
-          "cle": "etablissement",
+          "cle": "Établ. public",
           "texte": "Un établissement public assure la conduite, la coordination et la réalisation des études et opérations de conservation et de restauration depuis sa création par la loi de 2019.",
           "source": 3
         },
         {
-          "cle": "donateurs",
+          "cle": "825 M€ fin 2019",
           "texte": "Fin 2019 déjà, 825 millions d'euros avaient été recueillis auprès de 338 086 donateurs, selon la Cour des comptes.",
           "source": 4
         }
@@ -2826,22 +2826,22 @@
       "ouverture": "Et toi, la baguette que tu achètes ressemble-t-elle encore à ce savoir-faire décrit par l'UNESCO ?",
       "reperes": [
         {
-          "cle": "inscription",
+          "cle": "2022",
           "texte": "L'élément est inscrit depuis 2022 (décision 17.COM) sur la Liste représentative du patrimoine culturel immatériel de l'humanité.",
           "source": 1
         },
         {
-          "cle": "sauvegarde",
+          "cle": "Une seule mesure",
           "texte": "La seule mesure de sauvegarde détaillée est la mise en place d'actions de sensibilisation à l'importance des pratiques alimentaires qui font partie du quotidien.",
           "source": 2
         },
         {
-          "cle": "objectifconv",
+          "cle": "Sensibiliser",
           "texte": "La convention vise à « sensibiliser un large public aux pratiques culturelles immatérielles » et à renforcer la reconnaissance de leurs détenteurs.",
           "source": 4
         },
         {
-          "cle": "partdemarche",
+          "cle": "72 % du pain",
           "texte": "Entre 1993 et 2000, les boulangeries-pâtisseries ont enregistré la deuxième plus forte perte de part de marché du commerce alimentaire spécialisé (-6,1 points) ; leur poids dans la vente de pain (72 % en 2000) a, selon l'Insee, atténué l'effet de cette baisse.",
           "source": 3
         }
@@ -2931,22 +2931,22 @@
       "ouverture": "Et si on comptait, en euros, tout ce que personne ne te paie à la maison ?",
       "reperes": [
         {
-          "cle": "ecart-1h30",
+          "cle": "1 h 30 par jour",
           "texte": "L'écart de temps domestique quotidien entre hommes et femmes s'est réduit au fil des enquêtes, mais reste d'une heure et demie par jour.",
           "source": 2
         },
         {
-          "cle": "42-77mds-h",
+          "cle": "42 à 77 Mds h",
           "texte": "Au niveau macroéconomique, en 2010, entre 42 et 77 milliards d'heures de travail domestique ont été effectuées en France selon le périmètre retenu.",
           "source": 1
         },
         {
-          "cle": "stiglitz-pib",
+          "cle": "Rapport Stiglitz",
           "texte": "Le rapport Stiglitz a rappelé qu'une des limites du PIB comme indicateur de bien-être est qu'il ne prend pas en compte la production domestique non marchande.",
           "source": 3
         },
         {
-          "cle": "17,5%-smic",
+          "cle": "17,5 % du PIB",
           "texte": "Valorisé au Smic et avec la définition la plus restreinte, le travail domestique équivaudrait à 17,5 % du PIB.",
           "source": 3
         }
@@ -3142,22 +3142,22 @@
       "ouverture": "Et toi, tu crois que cette loi a vraiment réduit le gaspillage, ou qu'elle a surtout déplacé le problème vers les associations ?",
       "reperes": [
         {
-          "cle": "total-dechets",
+          "cle": "9,7 Mt par an",
           "texte": "Le gaspillage alimentaire représente au total 9,7 millions de tonnes de déchets par an en France, en 2023.",
           "source": 1
         },
         {
-          "cle": "part-comestible",
+          "cle": "3,8 Mt",
           "texte": "Sur ce total, 3,8 millions de tonnes sont des produits encore comestibles jetés, soit près de la moitié des déchets alimentaires.",
           "source": 1
         },
         {
-          "cle": "interdiction",
+          "cle": "Loi de 2016",
           "texte": "Depuis la loi du 11 février 2016, les distributeurs ne peuvent plus rendre délibérément impropres à la consommation leurs invendus alimentaires encore consommables.",
           "source": 2
         },
         {
-          "cle": "seuil-400m2",
+          "cle": "400 m²",
           "texte": "Les distributeurs dont la surface de vente dépasse 400 m² doivent proposer une convention de don à une association habilitée.",
           "source": 3
         }

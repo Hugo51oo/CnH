@@ -23,6 +23,9 @@ RACINE = Path(__file__).resolve().parent.parent
 CLE_MAX = 16
 LONGUEUR_BASE_MAX = 600
 LONGUEUR_CAMP_MAX = 700
+# Une clé de repère s'affiche en gros : c'est un chiffre ou un mot lu par un humain,
+# pas un identifiant. Refuse « plaintes25 », « total-dechets », « 17,5%-smic »…
+CLE_IDENTIFIANT = re.compile(r"^[a-zà-ÿ]|^\S*(?:[^\W\d_]-|-[^\W\d_])\S*$")
 
 
 def numeros(valeur):
@@ -80,6 +83,9 @@ def verifier(racine=RACINE, aujourdhui=None):
             cle = (r.get("cle") or "").strip()
             if len(cle) > CLE_MAX:
                 erreurs.append(f"« {cid} » : clé « {cle} » = {len(cle)} caractères (maximum {CLE_MAX}).")
+            if CLE_IDENTIFIANT.search(cle):
+                erreurs.append(f"« {cid} » : clé « {cle} » ressemble à un identifiant ; "
+                               "il faut un chiffre (« 20 150 ») ou des mots lisibles (« Fermée en 1963 »).")
             if not (r.get("texte") or "").strip():
                 erreurs.append(f"« {cid} » : repère {i} sans texte.")
         cles = [(r.get("cle") or "").strip().lower() for r in (c.get("reperes") or [])]

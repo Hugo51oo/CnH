@@ -68,6 +68,20 @@ class TestGardeFous(unittest.TestCase):
             erreurs, _ = bac.verifier()
             self.assertTrue(any("caractères (maximum" in e for e in erreurs), erreurs)
 
+    def test_cle_en_forme_d_identifiant_refusee(self):
+        for cle in ("plaintes25", "total-dechets", "17,5%-smic", "dons"):
+            with Bac() as bac:
+                bac.carte("vivre-seul")["reperes"][0]["cle"] = cle
+                erreurs, _ = bac.verifier()
+                self.assertTrue(any("ressemble à un identifiant" in e for e in erreurs), (cle, erreurs))
+
+    def test_cle_lisible_acceptee(self):
+        for cle in ("20 150", "2022-2032", "− 8 % en 2026", "Fermée en 1963", "OMS <53dB Lden"):
+            with Bac() as bac:
+                bac.carte("vivre-seul")["reperes"][0]["cle"] = cle
+                erreurs, _ = bac.verifier()
+                self.assertFalse(any("ressemble à un identifiant" in e for e in erreurs), (cle, erreurs))
+
     def test_deux_camps_identiques_refuses(self):
         with Bac() as bac:
             k = bac.carte("vivre-seul")["clivages"][0]

@@ -70,6 +70,10 @@ bonne réponse. Ton : curieux, simple, direct, tutoiement, jamais moralisateur.
 
 Contraintes mécaniques (un validateur les refuse sinon) :
 - `cle` d'un repère : **16 caractères maximum**, deux repères ne peuvent pas avoir la même.
+  Elle s'affiche en très gros au-dessus du texte : c'est **le chiffre clé tel qu'un lecteur
+  le lit** (« 20 150 », « 830 M€ », « 17,5 % du PIB ») ou, à défaut, quelques mots avec
+  majuscule (« Fermée en 1963 »). Jamais un identifiant : pas de « plaintes25 », de
+  « total-dechets », de minuscule initiale ni de mots liés par des tirets.
 - `source` : le **numéro** de la source dans `sources` (1 = première), ou une liste de numéros.
   Jamais le titre de la source, jamais une chaîne de caractères.
 - Les deux camps d'un clivage ne doivent pas dire la même chose, et aucun ne doit être
