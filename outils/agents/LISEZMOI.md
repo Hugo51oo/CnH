@@ -36,6 +36,28 @@ l'écriture à un modèle moins cher.
 L'étape 6 utilise obligatoirement un modèle **différent** de celui qui a écrit :
 un modèle relit très mal ses propres erreurs. Le script refuse le même modèle.
 
+## Gratuit et automatique (réglage par défaut)
+
+| Étape | Service | Coût |
+|---|---|---|
+| Recherche des sources + écriture | **Gemini Flash** (offre gratuite, recherche Google incluse) — clé sur https://aistudio.google.com/apikey | 0 € |
+| Relecture adverse | **Groq** (offre gratuite, modèle `openai/gpt-oss-120b`) — clé sur https://console.groq.com/keys | 0 € |
+| Lancement chaque matin | **GitHub Actions** (`.github/workflows/journee.yml`, gratuit pour un dépôt public) | 0 € |
+
+Les clés se rangent à deux endroits : `.env.local` pour lancer à la main depuis le Mac, et
+les **secrets du dépôt** pour GitHub Actions (*Settings → Secrets and variables → Actions →
+New repository secret* : `GEMINI_API_KEY`, `GROQ_API_KEY`).
+
+**File d'attente.** Chaque matin, la chaîne prend `sujets/AAAA-MM-JJ.json` s'il existe,
+sinon la première journée de `sujets/a-venir/` (ordre alphabétique), qu'elle date du jour.
+Garder trois ou quatre journées d'avance dans la file suffit. File vide = rien n'est
+produit, et le site tourne sur les cartes déjà publiées.
+
+Limites des offres gratuites : elles changent sans prévenir, et Google peut réutiliser ce
+qu'on envoie à l'offre gratuite (sans enjeu ici : seulement des sujets et des pages
+publiques, aucune donnée personnelle). Si un fournisseur refuse, la chaîne s'arrête
+sans rien publier ; le journal est dans l'onglet *Actions* du dépôt.
+
 ## Installer une clé
 
 Crée `.env.local` **à la racine du projet** (il est déjà dans `.gitignore`, il ne
@@ -46,7 +68,7 @@ MISTRAL_API_KEY=…
 OPENAI_API_KEY=…
 ```
 
-Fournisseurs reconnus : `mistral`, `openai`, `groq`, `deepseek`, `together`,
+Fournisseurs reconnus : `gemini`, `groq`, `mistral`, `openai`, `deepseek`, `together`,
 `anthropic`, et `ollama` (modèle installé sur ta machine, gratuit, aucune clé).
 
 Pour voir ce qui est prêt :

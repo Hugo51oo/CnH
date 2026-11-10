@@ -4,16 +4,26 @@ CnH — trouve des URLs de sources candidates pour chaque sujet d'une journée.
 
     python3 outils/agents/chercher.py outils/agents/sujets/2026-09-20.json --ecrire
 
-C'est la seule étape qui a besoin de naviguer. Elle passe par la recherche web
-d'OpenAI (API « responses », outil `web_search`) : le modèle cherche, le script ne
-garde que les URLs et **ne croit aucun fait** rapporté au passage. Les faits viendront
+C'est la seule étape qui a besoin de naviguer. Trois façons, au choix (`--modele`) :
+
+- `wikipedia` (par défaut, gratuit, sans clé) : on cherche les articles Wikipédia du
+  sujet et on récupère **les liens qu'ils citent**. Wikipédia n'est jamais une source
+  publiée ; ses références vers l'INSEE, Légifrance, l'UNESCO… le sont. Si une clé
+  Gemini est là, Gemini choisit les plus pertinents **dans cette liste**, sans pouvoir
+  en ajouter : rien ne peut être inventé.
+- `gemini:…` : recherche Google de Gemini (outil `google_search`) — pas ouverte à
+  toutes les offres gratuites.
+- `openai:…` : recherche web d'OpenAI (API « responses », payante).
+
+Dans tous les cas, le script ne garde que les URLs et **ne croit aucun fait** rapporté
+au passage. Les faits viendront
 du texte réel des pages, téléchargé ensuite par `documenter.py`.
 
 Le résultat est écrit dans le champ `sources_candidates` du fichier de sujets, où tu
 peux — et devrais — le relire, en retirer et en ajouter : le choix des sources reste
 une décision éditoriale (règle 1 du projet).
 
-Sans clé OpenAI, le script ne fait rien de plus que te rappeler quels domaines sont
+En dernier recours, de plus que te rappeler quels domaines sont
 acceptés : tu peux toujours remplir `sources_candidates` à la main.
 
 Aucune dépendance : bibliothèque standard uniquement.
@@ -110,6 +120,176 @@ def chercher_openai(question, modele="gpt-4.1", max_essais=2):
     return donnees.get("urls") or [], donnees.get("pourquoi") or [], infos
 
 
+class _SansRedirection(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, *args, **kwargs):
+        return None
+
+
+def resoudre_redirection(url, timeout=15):
+    """Les liens de Google sont des redirections (vertexaisearch…) : on lit la vraie adresse
+    dans l'en-tête Location, sans aller jusqu'à la page. None si ce n'est pas une redirection."""
+    ouvreur = urllib.request.build_opener(_SansRedirection)
+    try:
+        ouvreur.open(urllib.request.Request(url, method="HEAD"), timeout=timeout)
+    except urllib.error.HTTPError as e:
+        if e.code in (301, 302, 303, 307, 308):
+            return e.headers.get("location")
+    except (urllib.error.URLError, TimeoutError):
+        pass
+    return None
+
+
+def chercher_gemini(question, modele="gemini-flash-latest"):
+    """Recherche Google via Gemini (offre gratuite). Retourne (urls, pourquoi, infos).
+
+    On garde deux choses : les URLs que le modèle écrit dans sa réponse, et celles des
+    pages que Google lui a réellement renvoyées (groundingChunks), qui ne peuvent pas
+    être inventées. Toutes repasseront de toute façon par le téléchargement et la
+    vérification des citations."""
+    cle = fo.cle_de("gemini")
+    if not cle:
+        raise fo.ErreurFournisseur(
+            "Clé manquante pour gemini : ajoute « GEMINI_API_KEY=… » dans .env.local "
+            "(gratuite sur https://aistudio.google.com/apikey).")
+    corps = {
+        "systemInstruction": {"parts": [{"text": CONSIGNE.format(domaines=", ".join(DOMAINES))}]},
+        "contents": [{"role": "user", "parts": [{"text": question}]}],
+        "tools": [{"google_search": {}}],
+        "generationConfig": {"temperature": 0.2},
+    }
+    req = urllib.request.Request(
+        f"https://generativelanguage.googleapis.com/v1beta/models/{modele}:generateContent",
+        data=json.dumps(corps).encode("utf-8"),
+        headers={"content-type": "application/json", "x-goog-api-key": cle,
+                 "user-agent": fo.AGENT},
+        method="POST")
+    with urllib.request.urlopen(req, timeout=300) as r:
+        rep = json.loads(r.read().decode("utf-8"))
+
+    candidat = (rep.get("candidates") or [{}])[0]
+    texte = "".join(p.get("text", "") for p in (candidat.get("content") or {}).get("parts", []))
+    try:
+        donnees = fo.extraire_json(texte)
+    except ValueError:
+        donnees = {}
+    urls = list(donnees.get("urls") or [])
+    pourquoi = list(donnees.get("pourquoi") or [])
+    for morceau in (candidat.get("groundingMetadata") or {}).get("groundingChunks", []):
+        web = morceau.get("web") or {}
+        vraie = resoudre_redirection(web.get("uri", "")) or web.get("uri", "")
+        if vraie and vraie not in urls:
+            urls.append(vraie)
+            pourquoi.append(f"page renvoyée par Google : {web.get('title', '')}")
+    u = rep.get("usageMetadata", {})
+    infos = {"modele": f"gemini:{modele}", "tache": "chercher",
+             "jetons_entree": u.get("promptTokenCount", 0),
+             "jetons_sortie": u.get("candidatesTokenCount", 0), "secondes": 0}
+    return urls, pourquoi, infos
+
+
+# Liens cités par Wikipédia qui ne sont pas des pages de contenu (notices d'autorité,
+# catalogues, identifiants) : inutiles comme source d'un fait.
+HOTES_SANS_CONTENU = ("data.bnf.fr", "catalogue.bnf.fr", "isni", "viaf", "idref",
+                      "wikidata", "archive.org/details")
+
+
+def _api_wikipedia(langue, parametres, timeout=30):
+    import urllib.parse
+    parametres = {**parametres, "format": "json", "formatversion": "2"}
+    url = f"https://{langue}.wikipedia.org/w/api.php?" + urllib.parse.urlencode(parametres)
+    req = urllib.request.Request(url, headers={"user-agent": fo.AGENT})
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        return json.loads(r.read().decode("utf-8"))
+
+
+def liens_cites_par_wikipedia(requete, langue="fr", articles=2):
+    """URLs citées par les premiers articles Wikipédia trouvés pour `requete`."""
+    trouves = _api_wikipedia(langue, {"action": "query", "list": "search",
+                                      "srsearch": requete, "srlimit": articles})
+    titres = [r["title"] for r in trouves.get("query", {}).get("search", [])]
+    if not titres:
+        return []
+    pages = _api_wikipedia(langue, {"action": "query", "prop": "extlinks",
+                                    "titles": "|".join(titres), "ellimit": "max"})
+    liens = []
+    for page in pages.get("query", {}).get("pages", []):
+        for lien in page.get("extlinks", []):
+            liens.append((lien.get("url", ""), page.get("title", "")))
+    return liens
+
+
+def candidates_wikipedia(sujet):
+    """(url, article) acceptables pour ce sujet, sans doublon, dans l'ordre de découverte."""
+    requetes = [sujet.get("brief", sujet["id"])] + list(sujet.get("pistes") or [])
+    vues, gardees = set(), []
+    for requete in requetes:
+        try:
+            liens = liens_cites_par_wikipedia(requete)
+        except (urllib.error.URLError, TimeoutError, ValueError):
+            continue
+        for url, article in liens:
+            url = url.strip()
+            if url.startswith("http://"):
+                url = "https://" + url[len("http://"):]
+            if (url in vues or not url.startswith("https://") or not domaine_accepte(url)
+                    or any(h in url for h in HOTES_SANS_CONTENU)):
+                continue
+            vues.add(url)
+            gardees.append((url, article))
+    return gardees
+
+
+TRI = """Tu choisis des sources pour une fiche documentaire française. On te donne un sujet,
+des pistes, et une liste numérotée d'URLs (citées par des articles Wikipédia sur le sujet).
+Choisis les {n} URLs les plus susceptibles de contenir des faits précis (chiffres datés,
+textes de loi, analyses) sur CE sujet. Tu ne peux choisir QUE dans la liste.
+Réponds uniquement par un objet JSON : {{"numeros": [3, 1, 7], "pourquoi": ["…", "…", "…"]}}"""
+
+
+def chercher_wikipedia(sujet, trieur=None, garder=9):
+    """Retourne (urls, pourquoi, infos). `trieur` = modèle qui choisit dans la liste."""
+    candidates = candidates_wikipedia(sujet)
+    infos = {"modele": "wikipedia", "tache": "chercher", "jetons_entree": 0,
+             "jetons_sortie": 0, "secondes": 0}
+    if len(candidates) <= garder or not trieur:
+        return ([u for u, _ in candidates[:garder]],
+                [f"citée par l'article Wikipédia « {a} »" for _, a in candidates[:garder]], infos)
+    liste = "\n".join(f"{i}. {u}  (cité par « {a} »)" for i, (u, a) in enumerate(candidates, 1))
+    message = (f"Sujet : {sujet.get('brief', sujet['id'])}\n"
+               f"Pistes : {' ; '.join(sujet.get('pistes') or [])}\n\nURLs :\n{liste}")
+    numeros, pourquoi = [], []
+    try:
+        texte, infos = fo.appeler(trieur, systeme=TRI.format(n=garder), message=message,
+                                  json_attendu=True, max_jetons=2000, temperature=0,
+                                  tache=f"chercher:{sujet['id']}")
+        choix = fo.extraire_json(texte)
+        numeros = [n for n in choix.get("numeros", []) if isinstance(n, int)
+                   and 1 <= n <= len(candidates)]
+        pourquoi = [str(x) for x in choix.get("pourquoi", [])]
+    except Exception as e:
+        print(f"    (tri par {trieur} impossible : {type(e).__name__} — ordre de découverte gardé)")
+    if not numeros:
+        numeros, pourquoi = list(range(1, garder + 1)), []
+    urls = [candidates[n - 1][0] for n in numeros[:garder]]
+    pourquoi = (pourquoi + [""] * len(urls))[:len(urls)]
+    return urls, pourquoi, infos
+
+
+def chercher(sujet, modele):
+    """`modele` = « wikipedia », ou « fournisseur:nom » ; sans préfixe, OpenAI (ancien usage)."""
+    if modele == "wikipedia":
+        trieur = next((m for m in fo.disponibles() if not m.startswith("ollama:")), None)
+        return chercher_wikipedia(sujet, trieur)
+    fournisseur, _, nom = modele.rpartition(":")
+    if fournisseur == "gemini":
+        return chercher_gemini(question_du_sujet(sujet), nom)
+    return chercher_openai(question_du_sujet(sujet), nom)
+
+
+def modele_par_defaut():
+    return "wikipedia"
+
+
 def question_du_sujet(sujet):
     morceaux = [f"Sujet : {sujet.get('brief', sujet['id'])}"]
     if sujet.get("pistes"):
@@ -121,7 +301,8 @@ def question_du_sujet(sujet):
 def main():
     ap = argparse.ArgumentParser(description="Trouve des sources candidates pour une journée CnH.")
     ap.add_argument("sujets")
-    ap.add_argument("--modele", default="gpt-4.1")
+    ap.add_argument("--modele", default=None,
+                    help="wikipedia (gratuit, par défaut), gemini:… ou openai:…")
     ap.add_argument("--ecrire", action="store_true",
                     help="écrit les URLs dans le fichier de sujets")
     ap.add_argument("--seulement", help="ne traiter qu'un id")
@@ -131,6 +312,7 @@ def main():
     brut = json.loads(chemin.read_text(encoding="utf-8"))
     sujets = brut["sujets"] if isinstance(brut, dict) else brut
 
+    modele = args.modele or modele_par_defaut()
     total = 0
     for s in sujets:
         if args.seulement and s["id"] != args.seulement:
@@ -139,7 +321,7 @@ def main():
             print(f"  = {s['id']} — {len(s['sources_candidates'])} URL(s) déjà là, on n'y touche pas.")
             continue
         try:
-            urls, pourquoi, infos = chercher_openai(question_du_sujet(s), args.modele)
+            urls, pourquoi, infos = chercher(s, modele)
         except Exception as e:
             print(f"  ✗ {s['id']} : {type(e).__name__} — {e}")
             continue
@@ -161,7 +343,7 @@ def main():
         print(f"  Étape suivante : python3 outils/agents/documenter.py {chemin}")
     else:
         print("\n(essai à blanc) Relance avec --ecrire pour enregistrer ces URLs.")
-    print(f"{total} jetons chez OpenAI (aucun jeton Claude).")
+    print(f"{total} jetons chez {modele.split(':')[0]} (aucun jeton Claude).")
     return 0
 
 

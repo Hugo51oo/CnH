@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
-# CnH — lance automatiquement la chaîne d'agents pour la journée du jour, si un fichier
-# de sujets l'attend dans outils/agents/sujets/AAAA-MM-JJ.json.
+# CnH — lance automatiquement la chaîne d'agents pour la journée du jour.
 #
-# Pensé pour tourner via launchd (tâche planifiée macOS), EN LOCAL sur cette machine :
-# la chaîne a besoin d'un accès réseau normal, qu'une session Claude n'a pas (voir
-# outils/agents/LISEZMOI.md, "Où lancer la chaîne").
+# Sujets : outils/agents/sujets/AAAA-MM-JJ.json s'il existe ; sinon, la première journée
+# de la file d'attente outils/agents/sujets/a-venir/ (ordre alphabétique), datée du jour.
+# Garder quelques journées d'avance dans la file suffit à ne jamais rater un matin.
+#
+# Tourne chaque matin sur GitHub Actions (.github/workflows/journee.yml), gratuitement.
+# Se lance aussi à la main depuis le Terminal du Mac, avec les clés dans .env.local.
 #
 # Tout est journalisé dans outils/agents/journal_auto.log. Rien n'est écrit dans
 # contenu/ ni poussé sur GitHub tant que toutes les étapes n'ont pas réussi.
@@ -22,12 +24,24 @@ echo "" >> "$LOG"
 horodater "=== Lancement automatique pour le ${JOUR} ==="
 
 if [ ! -f "$SUJETS" ]; then
-  horodater "Aucun fichier de sujets pour aujourd'hui (${SUJETS} absent) — rien à faire. Pense à en préparer d'avance."
-  exit 0
+  SUIVANT="$(ls outils/agents/sujets/a-venir/*.json 2>/dev/null | head -n 1)"
+  if [ -z "$SUIVANT" ]; then
+    horodater "Aucun sujet pour aujourd'hui et file d'attente vide (outils/agents/sujets/a-venir/) — rien à faire. Le site tourne sur les cartes déjà publiées."
+    exit 0
+  fi
+  horodater "Pas de sujets datés du jour : on prend ${SUIVANT} dans la file d'attente."
+  git mv "$SUIVANT" "$SUJETS" 2>/dev/null || mv "$SUIVANT" "$SUJETS"
+  python3 - "$SUJETS" "$JOUR" <<'PY_DATE'
+import json, sys
+chemin, jour = sys.argv[1], sys.argv[2]
+brut = json.load(open(chemin, encoding="utf-8"))
+brut["date"] = jour
+open(chemin, "w", encoding="utf-8").write(json.dumps(brut, ensure_ascii=False, indent=2) + "\n")
+PY_DATE
 fi
 
 if ! python3 outils/agents/fournisseurs.py 2>&1 | grep -q "clé présente"; then
-  horodater "✗ Aucune clé d'API configurée dans .env.local — impossible de continuer."
+  horodater "✗ Aucune clé d'API (GEMINI_API_KEY, GROQ_API_KEY…) dans .env.local ou dans les secrets GitHub — impossible de continuer."
   exit 1
 fi
 
@@ -56,7 +70,8 @@ if ! ./outils/tout_verifier.sh >>"$LOG" 2>&1; then
 fi
 
 horodater "5/5 — commit et push"
-git add contenu/cartes.json contenu/programme.json contenu/preuves.json contenu/donnees.js
+git add contenu/cartes.json contenu/programme.json contenu/preuves.json contenu/donnees.js \
+        outils/agents/sujets/
 if git diff --cached --quiet; then
   horodater "Rien à committer (étrange si la publication a réussi) — arrêt."
   exit 0

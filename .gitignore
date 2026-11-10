@@ -10,6 +10,7 @@ outils/agents/produits/
 outils/agents/.pages/
 outils/agents/.bac/
 outils/agents/journal.jsonl
+outils/agents/journal_auto.log
 
 # Aperçu autonome (régénérable : python3 outils/construire_apercu.py)
 apercu/

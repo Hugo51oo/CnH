@@ -29,6 +29,14 @@ JOURNAL = Path(__file__).resolve().parent / "journal.jsonl"
 
 # fournisseur -> (url, variable de clé, style d'API)
 FOURNISSEURS = {
+    # Gemini et Groq ont une offre gratuite, sans carte bancaire : la chaîne peut tourner à 0 €.
+    # API native : son mode « compatible OpenAI » mêle des bouts de raisonnement à la réponse
+    "gemini":    ("https://generativelanguage.googleapis.com/v1beta/models/{modele}:generateContent",
+                  "GEMINI_API_KEY", "gemini"),
+    # OpenRouter : modèles « :free » (Gemma, Qwen, Nemotron…), sans carte bancaire.
+    "openrouter": ("https://openrouter.ai/api/v1/chat/completions",  "OPENROUTER_API_KEY", "openai"),
+    # Cohere : clé d'essai gratuite (1 000 appels/mois, usage non commercial — c'est le cas de CnH).
+    "cohere":    ("https://api.cohere.ai/compatibility/v1/chat/completions", "COHERE_API_KEY", "openai"),
     "mistral":   ("https://api.mistral.ai/v1/chat/completions",      "MISTRAL_API_KEY",  "openai"),
     "openai":    ("https://api.openai.com/v1/chat/completions",      "OPENAI_API_KEY",   "openai"),
     "groq":      ("https://api.groq.com/openai/v1/chat/completions", "GROQ_API_KEY",     "openai"),
@@ -39,8 +47,14 @@ FOURNISSEURS = {
     "ollama":    ("http://localhost:11434/v1/chat/completions",      None,               "openai"),
 }
 
-# Ordre de repli : le premier fournisseur dont la clé est présente.
-PAR_DEFAUT = ["openai:gpt-4.1", "ollama:llama3.1", "mistral:mistral-large-latest"]
+# Ordre de repli : le premier fournisseur dont la clé est présente. Les offres gratuites
+# d'abord : Gemini écrit, Groq (un autre modèle, comme l'exige la relecture) contredit.
+PAR_DEFAUT = ["gemini:gemini-3.5-flash", "groq:openai/gpt-oss-120b", "ollama:llama3.1",
+              "openai:gpt-4.1", "mistral:mistral-large-latest"]
+
+
+
+AGENT = "CnH-chaine-agents/1.0 (+https://hugo51oo.github.io/CnH/)"
 
 
 class ErreurFournisseur(RuntimeError):
@@ -92,6 +106,8 @@ def disponibles():
 
 def _requete(url, corps, entetes, timeout):
     donnees = json.dumps(corps).encode("utf-8")
+    # Certains fournisseurs (Groq, derrière Cloudflare) refusent l'agent « Python-urllib »
+    entetes = {"user-agent": AGENT, **entetes}
     req = urllib.request.Request(url, data=donnees, headers=entetes, method="POST")
     with urllib.request.urlopen(req, timeout=timeout) as r:
         return json.loads(r.read().decode("utf-8"))
@@ -118,6 +134,15 @@ def appeler(modele, systeme, message, json_attendu=False, temperature=0.2,
                    "anthropic-version": "2023-06-01"}
         corps = {"model": nom, "max_tokens": max_jetons, "temperature": temperature,
                  "system": systeme, "messages": [{"role": "user", "content": message}]}
+    elif style == "gemini":
+        url = url.format(modele=nom)
+        entetes = {"content-type": "application/json", "x-goog-api-key": cle}
+        config = {"temperature": temperature, "maxOutputTokens": max_jetons}
+        if json_attendu:
+            config["responseMimeType"] = "application/json"
+        corps = {"systemInstruction": {"parts": [{"text": systeme}]},
+                 "contents": [{"role": "user", "parts": [{"text": message}]}],
+                 "generationConfig": config}
     else:
         entetes = {"content-type": "application/json"}
         if cle:
@@ -131,6 +156,7 @@ def appeler(modele, systeme, message, json_attendu=False, temperature=0.2,
     debut = time.time()
     derniere = None
     for essai in range(1, essais + 1):
+        attente = min(2 ** essai * 5, 60)
         try:
             rep = _requete(url, corps, entetes, timeout)
             break
@@ -140,10 +166,12 @@ def appeler(modele, systeme, message, json_attendu=False, temperature=0.2,
             # 429 / 5xx : on réessaie en patientant, le reste est définitif
             if e.code not in (408, 409, 429) and e.code < 500:
                 raise ErreurFournisseur(f"{modele} : {derniere}") from None
+            # Les offres gratuites limitent les jetons par minute et disent combien attendre
+            attente = delai_demande(e.headers.get("retry-after")) or attente
         except (urllib.error.URLError, TimeoutError) as e:
             derniere = str(e)
         if essai < essais:
-            time.sleep(min(2 ** essai * 5, 60))
+            time.sleep(attente)
     else:
         raise ErreurFournisseur(f"{modele} : {essais} tentatives échouées — {derniere}")
 
@@ -151,6 +179,14 @@ def appeler(modele, systeme, message, json_attendu=False, temperature=0.2,
         texte = "".join(b.get("text", "") for b in rep.get("content", []))
         u = rep.get("usage", {})
         entree, sortie = u.get("input_tokens", 0), u.get("output_tokens", 0)
+    elif style == "gemini":
+        candidat = (rep.get("candidates") or [{}])[0]
+        # les parties « thought » sont le raisonnement interne du modèle, pas la réponse
+        texte = "".join(p.get("text", "") for p in (candidat.get("content") or {}).get("parts", [])
+                        if not p.get("thought"))
+        u = rep.get("usageMetadata", {})
+        entree = u.get("promptTokenCount", 0)
+        sortie = u.get("candidatesTokenCount", 0) + u.get("thoughtsTokenCount", 0)
     else:
         texte = rep["choices"][0]["message"]["content"]
         u = rep.get("usage", {})
@@ -165,6 +201,14 @@ def appeler(modele, systeme, message, json_attendu=False, temperature=0.2,
     except OSError:
         pass
     return texte, infos
+
+
+def delai_demande(valeur, plafond=90):
+    """Secondes d'attente demandées par l'en-tête Retry-After (None si absent ou illisible)."""
+    try:
+        return min(max(float(valeur), 1), plafond)
+    except (TypeError, ValueError):
+        return None
 
 
 def extraire_json(texte):

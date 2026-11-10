@@ -1,0 +1,62 @@
+# CnH — produit et publie la journée chaque matin, gratuitement, sur les serveurs de GitHub
+# (gratuit pour un dépôt public) : plus besoin que le Mac soit allumé.
+#
+# Rien n'est publié si une seule étape échoue (voir outils/agents/lancer_journee_auto.sh).
+# Les clés vivent dans les secrets du dépôt (Settings → Secrets and variables → Actions),
+# jamais dans le code : GEMINI_API_KEY (écriture + recherche) et GROQ_API_KEY (relecture).
+
+name: Journée du jour
+
+on:
+  schedule:
+    - cron: "0 5 * * *"     # 5 h UTC = 7 h à Paris l'été, 6 h l'hiver
+  workflow_dispatch: {}     # bouton « Run workflow » pour lancer à la main
+
+permissions:
+  contents: write           # pour pousser les contenus publiés
+
+concurrency:
+  group: journee
+  cancel-in-progress: false
+
+jobs:
+  journee:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Lecteur de PDF (sources officielles en PDF)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+
+      - name: Identité des commits automatiques
+        run: |
+          git config user.name "cnh-journee[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Produire, vérifier, publier
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          TZ: Europe/Paris
+        run: ./outils/agents/lancer_journee_auto.sh
+
+      - name: Afficher le journal en cas d'échec
+        if: failure()
+        run: tail -n 200 outils/agents/journal_auto.log || true
+
+      - name: Garder le journal de la journée
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: journal-${{ github.run_id }}
+          path: |
+            outils/agents/journal_auto.log
+            outils/agents/journal.jsonl
+            outils/agents/produits/
+          if-no-files-found: ignore
+          retention-days: 14

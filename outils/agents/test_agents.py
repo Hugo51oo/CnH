@@ -229,15 +229,82 @@ class TestFournisseurs(unittest.TestCase):
             fo.appeler("magie:modele", systeme="a", message="b")
 
     def test_cle_absente_dit_quoi_faire(self):
-        import os
-        ancienne = os.environ.pop("MISTRAL_API_KEY", None)
+        ancien = fo.cle_de
+        fo.cle_de = lambda f: ""   # indépendant de ce que contient .env.local
         try:
             with self.assertRaises(fo.ErreurFournisseur) as ctx:
                 fo.appeler("mistral:mistral-large-latest", systeme="a", message="b")
             self.assertIn(".env.local", str(ctx.exception))
         finally:
-            if ancienne:
-                os.environ["MISTRAL_API_KEY"] = ancienne
+            fo.cle_de = ancien
+
+
+    def test_delai_demande_par_le_fournisseur(self):
+        self.assertEqual(fo.delai_demande("12"), 12)
+        self.assertEqual(fo.delai_demande("7.5"), 7.5)
+        self.assertEqual(fo.delai_demande("3600"), 90)   # plafonné
+        self.assertIsNone(fo.delai_demande(None))
+        self.assertIsNone(fo.delai_demande("Wed, 21 Oct 2026 07:28:00 GMT"))
+
+    def test_offres_gratuites_en_premier_et_deux_fournisseurs_differents(self):
+        premiers = [m.split(":")[0] for m in fo.PAR_DEFAUT[:2]]
+        self.assertEqual(premiers, ["gemini", "groq"])
+
+
+class TestRechercheGemini(unittest.TestCase):
+    def test_aiguillage_selon_le_fournisseur(self):
+        appels = []
+        anciens = ch.chercher_gemini, ch.chercher_openai
+        anciens += (ch.chercher_wikipedia,)
+        ch.chercher_gemini = lambda q, m: appels.append(("gemini", m)) or ([], [], {})
+        ch.chercher_openai = lambda q, m: appels.append(("openai", m)) or ([], [], {})
+        ch.chercher_wikipedia = lambda s, t: appels.append(("wikipedia", s["id"])) or ([], [], {})
+        sujet = {"id": "x", "brief": "q"}
+        try:
+            ch.chercher(sujet, "wikipedia")
+            ch.chercher(sujet, "gemini:gemini-flash-latest")
+            ch.chercher(sujet, "openai:gpt-4.1")
+            ch.chercher(sujet, "gpt-4.1")   # ancien usage, sans préfixe
+        finally:
+            ch.chercher_gemini, ch.chercher_openai, ch.chercher_wikipedia = anciens
+        self.assertEqual(appels, [("wikipedia", "x"), ("gemini", "gemini-flash-latest"),
+                                  ("openai", "gpt-4.1"), ("openai", "gpt-4.1")])
+
+    def test_wikipedia_ne_garde_que_les_domaines_acceptes(self):
+        ancien = ch.liens_cites_par_wikipedia
+        ch.liens_cites_par_wikipedia = lambda r: [
+            ("http://www.insee.fr/fr/statistiques/1", "A"),          # http → https
+            ("https://www.insee.fr/fr/statistiques/1", "B"),         # doublon
+            ("https://blog.example.com/article", "A"),               # domaine refusé
+            ("https://data.bnf.fr/12345/auteur/", "A"),              # notice, pas un contenu
+            ("https://fr.wikipedia.org/wiki/Musee", "A"),            # Wikipédia elle-même
+            ("https://www.unesco.org/fr/legal-affairs/convention", "A")]
+        try:
+            gardees = [u for u, _ in ch.candidates_wikipedia({"id": "x", "brief": "q"})]
+        finally:
+            ch.liens_cites_par_wikipedia = ancien
+        self.assertEqual(gardees, ["https://www.insee.fr/fr/statistiques/1",
+                                   "https://www.unesco.org/fr/legal-affairs/convention"])
+
+    def test_le_tri_ne_peut_pas_ajouter_d_url(self):
+        anciens = ch.candidates_wikipedia, fo.appeler
+        ch.candidates_wikipedia = lambda s: [(f"https://www.insee.fr/p{i}", "A") for i in range(1, 13)]
+        fo.appeler = lambda *a, **k: ('{"numeros": [2, 99, 5], "pourquoi": ["a", "b", "c"]}', {})
+        try:
+            urls, _, _ = ch.chercher_wikipedia({"id": "x", "brief": "q"}, trieur="groq:m")
+        finally:
+            ch.candidates_wikipedia, fo.appeler = anciens
+        self.assertEqual(urls, ["https://www.insee.fr/p2", "https://www.insee.fr/p5"])
+
+    def test_cle_gemini_absente_dit_ou_la_trouver(self):
+        ancien = fo.cle_de
+        fo.cle_de = lambda f: ""   # indépendant de ce que contient .env.local
+        try:
+            with self.assertRaises(fo.ErreurFournisseur) as ctx:
+                ch.chercher_gemini("q")
+            self.assertIn("aistudio.google.com", str(ctx.exception))
+        finally:
+            fo.cle_de = ancien
 
 
 if __name__ == "__main__":
