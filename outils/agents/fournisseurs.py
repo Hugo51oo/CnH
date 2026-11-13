@@ -217,8 +217,10 @@ def _appeler(modele, systeme, message, json_attendu, temperature, max_jetons, es
             # 429 / 5xx : on réessaie en patientant, le reste est définitif
             if e.code not in (408, 409, 429) and e.code < 500:
                 raise ErreurFournisseur(f"{modele} : {derniere}") from None
-            # Les offres gratuites limitent les jetons par minute et disent combien attendre
-            attente = delai_demande(e.headers.get("retry-after")) or attente
+            # Les offres gratuites limitent les jetons par minute et disent combien attendre ;
+            # mais ce délai ne suffit pas quand la requête suivante est aussi grosse : on
+            # garde au moins l'attente croissante.
+            attente = max(delai_demande(e.headers.get("retry-after")) or 0, attente)
         except (urllib.error.URLError, TimeoutError, ConnectionError,
                 http.client.HTTPException) as e:
             # coupures passagères (Wi-Fi, serveur surchargé qui raccroche) : on réessaie

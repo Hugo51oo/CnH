@@ -122,7 +122,13 @@ Tu n'as pas le droit d'ajouter un fait, un chiffre ou une citation absents du do
 documentaire : s'il manque de quoi corriger (par exemple un deuxième point qui divise),
 cherche-le dans le dossier, et chaque nouveau fait doit avoir sa citation mot pour mot.
 Citation introuvable ou « pas identique » : recopie la phrase EXACTE du dossier, caractère
-pour caractère ; si elle n'y est pas, retire le fait (repère ou camp) plutôt que de le garder."""
+pour caractère ; si elle n'y est pas, retire le fait (repère ou camp) plutôt que de le garder.
+Objection [relecture] « inverifiable » ou « imprecis » : ta phrase dit plus que sa citation.
+Trois réponses possibles, dans cet ordre : réécrire la phrase pour qu'elle ne dise RIEN de
+plus que la citation ; ou trouver dans le dossier une autre citation exacte qui la prouve
+vraiment ; sinon retirer le fait. Une source hors sujet (elle ne parle pas du sujet) ne
+doit appuyer aucun fait. Objection « camps déséquilibrés » : chaque camp doit être la
+meilleure version de sa position, appuyée par un fait qui la soutient directement."""
 
 
 def corriger(sujet, resultat, erreurs, modele, aujourdhui, dossiers=DOSSIERS):

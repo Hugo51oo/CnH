@@ -37,6 +37,9 @@ Pour chaque affirmation publiée (la base, chaque repère, chaque fait d'un camp
 - "inverifiable" : la citation n'établit pas l'affirmation (hors sujet, trop vague).
 
 Vérifie aussi :
+- que la fiche traite bien le SUJET DEMANDÉ (s'il est donné). Si elle parle d'autre chose
+  (par exemple du télétravail quand on demande la semaine de quatre jours), ajoute
+  "hors_sujet": "ce dont elle parle à la place" et donne l'avis "a-jeter" ;
 - qu'aucun camp n'est un épouvantail : les deux positions doivent être les meilleures
   versions du désaccord, également défendables ;
 - qu'un fait reste exact lu hors contexte ;
@@ -48,6 +51,7 @@ Réponds UNIQUEMENT par un objet JSON :
   "verdicts": [ {"appuie": "repere 2", "verdict": "imprecis", "pourquoi": "…", "correction": "…"} ],
   "camps_desequilibres": ["clivage 1 : le côté B est un épouvantail parce que …"],
   "sources_douteuses": ["source 3 : blog sans auteur"],
+  "hors_sujet": null,
   "avis": "publiable" | "a-corriger" | "a-jeter"
 }
 Sois sévère : mieux vaut signaler un doute que laisser passer une erreur."""
@@ -78,8 +82,11 @@ def resume(donnees):
     return "\n".join(lignes)
 
 
-def contredire(donnees, modele):
-    texte, infos = fo.appeler(modele, systeme=CONSIGNE, message=resume(donnees),
+def contredire(donnees, modele, sujet=None):
+    message = resume(donnees)
+    if sujet and sujet.get("brief"):
+        message = f"SUJET DEMANDÉ : {sujet['brief']}\n\n" + message
+    texte, infos = fo.appeler(modele, systeme=CONSIGNE, message=message,
                               json_attendu=True, temperature=0,
                               tache=f"contredire:{donnees['contenu'].get('id')}")
     return fo.extraire_json(texte), infos

@@ -370,5 +370,20 @@ class TestElagage(unittest.TestCase):
         self.assertEqual(prod.elaguer_sources(r), 0)
 
 
+class TestObjections(unittest.TestCase):
+    def test_verdict_devient_liste_a_corriger(self):
+        import journee as j
+        o = j.objections_de({"avis": "a-corriger",
+                             "verdicts": [{"appuie": "base", "verdict": "inverifiable", "pourquoi": "hors sujet"},
+                                          {"appuie": "repere 1", "verdict": "exact"}],
+                             "camps_desequilibres": ["clivage 1 : épouvantail"]})
+        self.assertEqual(len(o), 2)
+        self.assertIn("base", o[0])
+
+    def test_avis_sans_detail_donne_une_consigne(self):
+        import journee as j
+        self.assertEqual(len(j.objections_de({"avis": "a-corriger", "verdicts": []})), 1)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

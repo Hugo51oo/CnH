@@ -82,6 +82,23 @@ def verifier_le_jour(sujets):
 
 
 CORRECTIONS_MAX = 3
+RELECTURES_MAX = 2   # reprises d'un contenu d'après les objections du relecteur
+
+
+def objections_de(verdict):
+    """Transforme le verdict du relecteur en liste d'erreurs à corriger."""
+    liste = []
+    for v in verdict.get("verdicts", []):
+        if v.get("verdict") in ("faux", "inverifiable", "imprecis"):
+            ligne = f"[relecture] {v.get('appuie')} — {v.get('verdict')} : {v.get('pourquoi')}"
+            if v.get("correction"):
+                ligne += f" (piste du relecteur : {v['correction']})"
+            liste.append(ligne)
+    liste += [f"[relecture, camps déséquilibrés] {x}" for x in verdict.get("camps_desequilibres", [])]
+    if not liste:
+        liste.append(f"[relecture] avis « {verdict.get('avis')} » sans détail : relis chaque fait "
+                     "et vérifie que sa citation le dit vraiment, sans rien ajouter.")
+    return liste
 
 
 def erreurs_par_contenu(erreurs, donnees):
@@ -191,135 +208,175 @@ def main():
     # mais suit moins bien les consignes : plutôt que de tout jeter, on lui renvoie ses
     # erreurs précises, et chaque correction repasse par les DEUX contrôles.
     par_id = {s["id"]: s for s in sujets}
-    tour = 0
-    while True:
-        tour += 1
-        if not donnees:
-            print("✗ Aucun contenu ne passe les contrôles : rien à publier.")
-            return 1
-        if recales:
-            date = None   # journée incomplète : rien n'est programmé, on garnit la réserve
-        candidats = [d["contenu"] for d in donnees.values()]
-        titre(2, "Schéma (gratuit)" + (f" — tour {tour}" if tour > 1 else ""))
-        erreurs, cartes_bac, programme_bac = bac_de_validation(
-            [{**c, "statut": "verifie"} for c in candidats], date, sujets)
-        for e in erreurs:
-            print(f"  - {e}")
-        if erreurs:
-            a_corriger = erreurs_par_contenu(erreurs, donnees)
-            hors_contenus = [e for e in erreurs if not any(e in l for l in a_corriger.values())]
-            if hors_contenus:
-                # une erreur qu'aucune correction de contenu ne réglera
-                print("✗ Contenus mal formés : corrige la consigne ou relance la production.")
+    approuves = set()   # contenus déjà acceptés par la relecture adverse
+    for passe in range(1, RELECTURES_MAX + 2):
+        objections, raison_rejet = {}, {}
+        tour = 0
+        while True:
+            tour += 1
+            if not donnees:
+                print("✗ Aucun contenu ne passe les contrôles : rien à publier.")
                 return 1
-            if tour > CORRECTIONS_MAX:
-                for nom in a_corriger:
-                    ecarter(nom, f"schéma encore invalide après {CORRECTIONS_MAX} corrections")
-                continue
+            if recales:
+                date = None   # journée incomplète : rien n'est programmé, on garnit la réserve
+            candidats = [d["contenu"] for d in donnees.values()]
+            titre(2, "Schéma (gratuit)" + (f" — tour {tour}" if tour > 1 else ""))
+            erreurs, cartes_bac, programme_bac = bac_de_validation(
+                [{**c, "statut": "verifie"} for c in candidats], date, sujets)
+            for e in erreurs:
+                print(f"  - {e}")
+            if erreurs:
+                a_corriger = erreurs_par_contenu(erreurs, donnees)
+                hors_contenus = [e for e in erreurs if not any(e in l for l in a_corriger.values())]
+                if hors_contenus:
+                    # une erreur qu'aucune correction de contenu ne réglera
+                    print("✗ Contenus mal formés : corrige la consigne ou relance la production.")
+                    return 1
+                if tour > CORRECTIONS_MAX:
+                    for nom in a_corriger:
+                        ecarter(nom, f"schéma encore invalide après {CORRECTIONS_MAX} corrections")
+                    continue
+            else:
+                print("✓ Tous les contenus respectent le schéma.")
+                titre(3, "Sources et citations (gratuit)")
+                a_corriger = {}
+                for nom, d in donnees.items():
+                    e, a, lues = vs.verifier_contenu(d["contenu"], d.get("preuves") or [],
+                                                     hors_ligne=args.hors_ligne)
+                    for x in a:
+                        print(f"  ! {x}")
+                    for x in e:
+                        print(f"  - {x}")
+                    print(f"  {'✓' if not e else '✗'} {nom} — {lues} page(s) lue(s)")
+                    if e:
+                        # les citations « presque exactes » sont à recopier au passage
+                        a_corriger[nom] = e + [x for x in a if "pas identique" in x]
+                if not a_corriger:
+                    print("✓ Chaque fait publié est retrouvé mot pour mot dans sa source.")
+                    break
+                if tour > CORRECTIONS_MAX:
+                    for nom in a_corriger:
+                        ecarter(nom, "citations introuvables dans les sources")
+                    continue
+            print(f"  → correction {tour}/{CORRECTIONS_MAX} par {modele} : {', '.join(a_corriger)}")
+            for nom, liste in a_corriger.items():
+                try:
+                    corrige = prod.corriger(par_id[nom], donnees[nom], liste, modele, aujourdhui)
+                except Exception as e:
+                    ecarter(nom, f"correction impossible — {type(e).__name__} — {e}")
+                    continue
+                corrige["production"] = {**donnees[nom].get("production", {}),
+                                         "corrections": tour}
+                donnees[nom] = corrige
+                (PRODUITS / f"{nom}.json").write_text(
+                    json.dumps(corrige, ensure_ascii=False, indent=2), encoding="utf-8")
+
+        titre(4, "Qualité (gratuit)")
+        for nom, d in donnees.items():
+            retirees = prod.elaguer_sources(d)
+            if retirees:
+                print(f"  · {nom} : {retirees} source(s) jamais citée(s) retirée(s), renvois renumérotés")
+                (PRODUITS / f"{nom}.json").write_text(
+                    json.dumps(d, ensure_ascii=False, indent=2), encoding="utf-8")
+        erreurs, cartes_bac, programme_bac = bac_de_validation(
+            [{**d["contenu"], "statut": "verifie"} for d in donnees.values()], date, sujets)
+        if erreurs:
+            for e in erreurs:
+                print(f"  - {e}")
+            print("✗ Le rangement des sources a cassé le schéma : à examiner.")
+            return 1
+        bac = ICI / ".bac"
+        (bac / "contenu").mkdir(parents=True, exist_ok=True)
+        (bac / "contenu" / "cartes.json").write_text(
+            json.dumps({**cartes_bac,
+                        "contenus": [{**c, "statut": "verifie"} if c["id"] in donnees else c
+                                     for c in cartes_bac["contenus"]]},
+                       ensure_ascii=False, indent=2), encoding="utf-8")
+        (bac / "contenu" / "programme.json").write_text(
+            json.dumps(programme_bac, ensure_ascii=False, indent=2), encoding="utf-8")
+        preuves_bac = json.loads((RACINE / "contenu" / "preuves.json").read_text(encoding="utf-8")) \
+            if (RACINE / "contenu" / "preuves.json").exists() else {}
+        for nom, d in donnees.items():
+            preuves_bac[nom] = {"sources": d["contenu"].get("sources") or [],
+                                "preuves": d.get("preuves") or []}
+        (bac / "contenu" / "preuves.json").write_text(
+            json.dumps(preuves_bac, ensure_ascii=False, indent=2), encoding="utf-8")
+        err_q, av_q = vq.verifier(racine=bac)
+        for a in av_q:
+            print(f"  ! {a}")
+        for e in err_q:
+            print(f"  - {e}")
+        if err_q:
+            print("✗ Garde-fous de qualité : à corriger avant publication.")
+            return 1
+        print(f"✓ Qualité : rien à corriger ({len(av_q)} avertissement(s)).")
+
+        titre(5, f"Relecture adverse ({relecteur or 'aucun second modèle'})")
+        if not relecteur:
+            print("  ! Un seul modèle disponible : la relecture adverse est sautée.")
+            print("  ! Ajoute une deuxième clé (un modèle ne relit pas ses propres erreurs).")
+            a_reprendre = set()
         else:
-            print("✓ Tous les contenus respectent le schéma.")
-            titre(3, "Sources et citations (gratuit)")
-            a_corriger = {}
+            a_reprendre = set()
             for nom, d in donnees.items():
-                e, a, lues = vs.verifier_contenu(d["contenu"], d.get("preuves") or [],
-                                                 hors_ligne=args.hors_ligne)
-                for x in a:
-                    print(f"  ! {x}")
-                for x in e:
-                    print(f"  - {x}")
-                print(f"  {'✓' if not e else '✗'} {nom} — {lues} page(s) lue(s)")
-                if e:
-                    # les citations « presque exactes » sont à recopier au passage
-                    a_corriger[nom] = e + [x for x in a if "pas identique" in x]
-            if not a_corriger:
-                print("✓ Chaque fait publié est retrouvé mot pour mot dans sa source.")
-                break
-            if tour > CORRECTIONS_MAX:
-                for nom in a_corriger:
-                    ecarter(nom, "citations introuvables dans les sources")
+                if nom in approuves:
+                    print(f"  = {nom} (déjà approuvé)")
+                    continue
+                try:
+                    verdict, infos = ct.contredire(d, relecteur, par_id.get(nom))
+                except Exception as e:
+                    print(f"  ✗ {nom} : relecture impossible — {type(e).__name__} : {e}")
+                    a_reprendre.add(nom)
+                    objections[nom] = None    # panne technique : rien à corriger
+                    continue
+                d["relecture"] = {**verdict, "modele": relecteur}
+                (PRODUITS / f"{nom}.json").write_text(
+                    json.dumps(d, ensure_ascii=False, indent=2), encoding="utf-8")
+                graves = [v for v in verdict.get("verdicts", [])
+                          if v.get("verdict") in ("faux", "inverifiable")]
+                if graves or verdict.get("avis") != "publiable":
+                    a_reprendre.add(nom)
+                if verdict.get("hors_sujet") or verdict.get("avis") == "a-jeter":
+                    # rien à corriger : les sources ou l'angle ne conviennent pas
+                    a_reprendre.add(nom)
+                    objections[nom] = None
+                    raison_rejet[nom] = ("hors sujet — " + str(verdict["hors_sujet"])
+                                         if verdict.get("hors_sujet") else "jugé à jeter par la relecture")
+                elif nom in a_reprendre:
+                    objections[nom] = objections_de(verdict)
+                else:
+                    approuves.add(nom)
+                print(f"  {'✓' if nom not in a_reprendre else '✗'} {nom} — « {verdict.get('avis')} », "
+                      f"{len(graves)} grave(s)")
+                for v in graves:
+                    print(f"      [{v.get('verdict')}] {v.get('appuie')} : {v.get('pourquoi')}")
+                for x in verdict.get("camps_desequilibres", []):
+                    print(f"      [camps] {x}")
+                if verdict.get("hors_sujet"):
+                    print(f"      [hors sujet] {verdict['hors_sujet']}")
+        corriges = 0
+        for nom in sorted(a_reprendre):
+            if objections.get(nom) is None:
+                ecarter(nom, raison_rejet.get(nom, "relecture adverse impossible"))
                 continue
-        print(f"  → correction {tour}/{CORRECTIONS_MAX} par {modele} : {', '.join(a_corriger)}")
-        for nom, liste in a_corriger.items():
+            if passe > RELECTURES_MAX:
+                ecarter(nom, f"encore recalé par la relecture après {RELECTURES_MAX} reprise(s)")
+                continue
+            print(f"  → reprise {passe}/{RELECTURES_MAX} de {nom} d'après la relecture")
             try:
-                corrige = prod.corriger(par_id[nom], donnees[nom], liste, modele, aujourdhui)
+                corrige = prod.corriger(par_id[nom], donnees[nom], objections[nom], modele, aujourdhui)
             except Exception as e:
-                ecarter(nom, f"correction impossible — {type(e).__name__} — {e}")
+                ecarter(nom, f"reprise impossible — {type(e).__name__} — {e}")
                 continue
-            corrige["production"] = {**donnees[nom].get("production", {}),
-                                     "corrections": tour}
+            corrige["production"] = {**donnees[nom].get("production", {}), "reprises": passe}
             donnees[nom] = corrige
             (PRODUITS / f"{nom}.json").write_text(
                 json.dumps(corrige, ensure_ascii=False, indent=2), encoding="utf-8")
+            corriges += 1
+        if not corriges:
+            break
+        # les contenus repris repassent par TOUS les contrôles, puis par une nouvelle relecture
 
-    titre(4, "Qualité (gratuit)")
-    for nom, d in donnees.items():
-        retirees = prod.elaguer_sources(d)
-        if retirees:
-            print(f"  · {nom} : {retirees} source(s) jamais citée(s) retirée(s), renvois renumérotés")
-            (PRODUITS / f"{nom}.json").write_text(
-                json.dumps(d, ensure_ascii=False, indent=2), encoding="utf-8")
-    erreurs, cartes_bac, programme_bac = bac_de_validation(
-        [{**d["contenu"], "statut": "verifie"} for d in donnees.values()], date, sujets)
-    if erreurs:
-        for e in erreurs:
-            print(f"  - {e}")
-        print("✗ Le rangement des sources a cassé le schéma : à examiner.")
-        return 1
-    bac = ICI / ".bac"
-    (bac / "contenu").mkdir(parents=True, exist_ok=True)
-    (bac / "contenu" / "cartes.json").write_text(
-        json.dumps({**cartes_bac,
-                    "contenus": [{**c, "statut": "verifie"} if c["id"] in donnees else c
-                                 for c in cartes_bac["contenus"]]},
-                   ensure_ascii=False, indent=2), encoding="utf-8")
-    (bac / "contenu" / "programme.json").write_text(
-        json.dumps(programme_bac, ensure_ascii=False, indent=2), encoding="utf-8")
-    preuves_bac = json.loads((RACINE / "contenu" / "preuves.json").read_text(encoding="utf-8")) \
-        if (RACINE / "contenu" / "preuves.json").exists() else {}
-    for nom, d in donnees.items():
-        preuves_bac[nom] = {"sources": d["contenu"].get("sources") or [],
-                            "preuves": d.get("preuves") or []}
-    (bac / "contenu" / "preuves.json").write_text(
-        json.dumps(preuves_bac, ensure_ascii=False, indent=2), encoding="utf-8")
-    err_q, av_q = vq.verifier(racine=bac)
-    for a in av_q:
-        print(f"  ! {a}")
-    for e in err_q:
-        print(f"  - {e}")
-    if err_q:
-        print("✗ Garde-fous de qualité : à corriger avant publication.")
-        return 1
-    print(f"✓ Qualité : rien à corriger ({len(av_q)} avertissement(s)).")
-
-    titre(5, f"Relecture adverse ({relecteur or 'aucun second modèle'})")
-    if not relecteur:
-        print("  ! Un seul modèle disponible : la relecture adverse est sautée.")
-        print("  ! Ajoute une deuxième clé (un modèle ne relit pas ses propres erreurs).")
-        a_reprendre = set()
-    else:
-        a_reprendre = set()
-        for nom, d in donnees.items():
-            try:
-                verdict, infos = ct.contredire(d, relecteur)
-            except Exception as e:
-                print(f"  ✗ {nom} : relecture impossible — {type(e).__name__} : {e}")
-                a_reprendre.add(nom)
-                continue
-            d["relecture"] = {**verdict, "modele": relecteur}
-            (PRODUITS / f"{nom}.json").write_text(
-                json.dumps(d, ensure_ascii=False, indent=2), encoding="utf-8")
-            graves = [v for v in verdict.get("verdicts", [])
-                      if v.get("verdict") in ("faux", "inverifiable")]
-            if graves or verdict.get("avis") != "publiable":
-                a_reprendre.add(nom)
-            print(f"  {'✓' if nom not in a_reprendre else '✗'} {nom} — « {verdict.get('avis')} », "
-                  f"{len(graves)} grave(s)")
-            for v in graves:
-                print(f"      [{v.get('verdict')}] {v.get('appuie')} : {v.get('pourquoi')}")
-            for x in verdict.get("camps_desequilibres", []):
-                print(f"      [camps] {x}")
-    for nom in sorted(a_reprendre):
-        ecarter(nom, "recalé par la relecture adverse")
     if not donnees:
         print("✗ Aucun contenu ne passe la relecture : rien à publier.")
         return 1
