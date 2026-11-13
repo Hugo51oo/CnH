@@ -49,6 +49,23 @@ jobs:
         if: failure()
         run: tail -n 200 outils/agents/journal_auto.log || true
 
+      - name: Publier le journal sur la branche « logs » (lisible sans connexion)
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p /tmp/j
+          cp outils/agents/journal_auto.log outils/agents/journal.jsonl /tmp/j/ 2>/dev/null || true
+          echo "Run ${GITHUB_RUN_ID} — $(date -u +%FT%TZ)" > /tmp/j/LISEZMOI.txt
+          cd /tmp/j
+          git init -q
+          git checkout -q -b logs
+          git config user.name "cnh-journee[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -qm "Journal du run ${GITHUB_RUN_ID}"
+          git push -qf "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" logs || true
+
       - name: Garder le journal de la journée
         if: always()
         uses: actions/upload-artifact@v4
