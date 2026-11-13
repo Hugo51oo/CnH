@@ -16,8 +16,10 @@ Enchaînement, du moins cher au plus cher :
 Un contenu qui échoue à une étape ne passe pas à la suivante : on ne paie pas la
 relecture d'un contenu déjà refusé par la vérification gratuite.
 
-Rien n'est publié sans `--ecrire`, et `--ecrire` refuse de s'exécuter si une seule
-étape a échoué.
+Rien n'est publié sans `--ecrire`. Option souple : un contenu qui échoue à une étape
+est écarté (il reste en brouillon dans produits/), les autres continuent. Si la journée
+est incomplète, rien n'est programmé : les contenus entièrement vérifiés vont dans la
+réserve de cartes. Aucun contrôle n'est assoupli pour autant.
 
 Aucune dépendance : bibliothèque standard uniquement.
 """
@@ -26,6 +28,7 @@ import argparse
 import copy
 import datetime as dt
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -76,6 +79,19 @@ def verifier_le_jour(sujets):
         if s["id"] in deja:
             pbs.append(f"« {s['id']} » existe déjà dans cartes.json.")
     return pbs
+
+
+CORRECTIONS_MAX = 3
+
+
+def erreurs_par_contenu(erreurs, donnees):
+    """{id: [erreurs]} pour les contenus produits aujourd'hui que cite chaque erreur."""
+    groupes = {}
+    for e in erreurs:
+        for nom in donnees:
+            if f"« {nom} »" in e:
+                groupes.setdefault(nom, []).append(e)
+    return groupes
 
 
 def bac_de_validation(contenus_candidats, date, sujets):
@@ -144,7 +160,7 @@ def main():
 
     titre(1, f"Production ({modele})")
     PRODUITS.mkdir(parents=True, exist_ok=True)
-    fichiers, echecs = [], []
+    fichiers, recales = [], {}
     for s in sujets:
         cible = PRODUITS / f"{s['id']}.json"
         if args.reprendre and cible.exists():
@@ -155,48 +171,100 @@ def main():
             resultat = prod.produire(s, modele, aujourdhui)
         except Exception as e:
             print(f"  ✗ {s['id']} : {type(e).__name__} — {e}")
-            echecs.append(s["id"])
+            recales[s["id"]] = f"production impossible — {type(e).__name__}"
             continue
         cible.write_text(json.dumps(resultat, ensure_ascii=False, indent=2), encoding="utf-8")
         i = resultat["production"]
         print(f"  ✓ {s['id']} — {i['jetons_entree']}+{i['jetons_sortie']} jetons, {i['secondes']} s")
         fichiers.append(cible)
-    if echecs:
-        print(f"✗ {len(echecs)} contenu(s) non produits : {', '.join(echecs)}")
-        return 1
 
     donnees = {f.stem: json.loads(f.read_text(encoding="utf-8")) for f in fichiers}
-    candidats = [d["contenu"] for d in donnees.values()]
 
-    titre(2, "Schéma (gratuit)")
-    erreurs, cartes_bac, programme_bac = bac_de_validation(
-        [{**c, "statut": "verifie"} for c in candidats], date, sujets)
-    for e in erreurs:
-        print(f"  - {e}")
-    if erreurs:
-        print("✗ Contenus mal formés : corrige la consigne ou relance la production.")
-        return 1
-    print("✓ Tous les contenus respectent le schéma.")
+    def ecarter(nom, raison):
+        # Option souple : un contenu raté ne fait pas perdre la journée. Il reste en
+        # brouillon dans produits/ ; les autres ne passent pas un contrôle de moins.
+        recales[nom] = raison
+        donnees.pop(nom, None)
+        print(f"  ✗ {nom} écarté : {raison} (reste en brouillon dans produits/)")
 
-    titre(3, "Sources et citations (gratuit)")
-    refuses = set()
-    for nom, d in donnees.items():
-        e, a, lues = vs.verifier_contenu(d["contenu"], d.get("preuves") or [],
-                                         hors_ligne=args.hors_ligne)
-        for x in a:
-            print(f"  ! {x}")
-        for x in e:
-            print(f"  - {x}")
-        print(f"  {'✓' if not e else '✗'} {nom} — {lues} page(s) lue(s)")
-        if e:
-            refuses.add(nom)
-    if refuses:
-        print(f"✗ {len(refuses)} contenu(s) dont les citations ne se retrouvent pas "
-              f"dans les sources : {', '.join(sorted(refuses))}")
-        return 1
-    print("✓ Chaque fait publié est retrouvé mot pour mot dans sa source.")
+    # Étapes 2 et 3, en boucle : schéma puis citations. Un modèle bon marché écrit vite
+    # mais suit moins bien les consignes : plutôt que de tout jeter, on lui renvoie ses
+    # erreurs précises, et chaque correction repasse par les DEUX contrôles.
+    par_id = {s["id"]: s for s in sujets}
+    tour = 0
+    while True:
+        tour += 1
+        if not donnees:
+            print("✗ Aucun contenu ne passe les contrôles : rien à publier.")
+            return 1
+        if recales:
+            date = None   # journée incomplète : rien n'est programmé, on garnit la réserve
+        candidats = [d["contenu"] for d in donnees.values()]
+        titre(2, "Schéma (gratuit)" + (f" — tour {tour}" if tour > 1 else ""))
+        erreurs, cartes_bac, programme_bac = bac_de_validation(
+            [{**c, "statut": "verifie"} for c in candidats], date, sujets)
+        for e in erreurs:
+            print(f"  - {e}")
+        if erreurs:
+            a_corriger = erreurs_par_contenu(erreurs, donnees)
+            hors_contenus = [e for e in erreurs if not any(e in l for l in a_corriger.values())]
+            if hors_contenus:
+                # une erreur qu'aucune correction de contenu ne réglera
+                print("✗ Contenus mal formés : corrige la consigne ou relance la production.")
+                return 1
+            if tour > CORRECTIONS_MAX:
+                for nom in a_corriger:
+                    ecarter(nom, f"schéma encore invalide après {CORRECTIONS_MAX} corrections")
+                continue
+        else:
+            print("✓ Tous les contenus respectent le schéma.")
+            titre(3, "Sources et citations (gratuit)")
+            a_corriger = {}
+            for nom, d in donnees.items():
+                e, a, lues = vs.verifier_contenu(d["contenu"], d.get("preuves") or [],
+                                                 hors_ligne=args.hors_ligne)
+                for x in a:
+                    print(f"  ! {x}")
+                for x in e:
+                    print(f"  - {x}")
+                print(f"  {'✓' if not e else '✗'} {nom} — {lues} page(s) lue(s)")
+                if e:
+                    # les citations « presque exactes » sont à recopier au passage
+                    a_corriger[nom] = e + [x for x in a if "pas identique" in x]
+            if not a_corriger:
+                print("✓ Chaque fait publié est retrouvé mot pour mot dans sa source.")
+                break
+            if tour > CORRECTIONS_MAX:
+                for nom in a_corriger:
+                    ecarter(nom, "citations introuvables dans les sources")
+                continue
+        print(f"  → correction {tour}/{CORRECTIONS_MAX} par {modele} : {', '.join(a_corriger)}")
+        for nom, liste in a_corriger.items():
+            try:
+                corrige = prod.corriger(par_id[nom], donnees[nom], liste, modele, aujourdhui)
+            except Exception as e:
+                ecarter(nom, f"correction impossible — {type(e).__name__} — {e}")
+                continue
+            corrige["production"] = {**donnees[nom].get("production", {}),
+                                     "corrections": tour}
+            donnees[nom] = corrige
+            (PRODUITS / f"{nom}.json").write_text(
+                json.dumps(corrige, ensure_ascii=False, indent=2), encoding="utf-8")
 
     titre(4, "Qualité (gratuit)")
+    for nom, d in donnees.items():
+        retirees = prod.elaguer_sources(d)
+        if retirees:
+            print(f"  · {nom} : {retirees} source(s) jamais citée(s) retirée(s), renvois renumérotés")
+            (PRODUITS / f"{nom}.json").write_text(
+                json.dumps(d, ensure_ascii=False, indent=2), encoding="utf-8")
+    erreurs, cartes_bac, programme_bac = bac_de_validation(
+        [{**d["contenu"], "statut": "verifie"} for d in donnees.values()], date, sujets)
+    if erreurs:
+        for e in erreurs:
+            print(f"  - {e}")
+        print("✗ Le rangement des sources a cassé le schéma : à examiner.")
+        return 1
     bac = ICI / ".bac"
     (bac / "contenu").mkdir(parents=True, exist_ok=True)
     (bac / "contenu" / "cartes.json").write_text(
@@ -250,14 +318,25 @@ def main():
                 print(f"      [{v.get('verdict')}] {v.get('appuie')} : {v.get('pourquoi')}")
             for x in verdict.get("camps_desequilibres", []):
                 print(f"      [camps] {x}")
-    if a_reprendre:
-        print(f"✗ {len(a_reprendre)} contenu(s) recalés par la relecture : "
-              f"{', '.join(sorted(a_reprendre))}")
+    for nom in sorted(a_reprendre):
+        ecarter(nom, "recalé par la relecture adverse")
+    if not donnees:
+        print("✗ Aucun contenu ne passe la relecture : rien à publier.")
         return 1
+    if recales:
+        date = None
 
     titre(6, "Publication")
+    if recales:
+        print(f"  ! Journée incomplète : {len(donnees)} contenu(s) vérifié(s) vont dans la réserve, "
+              "aucune journée n'est programmée.")
+        for nom, raison in recales.items():
+            print(f"  ! écarté : {nom} — {raison}")
+        if os.environ.get("GITHUB_ACTIONS"):
+            print(f"::warning::Journée incomplète, {len(recales)} contenu(s) écarté(s) : "
+                  + ", ".join(recales))
     if not args.ecrire:
-        print("  (essai à blanc) Tout est passé. Relance avec --ecrire pour publier.")
+        print("  (essai à blanc) Tout le reste est passé. Relance avec --ecrire pour publier.")
         return 0
 
     cartes = json.loads((RACINE / "contenu" / "cartes.json").read_text(encoding="utf-8"))

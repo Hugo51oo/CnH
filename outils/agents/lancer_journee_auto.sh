@@ -52,7 +52,7 @@ if ! python3 outils/agents/chercher.py "$SUJETS" --ecrire >>"$LOG" 2>&1; then
 fi
 
 horodater "2/5 — téléchargement et tri des pages (documenter.py)"
-if ! python3 outils/agents/documenter.py "$SUJETS" --condenser >>"$LOG" 2>&1; then
+if ! python3 outils/agents/documenter.py "$SUJETS" >>"$LOG" 2>&1; then
   horodater "✗ échec du documenter — arrêt, rien publié."
   exit 1
 fi

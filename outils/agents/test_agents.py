@@ -251,6 +251,22 @@ class TestFournisseurs(unittest.TestCase):
         self.assertEqual(premiers, ["gemini", "groq"])
 
 
+    def test_repli_sur_un_autre_modele_si_surcharge(self):
+        essais = []
+        def faux(modele, *a, **k):
+            essais.append(modele)
+            if modele == "gemini:gemini-3.5-flash":
+                raise fo.Surcharge("HTTP 503")
+            return "ok", {"modele": modele}
+        ancien, fo._appeler = fo._appeler, faux
+        try:
+            texte, infos = fo.appeler("gemini:gemini-3.5-flash", systeme="a", message="b")
+        finally:
+            fo._appeler = ancien
+        self.assertEqual(essais[:2], ["gemini:gemini-3.5-flash", "gemini:gemini-flash-latest"])
+        self.assertEqual(infos["modele"], "gemini:gemini-flash-latest")
+
+
 class TestRechercheGemini(unittest.TestCase):
     def test_aiguillage_selon_le_fournisseur(self):
         appels = []
@@ -305,6 +321,53 @@ class TestRechercheGemini(unittest.TestCase):
             self.assertIn("aistudio.google.com", str(ctx.exception))
         finally:
             fo.cle_de = ancien
+
+
+    def test_tri_impossible_arrete_au_lieu_de_garder_au_hasard(self):
+        anciens = ch.candidates_wikipedia, fo.appeler
+        ch.candidates_wikipedia = lambda s: [(f"https://www.insee.fr/p{i}", "A") for i in range(1, 13)]
+        fo.appeler = lambda *a, **k: ("pas du JSON", {})
+        try:
+            with self.assertRaises(fo.ErreurFournisseur):
+                ch.chercher_wikipedia({"id": "x", "brief": "q"}, trieur="groq:m")
+        finally:
+            ch.candidates_wikipedia, fo.appeler = anciens
+
+
+
+class TestCorrection(unittest.TestCase):
+    def test_erreurs_regroupees_par_contenu_du_jour(self):
+        donnees = {"camembert-lait-cru": {}, "occitan-a-l-ecole": {}}
+        erreurs = ["« camembert-lait-cru », repère n°2 : « cle » trop longue",
+                   "« occitan-a-l-ecole » : « clivages » doit contenir 2 à 4 points",
+                   "« camembert-lait-cru » : « clivages » doit contenir 2 à 4 points",
+                   "programme 2026-11-12 : 6 cartes au lieu de 5"]
+        groupes = jo.erreurs_par_contenu(erreurs, donnees)
+        self.assertEqual(sorted(groupes), ["camembert-lait-cru", "occitan-a-l-ecole"])
+        self.assertEqual(len(groupes["camembert-lait-cru"]), 2)
+        self.assertNotIn(erreurs[3], sum(groupes.values(), []))
+
+
+class TestElagage(unittest.TestCase):
+    def test_retire_les_sources_inutilisees_et_renumerote(self):
+        import produire as prod
+        r = {"contenu": {"base_source": 4,
+                         "reperes": [{"cle": "a", "source": 2}, {"cle": "b", "source": 4}],
+                         "clivages": [{"fait_a": {"source": [2, 4]}, "fait_b": {"source": 4}}],
+                         "sources": [{"url": f"https://x/{i}"} for i in range(1, 6)]},
+             "preuves": [{"appuie": "base", "source": 4}, {"appuie": "vieux", "source": 5}]}
+        self.assertEqual(prod.elaguer_sources(r), 3)
+        c = r["contenu"]
+        self.assertEqual([s["url"] for s in c["sources"]], ["https://x/2", "https://x/4"])
+        self.assertEqual(c["base_source"], 2)
+        self.assertEqual([x["source"] for x in c["reperes"]], [1, 2])
+        self.assertEqual(c["clivages"][0]["fait_a"]["source"], [1, 2])
+        self.assertEqual(r["preuves"], [{"appuie": "base", "source": 2}])
+
+    def test_ne_touche_a_rien_si_tout_sert(self):
+        import produire as prod
+        r = {"contenu": {"base_source": 1, "sources": [{"url": "https://x"}]}, "preuves": []}
+        self.assertEqual(prod.elaguer_sources(r), 0)
 
 
 if __name__ == "__main__":

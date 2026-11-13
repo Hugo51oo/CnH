@@ -17,14 +17,34 @@ Clés d'API : variables d'environnement, ou fichier `.env.local` à la racine du
 Aucune dépendance : bibliothèque standard uniquement.
 """
 
+import http.client
 import json
 import os
+import ssl
 import time
 import urllib.error
 import urllib.request
 from pathlib import Path
 
 RACINE = Path(__file__).resolve().parent.parent.parent
+
+
+def _contexte_ssl():
+    """Le Python de python.org sur Mac n'a aucun certificat tant qu'on n'a pas lancé son
+    « Install Certificates.command » : toutes les connexions HTTPS échouent alors avec
+    CERTIFICATE_VERIFY_FAILED. On se rabat sur les certificats fournis par macOS."""
+    contexte = ssl.create_default_context()
+    chemins = ssl.get_default_verify_paths()
+    vides = not any(c and os.path.exists(c) for c in (chemins.cafile, chemins.capath))
+    if vides and os.path.exists("/etc/ssl/cert.pem"):
+        contexte.load_verify_locations("/etc/ssl/cert.pem")
+    return contexte
+
+
+# Toutes les requêtes de la chaîne (urllib.request.urlopen) passent par ce contexte.
+CONTEXTE_SSL = _contexte_ssl()
+urllib.request.install_opener(
+    urllib.request.build_opener(urllib.request.HTTPSHandler(context=CONTEXTE_SSL)))
 JOURNAL = Path(__file__).resolve().parent / "journal.jsonl"
 
 # fournisseur -> (url, variable de clé, style d'API)
@@ -59,6 +79,18 @@ AGENT = "CnH-chaine-agents/1.0 (+https://hugo51oo.github.io/CnH/)"
 
 class ErreurFournisseur(RuntimeError):
     pass
+
+
+class Surcharge(ErreurFournisseur):
+    """Le fournisseur refuse pour l'instant (surcharge, quota par minute) : un autre
+    modèle du même fournisseur peut répondre."""
+
+
+# Modèles de rechange quand le modèle demandé reste surchargé (fréquent sur les offres
+# gratuites). Même fournisseur, donc la règle « relecteur différent » tient toujours.
+REPLIS = {
+    "gemini:gemini-3.5-flash": ["gemini:gemini-flash-latest", "gemini:gemini-3.1-flash-lite"],
+}
 
 
 def charger_env(racine=RACINE):
@@ -115,7 +147,23 @@ def _requete(url, corps, entetes, timeout):
 
 def appeler(modele, systeme, message, json_attendu=False, temperature=0.2,
             max_jetons=8000, essais=3, timeout=180, tache=""):
-    """Retourne (texte, infos). `infos` contient les jetons consommés et la durée."""
+    """Retourne (texte, infos). `infos` contient les jetons consommés et la durée.
+
+    Si le modèle reste surchargé, essaie ses modèles de rechange (REPLIS) ; `infos["modele"]`
+    dit lequel a réellement répondu."""
+    candidats = [modele] + REPLIS.get(modele, [])
+    for i, candidat in enumerate(candidats):
+        try:
+            return _appeler(candidat, systeme, message, json_attendu, temperature,
+                            max_jetons, essais, timeout, tache)
+        except Surcharge:
+            if i == len(candidats) - 1:
+                raise
+            print(f"    ({candidat} surchargé : on essaie {candidats[i + 1]})")
+
+
+def _appeler(modele, systeme, message, json_attendu, temperature, max_jetons, essais,
+             timeout, tache):
     if ":" not in modele:
         raise ErreurFournisseur(f"Modèle « {modele} » : il faut la forme « fournisseur:modele ».")
     fournisseur, nom = modele.split(":", 1)
@@ -137,7 +185,10 @@ def appeler(modele, systeme, message, json_attendu=False, temperature=0.2,
     elif style == "gemini":
         url = url.format(modele=nom)
         entetes = {"content-type": "application/json", "x-goog-api-key": cle}
-        config = {"temperature": temperature, "maxOutputTokens": max_jetons}
+        # Le raisonnement interne compte dans maxOutputTokens : sans marge, la réponse est
+        # coupée au milieu (JSON incomplet). Raisonnement court + marge.
+        config = {"temperature": temperature, "maxOutputTokens": max_jetons + 16000,
+                  "thinkingConfig": {"thinkingLevel": "low"}}
         if json_attendu:
             config["responseMimeType"] = "application/json"
         corps = {"systemInstruction": {"parts": [{"text": systeme}]},
@@ -168,12 +219,16 @@ def appeler(modele, systeme, message, json_attendu=False, temperature=0.2,
                 raise ErreurFournisseur(f"{modele} : {derniere}") from None
             # Les offres gratuites limitent les jetons par minute et disent combien attendre
             attente = delai_demande(e.headers.get("retry-after")) or attente
-        except (urllib.error.URLError, TimeoutError) as e:
-            derniere = str(e)
+        except (urllib.error.URLError, TimeoutError, ConnectionError,
+                http.client.HTTPException) as e:
+            # coupures passagères (Wi-Fi, serveur surchargé qui raccroche) : on réessaie
+            derniere = f"{type(e).__name__} — {e}"
         if essai < essais:
             time.sleep(attente)
     else:
-        raise ErreurFournisseur(f"{modele} : {essais} tentatives échouées — {derniere}")
+        # On n'arrive ici qu'après des pannes passagères (surcharge, délai dépassé, coupure) :
+        # les erreurs définitives (clé refusée, requête invalide) sont levées plus haut.
+        raise Surcharge(f"{modele} : {essais} tentatives échouées — {derniere}")
 
     if style == "anthropic":
         texte = "".join(b.get("text", "") for b in rep.get("content", []))
@@ -181,6 +236,8 @@ def appeler(modele, systeme, message, json_attendu=False, temperature=0.2,
         entree, sortie = u.get("input_tokens", 0), u.get("output_tokens", 0)
     elif style == "gemini":
         candidat = (rep.get("candidates") or [{}])[0]
+        if candidat.get("finishReason") == "MAX_TOKENS":
+            raise ErreurFournisseur(f"{modele} : réponse coupée (longueur maximale atteinte).")
         # les parties « thought » sont le raisonnement interne du modèle, pas la réponse
         texte = "".join(p.get("text", "") for p in (candidat.get("content") or {}).get("parts", [])
                         if not p.get("thought"))

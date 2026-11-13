@@ -29,6 +29,9 @@ import urllib.request
 import zlib
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import fournisseurs  # noqa: E402,F401  — certificats HTTPS sur le Python de python.org (Mac)
+
 RACINE = Path(__file__).resolve().parent.parent.parent
 CACHE = Path(__file__).resolve().parent / ".pages"
 NAVIGATEUR = "Mozilla/5.0 (compatible; CnH-verification/1.0; +projet personnel, non commercial)"

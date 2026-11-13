@@ -128,7 +128,8 @@ class _SansRedirection(urllib.request.HTTPRedirectHandler):
 def resoudre_redirection(url, timeout=15):
     """Les liens de Google sont des redirections (vertexaisearch…) : on lit la vraie adresse
     dans l'en-tête Location, sans aller jusqu'à la page. None si ce n'est pas une redirection."""
-    ouvreur = urllib.request.build_opener(_SansRedirection)
+    ouvreur = urllib.request.build_opener(
+        _SansRedirection, urllib.request.HTTPSHandler(context=fo.CONTEXTE_SSL))
     try:
         ouvreur.open(urllib.request.Request(url, method="HEAD"), timeout=timeout)
     except urllib.error.HTTPError as e:
@@ -221,11 +222,12 @@ def liens_cites_par_wikipedia(requete, langue="fr", articles=2):
 def candidates_wikipedia(sujet):
     """(url, article) acceptables pour ce sujet, sans doublon, dans l'ordre de découverte."""
     requetes = [sujet.get("brief", sujet["id"])] + list(sujet.get("pistes") or [])
-    vues, gardees = set(), []
+    vues, gardees, erreurs = set(), [], []
     for requete in requetes:
         try:
             liens = liens_cites_par_wikipedia(requete)
-        except (urllib.error.URLError, TimeoutError, ValueError):
+        except (urllib.error.URLError, TimeoutError, ValueError) as e:
+            erreurs.append(f"{type(e).__name__} — {getattr(e, 'reason', e)}")
             continue
         for url, article in liens:
             url = url.strip()
@@ -236,6 +238,9 @@ def candidates_wikipedia(sujet):
                 continue
             vues.add(url)
             gardees.append((url, article))
+    if erreurs and len(erreurs) == len(requetes):
+        # tout a échoué : ce n'est pas « aucune source », c'est Wikipédia injoignable
+        raise urllib.error.URLError(f"Wikipédia injoignable ({erreurs[0]})")
     return gardees
 
 
@@ -257,19 +262,23 @@ def chercher_wikipedia(sujet, trieur=None, garder=9):
     liste = "\n".join(f"{i}. {u}  (cité par « {a} »)" for i, (u, a) in enumerate(candidates, 1))
     message = (f"Sujet : {sujet.get('brief', sujet['id'])}\n"
                f"Pistes : {' ; '.join(sujet.get('pistes') or [])}\n\nURLs :\n{liste}")
-    numeros, pourquoi = [], []
-    try:
-        texte, infos = fo.appeler(trieur, systeme=TRI.format(n=garder), message=message,
-                                  json_attendu=True, max_jetons=2000, temperature=0,
-                                  tache=f"chercher:{sujet['id']}")
-        choix = fo.extraire_json(texte)
-        numeros = [n for n in choix.get("numeros", []) if isinstance(n, int)
-                   and 1 <= n <= len(candidates)]
-        pourquoi = [str(x) for x in choix.get("pourquoi", [])]
-    except Exception as e:
-        print(f"    (tri par {trieur} impossible : {type(e).__name__} — ordre de découverte gardé)")
+    numeros, pourquoi, derniere = [], [], None
+    for _ in range(2):
+        try:
+            texte, infos = fo.appeler(trieur, systeme=TRI.format(n=garder), message=message,
+                                      json_attendu=True, max_jetons=4000, temperature=0,
+                                      tache=f"chercher:{sujet['id']}")
+            choix = fo.extraire_json(texte)
+            numeros = [n for n in choix.get("numeros", []) if isinstance(n, int)
+                       and 1 <= n <= len(candidates)]
+            pourquoi = [str(x) for x in choix.get("pourquoi", [])]
+        except Exception as e:
+            derniere = f"{type(e).__name__} — {e}"
+        if numeros:
+            break
     if not numeros:
-        numeros, pourquoi = list(range(1, garder + 1)), []
+        # Garder les liens « au hasard » donnerait des sources hors sujet : on s'arrête.
+        raise fo.ErreurFournisseur(f"tri des sources par {trieur} impossible ({derniere}).")
     urls = [candidates[n - 1][0] for n in numeros[:garder]]
     pourquoi = (pourquoi + [""] * len(urls))[:len(urls)]
     return urls, pourquoi, infos
@@ -313,7 +322,7 @@ def main():
     sujets = brut["sujets"] if isinstance(brut, dict) else brut
 
     modele = args.modele or modele_par_defaut()
-    total = 0
+    total, sans_source = 0, []
     for s in sujets:
         if args.seulement and s["id"] != args.seulement:
             continue
@@ -324,12 +333,15 @@ def main():
             urls, pourquoi, infos = chercher(s, modele)
         except Exception as e:
             print(f"  ✗ {s['id']} : {type(e).__name__} — {e}")
+            sans_source.append(s["id"])
             continue
         gardees = [u for u in urls if u.startswith("https://") and domaine_accepte(u)]
         ecartees = [u for u in urls if u not in gardees]
         s["sources_candidates"] = gardees
         total += infos["jetons_entree"] + infos["jetons_sortie"]
-        print(f"  ✓ {s['id']} — {len(gardees)} URL(s) retenue(s)"
+        if not gardees:
+            sans_source.append(s["id"])
+        print(f"  {'✓' if gardees else '✗'} {s['id']} — {len(gardees)} URL(s) retenue(s)"
               + (f", {len(ecartees)} hors domaines acceptés" if ecartees else ""))
         for u, p in zip(gardees, pourquoi):
             print(f"      {u}\n        → {p}")
@@ -344,6 +356,11 @@ def main():
     else:
         print("\n(essai à blanc) Relance avec --ecrire pour enregistrer ces URLs.")
     print(f"{total} jetons chez {modele.split(':')[0]} (aucun jeton Claude).")
+    if sans_source:
+        print(f"✗ Aucune source pour : {', '.join(sans_source)}. Sans source, rien ne peut "
+              f"être écrit : ajoute des URLs à la main dans « sources_candidates », ou des "
+              f"pistes plus précises, puis relance.")
+        return 1
     return 0
 
 
