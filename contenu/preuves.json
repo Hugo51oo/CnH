@@ -1854,5 +1854,127 @@
         "citation": "Les associations doivent également supporter de nouvelles charges, notamment celles engendrées par le traitement des dons en nature qui sont en augmentation ; à savoir des coûts logistiques, de déploiement d'outils de gestion, de recherches de partenariat etc."
       }
     ]
+  },
+  "tapisserie-de-bayeux-voyage": {
+    "sources": [
+      {
+        "titre": "Researches and Conjectures on the Bayeux tapestry.",
+        "editeur": "Persée",
+        "url": "https://www.persee.fr/doc/bec_0373-6237_1841_num_2_1_451610",
+        "consulte_le": "2026-11-13"
+      },
+      {
+        "titre": "La tapisserie de Bayeux au British Museum, un prêt pour l’Histoire",
+        "editeur": "Ministère de la Culture",
+        "url": "https://www.culture.gouv.fr/actualites/la-tapisserie-de-bayeux-au-british-museum-un-pret-pour-l-histoire",
+        "consulte_le": "2026-11-13"
+      }
+    ],
+    "preuves": [
+      {
+        "appuie": "base",
+        "source": 2,
+        "citation": "la tapisserie n'ayant jamais quitté la France depuis près de 1000 ans, c'est un événement proprement historique, rendu possible par la fermeture pour travaux de rénovation du musée de Bayeux où elle est conservée."
+      },
+      {
+        "appuie": "repere 1",
+        "source": 2,
+        "citation": "La tapisserie de Bayeux, une broderie de 70 mètres de long"
+      },
+      {
+        "appuie": "repere 2",
+        "source": 2,
+        "citation": "la tapisserie n'ayant jamais quitté la France depuis près de 1000 ans"
+      },
+      {
+        "appuie": "repere 3",
+        "source": 2,
+        "citation": "A partir de septembre 2026, le prêt de la tapisserie de Bayeux au British Museum, à Londres, va être le point d’orgue d’un échange culturel significatif"
+      },
+      {
+        "appuie": "clivage 1 fait_a",
+        "source": 2,
+        "citation": "Le prêt de la tapisserie de Bayeux au British Museum, tel que le Président de la République l’a annoncé en juillet dernier, fait franchir une nouvelle étape à cette relation"
+      },
+      {
+        "appuie": "clivage 1 fait_b",
+        "source": 2,
+        "citation": "La tapisserie, qui est en réalité une broderie réalisée avec des fils de laine sur un support de lin, a été réalisée il y a près de mille ans ; elle a traversé des événements qui auraient pu la faire disparaître"
+      },
+      {
+        "appuie": "clivage 2 fait_a",
+        "source": 1,
+        "citation": "la tradition qui attribue la tapisserie de Bayeux à la reine Mathilde n'a pas plus de deux cents ans d'existence."
+      },
+      {
+        "appuie": "clivage 2 fait_b",
+        "source": 1,
+        "citation": "qu'elle est due aux libéralités du chapitre de Bayeux."
+      }
+    ]
+  },
+  "authentifier-une-relique": {
+    "sources": [
+      {
+        "titre": "Le Signe du linceul. Le Saint Suaire de Turin: de la relique à l'image",
+        "editeur": "Archives de Sciences Sociales des Religions",
+        "url": "https://www.persee.fr/web/revues/home/prescript/article/assr_0335-5985_1993_num_84_1_1503_t1_0262_0000_2",
+        "consulte_le": "2026-11-13"
+      },
+      {
+        "titre": "Histoire ancienne du linceul de Turin jusqu'au XIIIe siècle",
+        "editeur": "Archives de Sciences Sociales des Religions",
+        "url": "https://www.persee.fr/web/revues/home/prescript/article/assr_0335-5985_1986_num_62_2_2415_t1_0263_0000_2",
+        "consulte_le": "2026-11-13"
+      },
+      {
+        "titre": "Le Suaire de Turin aux prises avec l'histoire",
+        "editeur": "Revue d'histoire de l'Église de France",
+        "url": "https://www.persee.fr/doc/rhef_0300-9505_1990_num_76_196_3483",
+        "consulte_le": "2026-11-13"
+      }
+    ],
+    "preuves": [
+      {
+        "appuie": "base",
+        "source": 3,
+        "citation": "Elle faisait en effet connaître le résultat d'analyses séparément conduites par les laboratoires de l'Université d'Arizona, de l'Université d'Oxford et de l'Institut Polytechnique de Zurich et qui s'accordent à dater l'étoffe de lin qui constitue le Suaire entre les années 1260 et 1390 après Jésus-Christ."
+      },
+      {
+        "appuie": "repere 1",
+        "source": 3,
+        "citation": "Elle faisait en effet connaître le résultat d'analyses séparément conduites par les laboratoires de l'Université d'Arizona, de l'Université d'Oxford et de l'Institut Polytechnique de Zurich et qui s'accordent à dater l'étoffe de lin qui constitue le Suaire entre les années 1260 et 1390 après Jésus-Christ."
+      },
+      {
+        "appuie": "repere 2",
+        "source": 1,
+        "citation": "Apparu pour la première fois en 1355 réputé être rapporté de Constantinople par un croisé"
+      },
+      {
+        "appuie": "repere 3",
+        "source": 1,
+        "citation": "Elle ne se réveilla la fin du xixe siècle avec ostension de 1898 Turin qui attira 800000 pèlerins"
+      },
+      {
+        "appuie": "clivage 1 fait_a",
+        "source": 3,
+        "citation": "Elle faisait en effet connaître le résultat d'analyses séparément conduites par les laboratoires de l'Université d'Arizona, de l'Université d'Oxford et de l'Institut Polytechnique de Zurich et qui s'accordent à dater l'étoffe de lin qui constitue le Suaire entre les années 1260 et 1390 après Jésus-Christ."
+      },
+      {
+        "appuie": "clivage 1 fait_b",
+        "source": 1,
+        "citation": "autres refusèrent croire et orga nisèrent la contestation des résultats la thèse la plus connue prétendant que le miracle-flash de la Résurrection avait altéré les tissus et ren du douteuse la datation par le carbone 14"
+      },
+      {
+        "appuie": "clivage 2 fait_a",
+        "source": 3,
+        "citation": "Le moment paraît donc bien choisi de reprendre en mains le dossier historique qu'Ulysse Chevalier avait constitué sur le Suaire au début de notre siècle et qui situe son entrée dans l'histoire précisément dans la deuxième moitié du xiv* siècle."
+      },
+      {
+        "appuie": "clivage 2 fait_b",
+        "source": 2,
+        "citation": "Ayant posé comme admise sans en rediscuter identité de image de Turin et de celles de Lirey et de Chambéry il adopte la méthode régressive et part de la relique décrite Constantinople en 1204 par Robert de Clari par Nicolas Mesantes en 1201"
+      }
+    ]
   }
 }

@@ -1,0 +1,163 @@
+{
+  "date": "2026-11-13",
+  "sujets": [
+    {
+      "id": "pb-quest-ce-qui-fait-un-plat-francais",
+      "type": "problematique",
+      "theme": "cuisine-alimentation",
+      "format": "ouverte",
+      "brief": "Qu'est-ce qui rend un plat « français », et qui a le droit de le dire ?",
+      "pistes": [
+        "les appellations d'origine (AOC/AOP/IGP) et ce qu'elles protègent vraiment",
+        "le Nutri-Score et l'étiquetage d'origine",
+        "la restauration collective et la loi Egalim (part de produits locaux/bio obligatoire)",
+        "les labels « fait maison » et ce qu'ils excluent"
+      ],
+      "reperes": "4",
+      "clivages": "3",
+      "sources_candidates": [
+        "https://www.inao.gouv.fr/public/home.php?pageFromIndex=produits/commune_index.php~mnu=348",
+        "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=celex:32011R1169",
+        "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000031917917",
+        "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000035944131",
+        "https://sante.gouv.fr/IMG/pdf/rapport_Hercberg_15_11_2013.pdf",
+        "https://www.service-public.gouv.fr/particuliers/actualites/A18128",
+        "https://agriculture.gouv.fr/egalim-les-principales-actions-retenues-pour-une-alimentation-saine-durable-et-accessible-tous",
+        "https://www.legifrance.gouv.fr/WAspad/UnTexteDeJorf?numjo=AGRX1736303L",
+        "https://agriculture.gouv.fr/egalim-ce-que-contient-la-loi-agriculture-et-alimentation"
+      ]
+    },
+    {
+      "id": "tapisserie-de-bayeux-voyage",
+      "theme": "histoire-patrimoine",
+      "format": "avant-ailleurs",
+      "brief": "La tapisserie de Bayeux : neuf siècles sans quitter la France, puis un prêt exceptionnel au British Museum.",
+      "pistes": [
+        "sa fragilité (broderie du XIe siècle)",
+        "la décision de prêt annoncée en 2018 et sa mise en œuvre",
+        "les précautions de transport et de conservation",
+        "ce qu'elle représente (bataille de Hastings, 1066)"
+      ],
+      "liens": [
+        "les-archives-nationales"
+      ],
+      "sources_candidates": [
+        "https://www.persee.fr/doc/annor_0570-1600_1992_hos_24_1_4111",
+        "https://www.persee.fr/doc/bec_0373-6237_1841_num_2_1_451610",
+        "https://www.persee.fr/doc/roma_0035-8029_1934_num_60_237_4172",
+        "https://www.cairn.info/revue-annales-de-normandie-2019-2-page-149.htm#s1n2",
+        "https://www.pop.culture.gouv.fr/notice/palissy/PM14000079",
+        "https://www.prefectures-regions.gouv.fr/normandie/Grands-dossiers/Tapisserie-de-Bayeux/La-Tapisserie-de-Bayeux-est-une-propriete-de-l-Etat-deposee-a-la-ville-de-Bayeux.",
+        "https://www.culture.gouv.fr/actualites/la-tapisserie-de-bayeux-au-british-museum-un-pret-pour-l-histoire",
+        "https://www.pop.culture.gouv.fr/notice/joconde/M0655000214",
+        "https://www.britishmuseum.org/collection/term/BIOG85534"
+      ]
+    },
+    {
+      "id": "camembert-lait-cru",
+      "theme": "cuisine-alimentation",
+      "format": "objet",
+      "brief": "Le camembert de Normandie AOP : pourquoi il doit être au lait cru, et le débat sur la survie de cette règle.",
+      "pistes": [
+        "le cahier des charges de l'AOP (INAO)",
+        "le débat sanitaire (listeria) contre l'authenticité du goût",
+        "la baisse du nombre de producteurs au lait cru",
+        "la distinction avec le « camembert fabriqué en Normandie » industriel, non AOP"
+      ],
+      "liens": [
+        "la-fourchette",
+        "repas-gastronomique"
+      ],
+      "sources_candidates": [
+        "https://www.inao.gouv.fr/",
+        "https://questions.assemblee-nationale.fr/q14/14-94163QE.htm",
+        "https://www.inao.gouv.fr/economie",
+        "https://agriculture.gouv.fr/consommation-de-fromages-base-de-lait-cru-rappel-des-precautions-prendre",
+        "https://mesdemarches.agriculture.gouv.fr/Demande-d-autorisation-de-produire",
+        "https://eur-lex.europa.eu/legal-content/FR/TXT/PDF/?uri=CELEX:02005R2073-20180101",
+        "https://agriculture.gouv.fr/sites/minagri/files/documents/pdf/gph_lait_cru_produits_laitiers_20135957_0001_p000_cle82a6a2.pdf",
+        "https://agreste.agriculture.gouv.fr/enquetes/industries-agroalimentaires-529/enquete-annuelle-laitiere-enquete/",
+        "https://ec.europa.eu/competition/mergers/cases/decisions/m4761_20071018_20310_fr.pdf"
+      ]
+    },
+    {
+      "id": "semaine-de-quatre-jours",
+      "theme": "modes-de-vie-societe",
+      "format": "chiffre",
+      "brief": "Les expérimentations de semaine de quatre jours en France : où, combien, quels résultats mesurés.",
+      "pistes": [
+        "des entreprises ou collectivités ayant expérimenté la semaine de 4 jours",
+        "la distinction entre 4 jours à temps plein compressé et 4 jours à temps réduit",
+        "les études d'impact disponibles (absentéisme, productivité perçue)"
+      ],
+      "sources_candidates": [
+        "https://www.vie-publique.fr/discours/292847-declaration-de-politique-generale-gabriel-attal-30012024",
+        "https://theconversation.com/tu-prends-ton-apres-midi-pourquoi-le-presenteisme-nuit-aux-entreprises-268",
+        "https://journals.openedition.org/sdt/46022",
+        "https://dares.travail-emploi.gouv.fr/sites/default/files/pdf/dares_da_conditions_travail_et_presenteisme_pendant_maladie_.pdf",
+        "https://www.entreprises.gouv.fr/files/files/directions_services/cns/ressources/Teletravail_Rapport_du_ministere_de_Mai2012.pdf",
+        "https://journals.openedition.org/interventionseconomiques/689",
+        "https://www.ademe.fr/sites/default/files/assets/documents/teletravail-modes-de-vie-2020-synthese.pdf",
+        "https://www.cairn.info/revue-gerer-et-comprendre-2021-2-page-38.htm?ref=doi",
+        "https://www.strategie.gouv.fr/sites/strategie.gouv.fr/files/atoms/files/fs-2024-na146-teletravail-14_novembre.pdf"
+      ]
+    },
+    {
+      "id": "occitan-a-l-ecole",
+      "theme": "arts-langues-croyances",
+      "format": "et-si",
+      "brief": "Et si l'école enseignait autant l'occitan que l'anglais ? Les langues régionales dans l'enseignement public.",
+      "pistes": [
+        "la loi Molac de 2021 et sa censure partielle par le Conseil constitutionnel",
+        "les filières bilingues publiques et associatives (Calandretas, Diwan)",
+        "le nombre estimé de locuteurs de langues régionales",
+        "la charte européenne des langues régionales, jamais ratifiée par la France"
+      ],
+      "liens": [
+        "la-langue-des-signes",
+        "langues-qui-s-eteignent"
+      ],
+      "sources_candidates": [
+        "https://www.assemblee-nationale.fr/12/dossiers/langues_regionales.asp",
+        "https://www.assemblee-nationale.fr/14/dossiers/charte_europeenne_langues_regionales.asp",
+        "https://www.assemblee-nationale.fr/14/dossiers/enseignement_immersif_langues_regionales.asp",
+        "https://www.legifrance.gouv.fr/WAspad/UnTexteDeJorf?numjo=CSCX9903612S",
+        "https://www.conseil-etat.fr/Decisions-Avis-Publications/Avis/Selection-des-avis-faisant-l-objet-d-une-communication-particuliere/Ratification-de-la-Charte-europeenne-des-langues-regionales-ou-minoritaires",
+        "https://www.legifrance.gouv.fr/affichLoiPreparation.do?idDocument=JORFDOLE000028508398&type=general&typeLoi=prop&legislature=14",
+        "https://www.legifrance.gouv.fr/affichLoiPreparation.do?idDocument=JORFDOLE000030962769&type=general&typeLoi=proj&legislature=14",
+        "https://www.legifrance.gouv.fr/affichJuriConst.do?idTexte=CONSTEXT000017664883&dateTexte=",
+        "https://www.cairn.info/revue-vingtieme-siecle-revue-d-histoire-2007-2-page-135.htm"
+      ]
+    },
+    {
+      "id": "authentifier-une-relique",
+      "theme": "hors-piste",
+      "themes_croises": [
+        "histoire-patrimoine",
+        "arts-langues-croyances"
+      ],
+      "format": "dilemme",
+      "brief": "Le Saint Suaire de Turin, daté au carbone 14 du Moyen Âge : la science doit-elle trancher la valeur d'une relique ?",
+      "pistes": [
+        "la datation au carbone 14 de 1988 et ses résultats",
+        "les contestations méthodologiques ultérieures",
+        "la position officielle de l'Église (jamais authentifié comme relique du Christ)",
+        "d'autres reliques ou objets déjà déclassés par des méthodes scientifiques"
+      ],
+      "liens": [
+        "pb-a-qui-appartient-le-passe"
+      ],
+      "sources_candidates": [
+        "https://www.persee.fr/web/revues/home/prescript/article/assr_0335-5985_1993_num_84_1_1503_t1_0262_0000_2",
+        "https://www.persee.fr/web/revues/home/prescript/article/assr_0335-5985_1986_num_62_2_2415_t1_0263_0000_2",
+        "https://www.persee.fr/doc/rhef_0300-9505_1990_num_76_196_3483",
+        "https://www.persee.fr/doc/efr_0223-5099_1995_act_213_1_4933",
+        "https://shs.cairn.info/revue-annales-2024-2-page-335",
+        "https://www.persee.fr/doc/rebyz_0766-5598_2000_num_58_1_2000_t1_0289_0000_2",
+        "https://www.persee.fr/doc/rhef_0048-7988_2006_num_92_229_4286",
+        "https://www.persee.fr/doc/assr_0335-5985_1993_num_84_1_1503_t1_0262_0000_2",
+        "https://www.persee.fr/web/revues/home/prescript/article/ccmed_0007-9731_1965_num_8_31_1351"
+      ]
+    }
+  ]
+}

@@ -3258,6 +3258,190 @@
       ],
       "statut": "verifie",
       "verifie_le": "2026-09-25"
+    },
+    {
+      "id": "tapisserie-de-bayeux-voyage",
+      "type": "carte",
+      "theme": "histoire-patrimoine",
+      "format": "avant-ailleurs",
+      "titre": "La Tapisserie de Bayeux traverse la Manche",
+      "base": "La tapisserie de Bayeux n'avait jamais quitté la France depuis près de 1000 ans. En 2026, elle franchit exceptionnellement la Manche pour être exposée au British Museum, une opération rendue possible par la fermeture pour travaux de rénovation du musée qui l'abrite habituellement.",
+      "base_source": 2,
+      "ouverture": "Est-ce qu'un chef-d'œuvre millénaire doit rester immobile pour être protégé, ou voyager pour être partagé ?",
+      "reperes": [
+        {
+          "cle": "70 mètres",
+          "texte": "C'est la longueur totale de cette broderie réalisée avec des fils de laine sur un support de lin.",
+          "source": 2
+        },
+        {
+          "cle": "Près de 1000 ans",
+          "texte": "La tapisserie n'a jamais quitté la France depuis près de 1000 ans.",
+          "source": 2
+        },
+        {
+          "cle": "Septembre 2026",
+          "texte": "C'est la date à partir de laquelle la tapisserie sera présentée au British Museum à Londres.",
+          "source": 2
+        }
+      ],
+      "clivages": [
+        {
+          "question": "Faut-il faire voyager des œuvres aussi fragiles ?",
+          "cote_a": "Le prêt est un outil diplomatique puissant. Il renforce les liens entre les nations et permet à un public international de découvrir un trésor qu'il ne pourrait pas voir autrement, favorisant la compréhension mutuelle.",
+          "cote_b": "La fragilité extrême de l'objet impose une prudence absolue. Malgré les progrès techniques, chaque déplacement comporte des risques pour une broderie qui a déjà survécu à des siècles d'histoire et de guerres.",
+          "fait_a": {
+            "texte": "Le prêt de la tapisserie de Bayeux au British Museum, tel que le Président de la République l’a annoncé en juillet dernier, fait franchir une nouvelle étape à cette relation.",
+            "source": 2
+          },
+          "fait_b": {
+            "texte": "La tapisserie, qui est en réalité une broderie réalisée avec des fils de laine sur un support de lin, a été réalisée il y a près de mille ans ; elle a traversé des événements qui auraient pu la faire disparaître.",
+            "source": 2
+          },
+          "a_creuser": [
+            "Diplomatie culturelle",
+            "Conservation préventive"
+          ]
+        },
+        {
+          "question": "Qui a commandé ce chef-d'œuvre ?",
+          "cote_a": "La tradition populaire attribue souvent la réalisation de cette broderie à la reine Mathilde, épouse de Guillaume le Conquérant.",
+          "cote_b": "Certains historiens suggèrent plutôt qu'elle a été exécutée grâce aux libéralités du chapitre de la cathédrale de Bayeux.",
+          "fait_a": {
+            "texte": "La tradition qui attribue la tapisserie de Bayeux à la reine Mathilde n'a pas plus de deux cents ans d'existence.",
+            "source": 1
+          },
+          "fait_b": {
+            "texte": "Qu'elle est due aux libéralités du chapitre de Bayeux.",
+            "source": 1
+          },
+          "a_creuser": [
+            "Attribution historique",
+            "Rôle des mécènes médiévaux"
+          ]
+        }
+      ],
+      "derives": [
+        "L'histoire des pérégrinations passées de la tapisserie",
+        "L'Année européenne des Normands en 2027",
+        "Les trésors archéologiques prêtés en échange par le British Museum"
+      ],
+      "liens": [
+        "les-archives-nationales"
+      ],
+      "sources": [
+        {
+          "titre": "Researches and Conjectures on the Bayeux tapestry.",
+          "editeur": "Persée",
+          "url": "https://www.persee.fr/doc/bec_0373-6237_1841_num_2_1_451610",
+          "consulte_le": "2026-11-13"
+        },
+        {
+          "titre": "La tapisserie de Bayeux au British Museum, un prêt pour l’Histoire",
+          "editeur": "Ministère de la Culture",
+          "url": "https://www.culture.gouv.fr/actualites/la-tapisserie-de-bayeux-au-british-museum-un-pret-pour-l-histoire",
+          "consulte_le": "2026-11-13"
+        }
+      ],
+      "statut": "verifie",
+      "verifie_le": "2026-11-13"
+    },
+    {
+      "id": "authentifier-une-relique",
+      "type": "carte",
+      "theme": "hors-piste",
+      "themes_croises": [
+        "histoire-patrimoine",
+        "arts-langues-croyances"
+      ],
+      "format": "dilemme",
+      "titre": "Le Saint Suaire : science ou foi ?",
+      "base": "Le Saint Suaire de Turin, linceul portant l'empreinte d'un corps supplicié, est au cœur d'une controverse séculaire. Si certains y voient une preuve de la Résurrection, la datation au carbone 14 réalisée en 1988 a situé l'origine du tissu entre 1260 et 1390, contredisant son authenticité historique. L'Église, tout en soutenant la dévotion, n'a jamais officiellement authentifié l'objet comme étant le linceul du Christ.",
+      "base_source": 3,
+      "ouverture": "La science peut-elle réellement trancher la valeur spirituelle d'une relique ?",
+      "reperes": [
+        {
+          "cle": "1260-1390",
+          "texte": "La datation au carbone 14, effectuée par trois laboratoires indépendants, situe la fabrication du lin à cette période médiévale.",
+          "source": 3
+        },
+        {
+          "cle": "1355",
+          "texte": "Date de la première apparition documentée du Suaire, marquant son entrée dans l'histoire médiévale.",
+          "source": 1
+        },
+        {
+          "cle": "800 000",
+          "texte": "Le nombre de pèlerins attirés par l'ostension de 1898 à Turin, qui a relancé l'intérêt pour le Suaire après une période de déclin.",
+          "source": 1
+        }
+      ],
+      "clivages": [
+        {
+          "question": "La science peut-elle invalider une relique ?",
+          "cote_a": "Pour les sceptiques, les résultats scientifiques sont sans appel : l'objet est une création médiévale. L'histoire et la physique convergent pour démontrer que le Suaire n'est pas contemporain du Christ, rendant caduque toute prétention à l'authenticité.",
+          "cote_b": "Pour les partisans de l'authenticité, la science est limitée par la nature même de l'objet. Certains soutiennent que des facteurs extérieurs, comme des pollutions ou le « miracle-flash » de la Résurrection, auraient pu fausser les analyses, rendant la datation au carbone 14 non concluante.",
+          "fait_a": {
+            "texte": "Les analyses de 1988, menées par les laboratoires d'Arizona, d'Oxford et de Zurich, s'accordent sur une origine médiévale du lin.",
+            "source": 3
+          },
+          "fait_b": {
+            "texte": "Certains ont contesté les résultats, arguant que le « miracle-flash » de la Résurrection aurait pu altérer les tissus et rendre la datation douteuse.",
+            "source": 1
+          },
+          "a_creuser": [
+            "Le paradigme indiciaire",
+            "La notion de relique"
+          ]
+        },
+        {
+          "question": "L'histoire peut-elle prouver l'authenticité ?",
+          "cote_a": "Les historiens s'appuient sur la documentation. Puisque le Suaire n'apparaît qu'au XIVe siècle, il ne peut être lié au Christ historique, indépendamment de la nature de l'image.",
+          "cote_b": "L'absence de documentation avant le XIVe siècle ne prouve pas l'inauthenticité. Certains chercheurs utilisent des méthodes régressives pour tenter de relier le Suaire à des objets plus anciens, comme le Mandylion d'Édesse.",
+          "fait_a": {
+            "texte": "L'entrée du Suaire dans l'histoire est située précisément dans la deuxième moitié du XIVe siècle.",
+            "source": 3
+          },
+          "fait_b": {
+            "texte": "Certains chercheurs adoptent une méthode régressive, partant de la relique décrite à Constantinople en 1204, pour tenter de relier le Suaire au Mandylion.",
+            "source": 2
+          },
+          "a_creuser": [
+            "La méthode régressive",
+            "L'image d'Édesse"
+          ]
+        }
+      ],
+      "derives": [
+        "Le rôle des images-reliquaires dans la dévotion médiévale",
+        "Comment la photographie a transformé la perception du Suaire",
+        "L'histoire des autres reliques déclassées par la science"
+      ],
+      "liens": [
+        "pb-a-qui-appartient-le-passe"
+      ],
+      "sources": [
+        {
+          "titre": "Le Signe du linceul. Le Saint Suaire de Turin: de la relique à l'image",
+          "editeur": "Archives de Sciences Sociales des Religions",
+          "url": "https://www.persee.fr/web/revues/home/prescript/article/assr_0335-5985_1993_num_84_1_1503_t1_0262_0000_2",
+          "consulte_le": "2026-11-13"
+        },
+        {
+          "titre": "Histoire ancienne du linceul de Turin jusqu'au XIIIe siècle",
+          "editeur": "Archives de Sciences Sociales des Religions",
+          "url": "https://www.persee.fr/web/revues/home/prescript/article/assr_0335-5985_1986_num_62_2_2415_t1_0263_0000_2",
+          "consulte_le": "2026-11-13"
+        },
+        {
+          "titre": "Le Suaire de Turin aux prises avec l'histoire",
+          "editeur": "Revue d'histoire de l'Église de France",
+          "url": "https://www.persee.fr/doc/rhef_0300-9505_1990_num_76_196_3483",
+          "consulte_le": "2026-11-13"
+        }
+      ],
+      "statut": "verifie",
+      "verifie_le": "2026-11-13"
     }
   ]
 }
