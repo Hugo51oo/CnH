@@ -1,0 +1,330 @@
+
+[2026-11-14 13:00:21] === Lancement automatique pour le 2026-11-14 ===
+[2026-11-14 13:00:21] Pas de sujets datés du jour : on prend outils/agents/sujets/a-venir/02-a-quoi-sert-un-musee.json dans la file d'attente.
+[2026-11-14 13:00:21] 1/5 — recherche des sources (chercher.py)
+  ✓ pb-a-quoi-sert-un-musee-aujourdhui — 9 URL(s) retenue(s)
+      https://www.cairn.info/article.php?ID_REVUE=LHS&ID_NUMPUBLIE=LHS_154&ID_ARTICLE=LHS_154_0031#
+        → Analyse sociologique ou culturelle pertinente sur le rôle des institutions publiques et du spectacle (Cairn).
+      https://www.cairn.info/revue-societes-et-representations-2003-2-page-131.htm
+        → Étude académique traitant de la fréquentation culturelle et de la médiation dans les musées (Cairn).
+      https://books.openedition.org/pufc/28099
+        → Ouvrage académique spécialisé sur la définition, l'histoire et les rôles du musée (OpenEdition Books).
+      https://presse.louvre.fr/download?id=5324&pn=235141-pdf
+        → Document institutionnel relatif à la nouvelle définition des musées et aux directives de l'ICOM.
+      https://transparency-register.europa.eu/searchregister-or-update/organisation-detail_fr?id=333322034810-67
+        → Fiche d'enregistrement officielle du Conseil international des musées (ICOM) traitant de ses missions.
+      https://www.legifrance.gouv.fr/WAspad/UnTexteDeJorf?numjo=JUSD2007875D
+        → Texte réglementaire sur la fermeture des établissements recevant du public pendant le Covid-19 (Légifrance).
+      https://www.vie-publique.fr/loi/273943-loi-organique-durgence-pour-faire-face-lepidemie-de-covid-19-qpc
+        → Synthèse juridique et publique sur la gestion de crise sanitaire impactant les institutions culturelles (Vie-publique).
+      https://www.insee.fr/fr/statistiques/4485632
+        → Données statistiques de l'INSEE sur l'impact économique et la baisse de fréquentation durant la crise sanitaire.
+      https://www.insee.fr/fr/statistiques/4241397
+        → Statistiques officielles INSEE permettant d'évaluer la fréquentation et l'activité économique post-confinement.
+  ✓ graffitis-de-pompei — 9 URL(s) retenue(s)
+      https://whc.unesco.org/fr/list/829
+        → Fiche du patrimoine mondial de l'UNESCO sur les zones archéologiques de Pompéi, Herculanum et Torre Annunziata.
+      https://whc.unesco.org/fr/actualites/690/
+        → Actualités de l'UNESCO concernant la conservation et les états des lieux sur le site archéologique de Pompéi.
+      https://europa.eu/rapid/press-release_IP-12-328_fr.htm
+        → Communiqué de presse officiel de l'Union européenne sur la sauvegarde et la restauration du site de Pompéi.
+      https://www.persee.fr/doc/befar_0257-4101_1998_mon_299_1
+        → Publication académique (Persée) issue de la Bibliothèque des Écoles françaises d'Athènes et de Rome centrée sur l'archéologie et les inscriptions de Pompéi.
+      https://www.persee.fr/doc/crai_0065-0536_1905_num_49_4_71661
+        → Compte rendu de l'Académie des inscriptions et belles-lettres (Persée) analysant les découverts épigraphiques et graffitis à Pompéi.
+      https://www.persee.fr/doc/piot_1148-6023_1960_num_51_1_1480
+        → Étude académique (Persée / Monuments Piot) portant sur le mobilier, l'art et les inscriptions murales retrouvés à Pompéi.
+      https://volcano.si.edu/volcano.cfm?vn=211020
+        → Données volcanologiques sur le Vésuve fournissant le contexte géologique et l'éruption ayant enfoui et préservé les graffitis.
+      https://volcano.si.edu/volcano.cfm?vn=211020&vtab=GeneralInfo
+        → Informations générales complémentaires sur l'activité du Vésuve et les conditions de conservation du site antique.
+      https://www.unesco.org/new/en/natural-sciences/environment/ecological-sciences/biosphere-reserves/europe-north-america/italy/somma-vesuvio-and-miglio-doro/
+        → Fiche de l'UNESCO sur la réserve de biosphère Somma-Vésuve éclairant l'environnement et l'exposition du site aux éléments naturels.
+  ✓ additifs-alimentaires-e-numeros — 9 URL(s) retenue(s)
+      https://eur-lex.europa.eu/legal-content/FR/TXT/PDF/?uri=CELEX:32008R1333&from=FR
+        → Texte fondateur de la réglementation européenne (Règlement CE n° 1333/2008) établissant les règles relatives aux additifs alimentaires.
+      https://webgate.ec.europa.eu/foods_system/main/?sector=FAD&auth=SANCAS
+        → Accès à la base de données officielle de l'Union européenne sur les additifs autorisés et leurs numéros E.
+      https://www.efsa.europa.eu/fr/topics/topic/food-additives
+        → Page thématique de l'EFSA expliquant son rôle d'évaluation scientifique des additifs alimentaires.
+      https://eur-lex.europa.eu/legal-content/FR/TXT/?qid=1469450323996&uri=CELEX:32011R1129
+        → Texte juridique européen (Règlement UE n° 1129/2011) fixant la liste de l'Union européenne des additifs alimentaires autorisés.
+      https://www.efsa.europa.eu/fr/press/news/170712
+        → Communiqué ou publication scientifique de l'EFSA concernant la réévaluation de la sécurité des additifs.
+      https://www.efsa.europa.eu/fr/topics/topic/food-additive-re-evaluations
+        → Page d'information officielle de l'EFSA dédiée au programme de réévaluation systématique des additifs alimentaires.
+      https://www.anses.fr/fr/system/files/NUT2006sa0236.pdf
+        → Avis scientifique et rapport d'évaluation de l'Anses illustrant l'évaluation du risque au niveau national français.
+      https://eur-lex.europa.eu/legal-content/FR/TXT/PDF/?uri=CELEX:32002R0178&qid=1509004253165&from=FR
+        → Règlement CE n° 178/2002 créant l'EFSA et définissant les principes généraux de la législation alimentaire européenne.
+      https://www.efsa.europa.eu/sites/default/files/2025-03/efsa-consolidated-annual-activity-report-2024.pdf
+        → Rapport annuel d'activité officiel de l'EFSA détaillant son fonctionnement, son organisation et ses travaux d'évaluation.
+  ✓ teletravail-avant-apres-covid — 9 URL(s) retenue(s)
+      https://www.fonction-publique.gouv.fr/archives/home20111012/IMG/pdf/guide_teletravail_1998.pdf
+        → Guide historique sur la mise en œuvre et la réglementation initiale du télétravail.
+      https://www.entreprises.gouv.fr/files/files/directions_services/cns/ressources/Teletravail_Rapport_du_ministere_de_Mai2012.pdf
+        → Rapport du ministère de l'Économie sur la pratique et l'encadrement du télétravail avant son expansion.
+      https://www.economie.gouv.fr/entreprises/teletravail
+        → Guide pratique de l'économie sur l'encadrement juridique et l'organisation du télétravail en entreprise.
+      https://travail-emploi.gouv.fr/droit-du-travail/la-vie-du-contrat-de-travail/article/teletravail-mode-d-emploi
+        → Cadre légal et réglementaire fixant les conditions et accords de télétravail en entreprise.
+      https://www.insee.fr/fr/statistiques/4238573?sommaire=4238635
+        → Données statistiques clés de l'Insee sur la part de salariés en télétravail avant la crise sanitaire.
+      https://www.ademe.fr/sites/default/files/assets/documents/teletravail-modes-de-vie-2020-synthese.pdf
+        → Étude synthétique de l'ADEME sur l'impact, l'adoption et les modes de vie liés au télétravail en 2020.
+      https://www.cairn.info/revue-gerer-et-comprendre-2021-2-page-38.htm?ref=doi
+        → Analyse académique du basculement massif vers le télétravail durant les confinements de 2020-2021.
+      https://www.cairn.info/revue-constructif-2021-3.htm
+        → Réflexion et chiffres sur la transformation de l'organisation du travail post-crise COVID-19.
+      https://www.strategie.gouv.fr/sites/strategie.gouv.fr/files/atoms/files/fs-2024-na146-teletravail-14_novembre.pdf
+        → Rapport de France Stratégie (2024) analysant la stabilisation à long terme et l'impact économique du télétravail en France.
+  ✓ irezumi-tatouage-japonais — 9 URL(s) retenue(s)
+      https://www.persee.fr/web/revues/home/prescript/article/criti_1290-7839_2000_num_8_1_1441_t8_0063_0000_2
+        → Article universitaire cité dans la page Yakuza, directement lié aux structures du crime organisé japonais et à leurs pratiques culturelles comme le tatouage.
+      https://www.cairn.info/revue-diogene-2022-1-page-193.htm
+        → Source académique consacrée à l'ère Meiji, pertinente pour analyser les lois de modernisation et l'interdiction officielle de l'irezumi.
+      https://journals.openedition.org/ebisu/1615
+        → Revue d'études japonaises Ebisu fournissant des analyses historiques sur la modernisation de la société japonaise et la stigmatisation des pratiques traditionnelles.
+      https://journals.openedition.org/cipango/451?lang=en
+        → Revue d'études japonaises Cipango offrant un éclairage sociologique et historique sur les transformations culturelles au Japon.
+      https://www.persee.fr/doc/dhjap_0000-0000_1981_dic_6_1_886_t2_0008_0000_2
+        → Entrée du Dictionnaire historique du Japon utile pour retracer l'évolution juridique et sociale du tatouage depuis la période Edo.
+      https://www.persee.fr/doc/dhjap_0000-0000_1989_dic_15_1_927_t1_0151_0000_3
+        → Notice historique issue du Dictionnaire historique du Japon permettant d'analyser le statut des condamnés et l'évolution des marques corporelles.
+      https://www.metmuseum.org/toah/works-of-art/JP1847
+        → Notice du Metropolitan Museum of Art éclairant l'iconographie des estampes japonaises (ukiyo-e), source d'inspiration majeure des motifs d'irezumi.
+      https://expositions.bnf.fr/japonaises/grand/083.htm
+        → Document d'exposition de la BnF illustrant l'art pictural populaire de l'époque Edo dont découle l'esthétique du tatouage traditionnel.
+      https://www.britishmuseum.org/collection/term/BIOG3948
+        → Notice du British Museum sur les figures historiques et légendaires japonaises abondamment représentées dans les tatouages traditionnels.
+  ✓ manger-seul-au-restaurant — 9 URL(s) retenue(s)
+      https://www.persee.fr/docAsPDF/ofce_0751-6614_1988_num_24_1_1143.pdf
+        → Étude économique de l'OFCE sur Persée pour analyser les comportements de consommation.
+      https://www.insee.fr/fr/information/2417794
+        → Données statistiques de l'INSEE utilisables pour contextualiser la consommation et les ménages.
+      https://www.insee.fr/fr/themes/calcul-pouvoir-achat.asp
+        → Outil INSEE sur le pouvoir d'achat pour analyser l'évolution du budget restauration.
+      https://www.persee.fr/authority/254740
+        → Ressource académique Persée permettant d'aborder les sciences sociales et le comportement individuel.
+      https://www.persee.fr/doc/pop_0032-4663_1984_num_39_4_17965
+        → Revue de démographie et sociologie (Population sur Persée) utile pour l'analyse des modes de vie.
+      https://www.cairn.info/revue-figures-de-la-psy-2021-2-page-229.htm
+        → Article de revue spécialisée sur Cairn.info abordant la psychologie et la perception sociale.
+      https://www.legifrance.gouv.fr/affichTexte.do;jsessionid=FE158834703187DD501C92049A84AA12.tpdjo16v_1?cidTexte=JORFTEXT000026972451&dateTexte=&oldAction=rechJO&categorieLien=id
+        → Source juridique officielle sur Légifrance servant de référence réglementaire.
+      https://theconversation.com/plateformes-et-reseaux-sociaux-derriere-lillusion-de-la-neutralite-un-vrai-pouvoir-dinfluence-242530
+        → Analyse sociologique et médias de The Conversation sur l'influence des réseaux et les tendances sociales.
+      https://www.francenum.gouv.fr/guides-et-conseils/communication-et-publicite/reseaux-sociaux/x-anciennement-twitter-le-reseau
+        → Ressource institutionnelle FranceNum abordant les comportements numériques et la livraison/plateformes.
+
+✓ URLs écrites dans outils/agents/sujets/2026-11-14.json. Relis-les avant la suite : une source vaut ce que vaut son éditeur.
+  Étape suivante : python3 outils/agents/documenter.py outils/agents/sujets/2026-11-14.json
+21332 jetons chez wikipedia (aucun jeton Claude).
+[2026-11-14 13:01:10] 2/5 — téléchargement et tri des pages (documenter.py)
+  ✓ pb-a-quoi-sert-un-musee-aujourdhui — 6 page(s), 38 k caractères
+      illisible (HTTP 403) : https://www.cairn.info/article.php?ID_REVUE=LHS&ID_NUMPUBLIE=LHS_154&ID_ARTICLE=LHS_154_0031#
+      illisible (HTTP 403) : https://www.cairn.info/revue-societes-et-representations-2003-2-page-131.htm
+      illisible (HTTP 403) : https://www.legifrance.gouv.fr/WAspad/UnTexteDeJorf?numjo=JUSD2007875D
+  ✓ graffitis-de-pompei — 6 page(s), 27 k caractères
+      illisible (HTTP 403) : https://volcano.si.edu/volcano.cfm?vn=211020
+      illisible (HTTP 403) : https://volcano.si.edu/volcano.cfm?vn=211020&vtab=GeneralInfo
+      illisible (HTTP 404) : https://www.unesco.org/new/en/natural-sciences/environment/ecological-sciences/biosphere-reserves/europe-north-america/italy/somma-vesuvio-and-miglio-doro/
+  ✓ additifs-alimentaires-e-numeros — 7 page(s), 49 k caractères
+      illisible (HTTP 404) : https://webgate.ec.europa.eu/foods_system/main/?sector=FAD&auth=SANCAS
+      illisible (HTTP 404) : https://www.anses.fr/fr/system/files/NUT2006sa0236.pdf
+  ✓ teletravail-avant-apres-covid — 2 page(s), 12 k caractères
+      illisible (HTTP 404) : https://www.fonction-publique.gouv.fr/archives/home20111012/IMG/pdf/guide_teletravail_1998.pdf
+      illisible (HTTP 404) : https://www.entreprises.gouv.fr/files/files/directions_services/cns/ressources/Teletravail_Rapport_du_ministere_de_Mai2012.pdf
+      illisible (HTTP 403) : https://www.economie.gouv.fr/entreprises/teletravail
+      illisible (HTTP 403) : https://www.ademe.fr/sites/default/files/assets/documents/teletravail-modes-de-vie-2020-synthese.pdf
+      illisible (HTTP 403) : https://www.cairn.info/revue-gerer-et-comprendre-2021-2-page-38.htm?ref=doi
+      illisible (HTTP 403) : https://www.cairn.info/revue-constructif-2021-3.htm
+      illisible (HTTP 404) : https://www.strategie.gouv.fr/sites/strategie.gouv.fr/files/atoms/files/fs-2024-na146-teletravail-14_novembre.pdf
+      ! seulement 2 source(s) lisible(s) : ajoute des URLs, sinon la carte sera pauvre ou invérifiable.
+  ✓ irezumi-tatouage-japonais — 6 page(s), 22 k caractères
+      illisible (HTTP 403) : https://www.cairn.info/revue-diogene-2022-1-page-193.htm
+      illisible (HTTP 429) : https://www.metmuseum.org/toah/works-of-art/JP1847
+      illisible (HTTP 403) : https://www.britishmuseum.org/collection/term/BIOG3948
+  ✓ manger-seul-au-restaurant — 6 page(s), 56 k caractères
+      illisible (HTTP 403) : https://www.persee.fr/docAsPDF/ofce_0751-6614_1988_num_24_1_1143.pdf
+      illisible (HTTP 403) : https://www.cairn.info/revue-figures-de-la-psy-2021-2-page-229.htm
+      illisible (HTTP 403) : https://www.legifrance.gouv.fr/affichTexte.do;jsessionid=FE158834703187DD501C92049A84AA12.tpdjo16v_1?cidTexte=JORFTEXT000026972451&dateTexte=&oldAction=rechJO&categorieLien=id
+
+✓ Dossiers écrits dans outils/agents/dossiers (207 k caractères au total).
+  Étape suivante : python3 outils/agents/journee.py outils/agents/sujets/2026-11-14.json
+[2026-11-14 13:02:04] 3/5 — production, vérification et publication (journee.py --ecrire)
+
+[1m0. Composition de la journée[0m
+✓ 1 problématique + 5 cartes, 5 thèmes, 5 formats, programmés le 2026-11-14.
+
+[1m1. Production (gemini:gemini-3.5-flash)[0m
+  ✓ pb-a-quoi-sert-un-musee-aujourdhui — 20797+2081 jetons, 9.4 s
+  ✓ graffitis-de-pompei — 10059+3557 jetons, 48.3 s
+  ✓ additifs-alimentaires-e-numeros — 13974+2087 jetons, 9.5 s
+  ✓ teletravail-avant-apres-covid — 6081+1895 jetons, 7.9 s
+  ✓ irezumi-tatouage-japonais — 9006+1505 jetons, 6.9 s
+  ✓ manger-seul-au-restaurant — 18123+1491 jetons, 8.1 s
+
+[1m2. Schéma (gratuit)[0m
+  - « graffitis-de-pompei » : « clivages » doit contenir 2 à 4 points clivants pour une carte vérifiée.
+  - « additifs-alimentaires-e-numeros » : « clivages » doit contenir 2 à 4 points clivants pour une carte vérifiée.
+  - « irezumi-tatouage-japonais » : « reperes » doit contenir 2 à 6 points pour une carte vérifiée.
+  - « irezumi-tatouage-japonais » : « clivages » doit contenir 2 à 4 points clivants pour une carte vérifiée.
+  - « manger-seul-au-restaurant » : « clivages » doit contenir 2 à 4 points clivants pour une carte vérifiée.
+  → correction 1/3 par gemini:gemini-3.5-flash : graffitis-de-pompei, additifs-alimentaires-e-numeros, irezumi-tatouage-japonais, manger-seul-au-restaurant
+    (gemini:gemini-3.5-flash surchargé : on essaie gemini:gemini-flash-latest)
+    (gemini:gemini-flash-latest surchargé : on essaie gemini:gemini-3.1-flash-lite)
+
+[1m2. Schéma (gratuit) — tour 2[0m
+  - « irezumi-tatouage-japonais » : « clivages » doit contenir 2 à 4 points clivants pour une carte vérifiée.
+  → correction 2/3 par gemini:gemini-3.5-flash : irezumi-tatouage-japonais
+
+[1m2. Schéma (gratuit) — tour 3[0m
+✓ Tous les contenus respectent le schéma.
+
+[1m3. Sources et citations (gratuit)[0m
+  ✓ pb-a-quoi-sert-un-musee-aujourdhui — 6 page(s) lue(s)
+  ✓ graffitis-de-pompei — 2 page(s) lue(s)
+  ! « additifs-alimentaires-e-numeros » : preuve « clivage 1 fait_b » : citation proche mais pas identique (score 0.97) — à recopier exactement
+  - « additifs-alimentaires-e-numeros » : preuve « repere 3 » : citation introuvable dans la source (score 0.60). Le fait n'est pas prouvé.
+  - « additifs-alimentaires-e-numeros » : preuve « clivage 2 fait_a » : citation introuvable dans la source (score 0.75). Le fait n'est pas prouvé.
+  ✗ additifs-alimentaires-e-numeros — 7 page(s) lue(s)
+  ✓ teletravail-avant-apres-covid — 2 page(s) lue(s)
+  ✓ irezumi-tatouage-japonais — 6 page(s) lue(s)
+  ✓ manger-seul-au-restaurant — 6 page(s) lue(s)
+  → correction 3/3 par gemini:gemini-3.5-flash : additifs-alimentaires-e-numeros
+    (gemini:gemini-3.5-flash surchargé : on essaie gemini:gemini-flash-latest)
+    (gemini:gemini-flash-latest surchargé : on essaie gemini:gemini-3.1-flash-lite)
+
+[1m2. Schéma (gratuit) — tour 4[0m
+✓ Tous les contenus respectent le schéma.
+
+[1m3. Sources et citations (gratuit)[0m
+  ✓ pb-a-quoi-sert-un-musee-aujourdhui — 6 page(s) lue(s)
+  ✓ graffitis-de-pompei — 2 page(s) lue(s)
+  ! « additifs-alimentaires-e-numeros » : preuve « base » : citation proche mais pas identique (score 0.99) — à recopier exactement
+  ! « additifs-alimentaires-e-numeros » : preuve « clivage 1 fait_b » : citation proche mais pas identique (score 0.97) — à recopier exactement
+  - « additifs-alimentaires-e-numeros » : preuve « repere 3 » : citation introuvable dans la source (score 0.60). Le fait n'est pas prouvé.
+  ✗ additifs-alimentaires-e-numeros — 7 page(s) lue(s)
+  ✓ teletravail-avant-apres-covid — 2 page(s) lue(s)
+  ✓ irezumi-tatouage-japonais — 6 page(s) lue(s)
+  ✓ manger-seul-au-restaurant — 6 page(s) lue(s)
+  ✗ additifs-alimentaires-e-numeros écarté : citations introuvables dans les sources (reste en brouillon dans produits/)
+
+[1m2. Schéma (gratuit) — tour 5[0m
+✓ Tous les contenus respectent le schéma.
+
+[1m3. Sources et citations (gratuit)[0m
+  ✓ pb-a-quoi-sert-un-musee-aujourdhui — 6 page(s) lue(s)
+  ✓ graffitis-de-pompei — 2 page(s) lue(s)
+  ✓ teletravail-avant-apres-covid — 2 page(s) lue(s)
+  ✓ irezumi-tatouage-japonais — 6 page(s) lue(s)
+  ✓ manger-seul-au-restaurant — 6 page(s) lue(s)
+✓ Chaque fait publié est retrouvé mot pour mot dans sa source.
+
+[1m4. Qualité (gratuit)[0m
+  · pb-a-quoi-sert-un-musee-aujourdhui : 4 source(s) jamais citée(s) retirée(s), renvois renumérotés
+  · teletravail-avant-apres-covid : 1 source(s) jamais citée(s) retirée(s), renvois renumérotés
+  · irezumi-tatouage-japonais : 5 source(s) jamais citée(s) retirée(s), renvois renumérotés
+  · manger-seul-au-restaurant : 4 source(s) jamais citée(s) retirée(s), renvois renumérotés
+  ! « pb-ce-quon-transmet » : aucune preuve archivée dans contenu/preuves.json.
+  ! « lune-patrimoine » : aucune preuve archivée dans contenu/preuves.json.
+  ! « repas-gastronomique » : aucune preuve archivée dans contenu/preuves.json.
+  ! « vivre-seul » : aucune preuve archivée dans contenu/preuves.json.
+  ! « langues-qui-s-eteignent » : aucune preuve archivée dans contenu/preuves.json.
+  ! « met-open-access » : aucune preuve archivée dans contenu/preuves.json.
+✓ Qualité : rien à corriger (6 avertissement(s)).
+
+[1m5. Relecture adverse (groq:openai/gpt-oss-120b)[0m
+  ✗ pb-a-quoi-sert-un-musee-aujourdhui — « a-corriger », 2 grave(s)
+      [inverifiable] clivage 1 fait_a : La citation de la source 1 porte sur la baisse du PIB liée à l’arrêt des activités non essentielles, mais ne mentionne pas explicitement l’impact sur la consommation des ménages. La partie « affecté la consommation des ménages » n’est pas étayée.
+      [inverifiable] base : Aucune source n’est fournie pour la phrase d’introduction sur la question du rôle des institutions culturelles ; elle ne peut donc être vérifiée.
+  ✗ graffitis-de-pompei — « a-jeter », 0 grave(s)
+      [hors sujet] Le texte traite de la conservation et de la gestion du site de Pompéi, alors que le sujet demandé porte sur les graffitis antiques découverts à Pompéi comme source historique.
+  ✗ teletravail-avant-apres-covid — « a-corriger », 3 grave(s)
+      [inverifiable] clivage 1 fait_a : La source ne fournit pas les pourcentages précis de 1,4 % pour les employés et 0,2 % pour les ouvriers ; elle se contente de dire que la pratique est «rare» ou «marginale».
+      [faux] clivage 2 fait_a : La source indique 5,5 % en Île‑de‑France et «un sur dix» (~10 %) dans le reste du pays, pas 2,4 % comme indiqué.
+      [inverifiable] clivage 2 fait_b : La source cite «un sur dix dans le reste du pays» sans préciser qu'il s'agit de cadres ; l'affirmation cible spécifiquement les cadres, ce qui n'est pas soutenu.
+  ✗ irezumi-tatouage-japonais — « a-jeter », 0 grave(s)
+      [hors sujet] tatouage irezumi (pratique culturelle)
+  ✗ manger-seul-au-restaurant — « a-jeter », 0 grave(s)
+      [hors sujet] Le texte traite des usages des réseaux sociaux en France alors que le sujet demandé porte sur le phénomène japonais « ohitorisama » et le fait de manger seul au restaurant en France.
+  ✗ graffitis-de-pompei écarté : hors sujet — Le texte traite de la conservation et de la gestion du site de Pompéi, alors que le sujet demandé porte sur les graffitis antiques découverts à Pompéi comme source historique. (reste en brouillon dans produits/)
+  ✗ irezumi-tatouage-japonais écarté : hors sujet — tatouage irezumi (pratique culturelle) (reste en brouillon dans produits/)
+  ✗ manger-seul-au-restaurant écarté : hors sujet — Le texte traite des usages des réseaux sociaux en France alors que le sujet demandé porte sur le phénomène japonais « ohitorisama » et le fait de manger seul au restaurant en France. (reste en brouillon dans produits/)
+  → reprise 1/2 de pb-a-quoi-sert-un-musee-aujourdhui d'après la relecture
+  → reprise 1/2 de teletravail-avant-apres-covid d'après la relecture
+
+[1m2. Schéma (gratuit)[0m
+  - « teletravail-avant-apres-covid », repère n°2 : « cle » (chiffre ou mot clé) manquante ou trop longue (16 caractères max).
+  - « teletravail-avant-apres-covid », repère n°3 : « cle » (chiffre ou mot clé) manquante ou trop longue (16 caractères max).
+  → correction 1/3 par gemini:gemini-3.5-flash : teletravail-avant-apres-covid
+
+[1m2. Schéma (gratuit) — tour 2[0m
+✓ Tous les contenus respectent le schéma.
+
+[1m3. Sources et citations (gratuit)[0m
+  ✓ pb-a-quoi-sert-un-musee-aujourdhui — 2 page(s) lue(s)
+  ✓ teletravail-avant-apres-covid — 2 page(s) lue(s)
+✓ Chaque fait publié est retrouvé mot pour mot dans sa source.
+
+[1m4. Qualité (gratuit)[0m
+  · teletravail-avant-apres-covid : 1 source(s) jamais citée(s) retirée(s), renvois renumérotés
+  ! « pb-ce-quon-transmet » : aucune preuve archivée dans contenu/preuves.json.
+  ! « lune-patrimoine » : aucune preuve archivée dans contenu/preuves.json.
+  ! « repas-gastronomique » : aucune preuve archivée dans contenu/preuves.json.
+  ! « vivre-seul » : aucune preuve archivée dans contenu/preuves.json.
+  ! « langues-qui-s-eteignent » : aucune preuve archivée dans contenu/preuves.json.
+  ! « met-open-access » : aucune preuve archivée dans contenu/preuves.json.
+✓ Qualité : rien à corriger (6 avertissement(s)).
+
+[1m5. Relecture adverse (groq:openai/gpt-oss-120b)[0m
+  ✗ pb-a-quoi-sert-un-musee-aujourdhui — « a-corriger », 1 grave(s)
+      [inverifiable] clivage 1 fait_a : La source confirme la date du confinement mais ne précise pas que la fermeture visait à protéger la santé publique ; l'affirmation dépasse le contenu de la citation.
+  ✗ teletravail-avant-apres-covid — « a-corriger », 1 grave(s)
+      [faux] clivage 2 fait_a : La citation ne fournit pas de taux de 2,4 % pour les autres régions ; elle indique seulement « un sur dix » (≈10 %) dans le reste du pays. Le chiffre 2,4 % n’est pas justifié.
+  → reprise 2/2 de pb-a-quoi-sert-un-musee-aujourdhui d'après la relecture
+    (gemini:gemini-3.5-flash surchargé : on essaie gemini:gemini-flash-latest)
+    (gemini:gemini-flash-latest surchargé : on essaie gemini:gemini-3.1-flash-lite)
+  → reprise 2/2 de teletravail-avant-apres-covid d'après la relecture
+    (gemini:gemini-3.5-flash surchargé : on essaie gemini:gemini-flash-latest)
+    (gemini:gemini-flash-latest surchargé : on essaie gemini:gemini-3.1-flash-lite)
+
+[1m2. Schéma (gratuit)[0m
+  - « teletravail-avant-apres-covid » : « base_source » manquant ou invalide (la base doit renvoyer à une source).
+  - « teletravail-avant-apres-covid », repère n°1 : « source » doit être le numéro d'une source de la carte (1 à 1) ou une liste de numéros.
+  - « teletravail-avant-apres-covid », repère n°2 : « source » doit être le numéro d'une source de la carte (1 à 1) ou une liste de numéros.
+  - « teletravail-avant-apres-covid », repère n°3 : « source » doit être le numéro d'une source de la carte (1 à 1) ou une liste de numéros.
+  - « teletravail-avant-apres-covid », clivage n°1, fait_a : « source » doit être le numéro d'une source de la carte (1 à 1) ou une liste de numéros.
+  - « teletravail-avant-apres-covid », clivage n°1, fait_b : « source » doit être le numéro d'une source de la carte (1 à 1) ou une liste de numéros.
+  - « teletravail-avant-apres-covid », clivage n°2, fait_a : « source » doit être le numéro d'une source de la carte (1 à 1) ou une liste de numéros.
+  - « teletravail-avant-apres-covid », clivage n°2, fait_b : « source » doit être le numéro d'une source de la carte (1 à 1) ou une liste de numéros.
+  → correction 1/3 par gemini:gemini-3.5-flash : teletravail-avant-apres-covid
+
+[1m2. Schéma (gratuit) — tour 2[0m
+✓ Tous les contenus respectent le schéma.
+
+[1m3. Sources et citations (gratuit)[0m
+  ✓ pb-a-quoi-sert-un-musee-aujourdhui — 2 page(s) lue(s)
+  ✓ teletravail-avant-apres-covid — 1 page(s) lue(s)
+✓ Chaque fait publié est retrouvé mot pour mot dans sa source.
+
+[1m4. Qualité (gratuit)[0m
+  ! « pb-ce-quon-transmet » : aucune preuve archivée dans contenu/preuves.json.
+  ! « lune-patrimoine » : aucune preuve archivée dans contenu/preuves.json.
+  ! « repas-gastronomique » : aucune preuve archivée dans contenu/preuves.json.
+  ! « vivre-seul » : aucune preuve archivée dans contenu/preuves.json.
+  ! « langues-qui-s-eteignent » : aucune preuve archivée dans contenu/preuves.json.
+  ! « met-open-access » : aucune preuve archivée dans contenu/preuves.json.
+✓ Qualité : rien à corriger (6 avertissement(s)).
+
+[1m5. Relecture adverse (groq:openai/gpt-oss-120b)[0m
+  ✗ pb-a-quoi-sert-un-musee-aujourdhui — « a-jeter », 0 grave(s)
+      [hors sujet] Le texte traite de l'impact économique et de la fracture numérique liés à la crise du Covid‑19, alors que le sujet demandé porte sur le rôle actuel des musées (éduquer, conserver, divertir)
+  ✗ teletravail-avant-apres-covid — « a-corriger », 1 grave(s)
+      [faux] repere 2 : La source indique que 61 % des télétravailleurs réguliers sont cadres, pas que 61 % des cadres télétravaillent. L’énoncé inverse la proportion.
+      [hors sujet] absence de données post‑2020 ; le texte ne présente que des chiffres de 2017 alors que le sujet demande une comparaison avant/après 2020
+  ✗ pb-a-quoi-sert-un-musee-aujourdhui écarté : hors sujet — Le texte traite de l'impact économique et de la fracture numérique liés à la crise du Covid‑19, alors que le sujet demandé porte sur le rôle actuel des musées (éduquer, conserver, divertir) (reste en brouillon dans produits/)
+  ✗ teletravail-avant-apres-covid écarté : hors sujet — absence de données post‑2020 ; le texte ne présente que des chiffres de 2017 alors que le sujet demande une comparaison avant/après 2020 (reste en brouillon dans produits/)
+✗ Aucun contenu ne passe la relecture : rien à publier.
+[2026-11-14 13:30:28] ✗ la chaîne a refusé de publier (détail dans ce journal, section ci-dessus) — rien n'a été écrit dans contenu/.
