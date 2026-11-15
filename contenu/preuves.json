@@ -1976,5 +1976,63 @@
         "citation": "Ayant posé comme admise sans en rediscuter identité de image de Turin et de celles de Lirey et de Chambéry il adopte la méthode régressive et part de la relique décrite Constantinople en 1204 par Robert de Clari par Nicolas Mesantes en 1201"
       }
     ]
+  },
+  "additifs-alimentaires-e-numeros": {
+    "sources": [
+      {
+        "titre": "Additifs alimentaires",
+        "editeur": "EFSA",
+        "url": "https://www.efsa.europa.eu/fr/topics/topic/food-additives",
+        "consulte_le": "2026-11-15"
+      },
+      {
+        "titre": "L'EFSA se penche sur la sécurité des glutamates ajoutés aux aliments",
+        "editeur": "EFSA",
+        "url": "https://www.efsa.europa.eu/fr/press/news/170712",
+        "consulte_le": "2026-11-15"
+      }
+    ],
+    "preuves": [
+      {
+        "appuie": "base",
+        "source": 1,
+        "citation": "Un numéro E signifie qu'un additif a été soumis à des tests de sécurité et que son utilisation a été approuvée"
+      },
+      {
+        "appuie": "repere 1",
+        "source": 1,
+        "citation": "Plus de 300 substances sont autorisées en tant qu’additifs alimentaires dans l’UE."
+      },
+      {
+        "appuie": "repere 2",
+        "source": 2,
+        "citation": "calculé une dose journalière admissible Quantité estimée d'une substance présente dans les aliments ou dans l'eau potable qui peut être consommée quotidiennement durant toute la durée d’une vie sans présenter de risque appréciable pour la santé. Elle est généralement exprimée en milligrammes de substance par kilogramme de poids corporel par jour et s'applique à des substances chimiques telles que les additifs alimentaires, les résidus de pesticides et les médicaments vétérinaires de groupe (DJA) de 30 mg par kg de poids corporel par jour pour les six additifs de ce groupe."
+      },
+      {
+        "appuie": "repere 3",
+        "source": 1,
+        "citation": "L’EFSA a pour l’instant réévalué plus de 70 % des 315 additifs alimentaires approuvés dans l’UE avant le 20 janvier 2009."
+      },
+      {
+        "appuie": "clivage 1 fait_a",
+        "source": 2,
+        "citation": "D'après les preuves disponibles, nous estimons que la nouvelle DJA de groupe calculée pour l'acide glutamique et les glutamates protège adéquatement la santé des consommateurs car elle est inférieure aux doses associées à certains effets observés chez l'homme, tels que maux de tête, augmentation de la tension artérielle ou taux d'insuline accrus"
+      },
+      {
+        "appuie": "clivage 1 fait_b",
+        "source": 2,
+        "citation": "Ils ont estimé que l'exposition aux glutamates ajoutés aux aliments peut dépasser la DJA recommandée pour tous les groupes de population dont le régime alimentaire est riche en aliments contenant ces additifs, ainsi que pour les jeunes enfants et les enfants présentant une exposition Concentration ou quantité d'une substance donnée absorbée par une personne, une population ou un écosystème à une fréquence spécifique, dans un intervalle de temps donné moyenne."
+      },
+      {
+        "appuie": "clivage 2 fait_a",
+        "source": 1,
+        "citation": "Les additifs alimentaires peuvent également être dérivés d’animaux (par exemple, l’acide carminique (E 120), obtenu à partir de cochenilles ou de minéraux (par exemple, le carbonate de calcium (E 170) obtenu à partir de calcaire broyé)"
+      },
+      {
+        "appuie": "clivage 2 fait_b",
+        "source": 1,
+        "citation": "De nombreuses substances utilisées comme additifs sont présentes naturellement, telles que la vitamine Substance alimentaire nécessaire en très petites quantités pour la croissance, le développement et le maintien d’une bonne santé chez l’homme et l’animal. La plupart des vitamines sont dites « essentielles », étant donné qu’elles ne peuvent pas être produites par le corps lui-même C (E 300) et la pectine (E 440) dans les fruits"
+      }
+    ]
   }
 }

@@ -3442,6 +3442,92 @@
       ],
       "statut": "verifie",
       "verifie_le": "2026-11-13"
+    },
+    {
+      "id": "additifs-alimentaires-e-numeros",
+      "type": "carte",
+      "theme": "cuisine-alimentation",
+      "format": "et-si",
+      "titre": "Comprendre les numéros E sur nos étiquettes",
+      "base": "Dans l’Union européenne, chaque additif alimentaire autorisé possède un numéro E. Ce code signifie que la substance a fait l'objet d'une évaluation de sécurité avant que son utilisation ne soit approuvée dans les denrées alimentaires.",
+      "base_source": 1,
+      "ouverture": "Et si tu déchiffrais systématiquement la liste des additifs E avant de remplir ton caddie ?",
+      "reperes": [
+        {
+          "cle": "+300 substances",
+          "texte": "Plus de 300 substances sont autorisées comme additifs alimentaires dans l'UE.",
+          "source": 1
+        },
+        {
+          "cle": "DJA à 30 mg/kg",
+          "texte": "Pour les glutamates (E 620-625), l'EFSA a fixé une dose journalière admissible de 30 mg par kg de poids corporel.",
+          "source": 2
+        },
+        {
+          "cle": "Plus de 70 %",
+          "texte": "L'EFSA a réévalué la sécurité de plus de 70 % des 315 additifs autorisés avant 2009.",
+          "source": 1
+        }
+      ],
+      "clivages": [
+        {
+          "question": "Faut-il revoir la dose maximale autorisée des additifs jugés sûrs à faible dose ?",
+          "cote_a": "La fixation d'une dose journalière admissible protège les consommateurs des risques toxicologiques en encadrant la consommation globale.",
+          "cote_b": "Les niveaux d'exposition réels chez les forts consommateurs ou les enfants dépassent souvent la dose de sécurité préconisée.",
+          "fait_a": {
+            "texte": "La DJA de groupe calculée pour les glutamates protège contre les effets indésirables comme les maux de tête.",
+            "source": 2
+          },
+          "fait_b": {
+            "texte": "L'exposition estimée aux glutamates dépasse la dose sans danger chez les enfants et les forts consommateurs.",
+            "source": 2
+          },
+          "a_creuser": [
+            "Dose journalière admissible",
+            "Réévaluation des risques"
+          ]
+        },
+        {
+          "question": "Un numéro E est-il forcément synonyme d'ingrédient artificiel ou chimique ?",
+          "cote_a": "Plusieurs numéros E désignent des substances synthétisées chimiquement ou extraites d'animaux ou de minéraux.",
+          "cote_b": "De nombreux additifs E sont des molécules d'origine parfaitement naturelle issues de fruits ou de végétaux.",
+          "fait_a": {
+            "texte": "L'acide carminique E 120 provient de cochenilles et le carbonate de calcium E 170 de calcaire broyé.",
+            "source": 1
+          },
+          "fait_b": {
+            "texte": "La vitamine C (E 300) et la pectine (E 440) sont présentes naturellement dans les fruits.",
+            "source": 1
+          },
+          "a_creuser": [
+            "Origine des additifs",
+            "Étiquetage des ingrédients"
+          ]
+        }
+      ],
+      "derives": [
+        "Consulter la base de données de la Commission européenne sur les additifs",
+        "Découvrir le rôle du groupe scientifique FAF de l'EFSA"
+      ],
+      "liens": [
+        "qui-decide-du-bon"
+      ],
+      "sources": [
+        {
+          "titre": "Additifs alimentaires",
+          "editeur": "EFSA",
+          "url": "https://www.efsa.europa.eu/fr/topics/topic/food-additives",
+          "consulte_le": "2026-11-15"
+        },
+        {
+          "titre": "L'EFSA se penche sur la sécurité des glutamates ajoutés aux aliments",
+          "editeur": "EFSA",
+          "url": "https://www.efsa.europa.eu/fr/press/news/170712",
+          "consulte_le": "2026-11-15"
+        }
+      ],
+      "statut": "verifie",
+      "verifie_le": "2026-11-15"
     }
   ]
 }

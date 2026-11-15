@@ -1,0 +1,163 @@
+{
+  "date": "2026-11-15",
+  "sujets": [
+    {
+      "id": "pb-a-quoi-sert-un-musee-aujourdhui",
+      "type": "problematique",
+      "theme": "histoire-patrimoine",
+      "format": "ouverte",
+      "brief": "Éduquer, conserver ou divertir : à quoi sert un musée aujourd'hui ?",
+      "pistes": [
+        "la nouvelle définition du musée adoptée par l'ICOM en 2022",
+        "le débat gratuité contre billetterie",
+        "la fréquentation des musées français, avant et après le covid",
+        "la tension entre recherche/conservation et exposition au public"
+      ],
+      "reperes": "4",
+      "clivages": "3",
+      "sources_candidates": [
+        "https://books.openedition.org/pufc/28099",
+        "https://presse.louvre.fr/download?id=5324&pn=235141-pdf",
+        "https://transparency-register.europa.eu/searchregister-or-update/organisation-detail_fr?id=333322034810-67",
+        "https://www.cairn.info/article.php?ID_REVUE=LHS&ID_NUMPUBLIE=LHS_154&ID_ARTICLE=LHS_154_0031#",
+        "https://www.cairn.info/revue-societes-et-representations-2003-2-page-131.htm",
+        "https://www.insee.fr/fr/statistiques/4485632",
+        "https://www.insee.fr/fr/statistiques/4638729",
+        "https://www.insee.fr/fr/statistiques/4925348",
+        "https://www.insee.fr/fr/statistiques/4994488"
+      ]
+    },
+    {
+      "id": "graffitis-de-pompei",
+      "theme": "histoire-patrimoine",
+      "format": "chiffre",
+      "brief": "Pompéi : des milliers de graffitis antiques retrouvés sur les murs, une source historique à part entière.",
+      "pistes": [
+        "le nombre de graffitis recensés à Pompéi",
+        "ce qu'ils racontent (petites annonces, insultes, déclarations d'amour, résultats de combats de gladiateurs)",
+        "leur conservation face à l'exposition à l'air libre depuis les fouilles"
+      ],
+      "liens": [
+        "les-archives-nationales"
+      ],
+      "sources_candidates": [
+        "https://whc.unesco.org/fr/list/829",
+        "https://whc.unesco.org/fr/actualites/690/",
+        "https://europa.eu/rapid/press-release_IP-12-328_fr.htm",
+        "https://www.persee.fr/doc/befar_0257-4101_1998_mon_299_1",
+        "https://www.persee.fr/doc/crai_0065-0536_1905_num_49_4_71661",
+        "https://www.persee.fr/doc/piot_1148-6023_1960_num_51_1_1480",
+        "https://volcano.si.edu/volcano.cfm?vn=211020",
+        "https://volcano.si.edu/volcano.cfm?vn=211020&vtab=GeneralInfo",
+        "https://www.unesco.org/new/en/natural-sciences/environment/ecological-sciences/biosphere-reserves/europe-north-america/italy/somma-vesuvio-and-miglio-doro/"
+      ]
+    },
+    {
+      "id": "additifs-alimentaires-e-numeros",
+      "theme": "cuisine-alimentation",
+      "format": "et-si",
+      "brief": "Et si tu lisais vraiment la liste des additifs sur un paquet ? Ce que les numéros E veulent dire, et qui les évalue.",
+      "pistes": [
+        "le système européen de numérotation des additifs (E...)",
+        "le rôle de l'Anses et de l'EFSA dans leur évaluation",
+        "des exemples de retraits récents (ex. dioxyde de titane E171)",
+        "la différence entre « interdit » et « déconseillé »"
+      ],
+      "liens": [
+        "qui-decide-du-bon"
+      ],
+      "sources_candidates": [
+        "https://eur-lex.europa.eu/legal-content/FR/TXT/PDF/?uri=CELEX:32008R1333&from=FR",
+        "https://webgate.ec.europa.eu/foods_system/main/?sector=FAD&auth=SANCAS",
+        "https://www.efsa.europa.eu/fr/",
+        "https://www.efsa.europa.eu/fr/topics/topic/food-additives",
+        "https://eur-lex.europa.eu/legal-content/FR/TXT/?qid=1469450323996&uri=CELEX:32011R1129",
+        "https://www.efsa.europa.eu/fr/topics/topic/food-additive-re-evaluations",
+        "https://www.anses.fr/fr/system/files/NUT2006sa0236.pdf",
+        "https://eur-lex.europa.eu/legal-content/FR/TXT/PDF/?uri=CELEX:32002R0178&qid=1509004253165&from=FR",
+        "https://www.efsa.europa.eu/fr/press/news/170712"
+      ]
+    },
+    {
+      "id": "teletravail-avant-apres-covid",
+      "theme": "modes-de-vie-societe",
+      "format": "avant-ailleurs",
+      "brief": "Le télétravail en France : marginal avant 2020, installé depuis. Ce que disent les chiffres avant/après.",
+      "pistes": [
+        "la part de salariés en télétravail avant 2020 (Dares/Insee)",
+        "la bascule pendant les confinements",
+        "le taux stabilisé depuis, une fois la crise passée",
+        "les accords d'entreprise encadrant le nombre de jours de télétravail"
+      ],
+      "liens": [
+        "machines-du-quotidien",
+        "temps-domestique"
+      ],
+      "sources_candidates": [
+        "https://www.fonction-publique.gouv.fr/archives/home20111012/IMG/pdf/guide_teletravail_1998.pdf",
+        "https://www.entreprises.gouv.fr/files/files/directions_services/cns/ressources/Teletravail_Rapport_du_ministere_de_Mai2012.pdf",
+        "https://www.economie.gouv.fr/entreprises/teletravail",
+        "https://travail-emploi.gouv.fr/droit-du-travail/la-vie-du-contrat-de-travail/article/teletravail-mode-d-emploi",
+        "https://www.insee.fr/fr/statistiques/4238573?sommaire=4238635",
+        "https://www.ademe.fr/sites/default/files/assets/documents/teletravail-modes-de-vie-2020-synthese.pdf",
+        "https://www.cairn.info/revue-gerer-et-comprendre-2021-2-page-38.htm?ref=doi",
+        "https://www.cairn.info/revue-constructif-2021-3.htm",
+        "https://www.strategie.gouv.fr/sites/strategie.gouv.fr/files/atoms/files/fs-2024-na146-teletravail-14_novembre.pdf"
+      ]
+    },
+    {
+      "id": "irezumi-tatouage-japonais",
+      "theme": "arts-langues-croyances",
+      "format": "objet",
+      "brief": "L'irezumi, tatouage traditionnel japonais : un art ancien encore associé au crime organisé aujourd'hui.",
+      "pistes": [
+        "son histoire (période Edo, décoration des condamnés puis art à part entière)",
+        "son interdiction pendant l'ère Meiji",
+        "l'association actuelle avec les yakuzas dans l'imaginaire japonais",
+        "l'interdiction de fait dans certains bains publics (onsen) japonais"
+      ],
+      "sources_candidates": [
+        "https://www.persee.fr/web/revues/home/prescript/article/criti_1290-7839_2000_num_8_1_1441_t8_0063_0000_2",
+        "https://www.cairn.info/revue-diogene-2022-1-page-193.htm",
+        "https://www.metmuseum.org/toah/works-of-art/JP1847",
+        "https://www.metmuseum.org/Works_of_Art/viewOne.asp?dep=6&viewMode=0&item=JP1847",
+        "https://www.britishmuseum.org/research/search_the_collection_database/search_object_details.aspx?objectId=8808&partId=1",
+        "https://expositions.bnf.fr/japonaises/grand/083.htm",
+        "https://expositions.bnf.fr/lamer/grand/121.htm",
+        "https://expositions.bnf.fr/",
+        "https://www.britishmuseum.org/collection/term/BIOG3948"
+      ]
+    },
+    {
+      "id": "manger-seul-au-restaurant",
+      "theme": "hors-piste",
+      "themes_croises": [
+        "cuisine-alimentation",
+        "modes-de-vie-societe"
+      ],
+      "format": "dilemme",
+      "brief": "Manger seul au restaurant : plaisir assumé ou malaise social ? Le concept japonais « ohitorisama » face au regard français.",
+      "pistes": [
+        "le concept japonais « ohitorisama » et les restaurants équipés pour un client seul",
+        "des données ou études sur le repas pris seul en France",
+        "l'essor de la livraison comme façon d'éviter le repas seul en public",
+        "le repas comme moment social par défaut dans la culture française"
+      ],
+      "liens": [
+        "vivre-seul",
+        "repas-gastronomique"
+      ],
+      "sources_candidates": [
+        "https://www.persee.fr/doc/pop_0032-4663_1984_num_39_4_17965",
+        "https://www.cairn.info/revue-figures-de-la-psy-2021-2-page-229.htm",
+        "https://theconversation.com/plateformes-et-reseaux-sociaux-derriere-lillusion-de-la-neutralite-un-vrai-pouvoir-dinfluence-242530",
+        "https://www.francenum.gouv.fr/guides-et-conseils/communication-et-publicite/reseaux-sociaux/x-anciennement-twitter-le-reseau",
+        "https://www.legifrance.gouv.fr/affichTexte.do?dateTexte=&categorieLien=id&cidTexte=JORFTEXT000038338004&fastPos=16&fastReqId=244957578&oldAction=rechExpMesuresNominatives",
+        "https://www.persee.fr/authority/254740",
+        "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/cion-cedu/l17cion-cedu2425035_compte-rendu",
+        "https://www.legifrance.gouv.fr/affichTexte.do;jsessionid=FE158834703187DD501C92049A84AA12.tpdjo16v_1?cidTexte=JORFTEXT000026972451&dateTexte=&oldAction=rechJO&categorieLien=id",
+        "https://www.persee.fr/doc/bec_0373-6237_1987_num_145_2_450474"
+      ]
+    }
+  ]
+}
